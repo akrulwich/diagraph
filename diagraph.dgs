@@ -1,17 +1,18 @@
 Diagraph
+"What sort of thing is diagraph?"
+
+What sort of thing is diagraph?
+Diagraph is an abstract data type.
+
+
+Diagraph
 'What is diagraph?'
-'What is diagraph for?'
-
-What sort of thing is a diagraph?
-A diagraph is an abstract data type
-  for storing explanatory information.
-
 
 What is a diagraph?
 Diagraph is the directed graph across which traversals are explanations.
-A diagraph is key-value store,
-  in which the keys are 'diagraphic categories'.
-  in which the values are 'diagraphic element' collections.
+A diagraph is a key-value store,
+  in which the keys are "diagraphic categories".
+  in which the values are "diagraphic element" collections.
 
 Diagraphic categor(y/ies): What is a diagraphic category?
 What is a diagraphic category?
@@ -26,15 +27,31 @@ What is a diagraphic element?
 A diagraphic element is either a string, a note-pile, or a clause-node tree. 
 
 
-What are the design goals of diagraph?
-Diagraph is a model of the interface of explanation: how diagraph is a model of the interface of explanation
+Diagraph
+"What does a diagraph represent?"
 
-How diagraph is a model of the interface of explanation
+"What does a diagraph represent?"
+Diagraph is a model of the interface of explanation.
 
 
+Diagraph
+"What is diagraph for?"
 
 What is diagraph for?
 Diagraph is a medium for representing explanatory information. 
 
+
+Diagraph
+"What is diagraph for?"
+
 Why is diagraph useful?
 Diagraph provides logarithmic-time access to a corpus of explanatory information. 
+
+
+Diagraph
+'What questions are addressed by diagraph?'
+
+What questions are addressed by diagraph? What questions does diagraph address?
+Diagraph is an answer to the question 'How should we organize explanatory information?'
+
+How should we organize explanatory information?
