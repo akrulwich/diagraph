@@ -49,6 +49,6 @@
   ],
 
 
-  category: 'sentence'
+  category: ['sentence']
 
 }
