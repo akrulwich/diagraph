@@ -9,8 +9,6 @@
   ]
 
 
-
-
   category: [
     ['clause', {}],
     []
@@ -34,8 +32,6 @@
   ]
 
 
-
-
   category: 'alias'
 
   category: [
@@ -53,9 +49,6 @@
   ],
 
 
-
-
   category: 'sentence'
-
 
 }
