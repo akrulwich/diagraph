@@ -6,7 +6,7 @@ Diagraph is an abstract data type.
 
 
 Diagraph
-'What is diagraph?'
+"What is diagraph?"
 
 What is a diagraph?
 Diagraph is the directed graph across which traversals are explanations.
@@ -49,9 +49,9 @@ Diagraph provides logarithmic-time access to a corpus of explanatory information
 
 
 Diagraph
-'What questions are addressed by diagraph?'
+"What questions are addressed by diagraph?"
 
 What questions are addressed by diagraph? What questions does diagraph address?
-Diagraph is an answer to the question 'How should we organize explanatory information?'
+Diagraph is an answer to the question "How should we organize explanatory information?"
 
 How should we organize explanatory information?
