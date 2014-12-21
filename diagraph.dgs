@@ -19,8 +19,7 @@ A diagraphic category is an ordinary-language
 Diagraphic category names are case-insensitive strings
 
 What is a diagraphic element?
-A diagraphic element is either a string or a clause-node-tree. 
-
+A diagraphic element is either a string, a note-pile, or a clause-node tree. 
 
 
 

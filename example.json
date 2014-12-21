@@ -1,10 +1,15 @@
 {
+
+  category: [
+    'composition'
+  ]
+
   
   category: [
-    'sentence',
     [
-      'sentence',
-      'sentence'
+      'note',
+      'note',
+      'note'
     ]
   ],
 
@@ -47,8 +52,4 @@
       }],
     []
   ],
-
-
-  category: ['sentence']
-
 }
