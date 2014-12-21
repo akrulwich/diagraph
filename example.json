@@ -1,0 +1,61 @@
+{
+  
+  category: [
+    'sentence',
+    [
+      'sentence',
+      'sentence'
+    ]
+  ]
+
+
+
+
+  category: [
+    ['clause', {}],
+    []
+  ],
+
+  category: [
+    ['clause', {
+      'conjunction': []
+      }],
+    []
+  ],
+
+  category: [
+    ['clause', {}],
+    [
+      [
+        ['dependent clause', {}],
+        []
+      ]
+    ]
+  ]
+
+
+
+
+  category: 'alias'
+
+  category: [
+    ['clause', {
+      'conjunction': []
+      }],
+    'alias'
+  ],
+
+  category: [
+    ['clause', {
+      'conjunction': 'alias'
+      }],
+    []
+  ],
+
+
+
+
+  category: 'sentence'
+
+
+}
