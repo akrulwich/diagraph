@@ -4,25 +4,26 @@ Category
   note
 
 Category
-  composition.
+  Composition.
 
 Category
-  Clause.
-
-Category
-  Clause
-    conjunction dependent clause
-
-Category 
-  Clause
-    specification
-
-Category: alias
-
-Category
-  Clause: alias
+  Sentence.
+    Sentence.
 
 Category
   Clause,
-    conjunction: alias
+    conjunction clause
+
+Category 
+  Clause,
+    clause.
+
+Category: Alias
+
+Category
+  Sentence: Alias
+
+Category
+  Clause,
+    conjunction: Alias
   

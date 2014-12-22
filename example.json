@@ -1,28 +1,29 @@
 {
-
   category: [
     [
-      'note',
-      'note',
-      'note'
+      'Note',
+      'Note',
+      'Note'
     ]
   ],
 
   category: [
-    'composition'
+    'Composition.'
   ]
 
-
   category: [
-    ['clause', {}], 
-    []
+    [
+      'Sentence.',
+      [
+        'Sentence.'
+      ]
   ],
 
   category: [
-    ['clause', {
+    ['Clause', {
       'conjunction': [
         [
-          ['dependent clause', {}],
+          ['clause', {}],
           []
         ]
       ]
@@ -33,24 +34,22 @@
   category: [
     ['Clause', {}], [
       [
-        ['specification', {}], []
+        ['clause', {}], []
       ]
     ]
   ],
 
 
-  category: 'alias'
+  category: 'Alias'
 
   category: [
-    ['clause', {
-      'conjunction': []
-      }],
-    'alias'
+    'Sentence.', 
+    'Alias'
   ],
 
   category: [
     ['clause', {
-      'conjunction': 'alias'
+      'conjunction': 'Alias'
       }],
     []
   ],
