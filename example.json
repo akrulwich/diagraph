@@ -14,19 +14,26 @@
 
 
   category: [
-    ['clause', {}], []
+    ['clause', {}], 
+    []
   ],
 
   category: [
     ['clause', {
-      'conjunction': []
-      }], []
+      'conjunction': [
+        [
+          ['dependent clause', {}],
+          []
+        ]
+      ]
+      }], 
+    []
   ],
 
   category: [
-    ['clause', {}], [
+    ['Clause', {}], [
       [
-        ['dependent clause', {}], []
+        ['specification', {}], []
       ]
     ]
   ],

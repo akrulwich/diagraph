@@ -1,14 +1,12 @@
 Diagraph
   "What sort of thing is diagraph?"
+  "What is diagraph?"
 What sort of thing is diagraph?
   Diagraph is an abstract data type.
-
-Diagraph
-  "What is diagraph?"
 What is a diagraph?
   Diagraph is the directed graph across which traversals are explanations.
   A diagraph is a decision tree in which the paths are particular explanations.
-  A diagraph captures a set of possible explanations. 
+  A diagraph represents a set of possible explanations. 
   A diagraph is a non-linear data structure that represents many potential linear traversals. 
 
 
@@ -17,16 +15,16 @@ Diagraph
 What is the definition of diagraph?  
   A diagraph is a key-value store,
     in which the keys are "diagraphic categories".
-    in which the values are "diagraphic element" collections.
+    in which the values are collections of "diagraphic trees".
 
-What is a diagraphic category? 
+Diagraphic category, What is a diagraphic category? 
   A diagraphic category is an ordinary-language specification of a sentence-set. 
   A diagraphic category contains explanations of the thing refered to in the cateogory name. 
   A diagraphic category is a named collection of diagraphic trees.
   Diagraphic category names are case-insensitive strings.
   A diagraphic category is a key of the diagraph.
 
-Diagraphic trees
+Diagraphic trees, What is a diagraphic tree?
   A diagraph is comprised of several kinds of tree structure. 
   One kind of diagraphic tree is the "clause-node tree".
   One kind of diagraphic tree is the "sentence-node tree".
@@ -60,6 +58,7 @@ Note piles, note pile
   The the order of the notes represents the hierarchy of a potential tree.
     Notes that come first in the pile are assumed to come higher in the tree.
 
+
 Diagraphic trees
   Diagraphic trees represent language.
     Diagraphic trees vary in their degree of representation, 
@@ -88,18 +87,25 @@ Diagraph
   "What does a diagraph represent?"
 What does a diagraph represent?
   Diagraph is a model of the interface of explanation.
+    A diagraph is a model of the interface of something capable of producing explanations, an explanatory system.
+  A diagraph maps a set of requests for explanation to a particular set of explanations.
+    A diagraph of an individual might represent the total set of explanations they are capable of producing. 
+    The keys of a diagraph should be everything that can be explained 
+  A diagraph models only the interface of an explanatory system.
+    It only represents what goes in, and what comes out. 
+    Diagraph ignores the implementation of an explanatory system. 
+
 
 Diagraph
   "What is diagraph for?"
+  "Why is diagraph useful?"
 What is diagraph for?
   Diagraph is a medium,
     like books are a medium.
     for representing explanatory information.
-
-Diagraph
-  "What is diagraph for?"
 Why is diagraph useful?
   Diagraph provides logarithmic-time access to a corpus of explanatory information. 
+
 
 How should we organize explanatory information?
   One way is to use a diagraph.
