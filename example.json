@@ -8,30 +8,28 @@
   category: [
     [
       'note',
-      'note',
-      'note'
+      [
+        [ 'note' ],
+        [ 'note' ]
+      ]
     ]
   ],
 
 
   category: [
-    ['clause', {}],
-    []
+    ['clause', {}], []
   ],
 
   category: [
     ['clause', {
       'conjunction': []
-      }],
-    []
+      }], []
   ],
 
   category: [
-    ['clause', {}],
-    [
+    ['clause', {}], [
       [
-        ['dependent clause', {}],
-        []
+        ['dependent clause', {}], []
       ]
     ]
   ],

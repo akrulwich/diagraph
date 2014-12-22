@@ -7,19 +7,26 @@ Diagraph
   "What is diagraph?"
 What is a diagraph?
   Diagraph is the directed graph across which traversals are explanations.
+  A diagraph is a decision tree in which the paths are particular explanations.
+  A diagraph captures a set of possible explanations. 
+  A diagraph is a non-linear data structure that represents many potential linear traversals. 
+
+Diagraph
+  "What is the definition of diagraph?"
+What is the definition of diagraph?  
   A diagraph is a key-value store,
     in which the keys are "diagraphic categories".
     in which the values are "diagraphic element" collections.
 
-What is a diagraphic category? (Diagraphic) categor(y/ies)
-  A diagraphic category is an ordinary-language specification of an explanation-set. 
+What is a diagraphic category? 
+  A diagraphic category is an ordinary-language specification of a sentence-set. 
   A diagraphic category contains explanations of the thing refered to in the cateogory name. 
-  A diagraphic category is a collection of diagraphic elements.
+  A diagraphic category is a named collection of diagraphic trees.
   Diagraphic category names are case-insensitive strings.
   A diagraphic category is a key of the diagraph.
 
-What is a diagraphic element? (Diagraphic) element(s),
-A diagraphic element is either a string, a note-pile, or a clause-node tree. 
+What is a diagraphic tree?
+  A diagraphic tree is either a note-pile, a clause-node tree, or a composition-string.
 
 Diagraph
   "What does a diagraph represent?"
