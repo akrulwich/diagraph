@@ -1,19 +1,16 @@
 {
 
   category: [
-    'composition'
-  ]
-
-  
-  category: [
     [
       'note',
-      [
-        [ 'note' ],
-        [ 'note' ]
-      ]
+      'note',
+      'note'
     ]
   ],
+
+  category: [
+    'composition'
+  ]
 
 
   category: [

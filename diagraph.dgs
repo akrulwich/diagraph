@@ -11,6 +11,7 @@ What is a diagraph?
   A diagraph captures a set of possible explanations. 
   A diagraph is a non-linear data structure that represents many potential linear traversals. 
 
+
 Diagraph
   "What is the definition of diagraph?"
 What is the definition of diagraph?  
@@ -25,8 +26,63 @@ What is a diagraphic category?
   Diagraphic category names are case-insensitive strings.
   A diagraphic category is a key of the diagraph.
 
-What is a diagraphic tree?
-  A diagraphic tree is either a note-pile, a clause-node tree, or a composition-string.
+Diagraphic trees
+  A diagraph is comprised of several kinds of tree structure. 
+  One kind of diagraphic tree is the "clause-node tree".
+  One kind of diagraphic tree is the "sentence-node tree".
+  One kind of diagraphic tree is the "composition-node".
+  One kind of diagraphic tree is a "note pile".
+
+Clause-node trees, a clause-node tree
+  A clause-node tree is comprised of "a clause-node", and an array of "subordinate clause-node trees".
+Clause-nodes, a clause node
+  A clause-node contains a clause-string and "a conjunction table."
+Subordinate clause-node trees
+  The clause of a subordinate clause-node tree's root clause-node represents a semantic specification or interpretation of its parent clause-node's clause. 
+Conjunction table, a conjunction table
+  A conjunction table associates a conjunction string with a clause-node tree collection. 
+
+Sentence trees, a sentence tree
+  A sentence tree is comprised of a sentence and an array of "subordinate sentences".
+  A sentence tree can be represented explicitly. 
+  A sentence tree can be represented implicitly by a composition string. 
+Sentences, a sentence, sentence
+  A sentence is an implicit clause-node tree segment represented by a string.
+  A sentence in the context of diagraph is just an ordinary kind of a sentence. 
+Subordinate sentences, a subordinate sentence
+  A sentence that is subordinate to another sentence represents a segment of a clause-node tree that is subordinate to another segment of a clause-node tree. 
+
+Compositions, a composition
+  A composition is a prose string of one or more sentences that implicitly represents a sentence tree. 
+   
+Note piles, note pile
+  A note pile is a list of notes, which are sentence fragments.
+  The the order of the notes represents the hierarchy of a potential tree.
+    Notes that come first in the pile are assumed to come higher in the tree.
+
+Diagraphic trees
+  Diagraphic trees represent language.
+    Diagraphic trees vary in their degree of representation, 
+      where an explicit representation would mean that every syntactic relationship is represented in the data structure, 
+      where an implicit representation would mean that many syntactic relationships are represented only in the syntax of a natural-language string, and not in the data structure itself.
+
+      A clause-node tree has an entirely explicit structure.
+      A sentence tree has a partially-implicit structure.
+      A composition tree has an entirely implicit structure.
+      A note pile has a partially-implicit structure.
+
+    A composition-node corresponds to a sentence-node tree.
+    A sentence-node corresponds to a clause-node tree.
+
+  A diagraph usually would have clause-node trees at the top,
+    then sentence trees in the middle, 
+      then compositions for the terminal nodes. 
+  
+  As a diagraph develops, it gains structure.
+    Ordinarily a note pile might become a sentence tree,
+      which might become a clause-node tree, 
+        (or a composition, if it is a terminal node.)
+
 
 Diagraph
   "What does a diagraph represent?"
@@ -46,4 +102,4 @@ Why is diagraph useful?
   Diagraph provides logarithmic-time access to a corpus of explanatory information. 
 
 How should we organize explanatory information?
-  One way is to use diagraph.
+  One way is to use a diagraph.
