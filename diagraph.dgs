@@ -37,7 +37,7 @@ Diagraphic trees, What is a diagraphic tree?
   A diagraph is a mix of several kinds of tree structure. 
   One kind of diagraphic tree is the "clause-node tree".
   One kind of diagraphic tree is the "sentence-node tree".
-  One kind of diagraphic tree is the "composition-node".
+  One kind of diagraphic tree is the "composition".
   One kind of diagraphic tree is the "note pile".
 
 Clause-node trees, a clause-node tree
@@ -59,8 +59,8 @@ Sentences, a sentence, sentence
 Subordinate sentences, a subordinate sentence
   A sentence that is subordinate to another sentence represents a segment of a clause-node tree that is subordinate to another segment of a clause-node tree. 
 
-Composition nodes, composition-node, compositions, composition
-  A composition-node is a prose string of one or more sentences that implicitly represents a sentence tree. 
+Compositions
+  A composition is a prose string of one or more sentences that implicitly represents a sentence tree. 
    
 Note piles, note pile
   A note pile is a list of notes, which are sentence-fragment strings.
