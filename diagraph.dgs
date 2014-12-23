@@ -11,8 +11,17 @@ What is a diagraph?
 
 
 Diagraph
+  What is diagraph for?
+    Diagraph is a medium for representing explanatory information.
+  Why is diagraph useful?
+    Diagraph provides logarithmic-time access to a corpus of explanatory information.
+How should we organize explanatory information?
+  One way is to use a diagraph.
+
+
+Diagraph
   "What is the definition of diagraph?"
-What is the definition of diagraph?  
+Definition of diagraph, What is the definition of diagraph?  
   A diagraph is a key-value store,
     in which the keys are "diagraphic categories".
     in which the values are collections of "diagraphic trees".
@@ -54,69 +63,60 @@ Composition nodes, composition-node, compositions, composition
   A composition-node is a prose string of one or more sentences that implicitly represents a sentence tree. 
    
 Note piles, note pile
-  A note pile is a list of notes, which are sentence fragments.
-  The the order of the notes represents the hierarchy of a potential tree.
-    Notes that come first in the pile are assumed to come higher in the tree.
+  A note pile is a list of notes, which are sentence-fragment strings.
+    The the order of the notes represents the hierarchy of a potential clause-node tree.
+  A note pile is used to represent an incomplete explanation. 
+  A note pile is used when not enough is known yet about an explanation to represent it explicitly. 
+  
 
-
-Diagraphic trees
+Diagraphic trees, What are diagraphic trees? Why are there multiple kinds of diagraphic tree?
   Diagraphic trees represent explanations.
-    An explanation is a series of sentences.
-      Some sentences come after other sentences.
-        This produces a tree. 
-    A diagraph is a mix of several kinds of tree structure.
-      Some types of diagraphic tree are easy for people to write, but hard for machines to read.
-        These look more like prose, because they rely upon the implicit syntax of natural-language.
-      Some types of diagraphic tree are harder for people to write, but easier for machines to read. 
-        These look more like trees, with explicit nodes and edges. 
+    An explanation is a series of sentences. Some sentences can only come after other sentences. Some sentences can come before or after other sentences. A diagraphic tree represents the order in which the sentences of an explanation can be given.
 
-      A clause-node tree has an entirely explicit structure.
-        The syntax of the explanation is entirely represented in the data structure.
-      A sentence tree has a partially-explicit structure.
-        The relationship between different sentences is represented as an explicit hierarchy,
-          whereas the syntactic structure within a sentence is represented implicitly by a natural-language string. 
-      A composition node has an entirely implicit structure.
-        A composition is just one long string, and it doesn't represents explicitly either the internal syntax of a sentence, or the hierarchial relationship between sentences.
-      A note pile has a partially-implicit structure.
-        Each line represents a sentence fragment, but some may be missing, so a parent-child relationship merely represents a suspected ancestor-progency relationship in some future tree. 
-
+    Explanations have a hierarchial structure.
+      The different kinds of diagraphic tree differ in the degree to which they represent this structure explicitly, in the data structure, as opposed to implicitly, in the syntax of natural language.
+        Machines can more easily read trees with explicit structure, but humans can more easily produce explanations with the implicit structure of prose text. 
+    
+  One kind of diagraphic tree is the "clause-node tree".
+    This is the most explicit kind of tree, representing clauses as nodes with seperate edge-types for adjacent clauses and conjunctions.
+  One kind of diagraphic tree is the "sentence-node tree".
+    This is a partially explicit tree, representing intra-sentence hierarchy as an explicit tree structure, but representing inter-sentence syntax implicitly with a natural-language string.
+  One kind of diagraphic tree is the "composition-node".
+    This is the most implicit tree, being just one node with a multi-sentence natural language string. Both syntax and explanatory hierarchy are represented implicitly. 
   A composition-node corresponds to a sentence-node tree.
   A sentence-node corresponds to a clause-node tree.
 
-  A diagraph ordinarily would have clause-node trees at the root,
-    sentence trees in the middle, 
-      and compositions at the ends. 
+  Different parts of a diagraph will use different tree structures.
+    A diagraph ordinarily would have clause-node trees at the root, sentence trees in the middle, and compositions at the ends. This is because the top of a diagraph is more disambigutory, representing a sort of broad and sense index, then the middle is more sparse and hierarchial, and then the ends are usually more depictive, describing something in one long multi-sentence chunk.  
   
-  Diagraphic trees can change types over the life of a diagraph
-    A note pile might become a sentence tree.
-      A sentence tree might become a clause-node tree 
-        (or a composition, if it is a terminal node.)
+  Diagraphic trees can change type over the life of a diagraph.
+    A note pile might become a sentence tree. A sentence tree might become a clause-node tree (or a composition, if it is a terminal node.)
+
+
+Diagraph script
+  Diagraph script is a text format that represents a diagraph. 
+  Diagraph script is a list of category-tree pairs.
+  Diagraph script is comprised of blocks and units.
+    A block of diagraph script is one atomic write operation of several category-tree pairings.
+      By convention, blocks are seperated by a blank line.
+      A block of diagraph script is like a prose paragraph.
+    A unit of diagraph script is a set of thematically related blocks. 
+      By convention, units are seperated by two blank lines.
+      A unit of diagraph script is like a single prose explanation of multiple paragraphs.  
 
 
 Diagraph
   "What does a diagraph represent?"
 What does a diagraph represent?
-  A diagraph is a model of the interface of an explanatory system,
-    where an explanatory system is anything that can be asked to produce explanations,
-      
-    An explanatory system may be interactive, like a teacher, static, like a book, digital, like a search engine, or a mix of all three, like a library. 
+  A diagraph represents the interface of an explanatory system,
+    where an explanatory system is anything that can be asked to produce explanations.
+      An explanatory system may be interactive, like a teacher, static, like a book, digital, like a search engine, or a mix of all three, like a library. 
 
   A diagraph maps a set of explanation requests to a particular set of explanations.
     A diagraph of an individual maps the questions they can understand to the explanations they can produce.
     
   A diagraph models only the interface of an explanatory system.
     It ignores the internal implementation.
-    It represents what goes in, and what comes out, not how it is stored or produced.
+    It represents only what can go in, and what can come out, not what goes on inside.
 
 
-Diagraph
-  "What is diagraph for?"
-  "Why is diagraph useful?"
-What is diagraph for?
-  Diagraph is a medium,
-    like books are a medium.
-    for representing explanatory information.
-Why is diagraph useful?
-  Diagraph provides logarithmic-time access to a corpus of explanatory information. 
-How should we organize explanatory information?
-  One way is to use a diagraph.
