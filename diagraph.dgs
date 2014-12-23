@@ -1,22 +1,15 @@
 Diagraph
-  "What sort of thing is diagraph?"
-  "What is diagraph?"
-What sort of thing is diagraph?
-  Diagraph is an abstract data type.
-What is a diagraph?
-  Diagraph is the directed graph across which traversals are explanations.
-  A diagraph is a decision tree in which the paths are particular explanations.
-  A diagraph represents a set of possible explanations. 
-  A diagraph is a non-linear data structure that represents many potential linear traversals. 
-
-
-Diagraph
+  What sort of thing is diagraph?
+    Diagraph is an abstract data type.
+  What is a diagraph?
+    Diagraph is the directed graph across which traversals are explanations.
+    A diagraph is a decision tree in which the paths are particular explanations.
+    A diagraph represents a set of possible explanations. 
+    A diagraph is a non-linear data structure that represents many potential linear traversals. 
   What is diagraph for?
     Diagraph is a medium for representing explanatory information.
   Why is diagraph useful?
     Diagraph provides logarithmic-time access to a corpus of explanatory information.
-How should we organize explanatory information?
-  One way is to use a diagraph.
 
 
 Diagraph
@@ -105,6 +98,13 @@ Diagraph script
       A unit of diagraph script is like a single prose explanation of multiple paragraphs.  
 
 
+Diagraphic servers
+
+Diagraphic functions
+
+Diagraphic function environment
+
+
 Diagraph
   "What does a diagraph represent?"
 What does a diagraph represent?
@@ -119,4 +119,5 @@ What does a diagraph represent?
     It ignores the internal implementation.
     It represents only what can go in, and what can come out, not what goes on inside.
 
-
+How should we organize explanatory information?
+  One way is to use a diagraph.
