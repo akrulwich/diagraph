@@ -13,77 +13,46 @@ Diagraph
 
 
 Diagraph
-  "What is the definition of diagraph?"
-Definition of diagraph, What is the definition of diagraph?  
-  A diagraph is a key-value store,
-    in which the keys are "diagraphic categories".
-    in which the values are collections of "diagraphic trees".
+  "Definition of diagraph"
+Definition of diagraph
+  A diagraph is a key-value store in which the keys are things that can be explained, represented by "diagraphic categories", and the values are "explanations", represented by "diagraphic trees".
 
 Diagraphic category, What is a diagraphic category? 
-  A diagraphic category is an ordinary-language specification of a sentence-set. 
-  A diagraphic category contains explanations of the thing refered to in the cateogory name. 
+  A diagraphic category is an ordinary-language specification of an explanation set. 
   A diagraphic category is a named collection of diagraphic trees.
   Diagraphic category names are case-insensitive strings.
-  A diagraphic category is a key of the diagraph.
+  The name of a category of a diagraph is a diagraphic key.
+
+Diagraphic trees
+  A diagraphic tree represents a family of related explanations.
+Explanation
+  An explanation is a traversal of a diagraphic tree.
+
+
 
 Diagraphic trees, What is a diagraphic tree?
-  A diagraph is a mix of several kinds of tree structure. 
-  One kind of diagraphic tree is the "clause-node tree".
-  One kind of diagraphic tree is the "sentence-node tree".
-  One kind of diagraphic tree is the "composition".
-  One kind of diagraphic tree is the "note pile".
+  A diagraphic tree is a tree structure with several types of node.
+    There are "clause-nodes".
+    There are "sentence-nodes".
+    There are "composition-nodes".
+    There are "fragment-nodes". 
 
-Clause-node trees, a clause-node tree
-  A clause-node tree is comprised of "a clause-node", and an array of "subordinate clause-node trees".
-Clause-nodes, a clause node
-  A clause-node contains a clause-string and "a conjunction table."
-Subordinate clause-node trees
-  The clause of a subordinate clause-node tree's root clause-node represents a semantic specification or interpretation of its parent clause-node's clause. 
-Conjunction table, a conjunction table
-  A conjunction table associates a conjunction string with a clause-node tree collection. 
+Clause-nodes, Clauses
 
-Sentence trees, a sentence tree
-  A sentence tree is comprised of a sentence and an array of "subordinate sentences".
-  A sentence tree can be represented explicitly. 
-  A sentence tree can be represented implicitly by a composition string. 
-Sentences, a sentence, sentence
-  A sentence is an implicit clause-node tree segment represented by a string.
-  A sentence in the context of diagraph is just an ordinary kind of a sentence. 
-Subordinate sentences, a subordinate sentence
-  A sentence that is subordinate to another sentence represents a segment of a clause-node tree that is subordinate to another segment of a clause-node tree. 
+Sentence-nodes, Sentences
 
-Compositions
-  A composition is a prose string of one or more sentences that implicitly represents a sentence tree. 
+Composition-nodes, Compositions
    
-Note piles, note pile
-  A note pile is a list of notes, which are sentence-fragment strings.
-    The the order of the notes represents the hierarchy of a potential clause-node tree.
-  A note pile is used to represent an incomplete explanation. 
-  A note pile is used when not enough is known yet about an explanation to represent it explicitly. 
-  
+Fragment-nodes, Fragments, Notes
 
-Diagraphic trees, What are diagraphic trees? Why are there multiple kinds of diagraphic tree?
-  Diagraphic trees represent explanations.
-    An explanation is a series of sentences. Some sentences can only come after other sentences. Some sentences can come before or after other sentences. A diagraphic tree represents the order in which the sentences of an explanation can be given.
 
-    Explanations have a hierarchial structure.
-      The different kinds of diagraphic tree differ in the degree to which they represent this structure explicitly, in the data structure, as opposed to implicitly, in the syntax of natural language.
-        Machines can more easily read trees with explicit structure, but humans can more easily produce explanations with the implicit structure of prose text. 
-    
-  One kind of diagraphic tree is the "clause-node tree".
-    This is the most explicit kind of tree, representing clauses as nodes with seperate edge-types for adjacent clauses and conjunctions.
-  One kind of diagraphic tree is the "sentence-node tree".
-    This is a partially explicit tree, representing intra-sentence hierarchy as an explicit tree structure, but representing inter-sentence syntax implicitly with a natural-language string.
-  One kind of diagraphic tree is the "composition-node".
-    This is the most implicit tree, being just one node with a multi-sentence natural language string. Both syntax and explanatory hierarchy are represented implicitly. 
+
+
+Diagraphic trees
   A composition-node corresponds to a sentence-node tree.
-  A sentence-node corresponds to a clause-node tree.
+  A sentence-node corresponds to a clause-node tree.  
+  Different parts of a diagraph will different types of node.
 
-  Different parts of a diagraph will use different tree structures.
-    A diagraph ordinarily would have clause-node trees at the root, sentence trees in the middle, and compositions at the ends. This is because the top of a diagraph is more disambigutory, representing a sort of broad and sense index, then the middle is more sparse and hierarchial, and then the ends are usually more depictive, describing something in one long multi-sentence chunk.  
-  
-  Diagraphic trees can change type over the life of a diagraph.
-    A note pile might become a sentence tree. A sentence tree might become a clause-node tree (or a composition, if it is a terminal node.)
 
 
 Diagraph script
@@ -97,12 +66,42 @@ Diagraph script
       By convention, units are seperated by two blank lines.
       A unit of diagraph script is like a single prose explanation of multiple paragraphs.  
 
+  How?/Why?/So?/And?
+
 
 Diagraphic servers
+  Diagraphic requests
+  Diagraphic responses
+    Rendered explanation
+    Raw diagraph
 
 Diagraphic functions
-
+  WM
+    Pushing to the top of WM
+    Queueing at the bottom of WM 
+  STM
+  LTM
 Diagraphic function environment
+  Isomorphic
+  Input
+  Output
+Diagraph-Explain
+Diagraph-Assess
+Diagraph-Review
+
+
+Diagraph production
+
+Individual diagraph production
+
+Group diagraph production
+
+Discussion diagraphs
+
+Asynchronous diagraph production
+
+Adversarial diagraph production
+
 
 
 Diagraph
