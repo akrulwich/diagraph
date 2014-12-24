@@ -1,29 +1,50 @@
 Category
-  note
-    note
-  note
-
-Category
-  Composition.
+  Fragment
+    Fragment
+  Fragment
 
 Category
   Sentence.
     Sentence.
 
 Category
+  Composition. Of. Many. Sentences.
+
+
+Category
   Clause,
-    conjunction clause
+    conjunction 
+      clause
 
 Category 
   Clause,
     clause.
 
-Category: Alias
+
+Category, Alias
 
 Category
-  Sentence: Alias
+  Alias,
+
+Category
+  Sentence,
+    alias,
 
 Category
   Clause,
-    conjunction: Alias
+    conjunction,
+      alias,
+
+Category
+  Clause,
+      alias?
+
   
+Category
+  Sentence
+    reference.
+
+Category
+  Sentence,
+    reference,
+      reference.

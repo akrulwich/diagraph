@@ -1,56 +1,101 @@
 {
   category: [
     [
-      'Note',
-      'Note',
-      'Note'
+      'Fragment',
+      'Fragment',
+      'Fragment'
     ]
   ],
 
   category: [
-    'Composition.'
+    'Sentence.',
+    [
+      'Sentence.'
+    ]
   ]
 
   category: [
+    'Composition. Of. Many. Sentences.'
+  ]
+
+  category: [
+    'Clause',
     [
-      'Sentence.',
+      'conjunction',
       [
-        'Sentence.'
-      ]
-  ],
-
-  category: [
-    ['Clause', {
-      'conjunction': [
-        [
-          ['clause', {}],
-          []
-        ]
-      ]
-      }], 
-    []
-  ],
-
-  category: [
-    ['Clause', {}], [
-      [
-        ['clause', {}], []
+        'clause',
+        []
       ]
     ]
   ],
+
+  category: [
+    'Clause',
+    [
+      'clause',
+      []
+    ]
+  ],
+
 
 
   category: 'Alias'
 
   category: [
-    'Sentence.', 
-    'Alias'
+    'Alias,',
+    []
+  ]
+
+  category: [
+    'Sentence,',
+    [
+      'alias,',
+      []
+    ]
+  ]
+
+  category: [
+    'Clause,'
+    [
+      'conjunction,', 
+      [  
+        'alias,',
+        []
+      ]
   ],
 
   category: [
-    ['clause', {
-      'conjunction': 'Alias'
-      }],
-    []
+    'Clause,'
+    [
+      'alias?',
+      []
+    ]
   ],
+
+
+  category: [
+    'Sentence.',
+    [
+      'reference.',
+      []
+    ]
+  ],
+
+  category: [
+    'Sentence.',
+    [
+      'reference,',
+      []
+    ]
+  ],
+
+  category: [
+    'Sentence.',
+    [
+      'reference,',
+      [
+        'reference.'
+      ]
+    ]
+  ]
 }

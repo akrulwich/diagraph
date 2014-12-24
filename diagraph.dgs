@@ -27,15 +27,12 @@ Diagraphic trees
   A diagraphic tree represents a family of related explanations.
 Explanation
   An explanation is a traversal of a diagraphic tree.
-
-
-
 Diagraphic trees, What is a diagraphic tree?
   A diagraphic tree is a tree structure with several types of node.
-    There are "clause-nodes".
-    There are "sentence-nodes".
-    There are "composition-nodes".
-    There are "fragment-nodes". 
+    There are clause-nodes.
+    There are sentence-nodes.
+    There are composition-nodes.
+    There are fragment-nodes. 
 
 Clause-nodes, Clauses
 
@@ -45,13 +42,11 @@ Composition-nodes, Compositions
    
 Fragment-nodes, Fragments, Notes
 
-
-
-
 Diagraphic trees
-  A composition-node corresponds to a sentence-node tree.
-  A sentence-node corresponds to a clause-node tree.  
+  A composition-node corresponds to a sentence tree.
+  A sentence-node corresponds to a clause tree.  
   Different parts of a diagraph will different types of node.
+  Provisional compositions become fragments which become sentences which become either clause-trees or final compositions.
 
 
 
@@ -67,6 +62,7 @@ Diagraph script
       A unit of diagraph script is like a single prose explanation of multiple paragraphs.  
 
   How?/Why?/So?/And?
+
 
 
 Diagraphic servers
@@ -88,6 +84,7 @@ Diagraphic function environment
 Diagraph-Explain
 Diagraph-Assess
 Diagraph-Review
+
 
 
 Diagraph production
