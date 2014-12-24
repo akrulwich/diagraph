@@ -6,25 +6,35 @@ Diagraph
     A diagraph is a decision tree in which the paths are particular explanations.
     A diagraph represents a set of possible explanations. 
     A diagraph is a non-linear data structure that represents many potential linear sequences. 
+    A diagraph is not a document.
   What is diagraph for?
     Diagraph is a medium for representing explanatory information.
   Why is diagraph useful?
     Diagraph provides logarithmic-time access to a corpus of explanatory information.
+  What does a diagraph represent?
+    A diagraph represents the interface of an explanatory system,
+      where an explanatory system is anything that can be asked to produce explanations.
+        An explanatory system may be interactive, like a teacher, static, like a book, digital, like a search engine, or a mix of all three, like a library. 
+    A diagraph maps a set of explanation requests to a particular set of explanations.
+      A diagraph of an individual maps the questions they can understand to the explanations they can produce.
+    A diagraph models only the interface of an explanatory system.
+      It ignores the internal implementation.
+      It represents only what can go in, and what can come out, not what goes on inside.
 
 
 Definition of diagraph
-  A diagraph is a key-value store in which the keys are things that can be explained,
-    diagraphic subjects, 
-      and the values are explanations,
-        diagraphic trees.
+  A diagraph is a key-value store.
+    The keys are diagraphic subjects, and the values are collections of diagraphic tree. 
+      A subject-collection pair is a diagraphic category. 
 
 Diagraphic subjects
   A diagraphic subject is an ordinary-language specification of an explanation set. 
-  A diagraphic subject is a named collection of diagraphic trees.
-  Diagraphic category names are case-insensitive strings.
+  A diagraphic subject is a thing that can be explained. 
+    Its associated value is an explanation of it. 
   A diagraphic subject is a key of the diagraph.
-  Diagraphic subjects are precise if they specify a partial sentence. 
+  Diagraphic subjects are case-insensitive strings.
   Diagraphic subjects cannot contain ostensives. 
+  Diagraphic subjects are precise if they specify an exact diagraphic path.  
 
 Diagraphic trees
   A diagraphic tree represents a set of explanations.
@@ -36,17 +46,18 @@ Diagraphic trees
       There are composition-nodes.
       There are fragment-nodes.
 
+Diagraphic categories
+  A diagraphic category is a named collection of diagraphic trees.
+
 Clause-nodes, Clauses
-
 Sentence-nodes, Sentences
-
 Composition-nodes, Compositions
-   
 Fragment-nodes, Fragments, Notes
+  Fragments form a one-dimensional array.
 
 Diagraphic trees
-  A composition-node can become a sentence tree.
-  A sentence-node can become a clause tree.  
+  A composition node can become a sentence tree.
+  A sentence node can become a clause tree.  
   Provisional compositions can become fragments which can become sentences which can become either clause-trees or final compositions.
 
 
@@ -55,6 +66,12 @@ Diagraphic references
 Diagraphic aliases
   A terminal ostensive-free node that corresponds to a key is an alias.
   A node of a tree that is aliased to a key could have its child-tree-array substituted by the key's associated tree-array. 
+Diagraphic paths
+  A diagraphic path is the string formed beginning with a key and concatinating the text of each node, resolving aliases. 
+
+
+Generic diagraph
+Particlar diagraph
 
 
 Diagraph script
@@ -67,8 +84,28 @@ Diagraph script
     A unit of diagraph script is a set of thematically related blocks. 
       By convention, units are seperated by two blank lines.
       A unit of diagraph script is like a single prose explanation of multiple paragraphs.  
+  Questions
+    Using questions to make relative requests. 
+    How?/Why?/So?/And?
 
-  How?/Why?/So?/And?
+
+Diagraph production
+Individual diagraph production
+Group diagraph production
+Discussion diagraphs
+Asynchronous diagraph production
+Adversarial diagraph production
+
+
+
+Applications of diagraph
+Diagraph in Education
+Diagraph in Journalism
+Diagraph in Politics
+Diagraph in Library Science
+  How should we organize explanatory information?
+    One way is to use a diagraph.
+Diagraph in Academic Publishing
 
 
 
@@ -77,14 +114,14 @@ Diagraphic servers
   Diagraphic responses
     Rendered explanation
     Raw diagraph
-
+Diagraphic interfaces
 Diagraphic functions
   WM
     Pushing to the top of WM
     Queueing at the bottom of WM 
   STM
   LTM
-Diagraphic function environment
+Diagraphic function environments
   Isomorphic
   Input
   Output
@@ -94,30 +131,7 @@ Diagraph-Review
 
 
 
-Diagraph production
-
-Individual diagraph production
-
-Group diagraph production
-
-Discussion diagraphs
-
-Asynchronous diagraph production
-
-Adversarial diagraph production
 
 
-What does a diagraph represent?
-  A diagraph represents the interface of an explanatory system,
-    where an explanatory system is anything that can be asked to produce explanations.
-      An explanatory system may be interactive, like a teacher, static, like a book, digital, like a search engine, or a mix of all three, like a library. 
 
-  A diagraph maps a set of explanation requests to a particular set of explanations.
-    A diagraph of an individual maps the questions they can understand to the explanations they can produce.
-    
-  A diagraph models only the interface of an explanatory system.
-    It ignores the internal implementation.
-    It represents only what can go in, and what can come out, not what goes on inside.
 
-How should we organize explanatory information?
-  One way is to use a diagraph.
