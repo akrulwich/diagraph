@@ -151,12 +151,24 @@ Diagraph in Academic Publishing
 
 Diagraphic servers
   Diagraphic request
-    A d
+    A diagraphic request specifies a category, function, and an optional path or input diagraph.  
   Diagraphic responses
-    Rendered explanation
-    Raw diagraph
+    Diagraphic responses are rendered in diagraph-script.
 Diagraphic interfaces
-Diagraphic functions
+  Document interface
+    Server-side generation
+    Server-side assembly
+  Correspondance interface
+    Server-side generation
+    Client-side assembly
+  Interactive interface
+    Client-side generation
+    Client-side assembly
+
+Diagraphic function environments
+  Isomorphic
+  Input
+  Output
   WM
     Push
     Enqueue
@@ -164,14 +176,16 @@ Diagraphic functions
   STM
     STM is a cache that associates every node added to WM with its category. 
   LTM
+  Configuration
+    Satisfaction condition
 
-Diagraphic function environments
-  Isomorphic
-  Input
-  Output
+Diagraphic functions
+  Terminating
+  Nonterminating
+
 Diagraph-Interpret
   Takes a poorly formed path and returns a precise one. 
-Diagraph-Context
+Diagraph-Contextualize
   Takes a category-node pair and returns a diagraphic path.
 Diagraph-Explain 
   Takes a path specification and returns the nodes adjacent to that address. 
@@ -182,7 +196,6 @@ Diagraph-Review
 Diagraph-Assess
   Takes a candidate diagraph for a diagraphic category and preforms a comparison to a reference value. 
   It returns a diagraph merge of the two values. 
-
 
 
 
