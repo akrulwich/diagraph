@@ -173,6 +173,7 @@ Diagraphic function environments
     Push
     Enqueue
     Promote
+    (Output)
   STM
     STM is a cache that associates every node added to WM with its category. 
   LTM
