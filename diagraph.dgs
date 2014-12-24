@@ -85,12 +85,13 @@ Diagraphic nodes
     Fragments can serve the purpose of documenting areas of a diagraph that should be expanded upon at some future point. 
 
 Diagraphic references
-  Any node with a string that corresponds to a diagraphic key is a reference to that key. 
+  A substring of a node that corresponds to a diagraphic key is a diagraphic reference. 
 Diagraphic aliases
-  A terminal ostensive-free node that corresponds to a key is an alias.
-  A node of a tree that is aliased to a key could have its child-tree-array substituted by the key's associated tree-array. 
+  A terminal clause-node that corresponds to a key is an alias.
+  An explanation that reaches a diagraphic alias may continue on to a root of the aliased category.
+  A node of a tree that is aliased to a key has its children substituted by the members of the aliased category.
 Diagraphic paths
-  A diagraphic path is a sequence of connected nodes starting at a root of the category.
+  A diagraphic path is a sequence of connected nodes starting at a root of a category.
   A diagraphic path does not include the category name. 
   A diagraphic path is the string formed beginning with a key and concatinating the text of each node, resolving aliases and removing commas and periods. 
   A diagraphic path is the address of a node. 
@@ -98,7 +99,12 @@ Diagraphic paths
 
 
 Generic diagraph
+  Generic diagraph belongs to generic subjects.
+  Every predicate of particular diagraph corresponds to a predicate of the generic diagraph. 
+    This may be represented explicitly or implicitly. 
 Particlar diagraph
+  Diagraph concerning singular subjects which are instances of generic classes. 
+
 
 
 Diagraph script
