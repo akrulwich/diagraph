@@ -21,6 +21,7 @@ Category
     clause.
 
 
+
 Category, Alias
 
 Category
@@ -38,13 +39,3 @@ Category
 Category
   Clause,
       alias?
-
-  
-Category
-  Sentence
-    reference.
-
-Category
-  Sentence,
-    reference,
-      reference.

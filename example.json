@@ -73,32 +73,5 @@
       'alias?',
       []
     ]
-  ],
-
-
-  category: [
-    'Sentence.',
-    [
-      'reference.',
-      []
-    ]
-  ],
-
-  category: [
-    'Sentence.',
-    [
-      'reference,',
-      []
-    ]
-  ],
-
-  category: [
-    'Sentence.',
-    [
-      'reference,',
-      [
-        'reference.'
-      ]
-    ]
   ]
 }
