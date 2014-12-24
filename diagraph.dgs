@@ -12,9 +12,7 @@ Diagraph
     Diagraph provides logarithmic-time access to a corpus of explanatory information.
 
 
-Diagraph
-  "Definition of diagraph"
-Definition of diagraph
+Definition of diagraph, Diagraph
   A diagraph is a key-value store in which the keys are things that can be explained, represented by "diagraphic categories", and the values are "explanations", represented by "diagraphic trees".
 
 Diagraphic category, What is a diagraphic category? 
@@ -100,9 +98,6 @@ Asynchronous diagraph production
 Adversarial diagraph production
 
 
-
-Diagraph
-  "What does a diagraph represent?"
 What does a diagraph represent?
   A diagraph represents the interface of an explanatory system,
     where an explanatory system is anything that can be asked to produce explanations.
