@@ -180,8 +180,11 @@ Diagraphic function environments
     Satisfaction condition
 
 Diagraphic functions
-  Terminating
-  Nonterminating
+  Returning the end result
+  Returning the intermediary values of WM
+
+  Terminating functions
+  Nonterminating functions
 
 Diagraph-Interpret
   Takes a poorly formed path and returns a precise one. 
