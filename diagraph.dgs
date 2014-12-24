@@ -5,32 +5,36 @@ Diagraph
     Diagraph is the directed graph across which traversals are explanations.
     A diagraph is a decision tree in which the paths are particular explanations.
     A diagraph represents a set of possible explanations. 
-    A diagraph is a non-linear data structure that represents many potential linear traversals. 
+    A diagraph is a non-linear data structure that represents many potential linear sequences. 
   What is diagraph for?
     Diagraph is a medium for representing explanatory information.
   Why is diagraph useful?
     Diagraph provides logarithmic-time access to a corpus of explanatory information.
 
 
-Definition of diagraph, Diagraph
-  A diagraph is a key-value store in which the keys are things that can be explained, represented by "diagraphic categories", and the values are "explanations", represented by "diagraphic trees".
+Definition of diagraph
+  A diagraph is a key-value store in which the keys are things that can be explained,
+    diagraphic subjects, 
+      and the values are explanations,
+        diagraphic trees.
 
-Diagraphic category, What is a diagraphic category? 
-  A diagraphic category is an ordinary-language specification of an explanation set. 
-  A diagraphic category is a named collection of diagraphic trees.
+Diagraphic subjects
+  A diagraphic subject is an ordinary-language specification of an explanation set. 
+  A diagraphic subject is a named collection of diagraphic trees.
   Diagraphic category names are case-insensitive strings.
-  The name of a category of a diagraph is a diagraphic key.
+  A diagraphic subject is a key of the diagraph.
+  Diagraphic subjects are precise if they specify a partial sentence. 
+  Diagraphic subjects cannot contain ostensives. 
 
 Diagraphic trees
-  A diagraphic tree represents a family of related explanations.
-Explanation
-  An explanation is a traversal of a diagraphic tree.
-Diagraphic trees, What is a diagraphic tree?
-  A diagraphic tree is a tree structure with several types of node.
-    There are clause-nodes.
-    There are sentence-nodes.
-    There are composition-nodes.
-    There are fragment-nodes. 
+  A diagraphic tree represents a set of explanations.
+    An explanation is a traversal of a diagraphic tree. 
+  The nodes of a diagraphic tree are strings.
+    Different kinds of string represent different kinds of node. 
+      There are clause-nodes.
+      There are sentence-nodes.
+      There are composition-nodes.
+      There are fragment-nodes.
 
 Clause-nodes, Clauses
 
@@ -41,11 +45,16 @@ Composition-nodes, Compositions
 Fragment-nodes, Fragments, Notes
 
 Diagraphic trees
-  A composition-node corresponds to a sentence tree.
-  A sentence-node corresponds to a clause tree.  
-  Different parts of a diagraph will different types of node.
-  Provisional compositions become fragments which become sentences which become either clause-trees or final compositions.
+  A composition-node can become a sentence tree.
+  A sentence-node can become a clause tree.  
+  Provisional compositions can become fragments which can become sentences which can become either clause-trees or final compositions.
 
+
+Diagraphic references
+  Any node with a string that corresponds to a diagraphic key is a reference to that key. 
+Diagraphic aliases
+  A terminal ostensive-free node that corresponds to a key is an alias.
+  A node of a tree that is aliased to a key could have its child-tree-array substituted by the key's associated tree-array. 
 
 
 Diagraph script
