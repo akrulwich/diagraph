@@ -5,6 +5,7 @@ Diagraph
     Diagraph is a directed graph traversals across which are explanations.
     A diagraph represents a set of possible explanations. 
     A diagraph is a non-linear data structure that represents many potential linear sequences. 
+    A diagraph is a directed graph comprised of trees. 
   What is diagraph for?
     Diagraph is a medium for representing explanatory information.
   Why is diagraph useful?
@@ -131,7 +132,7 @@ Diagraph merges
 Discussion diagraphs
   A merge of implicit diagraphs of a corpus
 Asynchronous diagraph production
-  Libraries
+  Diagraph can be produced by uncoordinated groups that are distributed in space or time. 
 Adversarial diagraph production
   Debate
   Incentive structure - Expressive sentences vs. competition for desireable paths. 
