@@ -42,7 +42,8 @@ Explanation
 Definition of diagraph
   A diagraph is a key-value store,
     the keys of which are diagraphic keys, 
-    the values of which are collections of diagraphic trees. 
+    the values of which are diagraphic categories,
+      which are named collections of diagraphic tree. 
   A diagraphic key-collection pair is a diagraphic category.
     A diagraphic key is a category-name. 
     A diagraphic tree is an element of the category specified by the key.
@@ -61,9 +62,15 @@ Diagraphic keys
 
 Diagraphic categories
   A diagraphic category is a named collection of diagraphic trees.
-  A diagraphic key is the name of a diagraphic category. 
+  A diagraphic key is the name of a diagraphic category, 
+    the associated tree collection of which constitutes the category members.
+  A diagraphic path is the name of a diagraphic category, 
+    the associated subtree collection of which constitutes the category members.
+  Not all diagraphic categories are represented explicitly as diagraphic key-value pairs.
+    Some are represented implicitly by path-subtree pairs. 
+      Implicit categories can be refactored as explicit categories using aliases. 
   A diagraphic tree is an element of a diagraphic category.
-  Diagraphic categories have roots, which are the root nodes of the diagraphic trees they contain. 
+  The roots of a diagraphic category are the roots of its diagraphic tree elements. 
 
 Diagraphic trees
   A diagraphic tree represents a set of explanations.
@@ -122,6 +129,13 @@ Diagraphic aliases
   The elements of the category to which an alias corresponds are children of the aliased key. 
   Any actual children of an alias node represent comments on the alias node as such, in the context of the particular path. 
 
+Disambigutory nodes
+  Disambigutory nodes are nodes which are for organizational, rather than explanatory purposes.
+  It is not necessary to include disambigutory nodes in a diagraphic path.
+  Disambigutory nodes are provided as a convinience for people browsing the diagraph. 
+    Ideally, a category with more than four nodes can be broken down with disambigutory nodes. 
+  A disambigutory node is used to make a wide tree taller, requiring fewer lookups to traverse. 
+
 Generic diagraph
   Generic diagraph belongs to generic subjects.
   Every predicate of particular diagraph corresponds to a predicate of the generic diagraph. 
@@ -133,12 +147,14 @@ Particlar diagraph
 
 
 Ellaborated diagraph
-  Questions
-  Disambiguation
+  A diagraph that is ellaborated contains every node explicitly. 
+  One can ellaborate a diagraph by inserting implied nodes between stated ones. 
+  Ellaborated diagraph is useful for diagraphic servers.
 
 
 Subsumption
-
+  One diagraphic tree subsumes another if it contains a node that can be parent to the other's root.
+  
 
 Ostensive diagraph
   Resource addresses.
@@ -146,7 +162,10 @@ Ostensive diagraph
 
 Diagraph script
   Diagraph script is a text format that represents a diagraph. 
-  Diagraph script is a list of category-tree pairs.
+  Lines of a diagraph script file represent nodes of a diagraph.
+  Indendation in a diagraph script file represents the hierarchy of a diagraph. 
+  Unindented lines of diagraph script represent diagraphic keys. 
+  Top-level indentations under a key represent the roots of a diagraphic category. 
   Diagraph script is comprised of blocks and units.
     A block of diagraph script is one atomic write operation of several category-tree pairings.
       By convention, blocks are seperated by a blank line.
