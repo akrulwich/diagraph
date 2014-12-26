@@ -23,7 +23,6 @@ Diagraph
     A diagraph can model any system that responds to requests for explanation, 
       such as teachers, books, search engines, or libraries. 
 
-
 Explanation 
   An explanation is an alternating sequence of questions and answers. 
     A valid explanation may omit some questions or some answers, which are represented implicitly.
@@ -109,7 +108,6 @@ Diagraphic nodes
       Fragments can serve the purpose of documenting areas of a diagraph that should be expanded upon at some future point. 
   Diagraphic nodes fall on a spectrum between long rigid compositions and tiny modular clauses.
 
-
 Diagraphic paths
   A diagraphic path is a sequence of connected nodes starting at a category root.
   A path can also mean the concatinated string formed by combining a sequence of connected nodes. 
@@ -124,13 +122,15 @@ Diagraphic references
 Diagraphic aliases
   A node that succeeds a colon-terminated node is an alias. 
   An alias represents the path that proceedes the colon. 
+  An alias is an association between a path and a category, represented by a node with that category name. 
   An explanation that reaches a diagraphic alias may continue on to a root of the aliased category.
   To resolve an alias is to replace the alias node with the members of the aliased category, and to remove preceeding colon. 
   The elements of the category to which an alias corresponds are children of the aliased key. 
   Any actual children of an alias node represent comments on the alias node as such, in the context of the particular path. 
 
 Disambigutory nodes
-  Disambigutory nodes are nodes which are for organizational, rather than explanatory purposes.
+  Disambigutory nodes are nodes which are intended for organizational, rather than explanatory purposes.
+  Disambigutory nodes are those which can be omitted from an explanation. 
   It is not necessary to include disambigutory nodes in a diagraphic path.
   Disambigutory nodes are provided as a convinience for people browsing the diagraph. 
     Ideally, a category with more than four nodes can be broken down with disambigutory nodes. 
@@ -194,13 +194,21 @@ Adversarial diagraph production
 
 
 Ideographs
+  An ideograph represents the possible explanations of an individual. 
+
+Discussion diagraph
+  A diagraph produced synchronously by a group. 
+  One can only add to a discussion diagraph. 
+  The end result represents a diagraphic merge of the individual viewpoints. 
 
 Discourse diagraph
+  A discourse diagraph is the hypothetical diagraph implicit in a corpus. 
 
 Library diagraphs
+  A library diagraph is a diagraph that subsumes various other diagraphs. 
 
 Language diagraphs
-
+  A langauge diagraph captures the generic information known to native speakers of a language.
 
 
 
@@ -214,6 +222,11 @@ Diagraph in Library Science
     One way is to use a diagraph.
 Diagraph in Academic Publishing
 
+
+Diabots
+  A diabot is any diagraphic agent. 
+  A diabot knows N if it has the node N. 
+  A diabot understands P if it has the path P. 
 
 
 Diagraphic servers
@@ -277,6 +290,8 @@ Other
   Diagraph
     A diagraph is not a document.
     A diagraph is not a hypertext.
+    Diagraph does not represent embodied discussions.
+    Diagraphic responses are of ideas and to ideas, rather than of people or writings to other people or writings. 
   Propsecting
     Provisional compositions can become fragments which can become sentences which can become either clause-trees or final compositions.
   Qualitative computing
