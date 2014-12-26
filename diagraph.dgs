@@ -154,7 +154,7 @@ Ellaborated diagraph
 
 Subsumption
   One diagraphic tree subsumes another if it contains a node that can be parent to the other's root.
-  
+
 
 Ostensive diagraph
   Resource addresses.
@@ -247,6 +247,8 @@ Diagraphic function environments
   LTM
   Configuration
     Satisfaction condition
+
+Diagraphic function controllers
 
 Diagraphic functions
   Returning the end result
