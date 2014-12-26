@@ -116,7 +116,7 @@ Diagraphic paths
   A diagraphic path is the string formed beginning with a key and concatinating the text of each node, resolving aliases and removing commas and periods. 
   A diagraphic path is the address of a node. 
   A diagraphic path is the context of a node relative to its category. 
-  A path can be visualized as words seperated by slashes, eg, A/B/C/D/E.
+  A path can be visualized as clauses seperated by slashes, eg, A/B/C/D/E.
     A path with an alias can be visualized with a colon, eg, A/B/C:D/E.
   
 Diagraphic references
