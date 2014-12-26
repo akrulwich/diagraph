@@ -81,7 +81,8 @@ Diagraphic trees
   Children of a diagraphic node are comments on their parent node. 
 
 Diagraphic nodes
-  A diagraphic node represents a minimal and sufficient unit of explanation. 
+  A diagraphic node has a node text, although references to the node may refer to the node and text collectively. 
+  A diagraphic node represents a minimally sufficient unit of explanation. 
     A diagraphic node is minimal unit of explanation if it cannot be broken down into smaller independent parts.
       A node that is not minimal contains more information than is relevent for every request to that path. 
       If a valid explanation can include only part of a node, it should be refactored into a parent node and child. 
@@ -111,7 +112,8 @@ Diagraphic nodes
 
 Diagraphic paths
   A diagraphic path is a sequence of connected nodes starting at a category root.
-  Diagraph can also refer to the string formed by concatinating a sequence of nodes. 
+  Diagraph can also refer to a symbol-delimited string formed by concatinating a sequence of nodes. 
+  Diagraphic paths in a URL would be the slash-delimited concatinations of a series of node texts, with underscores substituted for spaces.
   A diagraphic path does not include the category name. 
   A diagraphic path is the string formed beginning with a key and concatinating the text of each node, resolving aliases and removing commas and periods. 
   A diagraphic path is the address of a node. 
