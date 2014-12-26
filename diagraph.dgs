@@ -7,7 +7,7 @@ Diagraph
   What is a diagraph?
     Diagraph is a directed graph traversals across which are explanations.
     A diagraph represents a set of possible explanations. 
-    A diagraph is a non-linear data structure that represents many potential linear sequences. 
+    A diagraph is a non-linear data structure that represents many possible linear sequences. 
     A diagraph is a directed graph comprised of trees. 
   What is diagraph for?
     Diagraph is a medium for representing explanatory information.
@@ -15,31 +15,46 @@ Diagraph
     Diagraph provides logarithmic-time access to a corpus of explanatory information.
   What does a diagraph represent?
     A diagraph represents the interface of an explanation-producing system.
-    A diagraph maps a set of requests for explanations to a particular set of explanations.
+    A diagraph maps a set of requests for explanation to a particular set of explanations.
+    A diagraph represents all possible outputs of an explanatory system. 
     A diagraph models only the interface of an explanatory system.
       It ignores the internal implementation.
       It represents only what goes in and what comes out, not what goes on inside.
     A diagraph can model any system that responds to requests for explanation, 
       such as teachers, books, search engines, or libraries. 
-    A diagraph represents all possible outputs of an explanatory system. 
 
+
+Explanation 
+  An explanation is an alternating sequence of questions and answers. 
+    A valid explanation may omit some questions or some answers, which are represented implicitly.
+    A large answer can be broken down into smaller answers.
+    A series of alternating questions and answers can be combined into one answer.
+  An explanation can be modeled by a tree, 
+    where nodes represent utterances.
+    the roots of which are conversation-starters.
+    in which child-nodes represent germane responses to parent nodes. 
+    The tree is the explanation.
+      A particular sequential traversal of the tree is an articulation of the explanation.
+      To refer to an articulation as an explanation is to refer to the tree implicitly represented by the traversal.
+        Two articulations of the same tree constitute the same explanation,
+          even if they are of different sequence or depth. 
 
 Definition of diagraph
-  A diagraph is a key-value store.
-    The keys are diagraphic keys, and the values are collections of diagraphic trees. 
-      A diagraphic key-collection pair is a diagraphic category.
-        A diagraphic key is a category-name. 
-        A diagraphic tree is a member of the category specified by the key. 
+  A diagraph is a key-value store,
+    the keys of which are diagraphic keys, 
+    the values of which are collections of diagraphic trees. 
+  A diagraphic key-collection pair is a diagraphic category.
+    A diagraphic key is a category-name. 
+    A diagraphic tree is an element of the category specified by the key.
 
 Diagraphic keys
-  A diagraphic key is an ordinary-language specification of an explanation-set. 
-  Diagraphic keys include subjects and topics.
-    A subject is a key the explanations of which have the key for a syntactic subject.
-    A topic is a noun-phrase key the explanations of which have a different syntactic subject.
+  A diagraphic key is an ordinary-language specification of an explanation-set,
+    like a question or topic.
   A diagraphic key is a diagraphic category-name. 
-    The collection associated with the key contains members of that category.
+    The collection associated with the key contains elements of that category.
   A diagraphic key is something that can be explained,
-    and its associated value is the explanation.
+    and its associated value is the explanation,
+      or a set of acceptable explanations.
   Diagraphic category-names are precise if they specify a diagraphic path.
     A diagraphic subject that merely specifies a topic area would be imprecise. 
     Categories with precise names can be used as aliases. 
@@ -60,6 +75,12 @@ Diagraphic trees
 
 Diagraphic nodes
   A diagraphic node represents a minimal and sufficient unit of explanation. 
+    A diagraphic node is minimal unit of explanation if it cannot be broken down into smaller independent parts.
+      A node that is not minimal contains more information than is relevent for every request to that path. 
+      If a valid explanation can include only part of a node, it should be refactored into a parent node and child. 
+    A diagraphic node that is a sufficient unit of explanation can stand alone without mention of its children. 
+      You cannot assume that someone who sees a parent node will then ask to see the children, so each node must be sufficient without further explanation. 
+  A diagraphic node represents an utterance, like a statement, question, or noun-phrase.
   A diagraphic node has a string value. 
     Two nodes may have the same value and be different nodes. 
     Two nodes with the same path and the same value are the same node.  
@@ -81,6 +102,7 @@ Diagraphic nodes
       Fragments can serve the purpose of documenting areas of a diagraph that should be expanded upon at some future point. 
   Diagraphic nodes fall on a spectrum between long rigid compositions and tiny modular clauses.
 
+
 Diagraphic paths
   A diagraphic path is a sequence of connected nodes starting at a category root.
   A path can also mean the concatinated string formed by combining a sequence of connected nodes. 
@@ -91,14 +113,14 @@ Diagraphic paths
   
 Diagraphic references
   A diagraphic node with a value that corresponds to a diagraphic key is a reference to that key.
+
 Diagraphic aliases
   A node that succeeds a colon-terminated node is an alias. 
   An alias represents the path that proceedes the colon. 
   An explanation that reaches a diagraphic alias may continue on to a root of the aliased category.
   To resolve an alias is to replace the alias node with the members of the aliased category, and to remove preceeding colon. 
-  The elements of the category to which an alias corresponds are the children of that alias. 
-    Any children of the actual alias node represent comments on the alias node as such, in the context of the particular path. 
-
+  The elements of the category to which an alias corresponds are children of the aliased key. 
+  Any actual children of an alias node represent comments on the alias node as such, in the context of the particular path. 
 
 Generic diagraph
   Generic diagraph belongs to generic subjects.
@@ -233,6 +255,7 @@ Diagraph-Assess
 Other
   Diagraph
     A diagraph is not a document.
+    A diagraph is not a hypertext.
   Propsecting
     Provisional compositions can become fragments which can become sentences which can become either clause-trees or final compositions.
   Qualitative computing
