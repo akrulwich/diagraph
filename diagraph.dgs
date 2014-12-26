@@ -1,3 +1,6 @@
+This
+  This is Diagraph, a diagraph about diagraph.
+
 Diagraph
   What sort of thing is diagraph?
     Diagraph is an abstract data type.
@@ -19,6 +22,7 @@ Diagraph
     A diagraph can model any system that responds to requests for explanation, 
       such as teachers, books, search engines, or libraries. 
     A diagraph represents all possible outputs of an explanatory system. 
+
 
 Definition of diagraph
   A diagraph is a key-value store.
@@ -42,61 +46,58 @@ Diagraphic keys
 
 Diagraphic categories
   A diagraphic category is a named collection of diagraphic trees.
-  A diagraphic subject is the name of a diagraphic category. 
+  A diagraphic key is the name of a diagraphic category. 
+  A diagraphic tree is an element of a diagraphic category.
   Diagraphic categories have roots, which are the root nodes of the diagraphic trees they contain. 
 
 Diagraphic trees
   A diagraphic tree represents a set of explanations.
-    An explanation is a traversal of a diagraphic tree. 
-  A diagraphic tree is a tree data structure,
-    comprised of a root node, and a child-array of subtrees. 
-  The nodes of a diagraphic tree have values which are strings.
-    Two nodes may have the same value and be different nodes. 
-    Two nodes with the same path and the same value are the same node. 
-    Different kinds of string represent different kinds of node. 
-      There are clause-nodes,
-        which end in commas or periods.
-      There are sentence-nodes,
-        which contain one terminal period,
-      There are composition-nodes,
-        which are comprised of several sentences.
-      There are fragment-nodes,
-        which do not end with a punctuation mark. 
-Diagraphic nodes
-  Diagraphic nodes are identified by category and path. 
-  Clause-nodes, Clauses
-    Clause-nodes are a type of node in a diagraphic tree.
-    Clause-nodes are the most modular and structured type of node. 
-    Clause-nodes are easy for machines to read, but more difficult for people to write. 
-  Sentence-nodes, Sentences
-    Sentence-nodes are a type of node in a diagraphic tree.
-    Sentence nodes are of intermediary structure. 
-    A sentence node can be refactored into a clause-node tree.
-  Composition-nodes, Compositions
-    Composition-nodes are a type of node in a diagraphic tree.
-    Compositions are easy for people to write but are not machine-readable. 
-  Fragment-nodes, Fragments, Notes
-    Fragment-nodes are a type of node in a diagraphic tree.
-    Fragments are used to represent trees in the absence of complete knowledge of structure. 
-    Fragments can represent the relative hierarchy of nodes without knowledge of actual adjacencies.
-      Subordinate fragment nodes represent progeny, not direct children.
-        It is expected that additional nodes may be inserted between fragment parents and their children. 
-    Fragemnts can be moved around very easily because they lack a rigid syntactic structure. 
-    Fragments are often noun-phrases. 
-    Fragments can serve the purpose of documenting areas of a diagraph that should be expanded upon at some future point. 
+  An explanation is a traversal of a diagraphic tree. 
+  A diagraphic tree is a tree of diagraphic nodes.
+  A diagraphic tree has a root node, and an array of subtrees.
+  If a node follows from multiple parents, it should be the root of its own tree.
+  Children of a diagraphic node are comments on their parent node. 
 
-Diagraphic references
-  A substring of a node that corresponds to a diagraphic key is a diagraphic reference. 
-Diagraphic aliases
-  A terminal clause-node that corresponds to a key is an alias.
-  An explanation that reaches a diagraphic alias may continue on to a root of the aliased category.
-  A node of a tree that is aliased to a key has its children substituted by the members of the aliased category.
+Diagraphic nodes
+  A diagraphic node represents a minimal and sufficient unit of explanation. 
+  A diagraphic node has a string value. 
+    Two nodes may have the same value and be different nodes. 
+    Two nodes with the same path and the same value are the same node.  
+  Diagraphic nodes are identified by category and path. 
+  Two sibling nodes with the same prefix can be refactored into children of a shared parent.
+  Different kinds of string correspond to different kinds of diagraphic node. 
+    Some diagraphic nodes have only a single comma-terminated clause.
+      These are clauses, or clause-nodes.
+      Clauses are easier for machines to read, but more difficult for people to write. 
+    Some diagraphic nodes have one or more sentences.
+      These are compositions, or composition-nodes.
+        Compositions are easy for people to write but are not machine-readable. 
+    Some diagraphic nodes have only a sentence-fragment with no terminal punctuation.
+      These are fragments, or notes. 
+      Fragment nodes represent potential progeny that are not direct children. 
+      One would use a fragment node to represent relative hierarchy when the exact adjacencies of the final tree are unknown. 
+      Fragemnts can be moved around easily because they lack a rigid syntactic structure. 
+      Fragments are often noun-phrases. 
+      Fragments can serve the purpose of documenting areas of a diagraph that should be expanded upon at some future point. 
+  Diagraphic nodes fall on a spectrum between long rigid compositions and tiny modular clauses.
+
 Diagraphic paths
-  A diagraphic path is a sequence of connected nodes starting at a root of a category.
+  A diagraphic path is a sequence of connected nodes starting at a category root.
+  A path can also mean the concatinated string formed by combining a sequence of connected nodes. 
   A diagraphic path does not include the category name. 
   A diagraphic path is the string formed beginning with a key and concatinating the text of each node, resolving aliases and removing commas and periods. 
   A diagraphic path is the address of a node. 
   A diagraphic path is the context of a node relative to its category. 
+  
+Diagraphic references
+  A diagraphic node with a value that corresponds to a diagraphic key is a reference to that key.
+Diagraphic aliases
+  A node that succeeds a colon-terminated node is an alias. 
+  An alias represents the path that proceedes the colon. 
+  An explanation that reaches a diagraphic alias may continue on to a root of the aliased category.
+  To resolve an alias is to replace the alias node with the members of the aliased category, and to remove preceeding colon. 
+  The elements of the category to which an alias corresponds are the children of that alias. 
+    Any children of the actual alias node represent comments on the alias node as such, in the context of the particular path. 
 
 
 Generic diagraph
@@ -104,8 +105,21 @@ Generic diagraph
   Every predicate of particular diagraph corresponds to a predicate of the generic diagraph. 
     This may be represented explicitly or implicitly. 
 Particlar diagraph
-  Diagraph concerning singular subjects which are instances of generic classes. 
+  Diagraph concerning singular subjects. 
+  The roots of particular categories instantiate with reference to a generic. 
+    All children of the particular must correspond to generically sanctioned predicates. 
 
+
+Ellaborated diagraph
+  Questions
+  Disambiguation
+
+
+Subsumption
+
+
+Ostensive diagraph
+  Resource addresses.
 
 
 Diagraph script
@@ -129,13 +143,24 @@ Individual diagraph production
 Group diagraph production
 Diagraph merges
   A merge of explicit diagraphs
-Discussion diagraphs
-  A merge of implicit diagraphs of a corpus
 Asynchronous diagraph production
   Diagraph can be produced by uncoordinated groups that are distributed in space or time. 
 Adversarial diagraph production
   Debate
   Incentive structure - Expressive sentences vs. competition for desireable paths. 
+
+
+
+
+Ideographs
+
+Discourse diagraph
+
+Library diagraphs
+
+Language diagraphs
+
+
 
 
 
@@ -211,3 +236,4 @@ Other
   Propsecting
     Provisional compositions can become fragments which can become sentences which can become either clause-trees or final compositions.
   Qualitative computing
+  Moderation as merger not mean

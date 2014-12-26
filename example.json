@@ -1,77 +1,47 @@
 {
-  category: [
+  category: {
     [
       'Fragment',
       'Fragment',
       'Fragment'
     ]
-  ],
+  },
 
-  category: [
-    'Sentence.',
-    [
-      'Sentence.'
+  category: {
+    [  
+      'Sentence.',
+      [
+        'Sentence.'
+      ]
     ]
-  ]
+  }
 
-  category: [
-    'Composition. Of. Many. Sentences.'
-  ]
-
-  category: [
-    'Clause',
+  category: {
     [
-      'conjunction',
+      'Composition. Of. Many. Sentences.'
+    ]
+  }
+
+  category: {
+    [
+      'Clause',
+      [
+        'conjunction',
+        [
+          'clause',
+          []
+        ]
+      ]
+    ]
+  },
+
+  category: {
+    [  
+      'Clause',
       [
         'clause',
         []
       ]
     ]
-  ],
-
-  category: [
-    'Clause',
-    [
-      'clause',
-      []
-    ]
-  ],
-
-
-
-  category: []
-  'Alias':[
-    'category'
-  ]
-
-  category: [
-    'Alias,',
-    []
-  ]
-
-  category: [
-    'Sentence,',
-    [
-      'alias,',
-      []
-    ]
-  ]
-
-  category: [
-    'Clause,'
-    [
-      'conjunction,', 
-      [  
-        'alias,',
-        []
-      ]
-  ],
-
-  category: [
-    'Clause,'
-    [
-      'alias?',
-      []
-    ]
-  ]
+  },
 }
