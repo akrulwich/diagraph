@@ -169,11 +169,11 @@ Diagraph script
   Top-level indentations under a key represent the roots of a diagraphic category. 
   Diagraph script is comprised of blocks and units.
     A block of diagraph script is one atomic write operation of several category-tree pairings.
-      By convention, blocks are seperated by a blank line.
+      By convention, blocks are seperated by one blank line.
       A block of diagraph script is like a prose paragraph.
     A unit of diagraph script is a set of thematically related blocks. 
       By convention, units are seperated by two blank lines.
-      A unit of diagraph script is like a single prose explanation of multiple paragraphs.  
+      A unit of diagraph script is like a prose explanation of multiple paragraphs.
 
 
 
