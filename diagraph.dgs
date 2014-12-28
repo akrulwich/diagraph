@@ -24,8 +24,7 @@ Diagraph
       such as teachers, books, search engines, or libraries.
 
 Explanation 
-  An explanation is a diagraphic sentence. 
-  A diagraphic sentence is a traversal of a diagraphic tree.
+  An explanation is a traversal of a diagraphic tree.
 
                                 An explanation is an alternating sequence of questions and answers. 
                                   A valid explanation may omit some questions or some answers, which are represented implicitly.
@@ -43,50 +42,45 @@ Explanation
 
 Definition of diagraph
     A diagraph is a key-value store, 
-        the keys of which are diagraphic paths, 
-        the values of which are diagraphic trees.
+        in which the keys are diagraphic paths, 
+        in which the values are diagraphic trees.
 
                                   A diagraphic key-collection pair is a diagraphic category.
                                     A diagraphic key is a category-name. 
                                     A diagraphic tree is an element of the category specified by the key.
 
-Diagraphic keys
-    A key is a diagraphic path.
-      
+                                A diagraphic key is an ordinary-language specification of an explanation-set,
+                                  like a question or topic.
+                                A diagraphic key is a diagraphic category-name. 
+                                  The collection associated with the key contains elements of that category.
+                                A diagraphic key is something that can be explained,
+                                  and its associated value is the explanation,
+                                    or a set of acceptable explanations.
+                                Diagraphic category-names are precise if they specify a diagraphic path.
+                                  A diagraphic subject that merely specifies a topic area would be imprecise. 
+                                  Categories with precise names can be used as aliases. 
 
-
-                      A diagraphic key is an ordinary-language specification of an explanation-set,
-                        like a question or topic.
-                      A diagraphic key is a diagraphic category-name. 
-                        The collection associated with the key contains elements of that category.
-                      A diagraphic key is something that can be explained,
-                        and its associated value is the explanation,
-                          or a set of acceptable explanations.
-                      Diagraphic category-names are precise if they specify a diagraphic path.
-                        A diagraphic subject that merely specifies a topic area would be imprecise. 
-                        Categories with precise names can be used as aliases. 
-
-                      Diagraphic categories
-                        A diagraphic category is a named collection of diagraphic trees.
-                        A diagraphic key is the name of a diagraphic category, 
-                          the associated tree collection of which constitutes the category members.
-                        A diagraphic path is the name of a diagraphic category, 
-                          the associated subtree collection of which constitutes the category members.
-                        Not all diagraphic categories are represented explicitly as diagraphic key-value pairs.
-                          Some are represented implicitly by path-subtree pairs. 
-                            Implicit categories can be refactored as explicit categories using aliases. 
-                        A diagraphic tree is an element of a diagraphic category.
-                        The roots of a diagraphic category are the roots of its diagraphic tree elements. 
+                                Diagraphic categories
+                                  A diagraphic category is a named collection of diagraphic trees.
+                                  A diagraphic key is the name of a diagraphic category, 
+                                    the associated tree collection of which constitutes the category members.
+                                  A diagraphic path is the name of a diagraphic category, 
+                                    the associated subtree collection of which constitutes the category members.
+                                  Not all diagraphic categories are represented explicitly as diagraphic key-value pairs.
+                                    Some are represented implicitly by path-subtree pairs. 
+                                      Implicit categories can be refactored as explicit categories using aliases. 
+                                  A diagraphic tree is an element of a diagraphic category.
+                                  The roots of a diagraphic category are the roots of its diagraphic tree elements. 
 
 Diagraphic tree
-    A diagraphic tree is a set of nodes forming alternating clauses and conjunctions. 
+    A diagraphic tree is a trie that represents a set of sentences which share a subject. 
 
-                        A diagraphic tree represents a set of explanations.
-                        An explanation is a traversal of a diagraphic tree. 
-                        A diagraphic tree is a tree of diagraphic nodes.
-                        A diagraphic tree has a root node, and an array of subtrees.
-                        If a node follows from multiple parents, it should be the root of its own tree.
-                        Children of a diagraphic node are comments on their parent node. 
+                              A diagraphic tree represents a set of explanations.
+                              An explanation is a traversal of a diagraphic tree. 
+                              A diagraphic tree is a tree of diagraphic nodes.
+                              A diagraphic tree has a root node, and an array of subtrees.
+                              If a node follows from multiple parents, it should be the root of its own tree.
+                              Children of a diagraphic node are comments on their parent node. 
 
 Diagraphic nodes
   A diagraphic node is a string of natural langauge text.
@@ -106,6 +100,8 @@ Diagraphic aliases
 Diagraphic predication
   A predication is a correspondance between a particular predicate and a predicate of the generic type. 
 
+
+
 Generic diagraph
   Generic diagraph belongs to generic subjects.
   Every predicate of particular diagraph corresponds to a predicate of the generic diagraph. 
@@ -115,6 +111,8 @@ Particlar diagraph
   Diagraph concerning singular subjects. 
   The roots of particular categories instantiate with reference to a generic. 
     All children of the particular must correspond to generically sanctioned predicates. 
+
+
 
 
 Ellaborated diagraph
