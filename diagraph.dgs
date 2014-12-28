@@ -276,7 +276,7 @@ Diagraphic functions
   Nonterminating functions
 
 Diagraph-read
-  
+
 Diagraph-interpret
   Takes a poorly formed path and returns a precise one. 
 Diagraph-contextualize
@@ -305,7 +305,7 @@ Other
     A diagraph is not a document.
     A diagraph is not a hypertext.
     Diagraph does not represent embodied discussions.
-    Diagraphic responses are of ideas and to ideas, rather than of people or writings to other people or writings. 
+      Diagraphic responses are of ideas and to ideas, rather than of people or writings to other people or writings. 
   Propsecting
     Provisional compositions can become fragments which can become sentences which can become either clause-trees or final compositions.
   Qualitative computing
