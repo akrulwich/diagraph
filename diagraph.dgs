@@ -275,6 +275,8 @@ Diagraphic functions
   Terminating functions
   Nonterminating functions
 
+Diagraph-read
+  
 Diagraph-interpret
   Takes a poorly formed path and returns a precise one. 
 Diagraph-contextualize
