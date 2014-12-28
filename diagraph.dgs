@@ -24,7 +24,7 @@ Diagraph
       such as teachers, books, search engines, or libraries.
 
 Explanation 
-  An explanation is a traversal of a diagraphic tree.
+  An explanation is a traversal of a series of connected sentence-trees.
 
                                 An explanation is an alternating sequence of questions and answers. 
                                   A valid explanation may omit some questions or some answers, which are represented implicitly.
@@ -43,7 +43,7 @@ Explanation
 Definition of diagraph
     A diagraph is a key-value store, 
         in which the keys are diagraphic paths, 
-        in which the values are diagraphic trees.
+        in which the values are diagraphic sentence-trees.
 
                                   A diagraphic key-collection pair is a diagraphic category.
                                     A diagraphic key is a category-name. 
@@ -72,8 +72,9 @@ Definition of diagraph
                                   A diagraphic tree is an element of a diagraphic category.
                                   The roots of a diagraphic category are the roots of its diagraphic tree elements. 
 
-Diagraphic tree
-    A diagraphic tree is a trie that represents a set of sentences which share a subject. 
+Diagraphic sentence-tree
+    A diagraphic tree is a trie that represents a set of sentences sharing subject. 
+
 
                               A diagraphic tree represents a set of explanations.
                               An explanation is a traversal of a diagraphic tree. 
@@ -82,8 +83,8 @@ Diagraphic tree
                               If a node follows from multiple parents, it should be the root of its own tree.
                               Children of a diagraphic node are comments on their parent node. 
 
-Diagraphic nodes
-  A diagraphic node is a string of natural langauge text.
+Diagraphic components
+  A diagraphic node is a meaningul unit of natural langauge text.
 
 Diagraphic clauses
   A diagraphic clause is a series of connected nodes ending in a comma. 
