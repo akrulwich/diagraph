@@ -25,13 +25,9 @@ Diagraph
 
 Definition of diagraph
   A diagraph is a key-value store, 
-      in which the keys are diagraphic paths.
-      in which the values are diagraphic trees.
-  The key represents a prefix to the nodes of the associated tree.
-
-Diagraphic tree
-  A diagraphic tree is a trie that represents a set of sentences sharing subject. 
-  A diagraphic tree has components followed by a comma forming a clause, then conjunctions, then additional clauses, ending with a period, composition, or alias.
+      the keys of which are diagraphic paths.
+      the values of which are diagraphic trees.
+  The key represents a path prefix to the nodes of the associated tree.
 
 Diagraphic nodes
   Diagraphic nodes have a node text. 
@@ -42,11 +38,16 @@ Diagraphic component node
   A diagraphic component is a kind of node. 
   A diagraphic component is a word or phrase. 
 
+Diagraphic clauses
+  A clause is a hierarchial series of components ending in a comma. 
+
 Diagraphic composition node
   A multi-sentence text that is one meaningful unit.
 
-Diagraphic keys
-  A diagraphic key is the initial path of all connected components. 
+Diagraphic tree
+  A diagraphic tree is a trie of diagraphic nodes that represents a set of sentences which share a subject. 
+  A diagraphic tree has is comprised of diagraphic nodes. 
+  A diagraphic tree can have a subject component node, followed by a predicate component node, followed by conjunction component nodes, ending in period-terminated component node, a composition node, or an alias. 
 
 Diagraphic paths
   A path is a series of subject-predicate-conjunction combinations.
@@ -56,9 +57,6 @@ Diagraphic references
 
 Diagraphic aliases
   An alias is a correspondance between a path and a key.
-
-Diagraphic clauses
-  A clause is a hierarchial series of components ending in a comma. 
 
 Explanations
   An explanation is a traversal of alternating clauses and conjunctions.
