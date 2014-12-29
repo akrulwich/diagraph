@@ -30,23 +30,25 @@ Definition of diagraph
   The key represents a path prefix to the nodes of the associated tree.
 
 Diagraphic nodes
-  Diagraphic nodes have a node text. 
-  Diagraphic nodes represent a unit of explanation.
-  Children of a node represent germane comments on that node.
+  Diagraphic nodes are a string of natural language text. 
+  Diagraphic nodes represent a meaningful unit of explanation.
+  Children of diagraphic nodes represent things that could follow it in an explanation.
 
-Diagraphic component node
-  A diagraphic component is a kind of node. 
-  A diagraphic component is a word or phrase. 
+Diagraphic component
+  A diagraphic component is a minimal syntactic component, like a word or phrase.
+  A component that has its own diagraphic node is a component node. 
 
 Diagraphic clauses
-  A clause is a hierarchial series of components ending in a comma. 
+  A clause is a series of components ending in a comma.
+  A clause that has its own diagraphic node is a clause node.
 
-Diagraphic composition node
-  A multi-sentence text that is one meaningful unit.
+Diagraphic composition
+  A multi-sentence text that is one meaningful unit and cannot be subdivided.
+  A composition that has its own diagraphic node is a composition node. 
 
 Diagraphic tree
   A diagraphic tree is a trie of diagraphic nodes that represents a set of sentences which share a subject. 
-  A diagraphic tree has is comprised of diagraphic nodes. 
+  A diagraphic tree is a tree of diagraphic nodes. 
   In a diagraphic tree, child nodes represent things that could follow the parent nodes in an explanation,
     by specifying it or interpreting it. 
   A diagraphic tree can have a subject component node, followed by a predicate component node, followed by conjunction component nodes, ending in period-terminated component node, a composition node, or an alias. 
