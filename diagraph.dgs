@@ -39,7 +39,7 @@ Diagraphic component
   A component that has its own diagraphic node is a component node. 
 
 Diagraphic clauses
-  A clause is a series of components ending in a comma.
+  A clause is a subject and series of predicates ending in a comma.
   A clause that has its own diagraphic node is a clause node.
 
 Diagraphic composition
@@ -49,12 +49,13 @@ Diagraphic composition
 Diagraphic tree
   A diagraphic tree is a trie of diagraphic nodes that represents a set of sentences which share a subject. 
   A diagraphic tree is a tree of diagraphic nodes. 
-  In a diagraphic tree, child nodes represent things that could follow the parent nodes in an explanation,
-    by specifying it or interpreting it. 
+  In a diagraphic tree, child nodes represent things that could follow the parent nodes in an explanation.
+  In a diagraphic tree, children specify or interpret their parents. 
   A diagraphic tree can have a subject component node, followed by a predicate component node, followed by conjunction component nodes, ending in period-terminated component node, a composition node, or an alias. 
 
 Diagraphic paths
-  A path is a series of subject-predicate-conjunction combinations.
+  A path is a series of clauses and conjunctions.
+  A diagraphic URL path would replace commas with forward-slashes.
 
 Diagraphic references
   A diagraphic reference is a correspondance between a node and a key. 
