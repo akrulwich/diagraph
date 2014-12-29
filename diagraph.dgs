@@ -64,8 +64,6 @@ Explanations
   An explanation is a traversal of alternating clauses and conjunctions.
   Explanations may span connected diagraphic trees over aliases.  
 
-
-
 Particlar diagraph
   Diagraph concerning singular subjects. 
   The roots of particular categories instantiate with reference to a generic. 
@@ -78,64 +76,11 @@ Diagraphic predication
   A predication is a correspondance between a particular predicate and a predicate of the generic type. 
   Predication as state in a generic DFA.
 
-
-
--Old Definition of diagraph
-  A diagraphic key-collection pair is a diagraphic category.
-      A diagraphic key is a category-name. 
-      A diagraphic tree is an element of the category specified by the key.
-  A diagraphic key is an ordinary-language specification of an explanation-set,
-    like a question or topic.
-  A diagraphic key is a diagraphic category-name. 
-    The collection associated with the key contains elements of that category.
-  A diagraphic key is something that can be explained,
-    and its associated value is the explanation,
-      or a set of acceptable explanations.
-  Diagraphic category-names are precise if they specify a diagraphic path.
-    A diagraphic subject that merely specifies a topic area would be imprecise. 
-    Categories with precise names can be used as aliases. 
-  Diagraphic categories
-    A diagraphic category is a named collection of diagraphic trees.
-    A diagraphic key is the name of a diagraphic category, 
-      the associated tree collection of which constitutes the category members.
-    A diagraphic path is the name of a diagraphic category, 
-      the associated subtree collection of which constitutes the category members.
-    Not all diagraphic categories are represented explicitly as diagraphic key-value pairs.
-      Some are represented implicitly by path-subtree pairs. 
-        Implicit categories can be refactored as explicit categories using aliases. 
-    A diagraphic tree is an element of a diagraphic category.
-    The roots of a diagraphic category are the roots of its diagraphic tree elements. 
--Old Diagraphic tree
-           A diagraphic tree represents a set of explanations.
-                              An explanation is a traversal of a diagraphic tree. 
-                              A diagraphic tree is a tree of diagraphic nodes.
-                              A diagraphic tree has a root node, and an array of subtrees.
-                              If a node follows from multiple parents, it should be the root of its own tree.
-                              Children of a diagraphic node are comments on their parent node. 
--Old explanation
-  An explanation is an alternating sequence of questions and answers. 
-    A valid explanation may omit some questions or some answers, which are represented implicitly.
-    A large answer can be broken down into smaller answers.
-    A series of alternating questions and answers can be combined into one answer.
-  An explanation can be modeled by a tree, 
-    where nodes represent utterances.
-    the roots of which are conversation-starters.
-    in which child-nodes represent germane responses to parent nodes. 
-    The tree is the explanation.
-      A particular sequential traversal of the tree is an articulation of the explanation.
-      To refer to an articulation as an explanation is to refer to the tree implicitly represented by the traversal.
-        Two articulations of the same tree constitute the same explanation,
-          even if they are of different sequence or depth. 
-
-
-
 Subsumption
   One diagraphic tree subsumes another if it contains a node that can be parent to the other's root.
 
-
 Ostensive diagraph
   A diagraphic node may ostend to a resource referenced by address.
-
 
 Diagraph script
   Diagraph script is a text format that represents a diagraph. 
@@ -152,8 +97,6 @@ Diagraph script
       Sections can be seperated by two or three blank lines for clarity. 
       Sections would not usually begin indented. 
       A section of diagraph script might correspond to a prose article or chapter.
-
-
 
 Diagraph production
 Individual diagraph production
