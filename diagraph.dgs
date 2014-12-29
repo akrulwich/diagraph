@@ -101,9 +101,9 @@ Diagraph script
 Machine readable
   Every word or phrase is its own node. 
 Machine parsable
-  There are commas, periods, indentations, and newlines.
+  Clauses have their own nodes terminated by commas, with indentations and newlines. 
 Machine presentable
-  There are indentations and newlines. 
+  There are only indentations and newlines. 
 
 Diagraph production
 Individual diagraph production
