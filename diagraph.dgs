@@ -55,6 +55,7 @@ Diagraphic tree
 
 Diagraphic paths
   A path is a series of clauses and conjunctions.
+  A path can be a sole topic or subject.
   A diagraphic URL path would replace commas with forward-slashes.
 
 Diagraphic references
@@ -153,6 +154,7 @@ Diagraph in Academic Publishing
 
 Diabots
   A diabot is any diagraphic agent. 
+  A diabot is an agent that represents its knowledge as a diagraph. 
   A diabot knows N if it has the node N. 
   A diabot understands P if it has the path P. 
 
