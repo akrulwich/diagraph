@@ -23,26 +23,33 @@ Diagraph
     A diagraph can model any system that responds to requests for explanation, 
       such as teachers, books, search engines, or libraries.
 
-
-
 Definition of diagraph
   A diagraph is a key-value store, 
-      in which the keys are diagraphic paths, 
+      in which the keys are diagraphic paths.
       in which the values are diagraphic trees.
+  The key represents a prefix to the nodes of the associated tree.
 
 Diagraphic tree
   A diagraphic tree is a trie that represents a set of sentences sharing subject. 
+  A diagraphic tree has components followed by a comma forming a clause, then conjunctions, then additional clauses, ending with a period, composition, or alias.
 
 Diagraphic nodes
   Diagraphic nodes have a node text. 
   Diagraphic nodes represent a unit of explanation.
   Children of a node represent germane comments on that node.
 
-Diagraphic components
-  A diagraphic component is a word or phrase, 
+Diagraphic component node
+  A diagraphic component is a kind of node. 
+  A diagraphic component is a word or phrase. 
+
+Diagraphic composition node
+  A multi-sentence text that is one meaningful unit.
+
+Diagraphic keys
+  A diagraphic key is the initial path of all connected components. 
 
 Diagraphic paths
-  A path is a topic, or a subject, or a series of subject-predicate-conjunction combinations.
+  A path is a series of subject-predicate-conjunction combinations.
 
 Diagraphic references
   A diagraphic reference is a correspondance between a node and a key. 
@@ -53,10 +60,9 @@ Diagraphic aliases
 Diagraphic clauses
   A clause is a hierarchial series of components ending in a comma. 
 
-Explanation 
+Explanations
   An explanation is a traversal of alternating clauses and conjunctions.
   Explanations may span connected diagraphic trees over aliases.  
-
 
 
 
@@ -71,7 +77,6 @@ Generic diagraph
 Diagraphic predication
   A predication is a correspondance between a particular predicate and a predicate of the generic type. 
   Predication as state in a generic DFA.
-
 
 
 
@@ -122,12 +127,6 @@ Diagraphic predication
         Two articulations of the same tree constitute the same explanation,
           even if they are of different sequence or depth. 
 
-
-
-Ellaborated diagraph
-  A diagraph that is ellaborated contains every node explicitly. 
-  One can ellaborate a diagraph by inserting implied nodes between stated ones. 
-  Ellaborated diagraph is useful for diagraphic servers.
 
 
 Subsumption
@@ -284,3 +283,4 @@ Other
     Market fragmentation between producers and consumers. 
   Diagraph as epistemic algorithm
   Diabots and personal reading
+  Exhaustive diagraphs, which invite and address every articulation of an idea possible in the language
