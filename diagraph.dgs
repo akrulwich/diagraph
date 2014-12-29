@@ -47,6 +47,7 @@ Diagraphic composition node
 Diagraphic tree
   A diagraphic tree is a trie of diagraphic nodes that represents a set of sentences which share a subject. 
   A diagraphic tree has is comprised of diagraphic nodes. 
+  In a diagraphic tree, child nodes represent things that could follow the parent nodes in an explanation.
   A diagraphic tree can have a subject component node, followed by a predicate component node, followed by conjunction component nodes, ending in period-terminated component node, a composition node, or an alias. 
 
 Diagraphic paths
