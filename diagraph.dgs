@@ -99,7 +99,7 @@ Diagraph script
       A section of diagraph script might correspond to a prose article or chapter.
 
 Machine readable
-  Every word or phrase is its own node. 
+  Every syntactic component has its own node. 
 Machine parsable
   Clauses have their own nodes terminated by commas, with indentations and newlines. 
 Machine presentable
