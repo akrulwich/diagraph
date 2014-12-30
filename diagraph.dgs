@@ -29,29 +29,29 @@ Definition of diagraph
       the values of which are diagraphic trees.
   The key represents a path prefix to the nodes of the associated tree.
 
-Diagraphic nodes
-  Diagraphic nodes are a string of natural language text. 
-  Diagraphic nodes represent a meaningful unit of explanation.
-  Children of diagraphic nodes represent things that could follow it in an explanation.
-
-Diagraphic component
-  A diagraphic component is a minimal syntactic component, like a word or phrase.
-  A component that has its own diagraphic node is a component node. 
-
-Diagraphic clauses
-  A clause is a subject and series of predicates ending in a comma.
-  A clause that has its own diagraphic node is a clause node.
-
-Diagraphic composition
-  A multi-sentence text that is one meaningful unit and cannot be subdivided.
-  A composition that has its own diagraphic node is a composition node. 
-
 Diagraphic tree
   A diagraphic tree is a trie of diagraphic nodes that represents a set of sentences which share a subject. 
   A diagraphic tree is a tree of diagraphic nodes. 
   In a diagraphic tree, child nodes represent things that could follow the parent nodes in an explanation.
   In a diagraphic tree, children specify or interpret their parents. 
   A diagraphic tree can have a subject component node, followed by a predicate component node, followed by conjunction component nodes, ending in period-terminated component node, a composition node, or an alias. 
+
+Diagraphic nodes
+  Diagraphic nodes are a string of natural language text. 
+  Diagraphic nodes represent a meaningful unit of explanation.
+  Children of diagraphic nodes represent things that could follow it in an explanation.
+
+Diagraphic component nodes
+  A diagraphic component is a minimal syntactic component, like a word or phrase.
+  A component node tree is machine-readable, and can be used by diagraphic functions like dg-assess.
+
+Diagraphic clause nodes
+  A clause is a subject and series of predicates ending in a comma.
+  A clause node tree is machine-parsable, and can be used by diagraphic functions like dg-review.
+
+Diagraphic composition nodes
+  A text of one or more sentences that cannot be meaningfully subdivided.
+  A composition node tree can only be displayed.
 
 Diagraphic paths
   A path is a series of clauses and conjunctions.
@@ -76,7 +76,7 @@ Particlar diagraph
 Generic diagraph
   Generic diagraph is a generic subject and all possible predicates. 
 
-Diagraphic predication
+Predication in diagraph
   A predication is a correspondance between a particular predicate and a predicate of the generic type. 
   Predication as state in a generic DFA.
 
@@ -101,13 +101,6 @@ Diagraph script
       Sections can be seperated by two or three blank lines for clarity. 
       Sections would not usually begin indented. 
       A section of diagraph script might correspond to a prose article or chapter.
-
-Machine readable
-  Every syntactic component has its own node. 
-Machine parsable
-  Clauses have their own nodes terminated by commas, with indentations and newlines. 
-Machine presentable
-  There are only indentations and newlines. 
 
 Diagraph production
 Individual diagraph production
@@ -203,6 +196,7 @@ Diagraph-read
 
 Diagraph-interpret
   Takes a poorly formed path and returns a precise one. 
+  Autocomplete is interactive dg-interpret.
 Diagraph-contextualize
   Takes a category-node pair and returns a diagraphic path.
 Diagraph-explain 
