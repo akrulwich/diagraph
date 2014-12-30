@@ -55,7 +55,7 @@ Diagraphic composition nodes
   A composition node tree can only be displayed.
 
 Diagraphic paths
-  A path is a series of clauses and conjunctions.
+  A path is a series of clauses beginning from a diagraphic key.
   A path can be a sole topic or subject.
   A diagraphic URL path would replace commas with forward-slashes.
 
