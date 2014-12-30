@@ -30,24 +30,27 @@ Definition of diagraph
   The key represents a path prefix to the nodes of the associated tree.
 
 Diagraphic tree
-  A diagraphic tree has a syntactic structure, represented implicitly, and a pragmatic structure, represented explicitly. 
-    The syntactic structure is the relation between syntactic elements like subjects, predicates, conjunctions and clauses.
-    The pragmatic structure is the grouping of syntactic elements into particular nodes.
-  A diagraphic tree is a tree of diagraphic nodes, which contain one or more syntactic elements. 
+  A diagraphic tree is a tree of diagraphic nodes, which have a string containing one or more space-delimited syntactic elements. 
+  A diagraphic tree is at once a graph tree of nodes and a syntax tree of natural language strings. 
+  The syntactic structure of a diagraphic tree is represented implicitly the relation between the syntactic elements.
+  The pragmatic structure of a diagraphic tree is the grouping of particular syntactic elements together into particular nodes.
   A diagraphic tree is a kind of trie that represents a set of sentences which share a subject. 
   In a diagraphic tree, child nodes represent things that could follow the parent nodes in an explanation.
-    Children specify or interpret their parents. 
+    Child nodes might for example specify or interpret their parent nodes. 
   Any diagraphic tree could be rendered into one very long sentence. 
-    Where a particular node breaks represents where you might ordinary find a sentence break.
+    The breaks between particular nodes mirrors the breaks between particular sentences in explanation.
   A diagraphic tree might have a subject element-node, followed by a predicate element-node, followed by conjunction element-nodes, ending in period-terminated element node, a composition node, or an alias.
-  A tree does not include aliased subtrees, only nodes primarily stored at that key.
+  A tree does not include aliased subtrees, only nodes primarily stored under the tree's key.
+  The tree is the explicit structure stored in memory, not the implicit continous structure formed with aliases. 
 
 Diagraphic nodes
-  Diagraphic nodes are a string of natural language text. 
+  Diagraphic nodes are strings of natural language text. 
   Diagraphic nodes contain one or more syntactic elements. 
-  Diagraphic nodes correspond to pragmatic sentences. 
-  Diagraphic nodes represent a meaningful unit of explanation.
+  Diagraphic nodes represent the meaningful units of an explanation. 
+    No explanation should ever include only part of a node's text, or there should be two nodes.
+  Where a diagraphic node breaks corresponds to pragmatic sentences in conversation. 
   Children of diagraphic nodes represent things that could follow it in an explanation.
+  Requests made to a path will return the entire node at that path.  
 
 Diagraphic element nodes
   A diagraphic element is a minimal syntactic element, like a word or phrase.
@@ -62,15 +65,18 @@ Diagraphic composition nodes
   A composition node tree can only be displayed.
 
 Diagraphic paths
-  A path is a series of clauses beginning from a diagraphic key.
+  A path is a series of syntactic elements divided into clauses.
+  The division of syntactic elements between nodes does not affect path formation.
   A path can be a sole topic or subject.
   A diagraphic URL path would replace commas with forward-slashes.
 
 Diagraphic references
   A diagraphic reference is a correspondance between a node and a key. 
+  The explanation of diagraphic references produces derivation. 
 
 Diagraphic aliases
   An alias is a correspondance between a path and a key.
+  One might refactor a large tree into several smaller trees using aliases. 
 
 Diagraphic address
   Diagraphic nodes have one primary and many secondary addresses.
@@ -82,7 +88,7 @@ Explanations
   Explanations may span connected diagraphic trees over aliases.  
 
 Derivation
-  A derivation is an explanation of a element of a clause being explained. 
+  A derivation is a discontinous embedded subexplanation of an element of a clause being explained. 
 
 Particlar diagraph
   Diagraph concerning singular subjects. 
@@ -103,7 +109,9 @@ Diagraph script
     Other data structures merely implement the constructs of diagraph script.
   Lines of a diagraph script file represent nodes of a diagraph.
   Indendation in a diagraph script file represents the hierarchy of a diagraph. 
-  Unindented lines of diagraph script represent diagraphic keys. 
+  Unindented lines of diagraph script represent diagraphic paths.
+    The paths may not correspond exactly to the path-keys of the diagraph.
+      A diagraph might be more modularly refactored, and the diagraph script intended for a wider audience. 
   Top-level indentations under a key represent the roots of a diagraphic category. 
   Diagraph script is comprised of blocks and units.
     A block of diagraph script is one atomic write operation.
@@ -125,18 +133,20 @@ Asynchronous diagraph production
 Diagraph merges
   Two diagraphs are merged into one that contains the paths of both diagraphs, refactoring nodes that share prefixes. 
 Adversarial diagraph production
-  Or a debate diagraph. 
+  Or diagraphic debate. 
   Diagraph production in which individuals produce a discussion diagraph.
   By creating a node that contains a prefix of an existing node, parties can force an opponent's node to be refactored, reducing the effect. 
   Each party wishes to include long expressive sentences, but also to occupy desirable paths. 
 
 
+
 Discussion diagraph
   A diagraph produced synchronously by a group. 
   One can only add to a discussion diagraph. 
-  The end result represents a diagraphic merge of the individual viewpoints. 
+  Responses to particular articulations are preserved. 
 Discourse diagraph
   A discourse diagraph is the hypothetical diagraph implicit in a corpus. 
+  Responses to particular articulations are culled to produce an abstracted diagraph. 
 Library diagraph
   A library diagraph is a diagraph that subsumes various other diagraphs. 
 Ideographs
@@ -146,14 +156,13 @@ Language diagraphs
 
 
 
-
 Describing diagraphs
   Diagraphs can have depth, if many nodes are the roots of lower trees.
   Diagraphs can have context, if many trees are nodes in higher trees.
   A diagraph can subsume another. 
     One diagraphic tree subsumes another if it contains a node that can be parent to the other's root.
   A diagraph can reduce one diagraph to another.
-
+  A diagraph can be coherant if all paths belong to a single refactored tree.
 
 
 
@@ -166,7 +175,6 @@ Diagraph in Academic Publishing
 
 
 
-
 Diabots
   A diabot is any diagraphic agent. 
   A diabot is an agent that represents its knowledge as a diagraph. 
@@ -174,58 +182,70 @@ Diabots
   A diabot understands P if it has the path P. 
 
 Diagraphic servers
-  Diagraphic request
-    A diagraphic request specifies a category, function, and an optional path or input diagraph.  
-  Diagraphic responses
-    Diagraphic responses are rendered in diagraph-script.
+
+Diagraphic requests
+  Requests include a path, function, and optional input diagraph.
+  The path serves as prefix for lines of the input diagraph.
+Diagraphic responses
+  Responses are rendered text.
+
 Diagraphic interfaces
-  Document interface
+  Document mode
     Server-side generation
     Server-side assembly
-  Correspondance interface
+  Correspondance mode
     Server-side generation
     Client-side assembly
-  Interactive interface
+  Interactive mode
     Client-side generation
     Client-side assembly
 
 Diagraphic function environments
   Isomorphic
-  Input
-  Output
-  WM
-    Push
-    Enqueue
-    Promote
-    (Output stream)
-    (Caching)
+  Provide input stream as service
+  Provide output stream as service
+  Provides a WM service
+    Push method
+    Enqueue method
+    Promote method
+    By default caches to STM.
+    By default checks STM for value on top of stack and fills in context if there's a match.
   STM
-    STM is a cache that associates every node added to WM with its category. 
+    STM is a cache that associates every value added to WM with its path. 
   LTM
   Configuration
     Satisfaction condition
 
 Diagraphic function controllers
+  Diagraphic function controllers are responsible for putting input in WM,
+    checking the function's satisfaction condition, 
+      and piping the instantantaneous values of WM to output.
 
 Diagraphic functions
   Diagraphic functions take a stack of diagraph-script values.
   They return text, formed from the sequential states of that stack.
 
+
+Particular diagraphic functions
   Terminating functions
     eg, Explain
   Nonterminating functions
     eg, consider
-
 Diagraph-read
-  Takes a diagraph script path and fills in the tree
+  Takes a path and returns the corresponding values. 
+Diagraph-add
+  Takes a diagraph script file and adds it to a diagraph. 
+    This involves lining up the paths of the file to the keys of the diagraph. 
+    When a specified path goes partially into an existing node, the node is refactored.     
 Diagraph-interpret
-  Takes a poorly formed path and returns a precise one. 
+  Takes a public language path and returns a first match in the particular diagraph.  
   Autocomplete is interactive dg-interpret.
 Diagraph-contextualize
   Takes a category-node pair and returns a diagraphic path.
 Diagraph-explain 
   Takes a path specification in WM. 
   Diagraph-explain traverses the clauses of a tree. For each clause, if there is a element that is not in STM, it pushes it on the stack, otherwise, it states the clause and advances. 
+  Dg-explain states the clauses and derives the references.
 Diagraph-assess
   Shows the user a diagraphic key, has them produce an explanation in diagraph script, and preforms a comparison to the reference value. 
   Diagraph-assess is a companion function to diagraph-explain.
@@ -235,7 +255,6 @@ Diagraph-review
 Diagraph-quiz
   Diagraph-quiz shows the user a node and has them produce a path. 
   Diagraph-quiz is a companion function to diagraph-review.
-
 Diagraph-consider
   A hypothetical diagraphic function that preforms a breadth-first search on the generic inferences from a particular node, looking for collisions with existing LTM entries. 
 Diagraph-reflect
@@ -248,6 +267,7 @@ Other
     A diagraph is not a hypertext.
     Diagraph does not represent embodied discussions.
       Diagraphic responses are of ideas and to ideas, rather than of people or writings to other people or writings. 
+      Diagraphs can be formed by culling discussions.
   Propsecting
     Provisional compositions can become fragments which can become sentences which can become either clause-trees or final compositions.
   Qualitative computing
