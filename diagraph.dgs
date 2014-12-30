@@ -34,7 +34,8 @@ Diagraphic tree
   A diagraphic tree is a tree of diagraphic nodes. 
   In a diagraphic tree, child nodes represent things that could follow the parent nodes in an explanation.
   In a diagraphic tree, children specify or interpret their parents. 
-  A diagraphic tree can have a subject component node, followed by a predicate component node, followed by conjunction component nodes, ending in period-terminated component node, a composition node, or an alias. 
+  A diagraphic tree can have a subject component node, followed by a predicate component node, followed by conjunction component nodes, ending in period-terminated component node, a composition node, or an alias.
+  A tree does not include aliased subtrees, only nodes primarily stored at that key.
 
 Diagraphic nodes
   Diagraphic nodes are a string of natural language text. 
@@ -64,9 +65,17 @@ Diagraphic references
 Diagraphic aliases
   An alias is a correspondance between a path and a key.
 
+Diagraphic address
+  Diagraphic nodes have one primary and many secondary addresses.
+  A primary address is the path from the key where a node is stored.
+  A secondary address is a path from some other key that advances through aliases.
+
 Explanations
   An explanation is a traversal of alternating clauses and conjunctions.
   Explanations may span connected diagraphic trees over aliases.  
+
+Derivation
+  A derivation is an explanation of a component of a clause being explained. 
 
 Particlar diagraph
   Diagraph concerning singular subjects. 
@@ -102,6 +111,7 @@ Diagraph script
       Sections would not usually begin indented. 
       A section of diagraph script might correspond to a prose article or chapter.
 
+
 Diagraph production
 Individual diagraph production
 Group diagraph production
@@ -132,8 +142,6 @@ Ideographs
 Language diagraphs
   A langauge diagraph captures the generic information known to native speakers of a language.
 
-
-
 Applications of diagraph
 Diagraph in Education
 Diagraph in Journalism
@@ -142,7 +150,6 @@ Diagraph in Library Science
   How should we organize explanatory information?
     One way is to use a diagraph.
 Diagraph in Academic Publishing
-
 
 
 Diabots
@@ -186,22 +193,24 @@ Diagraphic function environments
 Diagraphic function controllers
 
 Diagraphic functions
-  Diagraphic functions take diagraph script. 
+  Diagraphic functions take an initial state of working memory in diagraph script. 
   They return text, the sequential states of working memory.
 
   Terminating functions
+    eg, Explain
   Nonterminating functions
+    eg, consider
 
 Diagraph-read
-
+  Takes a diagraph script path and fills in the tree
 Diagraph-interpret
   Takes a poorly formed path and returns a precise one. 
   Autocomplete is interactive dg-interpret.
 Diagraph-contextualize
   Takes a category-node pair and returns a diagraphic path.
 Diagraph-explain 
-  Takes a path specification. 
-  Diagraph-explain uses a depth-first search to push each node onto a WM element.
+  Takes a path specification in WM. 
+  Diagraph-explain traverses the clauses of a tree. For each clause, if there is a component that is not in STM, it pushes it on the stack, otherwise, it states the clause and advances. 
 Diagraph-assess
   Shows the user a diagraphic key, has them produce an explanation in diagraph script, and preforms a comparison to the reference value. 
   Diagraph-assess is a companion function to diagraph-explain.
