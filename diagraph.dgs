@@ -30,21 +30,28 @@ Definition of diagraph
   The key represents a path prefix to the nodes of the associated tree.
 
 Diagraphic tree
-  A diagraphic tree is a trie of diagraphic nodes that represents a set of sentences which share a subject. 
-  A diagraphic tree is a tree of diagraphic nodes. 
+  A diagraphic tree has a syntactic structure, represented implicitly, and a pragmatic structure, represented explicitly. 
+    The syntactic structure is the relation between syntactic elements like subjects, predicates, conjunctions and clauses.
+    The pragmatic structure is the grouping of syntactic elements into particular nodes.
+  A diagraphic tree is a tree of diagraphic nodes, which contain one or more syntactic elements. 
+  A diagraphic tree is a kind of trie that represents a set of sentences which share a subject. 
   In a diagraphic tree, child nodes represent things that could follow the parent nodes in an explanation.
-  In a diagraphic tree, children specify or interpret their parents. 
-  A diagraphic tree can have a subject component node, followed by a predicate component node, followed by conjunction component nodes, ending in period-terminated component node, a composition node, or an alias.
+    Children specify or interpret their parents. 
+  Any diagraphic tree could be rendered into one very long sentence. 
+    Where a particular node breaks represents where you might ordinary find a sentence break.
+  A diagraphic tree might have a subject element-node, followed by a predicate element-node, followed by conjunction element-nodes, ending in period-terminated element node, a composition node, or an alias.
   A tree does not include aliased subtrees, only nodes primarily stored at that key.
 
 Diagraphic nodes
   Diagraphic nodes are a string of natural language text. 
+  Diagraphic nodes contain one or more syntactic elements. 
+  Diagraphic nodes correspond to pragmatic sentences. 
   Diagraphic nodes represent a meaningful unit of explanation.
   Children of diagraphic nodes represent things that could follow it in an explanation.
 
-Diagraphic component nodes
-  A diagraphic component is a minimal syntactic component, like a word or phrase.
-  A component node tree is machine-readable, and can be used by diagraphic functions like dg-assess.
+Diagraphic element nodes
+  A diagraphic element is a minimal syntactic element, like a word or phrase.
+  A element node tree is machine-readable, and can be used by diagraphic functions like dg-assess.
 
 Diagraphic clause nodes
   A clause is a subject and series of predicates ending in a comma.
@@ -75,7 +82,7 @@ Explanations
   Explanations may span connected diagraphic trees over aliases.  
 
 Derivation
-  A derivation is an explanation of a component of a clause being explained. 
+  A derivation is an explanation of a element of a clause being explained. 
 
 Particlar diagraph
   Diagraph concerning singular subjects. 
@@ -97,6 +104,8 @@ Ostensive diagraph
 
 Diagraph script
   Diagraph script is a text format that represents a diagraph. 
+  Diagaph script is the canonical representation of a diagraph. 
+    Other data structures merely implement the constructs of diagraph script.
   Lines of a diagraph script file represent nodes of a diagraph.
   Indendation in a diagraph script file represents the hierarchy of a diagraph. 
   Unindented lines of diagraph script represent diagraphic keys. 
@@ -208,7 +217,7 @@ Diagraph-contextualize
   Takes a category-node pair and returns a diagraphic path.
 Diagraph-explain 
   Takes a path specification in WM. 
-  Diagraph-explain traverses the clauses of a tree. For each clause, if there is a component that is not in STM, it pushes it on the stack, otherwise, it states the clause and advances. 
+  Diagraph-explain traverses the clauses of a tree. For each clause, if there is a element that is not in STM, it pushes it on the stack, otherwise, it states the clause and advances. 
 Diagraph-assess
   Shows the user a diagraphic key, has them produce an explanation in diagraph script, and preforms a comparison to the reference value. 
   Diagraph-assess is a companion function to diagraph-explain.
