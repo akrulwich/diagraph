@@ -115,8 +115,9 @@ Diagraphic address
   Public-language nodes may have a generally agreed upon public-language address. 
 
 Explanations
-  An explanation is a traversal of alternating clauses and conjunctions.
-  Explanations may span connected diagraphic trees over aliases.  
+  An explanation is a series of alternating clauses and conjunctions.
+  An explanation is a traversal of a diagraphic tree.
+  Explanations may span connected diagraphic trees by crossing aliases.  
 
 Derivations
   A derivation is a path from a different subject to the abstraction of the current clause.
