@@ -4,26 +4,24 @@ This
 Diagraph
   What sort of thing is diagraph?
     Diagraph is an abstract data type.
-    A diagraph is a directed graph comprised of interconnected trees. 
+    A diagraph is a directed graph comprised of interconnected trees that stores explanatory information.  
   What is a diagraph?
-    Diagraph is a directed graph traversals across which are explanations.
-    A diagraph represents a set of possible explanations. 
-  What is diagraph for?
-    Diagraph is a medium for representing explanatory information.
+    A diagraph is a form of media. 
+    A diagraph captures a set of possible explanations. 
+    A diagraph is a representation of an explanatory system
+      A diagraph represents the interface of an explanation-producing system.
+      A diagraph maps a set of requests for explanation to a particular set of explanations.
+      A diagraph represents all possible outputs of an explanatory system. 
+      A diagraph models only the interface of an explanatory system.
+        It ignores the internal implementation.
+        It represents only what goes in and what comes out, not what goes on inside.
+      A diagraph can model any system that responds to requests for explanation, 
+        such as teachers, books, search engines, or libraries.
   Why is diagraph useful?
-    Diagraph provides logarithmic-time access to a corpus of explanatory information.  
-  What does a diagraph represent?
-    A diagraph represents the interface of an explanation-producing system.
-    A diagraph maps a set of requests for explanation to a particular set of explanations.
-    A diagraph represents all possible outputs of an explanatory system. 
-    A diagraph models only the interface of an explanatory system.
-      It ignores the internal implementation.
-      It represents only what goes in and what comes out, not what goes on inside.
-    A diagraph can model any system that responds to requests for explanation, 
-      such as teachers, books, search engines, or libraries.
-  What analysis can diagraph help us make?
-    Explaining the differences in explanation preformance between experts and non-experts.  
-    Expressing the shared generic interfaces of different explanatory systems. 
+    A diagraph provides logarithmic-time lookups to a corpus of explanatory information of arbitrary size.  
+  What kind of things might we be able to talk more easily about in terms of diagraph? 
+    The differences in explanation preformance between experts and non-experts.
+    The ways in which we might compare directly the interfaces of different explanatory systems.
 
 Definition of diagraph
   A diagraph is a key-value store, 
