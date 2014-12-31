@@ -238,7 +238,7 @@ Diagraphic function environments
     STM is a cache that associates every value added to WM with its path. 
     A particular trigger of STM is context. 
     A generic trigger of STM is recognition.
-
+    STM recalls can be for generic matches or near matches by generic implicature producing analogies, another example of generic diagraph being useful for comparing different particular diagraphs.
   LTM
     Connects to a data store or API.
 
