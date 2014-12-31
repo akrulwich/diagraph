@@ -65,12 +65,18 @@ Diagraphic clauses
   A clause is a subject and series of predicates ending in a comma, which may begin with a conjunction.
   A clause-node tree can be automatically parsed, and can be used by some diagraphic functions.
 
+Diagraphic sentences
+  A sentence is a series of clauses ending in a period. 
+  Sentences after a terminal clause can form subtrees in a diagraphic tree.
+    Subtrees represent how relative to the parent sentence's what, because subordinate sentences of an explanation specify relative to earlier sentences.
+
 Diagraphic compositions
   A text of one or more sentences that cannot be meaningfully subdivided.
   A composition-node tree can only be automatically displayed.
   Compositions don't nest.
   Compositions come after a period, and represent a new sentence.
     Compositions to not add to the path. 
+  Compositions are new sentences from a new subject that traces back to the given terminal clause. 
 
 Diagraphic paths
   A path is a series of syntactic elements divided into clauses.
@@ -80,7 +86,7 @@ Diagraphic paths
 
 Diagraphic references
   A diagraphic reference is a correspondance between a node and a key. 
-  The explanation of diagraphic references produces derivation. 
+  Explanations of references or subelements of a clause during an existing explanation are asides.
 
 Diagraphic aliases
   An alias is a correspondance between a path and a key.
@@ -97,8 +103,9 @@ Explanations
   An explanation is a traversal of alternating clauses and conjunctions.
   Explanations may span connected diagraphic trees over aliases.  
 
-Derivation
-  A derivation is a discontinous embedded subexplanation of an element of a clause being explained. 
+Derivations
+  A derivation is a path from a different subject to the current clause.
+  Compositions store derivations from a given example.
 
 Particlar diagraph
   Diagraph concerning singular subjects. 
@@ -152,8 +159,8 @@ Diagraph merges
 Adversarial diagraph production
   Or diagraphic debate. 
   Diagraph production in which individuals produce a discussion diagraph.
-  By creating a node that contains a prefix of an existing node, parties can force an opponent's node to be refactored, reducing the effect. 
-  Each party wishes to include long expressive sentences, but also to occupy desirable paths. 
+  A party that creates a terminal clause can write a composition, but another party may subdivide that terminal node causing dg-explain to pass over those compositions.
+  Only parties who react to opponent arguments will end up with responsive compositions at every point. 
 
 
 
@@ -270,6 +277,7 @@ Diagraph-explain
   Takes a path specification in WM. 
   Diagraph-explain traverses the clauses of a tree. For each clause, if there is a element that is not in STM, it pushes it on the stack, otherwise, it states the clause and advances. 
   Dg-explain states the clauses and derives the references.
+  Gives compositions of terminal nodes. 
 Diagraph-assess
   Shows the user a diagraphic key, has them produce an explanation in diagraph script, and preforms a comparison to the reference value. 
   Diagraph-assess is a companion function to diagraph-explain.
@@ -311,4 +319,4 @@ Other
     How agents behave when diagraph transmission is so reliable and ubiquitous as to be inevitable. 
   Ostensive diagraph
     A diagraphic node may ostend to a resource referenced by address.
-
+  Human assistants for composing diagraph script, eg customer support. 
