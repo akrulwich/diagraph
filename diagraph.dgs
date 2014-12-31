@@ -1,9 +1,5 @@
 This
   This is 'Diagraph', a diagraph about diagraph.
-  Why
-    To explain the differences in explanation preformance between experts and non-experts.  
-    To express a generic interface for explanatory systems. 
-    To allow direct comparison of different explanatory systems. 
 
 Diagraph
   What sort of thing is diagraph?
@@ -16,7 +12,7 @@ Diagraph
   What is diagraph for?
     Diagraph is a medium for representing explanatory information.
   Why is diagraph useful?
-    Diagraph provides logarithmic-time access to a corpus of explanatory information.
+    Diagraph provides logarithmic-time access to a corpus of explanatory information.  
   What does a diagraph represent?
     A diagraph represents the interface of an explanation-producing system.
     A diagraph maps a set of requests for explanation to a particular set of explanations.
@@ -26,6 +22,9 @@ Diagraph
       It represents only what goes in and what comes out, not what goes on inside.
     A diagraph can model any system that responds to requests for explanation, 
       such as teachers, books, search engines, or libraries.
+  What analysis can diagraph help us make?
+    Explaining the differences in explanation preformance between experts and non-experts.  
+    Expressing the shared generic interfaces of different explanatory systems. 
 
 Definition of diagraph
   A diagraph is a key-value store, 
