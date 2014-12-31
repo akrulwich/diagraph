@@ -109,8 +109,10 @@ Particlar diagraph
 Generic diagraph
   Generic diagraph is a generic subject and all possible predicates. 
   Generic trees begin with "there is" or "there are".
+  Generic diagraph is useful in comparing two particular diagraphs, eg determining if predicate A in one diagraph means the same thing as predicate B in another.
+  Generic subordination, eg, A/B, means all Bs are A but only some As are B.
 
-Predication in diagraph
+Diagraphic predication
   A predication is a correspondance between a particular predicate and a predicate of the generic type. 
   Predication as state in a generic DFA.
 
@@ -229,7 +231,8 @@ Diagraphic function environments
 
 Diagraphic function controllers
   Diagraphic function controllers are responsible for 
-    taking the provided path and loading the tree into short-term memory,  
+    taking the provided path and loading the tree into short-term memory, 
+    setting the provided path as the initial item of working memory, 
     before each cycle, checking the function's satisfaction condition, 
     when the function is satisfied, putting new input into working memory,
     piping the instantantaneous values of WM to output as text.
@@ -262,6 +265,7 @@ Diagraph-explain
 Diagraph-assess
   Shows the user a diagraphic key, has them produce an explanation in diagraph script, and preforms a comparison to the reference value. 
   Diagraph-assess is a companion function to diagraph-explain.
+  An answer is correct if the user-provided predicate is equivalent to the reference predicate in the reference generic diagraph. 
 Diagraph-review
   Diagraph-reivew puts whole paths of each node into one WM element.
   Diagraph-Review uses a breadth-first search. 
