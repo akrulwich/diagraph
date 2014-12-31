@@ -231,8 +231,7 @@ Diagraphic function environments
   STM
     STM is a cache that associates every value added to WM with its path. 
   LTM
-  Configuration
-    Satisfaction condition
+    Connects to a data store or API.
 
 Diagraphic function controllers
   Diagraphic function controllers are responsible for 
