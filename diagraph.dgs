@@ -256,8 +256,6 @@ Diagraph-add
 Diagraph-interpret
   Takes a public language path and returns a first match in the particular diagraph.  
   Autocomplete is interactive dg-interpret.
-Diagraph-contextualize
-  Takes a category-node pair and returns a diagraphic path.
 Diagraph-explain 
   Takes a path specification in WM. 
   Diagraph-explain traverses the clauses of a tree. For each clause, if there is a element that is not in STM, it pushes it on the stack, otherwise, it states the clause and advances. 
