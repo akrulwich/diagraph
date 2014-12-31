@@ -111,10 +111,15 @@ Generic diagraph
   Generic trees begin with "there is" or "there are".
   Generic diagraph is useful in comparing two particular diagraphs, eg determining if predicate A in one diagraph means the same thing as predicate B in another.
   Generic subordination, eg, A/B, means all Bs are A but only some As are B.
+  A schema or definition is a configuration of generic diagraph, of the form A/B/C/is a D.
 
 Diagraphic predication
   A predication is a correspondance between a particular predicate and a predicate of the generic type. 
   Predication as state in a generic DFA.
+
+Genericizing a clause
+  I genericize a particular clause by finding the path of the generic clause that sanctions the use of the predicate. 
+
 
 Diagraph script
   Diagraph script is a text format that represents a diagraph. 
@@ -232,14 +237,18 @@ Diagraphic function environments
 Diagraphic function controllers
   Diagraphic function controllers are responsible for 
     taking the provided path and loading the tree into short-term memory, 
-    setting the provided path as the initial item of working memory, 
+    perhaps setting the provided path as the initial item of working memory, 
     before each cycle, checking the function's satisfaction condition, 
     when the function is satisfied, putting new input into working memory,
     piping the instantantaneous values of WM to output as text.
+  The controller runs the diagraphic function's configuration script.
+    What the controller does with the path and input depends on the function. 
+
 
 Diagraphic functions
+  Diagraphic functions have a function body, a satisfaction condition, and a configuration script. 
   Diagraphic functions take a working memory stack of diagraph-script values.
-
+  Diagraphic functions manipulate WM.
 
 Particular diagraphic functions
   Terminating functions
@@ -272,8 +281,13 @@ Diagraph-quiz
   Diagraph-quiz is a companion function to diagraph-review.
 Diagraph-consider
   A hypothetical diagraphic function that preforms a breadth-first search on the generic inferences from a particular node, looking for collisions with existing LTM entries. 
+  Consideration takes a fact and looks for particular secondary paths. 
+  Consideration takes a fact and uses generic inferences to find candidate implications, marked with questions.
 Diagraph-reflect
   A hypothetical diagraphic function that takes an entire diagraphic category and looks for a subsuming interpretation by looking for definitions that fit subsets of nodes.
+  Reflection takes a fact and searches the generic diagraph for candidate interpretations.
+  Reflection alternatingly describes an entire tree, inviting schemas.
+  I keep a full description at the base of WM, and I push selective combinations onto the stack, inviting a STM trigger of a generic path. 
 
 
 Other
