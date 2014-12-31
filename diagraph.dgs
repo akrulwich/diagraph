@@ -73,6 +73,11 @@ Diagraphic elements
   A diagraphic element is a minimal syntactic element, like a word or phrase.
   A element-node tree is machine-readable, and can be used by all diagraphic functions.
 
+Diagraphic element-node tree
+  An element-node tree is a kind of diagraphic tree.
+  An element-node tree is a diagraphic tree in which every syntactic element has its own diagraphic node.
+  In an element-node tree, no two nodes of the same parent should share a prefix. 
+
 Diagraphic subjects
   Diagraphic subjects are the roots of diagraphic trees.
   There are two general kinds of a diagraphic subject: spaces and things.
@@ -208,6 +213,9 @@ Diagraph script
       Sections can be seperated by two or three blank lines for clarity. 
       Sections would not usually begin indented. 
       A section of diagraph script might correspond to a prose article or chapter.
+
+JSON representation of diagraph
+  An element-node tree can be a javascript object, because no children of the same node should share a prefix. Otherwise, we would use string-array tuples.
 
 
 
