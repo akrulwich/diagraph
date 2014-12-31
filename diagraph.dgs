@@ -128,7 +128,7 @@ Diagraphic aliases
   An alias is a correspondance between a path and a key.
   One might refactor a large tree into several smaller trees using aliases. 
 
-Diagraphic address
+Diagraphic addresses
   Diagraphic nodes have addresses in a particular diagraph.
   Diagraphic nodes have one primary and many secondary addresses.
   The primary address is the path from the key where a node is actually stored in a diagraph to that node.
@@ -257,6 +257,7 @@ Library diagraph
 Ideographs
   An ideograph represents the possible explanations of an individual. 
   An ideograph may contain scoped versions of other ideographs for reference. 
+  The keys of my ideograph are the words that I recognize. 
 Language diagraphs
   A langauge diagraph captures the generic information known to native speakers of a language.
   In a language diagraph, the paths cannot be very deep because of the entropy of ambiguous uses of terms as synonymic. 
