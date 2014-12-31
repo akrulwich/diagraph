@@ -82,7 +82,10 @@ Diagraphic paths
   A path is a series of syntactic elements divided into clauses.
   The division of syntactic elements between nodes does not affect path formation.
   A path can be a sole topic or subject.
+  A subject has a primary path in a given diagraph, and secondary paths through aliasing.
   A diagraphic URL path would replace commas with forward-slashes.
+  A path from a known subject to an unknown subject is the latter's context.
+  A public path may not be the same as a private path, which may have a longer antecedent context.
 
 Diagraphic references
   A diagraphic reference is a correspondance between a node and a key. 
@@ -252,7 +255,6 @@ Diagraphic function controllers
   The controller runs the diagraphic function's configuration script.
     What the controller does with the path and input depends on the function. 
 
-
 Diagraphic functions
   Diagraphic functions have a function body, a satisfaction condition, and a configuration script. 
   Diagraphic functions take a working memory stack of diagraph-script values.
@@ -278,6 +280,9 @@ Diagraph-explain
   Diagraph-explain traverses the clauses of a tree. For each clause, if there is a element that is not in STM, it pushes it on the stack, otherwise, it states the clause and advances. 
   Dg-explain states the clauses and derives the references.
   Gives compositions of terminal nodes. 
+  Explanation truncates the paths to the requested path.
+    Ie, if the diagraph has A:B/C, and B is requested, B/C will be sent, not A/B/C.
+  The session diagraph is the implicit diagraph formed by all transmissions. 
 Diagraph-assess
   Shows the user a diagraphic key, has them produce an explanation in diagraph script, and preforms a comparison to the reference value. 
   Diagraph-assess is a companion function to diagraph-explain.
@@ -320,3 +325,6 @@ Other
   Ostensive diagraph
     A diagraphic node may ostend to a resource referenced by address.
   Human assistants for composing diagraph script, eg customer support. 
+  Diagramatic explanation
+    A visual the elements of which correspond to one or more diagraphic trees.
+
