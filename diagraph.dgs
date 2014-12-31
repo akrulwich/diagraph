@@ -55,6 +55,7 @@ Diagraphic nodes
   Requests made to a path will return the entire node at that path.  
   Nodes are refactored when a new node is added at a path that enters an existing node.
     Nodes are not refactored merely by adding two nodes with the same prefix to the same path.
+  Terminal nodes end with a period.
 
 Diagraphic elements
   A diagraphic element is a minimal syntactic element, like a word or phrase.
@@ -228,6 +229,9 @@ Diagraphic function environments
     By default checks STM for value on top of stack and fills in context if there's a match.
   STM
     STM is a cache that associates every value added to WM with its path. 
+    A particular trigger of STM is context. 
+    A generic trigger of STM is recognition.
+
   LTM
     Connects to a data store or API.
 
