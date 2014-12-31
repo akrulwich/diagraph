@@ -165,6 +165,7 @@ Generic diagraph
   Generic subordination, eg, A/B, means all Bs are A but only some As are B.
   A schema or definition is a configuration of generic diagraph, of the form A/B/C/is a D.
   We represent generic diagraph only when a particular theory exerts complete explanatory power over a domain, and so we don't need any rich particulars, otherwise we explicitly represent particular diagraph & store the generic diagraph implicitly in the predicates of the particular.
+  Generic diagraph is composed of generic subjects or concepts. 
 
 Generic clauses
   Generic clauses are things like "Dogs bark"
