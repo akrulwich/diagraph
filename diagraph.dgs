@@ -103,6 +103,7 @@ Diagraphic compositions
   Compositions come after a period, and represent a new sentence.
     Compositions to not add to the path. 
   Compositions are new sentences from a new subject that traces back to the given terminal clause. 
+  Compositions are a kind of cached derivation that doesn't require the use of a generic term in a particular clause, and then a subsequent explanation of that term, but rather can proceede by analogy, the example from which the derivation occurs being used to derive directly the property of the particular which one desires to ellicit. The primary storage location of the germ of the derivation is not the tree to which the composition belongs, but this may be the only situation in which it is useful. 
 
 Diagraphic notes
   A note is a special kind of composition which is used to store information temporarily, provisional to its incorperation into a more modular tree.
