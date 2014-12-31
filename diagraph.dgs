@@ -46,9 +46,9 @@ Diagraphic tree
   The tree is the explicit structure stored in memory, not the implicit continous structure formed with aliases. 
 
 Diagraphic nodes
-  Diagraphic nodes are strings of natural language text. 
+  Diagraphic nodes are units of natural language text. 
   Diagraphic nodes contain one or more syntactic elements. 
-  Diagraphic nodes represent the meaningful units of an explanation. 
+  Diagraphic nodes represent the meaningfully indivisible units of an explanation. 
     No explanation should ever include only part of a node's text, or there should be two nodes.
   Where a diagraphic node breaks corresponds to pragmatic sentences in conversation. 
   Children of diagraphic nodes represent things that could follow it in an explanation.
@@ -56,6 +56,17 @@ Diagraphic nodes
   Nodes are refactored when a new node is added at a path that enters an existing node.
     Nodes are not refactored merely by adding two nodes with the same prefix to the same path.
   Terminal nodes end with a period.
+
+Diagraphic subjects
+  Diagraphic subjects are the roots of diagraphic trees.
+  There are two general kinds of a diagraphic subject: spaces and things.
+  Spaces are things like categories, sets, groups, topics, regions, eras, contexts, and they include things like members of a category, things in a space, etc. 
+  In a diagraph, the space that a thing is stored in is its context in that diagraph.
+    Every thing in a diagraph is stored primarily in some context, but we do not necessarily give our full private path when explaning something, but rather begin at the subject.
+      eg, if I have A/B/C, I might discuss with you .../B/C.
+  Some things, like countries, are things in one tree and spaces in another. 
+  Things are concrete and their children are predicates of that thing.
+  A tree that has a space-root may have embedded trees with subject-roots.
 
 Diagraphic elements
   A diagraphic element is a minimal syntactic element, like a word or phrase.
@@ -86,6 +97,7 @@ Diagraphic paths
   A diagraphic URL path would replace commas with forward-slashes.
   A path from a known subject to an unknown subject is the latter's context.
   A public path may not be the same as a private path, which may have a longer antecedent context.
+  EG, T/S/P/P/C/S/P/P/P/C/...
 
 Diagraphic references
   A diagraphic reference is a correspondance between a node and a key. 
@@ -107,8 +119,13 @@ Explanations
   Explanations may span connected diagraphic trees over aliases.  
 
 Derivations
-  A derivation is a path from a different subject to the current clause.
+  A derivation is a path from a different subject to the abstraction of the current clause.
   Compositions store derivations from a given example.
+  When a term of a clause is unknown to the reader and diagraph-explain pushes a new discontinous explanation onto working memory that explains the term, this is also a derivation.
+  Derivation does not find a path back to the particular clause, but rather a path from a case, through abstraction, to the generic upon which the current particular clause is predicated. 
+  The key marker of derivation is that it begins a discontinous explanation that is not integrated directly into the old explanation, eg as an answer to a motivated question, but rather which furnishes a generic which is then used indirectly by a particular of the explanation.
+  So, both compositions and term-subexplanations are derivations, discontinous explanations of a generic upon which we would like to predicate a particular.
+  When I attempt to derive a generic clause from a particular example, I am justifying the possibility of that clause by showing it to be a valid interpretation of at least one particular.
 
 Particlar diagraph
   Diagraph concerning singular subjects. 
@@ -122,12 +139,26 @@ Generic diagraph
   Generic subordination, eg, A/B, means all Bs are A but only some As are B.
   A schema or definition is a configuration of generic diagraph, of the form A/B/C/is a D.
 
-Diagraphic predication
-  A predication is a correspondance between a particular predicate and a predicate of the generic type. 
-  Predication as state in a generic DFA.
+Generic clauses
+  Generic clauses are things like "Dogs bark"
+  Every particular clause is predicated on a generic clause.
 
-Genericizing a clause
+Diagraphic predication
+  Every particular clause is predicated upon a generic clause, the abstraction of the particular clause. 
+  A predication is an implicit correspondance between a particular predicate and a predicate of the generic type. 
+  Predication of a generic address to a particular gives that particular an attribute that represents a state in an underlying generic DFA.
+
+Abstracting a clause
   I genericize a particular clause by finding the path of the generic clause that sanctions the use of the predicate. 
+  For example, "Fifi gave birth to twins" -> "Dogs give birth to twins".
+  This operation is used in diagraph-consider, and in generic diagraph formation by constantly abstracting from the particular cases we encounter.
+
+
+
+Common configurations of diagraph
+  Stories
+  Maps
+
 
 
 Diagraph script
@@ -136,7 +167,7 @@ Diagraph script
     Other data structures merely implement the constructs of diagraph script.
   Lines of a diagraph script file represent nodes of a diagraph.
   Indendation in a diagraph script file represents the hierarchy of a diagraph. 
-  Unindented lines of diagraph script represent diagraphic paths.
+  Unindented lines of diagraph script represent the diagraphic paths which are the keys of the diagraph.
     The paths may not correspond exactly to the path-keys of the diagraph.
       A diagraph might be more modularly refactored, and the diagraph script intended for a wider audience. 
   Top-level indentations under a key represent the roots of a diagraphic category. 
