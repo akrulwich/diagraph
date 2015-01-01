@@ -54,15 +54,18 @@ Diagraphic tree
 
 
 Diagraphic priority
+  A diagraph has a mode of priority, which is a total ordering of the nodes of that diagraph.
   Diagaphs are hierarchial, and children of a parent have a relative syntactic rank.
-    For particulars the order is: 
+    In particular diagraph the order is: 
       'Subject
         Classification (is a)
         Predicate (is)
           Conjunctions (why/so/but/because)
-          Prepositional & Adverbal phrases (how)
-
-    Nodes of a type must be ranked by some further criterion.
+          Adverbal phrases (how)
+    Elements of a type must be ranked by some further criterion.
+      In a functional diagraph, priority is relative to function or usefulness in a particular circumstance.
+      In a descriptive diagraph, priority might be relative to something like frequency.
+      An ideograph is ranked by importance to the particular person.
     Specifications are contingent, so if particular A is parent of particular B, A -/> B. 
     Classifications are high-priority, and so interpretations are often passed off as classifications.
     In generic diagraph, predicate children imply predicate parents.
