@@ -2,16 +2,15 @@ This
   This is 'Diagraph', a diagraph about diagraph.
 
 Diagraph
-  What sort of thing is diagraph?
-    Diagraph is an abstract data type.
-    A diagraph is a directed graph comprised of interconnected trees that stores explanatory information.  
+  What sort of thing is a diagraph?
+    A diagraph is an abstract data type. 
     A diagraph is a form of media. 
   
   What is a diagraph?
     A diagraph is a key-value store, 
       the keys of which are diagraphic paths.
       the values of which are diagraphic trees.
-    A diagraph captures a set of possible explanations. 
+    A diagraph represents a set of possible explanations. 
     A diagraph is a representation of an explanatory system
       A diagraph represents the interface of an explanation-producing system.
       A diagraph maps a set of requests for explanation to a particular set of explanations.
@@ -28,6 +27,12 @@ Diagraph
   What kind of things might be more easy to talk about in terms of diagraph? 
     The differences in explanation preformance between experts and non-experts.
     The ways in which we might compare directly the interfaces of different explanatory systems.
+
+The types of diagraphic entity
+  A diagraph is comprised of two kinds of entity, syntactic entities and graph entities.
+  The graph entities are explicitly represented, with nodes and edges.
+  The syntactic entities are implicitly represented, in the texts of the nodes.
+  The graph entities and their relationships supervene upon the syntactic entities and their relationships.
 
 Diagraphic keys
   The key of a diagraph represents a path prefix to the nodes of the associated tree.
@@ -168,7 +173,7 @@ Diagraphic priority
     Elements of a type must be ranked by some further criterion.
       In a functional diagraph, priority is relative to function or usefulness in a particular circumstance.
       In a descriptive diagraph, priority might be relative to something like frequency.
-      An ideograph is ranked by importance to the particular person.
+      An ideograph is ranked by hierarchy and subsumption.
     Specifications are contingent, so if particular A is parent of particular B, A -/> B. 
     Classifications are high-priority, and so interpretations are often passed off as classifications.
     In generic diagraph, predicate children imply predicate parents.
@@ -256,8 +261,39 @@ Descriptive diagraph specifications
   A descriptive diagraph definition is like, the diagraph formed by a particular corpus of text.
 
 
+Means of diagraphic priority
+
+
+Interesting diagraphs
+
+Discourse diagraphs
+  A discourse diagraph is the hypothetical diagraph implicit in a corpus of text. 
+  Responses to particular articulations are culled to produce an abstracted diagraph. 
+  Inclusion criteria
+    Does it have a wikipedia page?
+    Number of secondary sources that make a particular point/use a particular clause.
+  Diagraph ranking
+    Number of hits on google. 
+Library diagraphs
+  A library diagraph is a diagraph that subsumes various other diagraphs. 
+Ideographs
+  An ideograph represents the possible explanations of an individual. 
+  An ideograph may contain scoped versions of other ideographs for reference. 
+  The keys of my ideograph are the words that I recognize. 
+Language diagraphs
+  A langauge diagraph captures the generic information known to native speakers of a language.
+  In a language diagraph, the paths cannot be very deep because of the entropy of ambiguous uses of terms as synonymic. 
+    In an ideograph by comparison, there is no entropy across long lines of implicature, because there is no ambiguity about synonymity.
+Culture diagraphs
+  A culture diagraph represents the particular and generic diagraph common to a cultural group.
+  A culture diagraph is the set of references and generics that a member of a group expects another member of the group to know and understand.
+
+
+
+
 
 Describing with diagraph
+  Tag entropy
 Describing education with diagraph
 Describing journalism with diagraph
   How context in a news article might naively seem like aliased subtrees that belong primarily in other places, but really are custom made for the article's tree, children of references in a particular sentence, not a new explanation soley of the reference in its own right. 
@@ -265,7 +301,9 @@ Describing libraries with diagraph
 Describing academia with diagraph
 Capsizing
 Describing individuals with diagraph
-
+Describing chronology with diagraph
+  Real time, stateful time, evolutionary time
+    Being in a DFA, as opposed to being out of one.
 
 
 Applications of diagraph
@@ -316,33 +354,6 @@ Diagraph formation
   Pile sort
     Iterative periods of solicitation to topic buckets, sorting by similarity and subdividing, then more solicitation, until all buckets have fewer than some threshold of notes, then the creation of note piles, which become clause node trees, then element node trees. 
     Pile sort requires a large initial cost.
-
-
-
-
-Interesting diagraphs
-
-Discourse diagraphs
-  A discourse diagraph is the hypothetical diagraph implicit in a corpus of text. 
-  Responses to particular articulations are culled to produce an abstracted diagraph. 
-  Inclusion criteria
-    Does it have a wikipedia page?
-    Number of secondary sources that make a particular point/use a particular clause.
-  Diagraph ranking
-    Number of hits on google. 
-Library diagraphs
-  A library diagraph is a diagraph that subsumes various other diagraphs. 
-Ideographs
-  An ideograph represents the possible explanations of an individual. 
-  An ideograph may contain scoped versions of other ideographs for reference. 
-  The keys of my ideograph are the words that I recognize. 
-Language diagraphs
-  A langauge diagraph captures the generic information known to native speakers of a language.
-  In a language diagraph, the paths cannot be very deep because of the entropy of ambiguous uses of terms as synonymic. 
-    In an ideograph by comparison, there is no entropy across long lines of implicature, because there is no ambiguity about synonymity.
-Culture diagraphs
-  A culture diagraph represents the particular and generic diagraph common to a cultural group.
-  A culture diagraph is the set of references and generics that a member of a group expects another member of the group to know and understand.
 
 
   
@@ -436,11 +447,11 @@ Diagraphic functions
   Diagraphic functions take a working memory stack of diagraph-script values.
   Diagraphic functions manipulate WM.
 
-Particular diagraphic functions
-  Terminating functions
-    eg, Explain
-  Nonterminating functions
-    eg, consider
+Terminating diagraphic functions
+  eg, Explain
+Nonterminating diagraphic functions
+  eg, consider
+
 Diagraph-read
   Takes a path and returns the corresponding values. 
 Diagraph-add
@@ -513,8 +524,6 @@ Analogies
   Are compositions stored in subtrees analogies? Or are they like in only one respect, whereas an analogy is a direct comparison of likeness? "A is B. C is an example of B." vs. "A is like C"
 Intellectual virtue
   Having a reason besides ignorance for choosing where your diagraph will end
-Real time, habitual time, evolutionary time
-  Being in a DFA, as opposed to being out of one.
 How one can infer from the exact relevance of examples and analogies the resolution of one's ideolect.
 Moral intuitions as a finite set of innate interpretations that are naturally and generatively triggered by complete description, and so morality as a requirement to solicit the information that would give one's moral intuitions the chance to be triggered. An argument for moral intuitions of greater informational content, rather than a difference in kind. Moral intuitions as judgements, propositional to the degree that any ordinary language.
 
