@@ -83,10 +83,11 @@ Diagraphic nodes
 Syntactic elements
   A diagraphic element is a minimal syntactic element, like a word or phrase.
 
-Grammatical subjects
-  Diagraphic subjects are the roots of diagraphic trees.
+Diagraphic tree roots
   There are two general kinds of a diagraphic subject: spaces and things.
-  Spaces are things like categories, sets, groups, topics, regions, eras, contexts, and they include things like members of a category, things in a space, etc. 
+  Topics are things like spaces, categories, sets, groups, topics, regions, eras, contexts.
+  Subjects are things like members of a category, things in a space, etc. 
+  Topics contain subjects.
   In a diagraph, the space that a thing is stored in is its context in that diagraph.
     Every thing in a diagraph is stored primarily in some context, but we do not necessarily give our full private path when explaning something, but rather begin at the subject.
       eg, if I have A/B/C, I might discuss with you .../B/C.
@@ -277,6 +278,13 @@ Language diagraphs
 Culture diagraphs
   A culture diagraph represents the particular and generic diagraph common to a cultural group.
   A culture diagraph is the set of references and generics that a member of a group expects another member of the group to know and understand.
+
+Elsinore (criticism of Hamlet)
+Descent (a chronology of scientific theories on human development)
+Investigations (Wittgenstein’s reduction of analytic philosophy to ordinary language)
+Various Libraries
+Various Discussions 
+Various theories / religions
 
 
 
@@ -482,7 +490,14 @@ Diagraph-reflect
   Reflection alternatingly describes an entire tree, inviting schemas.
   I keep a full description at the base of WM, and I push selective combinations onto the stack, inviting a STM trigger of a generic path. 
 
+Diagraphic processes
+  A process is a function-root pair.
+  A process corresponds to a topic of the diagraph.
+  Processes can be represented as closures in the javascript runtime.
 
+Diagraphic threads
+  A thread is a particular branch of a process's root.
+  Threads can be represented as messages in the javascript runtime.
 
 Other
 Diagraph
