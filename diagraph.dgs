@@ -228,7 +228,6 @@ Diagraph writing
     A party that creates a terminal clause can write a composition, but another party may subdivide that terminal node causing explanation to pass over those compositions.
     Only parties who react to opponent arguments will end up with responsive compositions at every terminal point. 
 
-
 Diagraph formation
   Tidal sort
     Alternating periods of solicitation to topic-buckets, culling, and subdividing.
@@ -261,6 +260,7 @@ Culture diagraphs
   A culture diagraph represents the particular and generic diagraph common to a cultural group.
   A culture diagraph is the set of references and generics that a member of a group expects another member of the group to know and understand.
 
+
   
 
 Describing diagraphs
@@ -270,7 +270,6 @@ Describing diagraphs
     One diagraphic tree subsumes another if it contains a node that can be parent to the other's root.
   A diagraph can reduce one diagraph to another.
   A diagraph can be coherant if all paths belong to a single refactored tree.
-
 
 Diagraph specifications
 Functional diagraph specifications
@@ -284,6 +283,7 @@ Descriptive diagraph specifications
   A descriptive diagraph definition is like, the diagraph formed by a particular corpus of text.
 
 
+
 Describing with diagraph
 Describing education with diagraph
 Describing journalism with diagraph
@@ -294,8 +294,22 @@ Capsizing
 
 
 
+Applications of diagraph
+    Preventing the redundant duplication of explanatory information in multiple documents. 
+      Although, not all duplicated explanatory information is redundant, duplicating the same tree is redundant, but two tree might include the same fact but not the explanation. 
+    Preventing information that is similar from becomming fragmented by division into seperate documents
+Diagraph in Education
+Diagraph in Journalism
+  Explainer journalism – having one continuous piece of content for the story and the analysis.
+Diagraph in Politics
+Diagraph in Library Science
+Diagraph in Academic Publishing
+Diagraph in personal reading
+  Whatever your opinion on what people should read, biases that are failures to trigger a potential interest are inefficiencies.
+
+
+
 Representations of diagraph
-  
   Diagraph script
     Diagraph script is a text format that represents a diagraph. 
     Diagaph script is the canonical representation of a diagraph. 
@@ -320,21 +334,6 @@ Representations of diagraph
   JSON representation of diagraph
     An element-node tree can be a javascript object, because no children of the same node should share a prefix. Otherwise, we would use string-array tuples.
 
-
-
-
-Applications of diagraph
-    Preventing the redundant duplication of explanatory information in multiple documents. 
-      Although, not all duplicated explanatory information is redundant, duplicating the same tree is redundant, but two tree might include the same fact but not the explanation. 
-    Preventing information that is similar from becomming fragmented by division into seperate documents
-Diagraph in Education
-Diagraph in Journalism
-  Explainer journalism – having one continuous piece of content for the story and the analysis.
-Diagraph in Politics
-Diagraph in Library Science
-Diagraph in Academic Publishing
-Diagraph in personal reading
-  Whatever your opinion on what people should read, biases that are failures to trigger a potential interest are inefficiencies.
 
 
 Diabots
