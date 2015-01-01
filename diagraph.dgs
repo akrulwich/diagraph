@@ -49,11 +49,25 @@ Diagraphic tree
   A diagraphic tree might have a subject element-node, followed by a predicate element-node, followed by conjunction element-nodes, ending in period-terminated element node, a composition node, or an alias.
   A tree does not include aliased subtrees, only nodes primarily stored under the tree's key.
   The tree is the explicit structure stored in memory, not the implicit continous structure formed with aliases. 
-  Child order
-    The ordering of children can be done in several ways. 
-    Children of a node are things which could directly follow a node, and so, we might order them relative to how we would order them in an explanation that included both. Of a clause, conjoined dependent clauses might come first, then specifications, then new sentences, compositions and notes.
   Germanity as constraint on subtrees
   A speaker's sentence changes subject at the point where their tree aliases. 
+
+
+Diagraphic priority
+  Diagaphs are hierarchial, and children of a parent have a relative syntactic rank.
+    For particulars the order is: 
+      'Subject
+        Classification (is a)
+        Predicate (is)
+          Conjunctions (why/so/but/because)
+          Prepositional & Adverbal phrases (how)
+
+    Nodes of a type must be ranked by some further criterion.
+    Specifications are contingent, so if particular A is parent of particular B, A -/> B. 
+    Classifications are high-priority, and so interpretations are often passed off as classifications.
+    In generic diagraph, predicate children imply predicate parents.
+  Rank expresses, for example, which of two contributions that were not related would come first in an explanation.
+  There cannot be an uncontroversial diagraph ranking because even if ordering is something like linguistic frequency, there will still be disagreements over which things are classifications and which are interpretations.
 
 Diagraphic nodes
   Diagraphic nodes are units of natural language text. 
@@ -79,6 +93,9 @@ Diagraphic element-node tree
   An element-node tree is a kind of diagraphic tree.
   An element-node tree is a diagraphic tree in which every syntactic element has its own diagraphic node.
   In an element-node tree, no two nodes of the same parent should share a prefix. 
+  An element node tree has additional tokens like how and why before certain derivations.
+  An element node tree can be semantically parsed, because it can be overlayed onto a generic diagraph.
+  An element node tree can be syntactically parsed, because the different syntactic brances are explicitly represented. 
 
 Diagraphic subjects
   Diagraphic subjects are the roots of diagraphic trees.
@@ -95,12 +112,12 @@ Diagraphic clauses
   A clause is a subject and series of predicates ending in a comma, which may begin with a conjunction.
   A clause-node tree can be automatically parsed, and can be used by some diagraphic functions.
   Diagraphic clauses are only implicitly represented.
-  Conjunctions
-    A clause has conjunctions.
-  Specifications
-    A clause has specifications.
-  Interpretations
-    A clause has interpretations.
+
+Diagraphic clause-node tree
+  An element-node tree is a kind of diagraphic tree.
+  An element-node tree is a diagraphic tree in which every syntactic element has its own diagraphic node.
+  In an element-node tree, no two nodes of the same parent should share a prefix. 
+  A clause-node tree is not generically parsable, but relative precedence of syntactic branches can be discerned. 
 
 Diagraphic sentences
   A sentence is a series of clauses ending in a period. 
@@ -121,7 +138,6 @@ Diagraphic notes
   One would use a note not because the information contained within is meaningfully single-purpose, but rather because of the accidental organization of the information at its source. 
   A composition that is appropriate whole in one context might need to be broken down into smaller pieces in a different context, and so a composition in one place might become a note in another, provision to refactoring. 
   Diagraphic note piles
-
 
 Diagraphic paths
   A path is a series of syntactic elements divided into clauses.
@@ -157,15 +173,6 @@ Explanations
   Explanations have an implicit session diagraph, a single tree formed by combining all transmissions, used by an explainer and a listener to coordinate public paths, paths which may not correspond to either the explainer or the listener's private diagraph. 
     A speaker might not express what they think of the topic, and the listener might not express why they want to know, both of which would be given by the private path.
 
-Derivations
-  A derivation is a path from a different subject to the abstraction of the current clause.
-  Compositions store derivations from a given example.
-  When a term of a clause is unknown to the reader and diagraph-explain pushes a new discontinous explanation onto working memory that explains the term, this is also a derivation.
-  Derivation does not find a path back to the particular clause, but rather a path from a case, through abstraction, to the generic upon which the current particular clause is predicated. 
-  The key marker of derivation is that it begins a discontinous explanation that is not integrated directly into the old explanation, eg as an answer to a motivated question, but rather which furnishes a generic which is then used indirectly by a particular of the explanation.
-  So, both compositions and term-subexplanations are derivations, discontinous explanations of a generic upon which we would like to predicate a particular.
-  When I attempt to derive a generic clause from a particular example, I am justifying that clause by showing it to be a valid interpretation of at least one particular.
-
 Particlar diagraph
   Diagraph concerning singular subjects. 
   The roots of particular categories instantiate with reference to a generic. 
@@ -184,6 +191,23 @@ Generic diagraph
 Generic clauses
   Generic clauses are things like "Dogs bark"
   Every particular clause is predicated on a generic clause.
+
+Derivations
+  A derivation is a path from a different subject to the abstraction of the current clause.
+  Compositions store derivations from a given example.
+  When a term of a clause is unknown to the reader and diagraph-explain pushes a new discontinous explanation onto working memory that explains the term, this is also a derivation.
+  Derivation does not find a path back to the particular clause, but rather a path from a case, through abstraction, to the generic upon which the current particular clause is predicated. 
+  The key marker of derivation is that it begins a discontinous explanation that is not integrated directly into the old explanation, eg as an answer to a motivated question, but rather which furnishes a generic which is then used indirectly by a particular of the explanation.
+  So, both compositions and term-subexplanations are derivations, discontinous explanations of a generic upon which we would like to predicate a particular.
+  When I attempt to derive a generic clause from a particular example, I am justifying that clause by showing it to be a valid interpretation of at least one particular.
+
+Particular derivations
+  EG, X is P, why? becuase X is D, so X is E, so X is P.
+  Particular derivations must provide a reputable dependent clause from which the given clause follows in generic inferences inherent in the language.
+
+Generic derivations
+  A generic derivation is an aside made from a particular explanation.
+  EG, expl(x is p) -> expl(Cs can be p) -> expl(x is p)
 
 Diagraphic predication
   Every particular clause is predicated upon a generic clause, the abstraction of the particular clause. 
@@ -214,6 +238,8 @@ Describing diagraphs
   A diagraph can reduce one diagraph to another.
   A diagraph can be coherant if all paths belong to a single refactored tree.
 
+  A diagraph has a certain number of stages
+    The number of conjunctive layers at a particular point.
 
 
 Diagraph specifications
@@ -246,6 +272,7 @@ Applications of diagraph
 Diagraph in Education
 Diagraph in Journalism
   Explainer journalism – having one continuous piece of content for the story and the analysis.
+  Example of diagraph stages - articles and letters to the editor.
 Diagraph in Politics
 Diagraph in Library Science
 Diagraph in Academic Publishing
@@ -341,7 +368,7 @@ Representations of diagraph
         Sections can be seperated by two or three blank lines for clarity. 
         Sections would not usually begin indented. 
         A section of diagraph script might correspond to a prose article or chapter.
-
+    Multi-line compositions can be wraped in quotes.
   JSON representation of diagraph
     An element-node tree can be a javascript object, because no children of the same node should share a prefix. Otherwise, we would use string-array tuples.
 
