@@ -208,69 +208,45 @@ Common configurations of diagraph
 Diagraph production
 
 Diagraph writing
-
-Consensus diagraph 
-  Every write is changable by both parties. 
-  Like writing diagraph-script in a google doc.
-  One party may change the paths of the contributions of another party.
-  Vulnerable to filibustering.
-  Vulnerable to normative description.
-    Descriptive clauses should come before specifications and interpretations. By inserting a normative interpretation in the initial declaration, a party may violate that understanding.
-  Requires all parties to agree on a shared generic diagraph, 
-    in order to decide which inferences are acceptable.
-    in order to decide which declarations are descriptive and which are interpretive.
-  This method could be used by an organization with dispute resolution procedures, like a newspaper. 
-Debate diagraph
-  Every write is submitted by only one party.
-  Like a group of people submitting diagraph-script comments to a shared page, everyone can post what they want but no party may alter another party's post.
-  No conrtibution may change the path of an existing contribution.
-  Diagraph production in which individuals produce a discussion diagraph.
-  A party that creates a terminal clause can write a composition, but another party may subdivide that terminal node causing explanation to pass over those compositions.
-  Only parties who react to opponent arguments will end up with responsive compositions at every terminal point. 
-
+  Discussion diagraph 
+    Produces by consensus
+    Every write is changable by both parties. 
+    Like writing diagraph-script in a google doc.
+    One party may change the paths of the contributions of another party.
+    Vulnerable to filibustering.
+    Vulnerable to normative description.
+      Descriptive clauses should come before specifications and interpretations. By inserting a normative interpretation in the initial declaration, a party may violate that understanding.
+    Requires all parties to agree on a shared generic diagraph, 
+      in order to decide which inferences are acceptable.
+      in order to decide which declarations are descriptive and which are interpretive.
+    This method could be used by an organization with dispute resolution procedures, like a newspaper. 
+  Debate diagraph
+    Every write is submitted by only one party.
+    Like a group of people submitting diagraph-script comments to a shared page, everyone can post what they want but no party may alter another party's post.
+    No conrtibution may change the path of an existing contribution.
+    Diagraph production in which individuals produce a discussion diagraph.
+    A party that creates a terminal clause can write a composition, but another party may subdivide that terminal node causing explanation to pass over those compositions.
+    Only parties who react to opponent arguments will end up with responsive compositions at every terminal point. 
 
 
 Diagraph formation
-Tidal sort
-  Alternating periods of solicitation to topic-buckets, culling, and subdividing.
-  Tidal sort provides continuous improvements.
-  Tidal sort requires prior knowledge of high-order clauses.
-Pile sort
-  Iterative periods of solicitation to topic buckets, sorting by similarity and subdividing, then more solicitation, until all buckets have fewer than some threshold of notes, then the creation of note piles, which become clause node trees, then element node trees. 
-  Pile sort requires a large initial cost.
-
-
-
-Diagraph ranking
-  Topic, subject, predicate, 
-  Does it have a wikipedia page?
-  Number of hits on google. 
-
-
-
-Diagraph specifications
-Functional diagraph specifications
-  Functional diagraph specifies the desired information by functional relation to something else.
-  A functional diagraph specification is like a question, ie a partial path.
-  Diagraphs can be described functionally without complete knowledge of their contents. 
-  Functionally specified diagraph allows us to speak precisely about hypothetical diagraphs.
-Descriptive diagraph specifications
-  A descriptive diagraph specification is like a topic, and therefore is imprecise.
-  Descriptive specifications specify the desired information by describing an attribute of that information.
-  A descriptive diagraph definition is like, the diagraph formed by a particular corpus of text.
-
-
+  Tidal sort
+    Alternating periods of solicitation to topic-buckets, culling, and subdividing.
+    Tidal sort provides continuous improvements.
+    Tidal sort requires prior knowledge of high-order clauses.
+  Pile sort
+    Iterative periods of solicitation to topic buckets, sorting by similarity and subdividing, then more solicitation, until all buckets have fewer than some threshold of notes, then the creation of note piles, which become clause node trees, then element node trees. 
+    Pile sort requires a large initial cost.
 
 
 Interesting diagraphs
 
-Discussion diagraph
-  A diagraph produced synchronously by a group. 
-  One can only add to a discussion diagraph. 
-  Responses to particular articulations are preserved. 
 Discourse diagraph
   A discourse diagraph is the hypothetical diagraph implicit in a corpus. 
   Responses to particular articulations are culled to produce an abstracted diagraph. 
+  Diagraph ranking
+  Does it have a wikipedia page?
+  Number of hits on google. 
 Library diagraph
   A library diagraph is a diagraph that subsumes various other diagraphs. 
 Ideographs
@@ -284,8 +260,8 @@ Language diagraphs
 Culture diagraphs
   A culture diagraph represents the particular and generic diagraph common to a cultural group.
   A culture diagraph is the set of references and generics that a member of a group expects another member of the group to know and understand.
-  
 
+  
 
 Describing diagraphs
   Diagraphs can have depth, if many nodes are the roots of lower trees.
@@ -294,6 +270,18 @@ Describing diagraphs
     One diagraphic tree subsumes another if it contains a node that can be parent to the other's root.
   A diagraph can reduce one diagraph to another.
   A diagraph can be coherant if all paths belong to a single refactored tree.
+
+
+Diagraph specifications
+Functional diagraph specifications
+  Functional diagraph specifies the desired information by functional relation to something else.
+  A functional diagraph specification is like a question, ie a partial path.
+  Diagraphs can be described functionally without complete knowledge of their contents. 
+  Functionally specified diagraph allows us to speak precisely about hypothetical diagraphs.
+Descriptive diagraph specifications
+  A descriptive diagraph specification is like a topic, and therefore is imprecise.
+  Descriptive specifications specify the desired information by describing an attribute of that information.
+  A descriptive diagraph definition is like, the diagraph formed by a particular corpus of text.
 
 
 Describing with diagraph
