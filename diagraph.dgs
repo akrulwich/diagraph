@@ -243,9 +243,11 @@ Interesting diagraphs
 Discourse diagraph
   A discourse diagraph is the hypothetical diagraph implicit in a corpus of text. 
   Responses to particular articulations are culled to produce an abstracted diagraph. 
+  Inclusion criteria
+    Does it have a wikipedia page?
+    Number of secondary sources that make a particular point/use a particular clause.
   Diagraph ranking
-  Does it have a wikipedia page?
-  Number of hits on google. 
+    Number of hits on google. 
 Library diagraph
   A library diagraph is a diagraph that subsumes various other diagraphs. 
 Ideographs
