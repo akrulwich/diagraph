@@ -2,67 +2,50 @@ This
   This is 'Diagraph', a diagraph about diagraph.
 
 Diagraph
-  What sort of thing is a diagraph?
-    A diagraph is an abstract data type. 
-    A diagraph is a form of media. 
-  
-  What is a diagraph?
-    A diagraph is a key-value store, 
-      the keys of which are diagraphic paths.
-      the values of which are diagraphic trees.
-    A diagraph represents a set of possible explanations. 
-    A diagraph is a representation of an explanatory system
-      A diagraph represents the interface of an explanation-producing system.
-      A diagraph maps a set of requests for explanation to a particular set of explanations.
-      A diagraph represents all possible outputs of an explanatory system. 
-      A diagraph models only the interface of an explanatory system.
-        It ignores the internal implementation.
-        It represents only what goes in and what comes out, not what goes on inside.
-      A diagraph can model any system that responds to requests for explanation, 
-        such as teachers, books, search engines, or libraries.
-    A diagraph is an explanation machine.
-      It is a representation of the inputs and outputs like any abstract machine.
-  Why is diagraph useful?
-    A diagraph provides logarithmic-time lookups to a corpus of explanatory information of arbitrary size.  
-  What kind of things might be more easy to talk about in terms of diagraph? 
-    The differences in explanation preformance between experts and non-experts.
-    The ways in which we might compare directly the interfaces of different explanatory systems.
+  A diagraph is a kind of abstract data type. 
+  A diagraph is a form of media. 
+  A diagraph is a representation a set of possible explanations. 
+  A diagraph is a representation of the interface of an explanatory system
+    A diagraph represents the interface of an explanation-producing system.
+    A diagraph maps a set of requests for explanation to a particular set of explanations.
+    A diagraph represents all possible outputs of an explanatory system. 
+    A diagraph models only the interface of an explanatory system.
+      It ignores the internal implementation.
+      It represents only what goes in and what comes out, not what goes on inside.
+    A diagraph can model systems that responds to requests for explanation, 
+      such as teachers, books, search engines, or libraries.
+  A diagraph is an explanation machine.
+    It is a representation of the inputs and outputs like any abstract machine.
 
-The types of diagraphic entity
-  A diagraph is comprised of two kinds of entity, syntactic entities and graph entities.
-  The graph entities are explicitly represented, with nodes and edges.
-  The syntactic entities are implicitly represented, in the texts of the nodes.
-  The graph entities and their relationships supervene upon the syntactic entities and their relationships.
+Types of diagraphic entity
+  A diagraph has two kinds of entity, 
+    linguistic entities, like subjects, predicates, clauses, sentences, and explanations.
+    data structures, like key-value pairs, nodes, and trees.
+  The data structures are explicitly represented, and store natural-language text.
+  The syntactic entities are implicitly represented, in the natural language text.
+  The data structures and their relationships supervene upon the linguistic entities and their relationships.
+    There should be no relationship between data structures that doesn't represent a prior relationship between linguistic entities.
+
+The definition of diagraph
+  A diagraph is a key-value store, 
+      the keys of which are diagraphic paths, which represent requests for explanation.
+      the values of which are collections of diagraphic trees, which represent explanations.
 
 Diagraphic keys
-  The key of a diagraph represents a path prefix to the nodes of the associated tree.
-  The keys of a diagraph should be the things that can be explained. 
-  Keys that correspond to trees which are primarily stored as subtrees under another key should have their own key, but that key should merely be a reference or alias to the primary key.
-  A node's primary key is the key underwhich it is stored, as opposed to those keys which can access that tree through aliases and references.
-  Keys do not represent utterances, they represent recognitions that are occasioned by the associated utterance. They are often the same, although they need not be. 
+  The keys of a diagraph represent things that can be explained.
+  There should be a key for every query the explainer could recognize.
+  A key of a diagraph is a path prefix to the nodes of the associated tree.
+  Every node belongs to one primary key.
+  A node may be accessable via multiple keys through aliasing.
+  Keys do not represent utterances of the explanation, but rather recognitions which are occasioned by the associated utterance. A diagraphic tree may reiterate its key, like a teacher repeating a question.
 
 Explanations
-  An explanation is a series of alternating clauses and conjunctions.
-  An explanation is a traversal of a diagraphic tree.
-  Explanations may span connected diagraphic trees by crossing aliases.  
-  Explanations have an implicit session diagraph, a single tree formed by combining all transmissions, used by an explainer and a listener to coordinate public paths, paths which may not correspond to either the explainer or the listener's private diagraph. 
-    A speaker might not express what they think of the topic, and the listener might not express why they want to know, both of which would be given by the private path.
+  An explanation is a thing like an essay, lecture, book, article, answer or story.
+  An explanation is a represented in a diagraph by a collection of diagraphic trees.
+  An explanation may span several diagraphic trees by crossing over aliases.  
+  Explanations have an implicit diagraph, the single tree formed by combining all transmissions.
+    Clauses of an explanation have a path relative to the diagraph of the explanation, which may not correspond to the diagraph of the explainer.
 
-Diagraphic nodes
-  Diagraphic nodes are units of natural language text. 
-  Diagraphic nodes contain one or more syntactic elements. 
-  Diagraphic nodes represent the meaningfully indivisible units of an explanation.
-    A diagraphic node is a single-purpose text. 
-    If only part of the node's text is required for a particular purpose, it should be two nodes.
-    If a valid explanation could include only part of a node's text, it should be two nodes. 
-    If a diagraphic path defines a functional category of information, a node at that path should minimally suffice for that particular function.
-    A node should be functionally minimal.
-  Where a diagraphic node breaks corresponds to pragmatic sentences in conversation. 
-  Children of diagraphic nodes represent things that could follow it in an explanation.
-  Requests made to a path will return the entire node or nodes at that path, never portions of a single node.
-  Nodes are refactored when a new node is added at a path that enters an existing node.
-    Nodes are not refactored merely by adding two nodes with the same prefix to the same path.
-  Terminal nodes end with a period.
 Diagraphic tree
   A diagraphic tree is a tree of diagraphic nodes, which have a string containing one or more space-delimited syntactic elements. 
   A diagraphic tree is at once a graph tree of nodes and a syntax tree of natural language strings. 
@@ -79,10 +62,26 @@ Diagraphic tree
   Germanity as constraint on subtrees
   A speaker's sentence changes subject at the point where their tree aliases. 
 
+Diagraphic nodes
+  Diagraphic nodes are units of natural language text. 
+  Diagraphic nodes contain one or more syntactic elements. 
+  Diagraphic nodes represent the meaningfully indivisible units of an explanation.
+    A diagraphic node is a single-purpose text. 
+    If only part of the node's text is required for a particular purpose, it should be two nodes.
+    If a valid explanation could include only part of a node's text, it should be two nodes. 
+    If a diagraphic path defines a functional category of information, a node at that path should minimally suffice for that particular function.
+    A node should be functionally minimal.
+  Where a diagraphic node breaks corresponds to pragmatic sentences in conversation. 
+  Children of diagraphic nodes represent things that could follow it in an explanation.
+  Requests made to a path will return the entire node or nodes at that path, never portions of a single node.
+  Nodes are refactored when a new node is added at a path that enters an existing node.
+    Nodes are not refactored merely by adding two nodes with the same prefix to the same path.
+  Terminal nodes end with a period.
+
 Syntactic elements
   A diagraphic element is a minimal syntactic element, like a word or phrase.
 
-Syntactic subjects
+Grammatical subjects
   Diagraphic subjects are the roots of diagraphic trees.
   There are two general kinds of a diagraphic subject: spaces and things.
   Spaces are things like categories, sets, groups, topics, regions, eras, contexts, and they include things like members of a category, things in a space, etc. 
@@ -93,12 +92,12 @@ Syntactic subjects
   Things are concrete and their children are predicates of that thing.
   A tree that has a space-root may have embedded trees with subject-roots.
 
-Syntactic clauses
+Grammatical clauses
   A clause is a subject and series of predicates ending in a comma, which may begin with a conjunction.
   A clause-node tree can be automatically parsed, and can be used by some diagraphic functions.
   Diagraphic clauses are only implicitly represented.
 
-Syntactic sentences
+Grammatical sentences
   A sentence is a series of clauses ending in a period. 
   Sentences after a terminal clause can form subtrees in a diagraphic tree.
   Diagraphic sentences are only implicitly represented.
@@ -128,6 +127,8 @@ Diagraphic paths
     If a public truncated path is sufficient for an understanding appropriate to some context, it is inappropriate to say that some greater context or the private path used by experts is the correct path, whereas some public path is incorrect. 
       This is the mistake made for example by a graduate student who explains the real numbers as one axis of the range of complex numbers – says who? If the real numbers can be used and described by themselves for the purposes of a particular discussion, then they are their own sufficient context. We might say of complex numbers that they include the real numbers, but we may not say of the real numbers that they belong to the definition of complex numbers. By the time one reaches the age of a professor, one has more modularly refactored one's knowledge, so that each concept can be used and explained individually or in very intentional combinations. The undergraduate, on the other hand, avoids drawing in unneccessary information simply by maintaining a prudent ignorance. 
   EG, T/S/P/P/C/S/P/P/P/C/...
+  A speaker might not express what they think of the topic, and the listener might not express why they want to know, both of which would be given by the private path.
+
 
 Diagraphic addresses
   Diagraphic nodes have addresses in a particular diagraph.
@@ -175,6 +176,7 @@ Diagraphic priority
     Specifications are contingent, so if particular A is parent of particular B, A -/> B. 
     Classifications are high-priority, and so interpretations are often passed off as classifications.
     In generic diagraph, predicate children imply predicate parents.
+  "He is the" has priority over "he is a"
   Rank expresses, for example, which of two contributions that were not related would come first in an explanation.
   There cannot be an uncontroversial diagraph prioritization because even if ordering is something unobjectionable like linguistic frequency, there would still be disagreements over which things are classifications and which are interpretations attached to a description by a lower-priorty conjunction.
 
@@ -197,24 +199,16 @@ Generic clauses
   Generic clauses are things like "Dogs bark"
   Every particular clause is predicated on a generic clause.
 
-Derivations
-  A derivation is a path from a different subject to the abstraction of the current clause.
-  Compositions store derivations from a given example.
-  When a term of a clause is unknown to the reader and diagraph-explain pushes a new discontinous explanation onto working memory that explains the term, this is also a derivation.
-  Derivation does not find a path back to the particular clause, but rather a path from a case, through abstraction, to the generic upon which the current particular clause is predicated. 
-  The key marker of derivation is that it begins a discontinous explanation that is not integrated directly into the old explanation, eg as an answer to a motivated question, but rather which furnishes a generic which is then used indirectly by a particular of the explanation.
-  So, both compositions and term-subexplanations are derivations, discontinous explanations of a generic upon which we would like to predicate a particular.
-  When I attempt to derive a generic clause from a particular example, I am justifying that clause by showing it to be a valid interpretation of at least one particular.
-
 Particular derivations
   EG, X is P, why? becuase X is D, so X is E, so X is P.
   Particular derivations must provide a reputable dependent clause from which the given clause follows in generic inferences inherent in the language.
 
 Generic derivations
   A generic derivation is an aside made from a particular explanation.
+  A generic derivation begins a discontinous explanation.
   EG, expl(x is p) -> expl(Cs can be p) -> expl(x is p)
 
-Diagraphic predication
+Predication
   Every particular clause is predicated upon a generic clause, the abstraction of the particular clause. 
   A predication is an implicit correspondance between a particular predicate and a predicate of the generic type. 
   Predication of a generic address to a particular gives that particular an attribute that represents a state in an underlying generic DFA.
@@ -224,12 +218,7 @@ Abstracting a clause
   For example, "Fifi gave birth to twins" -> "Dogs give birth to twins".
   This operation is used in diagraph-consider, and in generic diagraph formation by constantly abstracting from the particular cases we encounter.
 
-Diagraph merges
-  Two diagraphs are merged into one that contains the paths of both diagraphs, refactoring nodes that share prefixes. 
 
-Common configurations of diagraph
-  Stories
-  Locations
 
 
 
@@ -258,12 +247,18 @@ Descriptive diagraph specifications
   Descriptive specifications specify the desired information by describing an attribute of that information.
   A descriptive diagraph definition is like, the diagraph formed by a particular corpus of text.
 
+Diagraph merges
+  Two diagraphs are merged into one that contains the paths of both diagraphs, refactoring nodes that share prefixes. 
 
-Means of diagraphic priority
+Common configurations of diagraph
+  Stories
+  Locations
+
+
+Kinds of diagraphic priority
 
 
 Interesting diagraphs
-
 Discourse diagraphs
   A discourse diagraph is the hypothetical diagraph implicit in a corpus of text. 
   Responses to particular articulations are culled to produce an abstracted diagraph. 
@@ -272,6 +267,8 @@ Discourse diagraphs
     Number of secondary sources that make a particular point/use a particular clause.
   Diagraph ranking
     Number of hits on google. 
+Pedagogic diagraphs
+  Diagraphs that contain every wrong explanation of something, and corrections.
 Library diagraphs
   A library diagraph is a diagraph that subsumes various other diagraphs. 
 Ideographs
@@ -290,7 +287,10 @@ Culture diagraphs
 
 
 
-Describing with diagraph
+Describing with diagraph  
+  What kind of things might be more easy to talk about in terms of diagraph? 
+    The differences in explanation preformance between experts and non-experts.
+    The ways in which we might compare directly the interfaces of different explanatory systems.
   Tag entropy
 Describing education with diagraph
 Describing journalism with diagraph
@@ -305,9 +305,10 @@ Describing chronology with diagraph
 
 
 Applications of diagraph
-    Preventing the redundant duplication of explanatory information in multiple documents. 
-      Although, not all duplicated explanatory information is redundant, duplicating the same tree is redundant, but two tree might include the same fact but not the explanation. 
-    Preventing information that is similar from becomming fragmented by division into seperate documents
+  Preventing the redundant duplication of explanatory information in multiple documents. 
+    Although, not all duplicated explanatory information is redundant, duplicating the same tree is redundant, but two tree might include the same fact but not the explanation. 
+  Preventing information that is similar from becomming fragmented by division into seperate documents
+  A diagraph could provide logarithmic-time lookup to a very large corpus of explanatory information.
 Diagraph in Education
 Diagraph in Journalism
   Explainer journalism – having one continuous piece of content for the story and the analysis.
@@ -524,4 +525,6 @@ Intellectual virtue
   Having a reason besides ignorance for choosing where your diagraph will end
 How one can infer from the exact relevance of examples and analogies the resolution of one's ideolect.
 Moral intuitions as a finite set of innate interpretations that are naturally and generatively triggered by complete description, and so morality as a requirement to solicit the information that would give one's moral intuitions the chance to be triggered. An argument for moral intuitions of greater informational content, rather than a difference in kind. Moral intuitions as judgements, propositional to the degree that any ordinary language.
+How can you merge texts? 
+  How can we reason about the individual who has read two texts?
 
