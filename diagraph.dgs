@@ -1,6 +1,8 @@
 This
   This is 'Diagraph', a diagraph about diagraph.
 
+
+
 Diagraph
   A diagraph is a kind of abstract data type. 
   A diagraph is a form of media. 
@@ -129,7 +131,6 @@ Diagraphic paths
   EG, T/S/P/P/C/S/P/P/P/C/...
   A speaker might not express what they think of the topic, and the listener might not express why they want to know, both of which would be given by the private path.
 
-
 Diagraphic addresses
   Diagraphic nodes have addresses in a particular diagraph.
   Diagraphic nodes have one primary and many secondary addresses.
@@ -220,10 +221,6 @@ Abstracting a clause
 
 
 
-
-
-
-
 Describing diagraphs
   Diagraphs can have depth, if many nodes are the roots of lower trees.
   Diagraphs can have context, if many trees are nodes in higher trees.
@@ -234,7 +231,6 @@ Describing diagraphs
 
   A diagraph has a certain number of stages
     The number of conjunctive layers at a particular point.
-
 
 Diagraph specifications
 Functional diagraph specifications
@@ -253,7 +249,6 @@ Diagraph merges
 Common configurations of diagraph
   Stories
   Locations
-
 
 Kinds of diagraphic priority
 
@@ -285,9 +280,7 @@ Culture diagraphs
 
 
 
-
-
-Describing with diagraph  
+Describing things as diagraphs  
   What kind of things might be more easy to talk about in terms of diagraph? 
     The differences in explanation preformance between experts and non-experts.
     The ways in which we might compare directly the interfaces of different explanatory systems.
@@ -302,6 +295,7 @@ Describing individuals with diagraph
 Describing chronology with diagraph
   Real time, stateful time, evolutionary time
     Being in a DFA, as opposed to being out of one.
+
 
 
 Applications of diagraph
@@ -321,10 +315,8 @@ Diagraph in personal reading
 
 
 
-
-Diagraph production
-
-Diagraph writing
+Producing diagraph
+Writing diagraph
   Discussion diagraph 
     Produces by consensus
     Every write is changable by both parties. 
@@ -356,8 +348,6 @@ Diagraph formation
 
 
   
-
-
 Representations of diagraph
   Diagraph script
     Diagraph script is a text format that represents a diagraph. 
@@ -369,7 +359,7 @@ Representations of diagraph
       The paths may not correspond exactly to the path-keys of the diagraph.
         A diagraph might be more modularly refactored, and the diagraph script intended for a wider audience. 
     Top-level indentations under a key represent the roots of a diagraphic category. 
-    Diagraph script is comprised of blocks and section.
+    Diagraph script is comprised of blocks, section, and parts.
       A block of diagraph script is one atomic write operation.
         Blocks can be seperated by one blank line for clarity.
         Blocks would often begin at the indentation of the previous block. 
@@ -379,9 +369,12 @@ Representations of diagraph
         Sections can be seperated by two or three blank lines for clarity. 
         Sections would not usually begin indented. 
         A section of diagraph script might correspond to a prose article or chapter.
+      A part is a set of sections that share a topic or theme.
+        Parts are seperated by three blank lines.
     Multi-line compositions can be wraped in quotes.
-  JSON representation of diagraph
-    An element-node tree can be a javascript object, because no children of the same node should share a prefix. Otherwise, we would use string-array tuples.
+
+JSON representation of diagraph
+  An element-node tree can be a javascript object, because no children of the same node should share a prefix. Otherwise, trees can be represented with string-array tuples.
 
 
 
@@ -488,6 +481,7 @@ Diagraph-reflect
   Reflection takes a fact and searches the generic diagraph for candidate interpretations.
   Reflection alternatingly describes an entire tree, inviting schemas.
   I keep a full description at the base of WM, and I push selective combinations onto the stack, inviting a STM trigger of a generic path. 
+
 
 
 Other
