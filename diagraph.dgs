@@ -5,8 +5,12 @@ Diagraph
   What sort of thing is diagraph?
     Diagraph is an abstract data type.
     A diagraph is a directed graph comprised of interconnected trees that stores explanatory information.  
-  What is a diagraph?
     A diagraph is a form of media. 
+  
+  What is a diagraph?
+    A diagraph is a key-value store, 
+      the keys of which are diagraphic paths.
+      the values of which are diagraphic trees.
     A diagraph captures a set of possible explanations. 
     A diagraph is a representation of an explanatory system
       A diagraph represents the interface of an explanation-producing system.
@@ -17,23 +21,20 @@ Diagraph
         It represents only what goes in and what comes out, not what goes on inside.
       A diagraph can model any system that responds to requests for explanation, 
         such as teachers, books, search engines, or libraries.
+    A diagraph is an explanation machine.
+      It is a representation of the inputs and outputs like any abstract machine.
   Why is diagraph useful?
     A diagraph provides logarithmic-time lookups to a corpus of explanatory information of arbitrary size.  
-  What kind of things might we be able to talk more easily about in terms of diagraph? 
+  What kind of things might be more easy to talk about in terms of diagraph? 
     The differences in explanation preformance between experts and non-experts.
     The ways in which we might compare directly the interfaces of different explanatory systems.
 
-Definition of diagraph
-  A diagraph is a key-value store, 
-      the keys of which are diagraphic paths.
-      the values of which are diagraphic trees.
-  The key represents a path prefix to the nodes of the associated tree.
-  A diagraph is an explanation machine. 
-
 Diagraphic keys
+  The key of a diagraph represents a path prefix to the nodes of the associated tree.
   The keys of a diagraph should be the things that can be explained. 
   Keys that correspond to trees which are primarily stored as subtrees under another key should have their own key, but that key should merely be a reference or alias to the primary key.
   A node's primary key is the key underwhich it is stored, as opposed to those keys which can access that tree through aliases and references.
+  Keys do not represent utterances, they represent recognitions that are occasioned by the associated utterance. They are often the same, although they need not be. 
 
 Diagraphic tree
   A diagraphic tree is a tree of diagraphic nodes, which have a string containing one or more space-delimited syntactic elements. 
@@ -52,6 +53,7 @@ Diagraphic tree
     The ordering of children can be done in several ways. 
     Children of a node are things which could directly follow a node, and so, we might order them relative to how we would order them in an explanation that included both. Of a clause, conjoined dependent clauses might come first, then specifications, then new sentences, compositions and notes.
   Germanity as constraint on subtrees
+  A speaker's sentence changes subject at the point where their tree aliases. 
 
 Diagraphic nodes
   Diagraphic nodes are units of natural language text. 
@@ -93,6 +95,12 @@ Diagraphic clauses
   A clause is a subject and series of predicates ending in a comma, which may begin with a conjunction.
   A clause-node tree can be automatically parsed, and can be used by some diagraphic functions.
   Diagraphic clauses are only implicitly represented.
+  Conjunctions
+    A clause has conjunctions.
+  Specifications
+    A clause has specifications.
+  Interpretations
+    A clause has interpretations.
 
 Diagraphic sentences
   A sentence is a series of clauses ending in a period. 
@@ -105,13 +113,15 @@ Diagraphic compositions
   Compositions don't nest.
   Compositions come after a period, and represent a new sentence.
     Compositions to not add to the path. 
-  Compositions are new sentences from a new subject that traces back to the given terminal clause. 
-  Compositions are a kind of cached derivation that doesn't require the use of a generic term in a particular clause, and then a subsequent explanation of that term, but rather can proceede by analogy, the example from which the derivation occurs being used to derive directly the property of the particular which one desires to ellicit. The primary storage location of the germ of the derivation is not the tree to which the composition belongs, but this may be the only situation in which it is useful. 
+  Compositions can be a kind of cached derivation that doesn't require the use of a generic term in a particular clause, and then a subsequent explanation of that term, but rather can proceede by analogy, the example from which the derivation occurs being used to derive directly the property of the particular which one desires to ellicit. The primary storage location of the germ of the derivation is not the tree to which the composition belongs, but this may be the only situation in which it is useful. 
+  Compositions can correspond to any part of the tree.
 
 Diagraphic notes
   A note is a special kind of composition which is used to store information temporarily, provisional to its incorperation into a more modular tree.
   One would use a note not because the information contained within is meaningfully single-purpose, but rather because of the accidental organization of the information at its source. 
   A composition that is appropriate whole in one context might need to be broken down into smaller pieces in a different context, and so a composition in one place might become a note in another, provision to refactoring. 
+  Diagraphic note piles
+
 
 Diagraphic paths
   A path is a series of syntactic elements divided into clauses.
@@ -122,7 +132,7 @@ Diagraphic paths
   A path from a known subject to an unknown subject is the latter's context.
   A public path may not be the same as a private path, which may have a longer antecedent context.
     If a public truncated path is sufficient for an understanding appropriate to some context, it is inappropriate to say that some greater context or the private path used by experts is the correct path, whereas some public path is incorrect. 
-      This is the mistake made for example by a graduate teaching assistant who explains the real numbers as one axis of the range of complex numbers – says who? If the real numbers can be used and described by themselves for the purposes of a particular discussion, then they are their own sufficient context. We might say of complex numbers that they include the real numbers, but we may not say of the real numbers that they belong to the definition of complex numbers. By the time one reaches the age of a professor, one has more modularly refactored one's knowledge, so that each concept can be used and explained individually or in very intentional combinations. The undergraduate, on the other hand, avoids drawing in unneccessary information simply by maintaining a prudent ignorance. 
+      This is the mistake made for example by a graduate student who explains the real numbers as one axis of the range of complex numbers – says who? If the real numbers can be used and described by themselves for the purposes of a particular discussion, then they are their own sufficient context. We might say of complex numbers that they include the real numbers, but we may not say of the real numbers that they belong to the definition of complex numbers. By the time one reaches the age of a professor, one has more modularly refactored one's knowledge, so that each concept can be used and explained individually or in very intentional combinations. The undergraduate, on the other hand, avoids drawing in unneccessary information simply by maintaining a prudent ignorance. 
   EG, T/S/P/P/C/S/P/P/P/C/...
 
 Diagraphic references
@@ -185,56 +195,56 @@ Abstracting a clause
   For example, "Fifi gave birth to twins" -> "Dogs give birth to twins".
   This operation is used in diagraph-consider, and in generic diagraph formation by constantly abstracting from the particular cases we encounter.
 
+Diagraph merges
+  Two diagraphs are merged into one that contains the paths of both diagraphs, refactoring nodes that share prefixes. 
+
 
 
 Common configurations of diagraph
   Stories
-  Maps
+  Locations
 
 
+Diagraph production
 
-Diagraph script
-  Diagraph script is a text format that represents a diagraph. 
-  Diagaph script is the canonical representation of a diagraph. 
-    Other data structures merely implement the constructs of diagraph script.
-  Lines of a diagraph script file represent nodes of a diagraph.
-  Indendation in a diagraph script file represents the hierarchy of a diagraph. 
-  Unindented lines of diagraph script represent the diagraphic paths which are the keys of the diagraph.
-    The paths may not correspond exactly to the path-keys of the diagraph.
-      A diagraph might be more modularly refactored, and the diagraph script intended for a wider audience. 
-  Top-level indentations under a key represent the roots of a diagraphic category. 
-  Diagraph script is comprised of blocks and section.
-    A block of diagraph script is one atomic write operation.
-      Blocks can be seperated by one blank line for clarity.
-      Blocks would often begin at the indentation of the previous block. 
-      A block of diagraph script might correspond to a prose paragraph.
-      A diagraph script block captures a diagraphic root, its context, its specifications, and derivations of the generics used in that tree.
-    A section of diagraph script is a set of related blocks. 
-      Sections can be seperated by two or three blank lines for clarity. 
-      Sections would not usually begin indented. 
-      A section of diagraph script might correspond to a prose article or chapter.
+Diagraph writing
 
-JSON representation of diagraph
-  An element-node tree can be a javascript object, because no children of the same node should share a prefix. Otherwise, we would use string-array tuples.
-
-
-
-Individual diagraph formation
-Asynchronous diagraph production
-  Diagraph can be produced by uncoordinated groups that are distributed in space or time. 
-Diagraph merges
-  Two diagraphs are merged into one that contains the paths of both diagraphs, refactoring nodes that share prefixes. 
-Adversarial diagraph production
-  Or diagraphic debate. 
+Consensus diagraph 
+  Every write is changable by both parties. 
+  Like writing diagraph-script in a google doc.
+  One party may change the paths of the contributions of another party.
+  Vulnerable to filibustering.
+  Vulnerable to normative description.
+    Descriptive clauses should come before specifications and interpretations. By inserting a normative interpretation in the initial declaration, a party may violate that understanding.
+  Requires all parties to agree on a shared generic diagraph, 
+    in order to decide which inferences are acceptable.
+    in order to decide which declarations are descriptive and which are interpretive.
+  This method could be used by an organization with dispute resolution procedures, like a newspaper. 
+Debate diagraph
+  Every write is submitted by only one party.
+  Like a group of people submitting diagraph-script comments to a shared page, everyone can post what they want but no party may alter another party's post.
+  No conrtibution may change the path of an existing contribution.
   Diagraph production in which individuals produce a discussion diagraph.
-  A party that creates a terminal clause can write a composition, but another party may subdivide that terminal node causing dg-explain to pass over those compositions.
-  Only parties who react to opponent arguments will end up with responsive compositions at every point. 
+  A party that creates a terminal clause can write a composition, but another party may subdivide that terminal node causing explanation to pass over those compositions.
+  Only parties who react to opponent arguments will end up with responsive compositions at every terminal point. 
 
 
 
-Diagraph formation processes
+Diagraph formation
 Tidal sort
+  Alternating periods of solicitation to topic-buckets, culling, and subdividing.
+  Tidal sort provides continuous improvements.
+  Tidal sort requires prior knowledge of high-order clauses.
 Pile sort
+  Iterative periods of solicitation to topic buckets, sorting by similarity and subdividing, then more solicitation, until all buckets have fewer than some threshold of notes, then the creation of note piles, which become clause node trees, then element node trees. 
+  Pile sort requires a large initial cost.
+
+
+
+Diagraph ranking
+  Topic, subject, predicate, 
+  Does it have a wikipedia page?
+  Number of hits on google. 
 
 
 
@@ -248,6 +258,7 @@ Descriptive diagraph specifications
   A descriptive diagraph specification is like a topic, and therefore is imprecise.
   Descriptive specifications specify the desired information by describing an attribute of that information.
   A descriptive diagraph definition is like, the diagraph formed by a particular corpus of text.
+
 
 
 
@@ -284,25 +295,58 @@ Describing diagraphs
   A diagraph can reduce one diagraph to another.
   A diagraph can be coherant if all paths belong to a single refactored tree.
 
+
 Describing with diagraph
 Describing education with diagraph
 Describing journalism with diagraph
   How context in a news article might naively seem like aliased subtrees that belong primarily in other places, but really are custom made for the article's tree, children of references in a particular sentence, not a new explanation soley of the reference in its own right. 
 Describing libraries with diagraph
 Describing academia with diagraph
+Capsizing
+
+
+
+Representations of diagraph
+  
+  Diagraph script
+    Diagraph script is a text format that represents a diagraph. 
+    Diagaph script is the canonical representation of a diagraph. 
+      Other data structures merely implement the constructs of diagraph script.
+    Lines of a diagraph script file represent nodes of a diagraph.
+    Indendation in a diagraph script file represents the hierarchy of a diagraph. 
+    Unindented lines of diagraph script represent the diagraphic paths which are the keys of the diagraph.
+      The paths may not correspond exactly to the path-keys of the diagraph.
+        A diagraph might be more modularly refactored, and the diagraph script intended for a wider audience. 
+    Top-level indentations under a key represent the roots of a diagraphic category. 
+    Diagraph script is comprised of blocks and section.
+      A block of diagraph script is one atomic write operation.
+        Blocks can be seperated by one blank line for clarity.
+        Blocks would often begin at the indentation of the previous block. 
+        A block of diagraph script might correspond to a prose paragraph.
+        A diagraph script block captures a diagraphic root, its context, its specifications, and derivations of the generics used in that tree.
+      A section of diagraph script is a set of related blocks. 
+        Sections can be seperated by two or three blank lines for clarity. 
+        Sections would not usually begin indented. 
+        A section of diagraph script might correspond to a prose article or chapter.
+
+  JSON representation of diagraph
+    An element-node tree can be a javascript object, because no children of the same node should share a prefix. Otherwise, we would use string-array tuples.
+
+
 
 
 Applications of diagraph
-  Generally
     Preventing the redundant duplication of explanatory information in multiple documents. 
       Although, not all duplicated explanatory information is redundant, duplicating the same tree is redundant, but two tree might include the same fact but not the explanation. 
-
-  Diagraph in Education
-  Diagraph in Journalism
-  Diagraph in Politics
-  Diagraph in Library Science
-  Diagraph in Academic Publishing
-
+    Preventing information that is similar from becomming fragmented by division into seperate documents
+Diagraph in Education
+Diagraph in Journalism
+  Explainer journalism – having one continuous piece of content for the story and the analysis.
+Diagraph in Politics
+Diagraph in Library Science
+Diagraph in Academic Publishing
+Diagraph in personal reading
+  Whatever your opinion on what people should read, biases that are failures to trigger a potential interest are inefficiencies.
 
 
 Diabots
@@ -311,6 +355,8 @@ Diabots
   A diabot knows N if it has the node N. 
   A diabot understands P if it has the path P. 
   A diabot's ideograph of a particular topic is its understanding of that topic. 
+
+
 
 Diagraphic servers
 
@@ -409,34 +455,40 @@ Diagraph-reflect
 
 
 Other
-  Diagraph
-    A diagraph is not a document.
-      Documents are an insufficiently abstract tool for reasoning about explanatory information 
-    A diagraph is not a hypertext.
-    Diagraph does not represent embodied discussions.
-      Diagraphic responses are of ideas and to ideas, rather than of people or writings to other people or writings. 
-      Diagraphs can be formed by culling discussions.
-  Propsecting
-    Provisional compositions can become notes which can become sentences which can become either clause-trees or final compositions.
-  Qualitative computing
-  Moderation as merger not mean
-  The explanation market
-    Market fragmentation between producers and consumers. 
-  Diagraph as epistemic algorithm
-  Diabots and personal reading
-  Exhaustive diagraphs, which invite and address every articulation of an idea possible in the language
-  Diagraphic dynamics
-    How agents behave when diagraph transmission is so reliable and ubiquitous as to be inevitable. 
-  Ostensive diagraph
-    A diagraphic node may ostend to a resource referenced by address.
-  Human assistants for composing diagraph script, eg customer support. 
-  Diagramatic explanation
-    A visual the elements of which correspond to one or more diagraphic trees.
-  Arguments over competing narratives are arguments over suggested primary ideographic storage
-  A definition of wrongness that is relative to what one would think given more complete information
-  How creating a diagraph involves massive redundancy, enumerating for example every concievable way of articulating an idea, so that it is perfectly clear how you suggest the reader integrate it into their understanding.
-    How there are no true synonyms in a diagraph, and so every identity between terms must be explicitly represented and justified. 
-  An explanation of Darwin of infinite length might include an explanation of England of infinite length, but not every fact about England would be germane to that explanation.
-  Analogies
-    Are compositions stored in subtrees analogies? Or are they like in only one respect, whereas an analogy is a direct comparison of likeness? "A is B. C is an example of B." vs. "A is like C"
+Diagraph
+  A diagraph is not a document.
+    Documents are an insufficiently abstract tool for reasoning about explanatory information 
+  A diagraph is not a hypertext.
+  Diagraph does not represent embodied discussions.
+    Diagraphic responses are of ideas and to ideas, rather than of people or writings to other people or writings. 
+    Diagraphs can be formed by culling discussions.
+Propsecting
+  Provisional compositions can become notes which can become sentences which can become either clause-trees or final compositions.
+Qualitative computing
+Moderation as merger not mean
+The explanation market
+  Market fragmentation between producers and consumers. 
+Diagraph as epistemic algorithm
+Diabots and personal reading
+Exhaustive diagraphs, which invite and address every articulation of an idea possible in the language
+Diagraphic dynamics
+  How agents behave when diagraph transmission is so reliable and ubiquitous as to be inevitable. 
+Ostensive diagraph
+  A diagraphic node may ostend to a resource referenced by address.
+Human assistants for composing diagraph script, eg customer support. 
+Diagramatic explanation
+  A visual the elements of which correspond to one or more diagraphic trees.
+Arguments over competing narratives are arguments over suggested primary ideographic storage
+A definition of wrongness that is relative to what one would think given more complete information
+How creating a diagraph involves massive redundancy, enumerating for example every concievable way of articulating an idea, so that it is perfectly clear how you suggest the reader integrate it into their understanding.
+  How there are no true synonyms in a diagraph, and so every identity between terms must be explicitly represented and justified. 
+An explanation of Darwin of infinite length might include an explanation of England of infinite length, but not every fact about England would be germane to that explanation.
+Analogies
+  Are compositions stored in subtrees analogies? Or are they like in only one respect, whereas an analogy is a direct comparison of likeness? "A is B. C is an example of B." vs. "A is like C"
+Intellectual virtue
+  Having a reason besides ignorance for choosing where your diagraph will end
+Real time, habitual time, evolutionary time
+  Being in a DFA, as opposed to being out of one.
+How one can infer from the exact relevance of examples and analogies the resolution of one's ideolect.
+Moral intuitions as a finite set of innate interpretations are naturally and generatively triggered by complete description, and so morality as a requirement to solicit the information that would give one's moral intuitions the chance to be triggered. An argument for moral intuitions of greater informational content, rather than a difference in kind. Moral intuitions as judgements, propositional to the degree that any ordinary language.
 
