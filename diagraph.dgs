@@ -267,6 +267,7 @@ Capsizing
 Describing individuals with diagraph
 
 
+
 Applications of diagraph
     Preventing the redundant duplication of explanatory information in multiple documents. 
       Although, not all duplicated explanatory information is redundant, duplicating the same tree is redundant, but two tree might include the same fact but not the explanation. 
@@ -280,8 +281,6 @@ Diagraph in Library Science
 Diagraph in Academic Publishing
 Diagraph in personal reading
   Whatever your opinion on what people should read, biases that are failures to trigger a potential interest are inefficiencies.
-
-
 
 
 
@@ -323,7 +322,7 @@ Diagraph formation
 
 Interesting diagraphs
 
-Discourse diagraph
+Discourse diagraphs
   A discourse diagraph is the hypothetical diagraph implicit in a corpus of text. 
   Responses to particular articulations are culled to produce an abstracted diagraph. 
   Inclusion criteria
@@ -331,7 +330,7 @@ Discourse diagraph
     Number of secondary sources that make a particular point/use a particular clause.
   Diagraph ranking
     Number of hits on google. 
-Library diagraph
+Library diagraphs
   A library diagraph is a diagraph that subsumes various other diagraphs. 
 Ideographs
   An ideograph represents the possible explanations of an individual. 
