@@ -5,8 +5,7 @@ This
 Diagraph
   A diagraph is a kind of abstract data type. 
   A diagraph is a form of media. 
-  A diagraph is a representation a set of possible explanations. 
-  A diagraph is a representation of the interface of an explanatory system
+  A diagraph is a model of the interface of an explanatory system
     A diagraph represents the interface of an explanation-producing system.
     A diagraph maps a set of requests for explanation to a particular set of explanations.
     A diagraph represents all possible outputs of an explanatory system. 
@@ -15,6 +14,7 @@ Diagraph
       It represents only what goes in and what comes out, not what goes on inside.
     A diagraph can model systems that responds to requests for explanation, 
       such as teachers, books, search engines, or libraries.
+  A diagraph represents a set of possible explanations. 
   A diagraph is an explanation machine.
     It is a representation of the inputs and outputs like any abstract machine.
 
@@ -31,6 +31,7 @@ The definition of diagraph
   A diagraph is a key-value store, 
       the keys of which are diagraphic paths, which represent requests for explanation.
       the values of which are collections of diagraphic trees, which represent explanations.
+  Each diagraphic tree is an entry in the diagraph under the particular key.
 
 Diagraphic keys
   The keys of a diagraph represent things that can be explained.
@@ -383,6 +384,7 @@ Representations of diagraph
     Multi-line compositions can be wraped in quotes.
 
 JSON representation of diagraph
+  Strings in any primitive represent nodes, and any kind of nesting represents hierarchy.
   An element-node tree can be a javascript object, because no children of the same node should share a prefix. Otherwise, trees can be represented with string-array tuples.
 
 
@@ -454,17 +456,23 @@ Diagraphic function controllers
 Diagraphic function processes
   A diagraphic process is a continuity of a function with a STM & LTM and root path.
   A diagraphic process handles one or more requests.
-  Processes can be represented as continuous closures in the javascript runtime.
+  A diagraphic function process is like a webpage.
+  Processes can be represented as a closure in the javascript runtime.
 
 Diagraphic function threads
-  A diagraphic thread is a continuity of WM between cycles of diagraphic 
+  A diagraphic thread is represented by a closure, function, and state of WM.
+  A diagraphic thread is a continuity of WM between cycles of diagraphic function.
   A diagraphic thread handles one request, across multiple cycles.
   A thread of a process might be a branch of the process tree.
-  Threads can be represented as messages in the javascript runtime.
+  A thread might persist for a while with a provisional path, and terminate once it finds a LTM address.
+  A diagraphic function thread is like a paragraph.
+  Once a thread has stored its base entry to working memory, it empties and terminates.
+  A thread can be represented as a continuous series of javascript messages scheduling other messages. 
 
 Diagraphic function cycles
   Uses a call stack to compute the next state of WM.
-
+  A diagraphic function thread is like a sentence.
+  Each cycle can be represented as a javascript message.
 
 Active diagraphic functions
 Diagraph-read
@@ -511,6 +519,7 @@ Diagraph-reflect
   I keep a full description at the base of WM, and I push selective combinations onto the stack, inviting a STM trigger of a generic path. 
 
 Diagraphic priority queue
+  In order to select a passive process, perhaps the diagraphic function environment does a BFS on the identity tree, looking for hits in STM, and then creates a new process and thread.
 
 
 Other
@@ -551,3 +560,4 @@ Moral intuitions as a finite set of innate interpretations that are naturally an
 How can you merge texts? 
   How can we reason about the individual who has read two texts?
 Ellaborative encoding, using people's quotes as compositions of particular views.
+One uses one's linguistic sense to navigate a diagraph.
