@@ -2,7 +2,6 @@ This
   This is 'Diagraph', a diagraph about diagraph.
 
 
-
 Diagraph
   A diagraph is a kind of abstract data type. 
   A diagraph is a form of media. 
@@ -224,7 +223,6 @@ Abstracting a clause
   This operation is used in diagraph-consider, and in generic diagraph formation by constantly abstracting from the particular cases we encounter.
 
 
-
 Describing diagraphs
   Diagraphs can have depth, if many nodes are the roots of lower trees.
   Diagraphs can have context, if many trees are nodes in higher trees.
@@ -290,7 +288,6 @@ Various Discussions
 Various theories / religions
 
 
-
 Describing with diagraph
   What kind of things might be more easy to talk about in terms of diagraph? 
     The differences in explanation preformance between experts and non-experts.
@@ -309,7 +306,6 @@ Describing individuals with diagraph
 Describing chronology with diagraph
   Real time, stateful time, evolutionary time
     Being in a DFA, as opposed to being out of one.
-
 
 
 Applications of diagraph
@@ -361,7 +357,6 @@ Diagraph formation
     Pile sort requires a large initial cost.
 
 
-  
 Representations of diagraph
   Diagraph script
     Diagraph script is a text format that represents a diagraph. 
@@ -391,14 +386,12 @@ JSON representation of diagraph
   An element-node tree can be a javascript object, because no children of the same node should share a prefix. Otherwise, trees can be represented with string-array tuples.
 
 
-
 Diabots
   A diabot is any diagraphic agent. 
   A diabot is an agent that represents its knowledge as a diagraph. 
   A diabot knows N if it has the node N. 
   A diabot understands P if it has the path P. 
   A diabot's ideograph of a particular topic is its understanding of that topic. 
-
 
 
 Diagraphic servers
@@ -426,7 +419,6 @@ Diagraphic functions
   Diagraphic functions have a function body, a satisfaction condition, and a configuration script. 
   Diagraphic functions take a working memory stack of diagraph-script values.
   Diagraphic functions manipulate WM.
-
 
 Diagraphic function environments
   Input
