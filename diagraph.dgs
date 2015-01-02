@@ -291,11 +291,14 @@ Various theories / religions
 
 
 
-Describing things as diagraphs  
+Describing with diagraph
   What kind of things might be more easy to talk about in terms of diagraph? 
     The differences in explanation preformance between experts and non-experts.
     The ways in which we might compare directly the interfaces of different explanatory systems.
   Tag entropy
+  Ephemeral documents and feeds
+  An adjacency in a diagraph is a thing that would bring to mind another thing in an explanation.
+    So imagine the mind of the person who reads Twitter or the newspaper.
 Describing education with diagraph
 Describing journalism with diagraph
   How context in a news article might naively seem like aliased subtrees that belong primarily in other places, but really are custom made for the article's tree, children of references in a particular sentence, not a new explanation soley of the reference in its own right. 
@@ -323,11 +326,11 @@ Diagraph in Library Science
 Diagraph in Academic Publishing
 Diagraph in personal reading
   Whatever your opinion on what people should read, biases that are failures to trigger a potential interest are inefficiencies.
-
+Diagraph as personal desktop/task manager
 
 
 Producing diagraph
-Writing diagraph
+Writing a diagraph
   Discussion diagraph 
     Produces by consensus
     Every write is changable by both parties. 
@@ -416,54 +419,74 @@ Diagraphic interfaces
   Interactive mode
     Client-side generation
     Client-side assembly
+    Pages are processes, DOM elements are threads.
 
-Diagraphic function environments
-  Isomorphic
-  Provide input stream as service
-  Provide output stream as service
-  Provides a WM service
-    Push method
-    Enqueue method
-    Promote method
-    By default caches to STM.
-    By default checks STM for value on top of stack and fills in context if there's a match.
-  STM
-    STM is a cache that associates every value added to WM with its path. 
-    A particular trigger of STM is context. 
-    A generic trigger of STM is recognition.
-    STM recalls can be for generic matches or near matches by generic implicature producing analogies, another example of generic diagraph being useful for comparing different particular diagraphs.
-  LTM
-    Connects to a data store or API.
-
-Diagraphic function controllers
-  Diagraphic function controllers are responsible for 
-    taking the provided path and loading the tree into short-term memory, 
-    perhaps setting the provided path as the initial item of working memory, 
-    before each cycle, checking the function's satisfaction condition, 
-    when the function is satisfied, putting new input into working memory,
-    piping the instantantaneous values of WM to output as text.
-  The controller runs the diagraphic function's configuration script.
-    What the controller does with the path and input depends on the function. 
 
 Diagraphic functions
   Diagraphic functions have a function body, a satisfaction condition, and a configuration script. 
   Diagraphic functions take a working memory stack of diagraph-script values.
   Diagraphic functions manipulate WM.
 
-Terminating diagraphic functions
-  eg, Explain
-Nonterminating diagraphic functions
-  eg, consider
 
+Diagraphic function environments
+  Input
+  Output
+  Path
+  LTM
+    Connects to a data store or API.
+  STM
+    STM is a cache that associates every value added to WM with its path. 
+    A particular trigger of STM is context. 
+    A generic trigger of STM is recognition.
+    STM recalls can be for generic matches or near matches by generic implicature producing analogies, another example of generic diagraph being useful for comparing different particular diagraphs.
+  WM
+    Push method
+    Enqueue method
+    Promote method
+    By default caches to STM.
+    By default checks STM for value on top of stack and fills in context if there's a match.
+    A diagraphic function might use the base of WM to build up some value.
+  Call stack
+    The call stack represents discrete units of cognition.
+
+Diagraphic function controllers
+  The controller runs the diagraphic function's configuration script.
+    What the controller does with the path and input depends on the function. 
+  Diagraphic function controllers are responsible for 
+    taking the provided path and loading the tree into short-term memory, 
+    perhaps setting the provided path as the initial item of working memory, 
+    before each cycle, checking the function's satisfaction condition, 
+    when the function is satisfied, putting new input into working memory,
+    piping the instantantaneous values of WM to output as text.
+
+Diagraphic function processes
+  A diagraphic process is a continuity of a function with a STM & LTM and root path.
+  A diagraphic process handles one or more requests.
+  Processes can be represented as continuous closures in the javascript runtime.
+
+Diagraphic function threads
+  A diagraphic thread is a continuity of WM between cycles of diagraphic 
+  A diagraphic thread handles one request, across multiple cycles.
+  A thread of a process might be a branch of the process tree.
+  Threads can be represented as messages in the javascript runtime.
+
+Diagraphic function cycles
+  Uses a call stack to compute the next state of WM.
+
+
+Active diagraphic functions
 Diagraph-read
   Takes a path and returns the corresponding values. 
+Diagraph-edit
+  Retrieves the diagraph entry and allows changes.
 Diagraph-add
+  Merges the input with the existing diagraph entry.
   Takes a diagraph script file and adds it to a diagraph at the specified path. 
     This involves lining up the paths of the file to the keys of the diagraph. 
   When a specified path goes partially into an existing node, the node is refactored.     
     Nodes are not refactored merely by adding two nodes with the same prefix.
 Diagraph-interpret
-  Takes a public language path and returns a first match in the particular diagraph.  
+  Takes a public language path and returns the first match it finds in the particular diagraph.  
   Autocomplete is interactive dg-interpret.
 Diagraph-explain 
   Takes a path specification in WM. 
@@ -483,6 +506,8 @@ Diagraph-review
 Diagraph-quiz
   Diagraph-quiz shows the user a node and has them produce a path. 
   Diagraph-quiz is a companion function to diagraph-review.
+
+Passive diagraphic functions
 Diagraph-consider
   A hypothetical diagraphic function that preforms a breadth-first search on the generic inferences from a particular node, looking for collisions with existing LTM entries. 
   Consideration takes a fact and looks for particular secondary paths. 
@@ -493,14 +518,8 @@ Diagraph-reflect
   Reflection alternatingly describes an entire tree, inviting schemas.
   I keep a full description at the base of WM, and I push selective combinations onto the stack, inviting a STM trigger of a generic path. 
 
-Diagraphic processes
-  A process is a function-root pair.
-  A process corresponds to a topic of the diagraph.
-  Processes can be represented as closures in the javascript runtime.
+Diagraphic priority queue
 
-Diagraphic threads
-  A thread is a particular branch of a process's root.
-  Threads can be represented as messages in the javascript runtime.
 
 Other
 Diagraph
@@ -539,4 +558,4 @@ How one can infer from the exact relevance of examples and analogies the resolut
 Moral intuitions as a finite set of innate interpretations that are naturally and generatively triggered by complete description, and so morality as a requirement to solicit the information that would give one's moral intuitions the chance to be triggered. An argument for moral intuitions of greater informational content, rather than a difference in kind. Moral intuitions as judgements, propositional to the degree that any ordinary language.
 How can you merge texts? 
   How can we reason about the individual who has read two texts?
-
+Ellaborative encoding, using people's quotes as compositions of particular views.
