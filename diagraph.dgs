@@ -456,6 +456,7 @@ Diagraphic function controllers
 Diagraphic function processes
   A diagraphic process is a continuity of a function with a STM & LTM and root path.
   A diagraphic process handles one or more requests.
+  A diagraphic function process is like a diagraphi script section.
   A diagraphic function process is like a webpage.
   Processes can be represented as a closure in the javascript runtime.
 
@@ -465,13 +466,18 @@ Diagraphic function threads
   A diagraphic thread handles one request, across multiple cycles.
   A thread of a process might be a branch of the process tree.
   A thread might persist for a while with a provisional path, and terminate once it finds a LTM address.
-  A diagraphic function thread is like a paragraph.
+  A diagraphic function process is like a diagraph script block.
+  A diagraphic function thread is like a paragraph of an essay.
+  Ledgering involves flipping between developing threads of a process.
+  Flipping between threads of a process is like flipping between paragraphs of an essay.
+  A thread is like a sentence that schedules another sentence that schedules another sentence and you end up with a paragraph in WM that you write to LTM and then terminate.
   Once a thread has stored its base entry to working memory, it empties and terminates.
   A thread can be represented as a continuous series of javascript messages scheduling other messages. 
 
 Diagraphic function cycles
   Uses a call stack to compute the next state of WM.
   A diagraphic function thread is like a sentence.
+  A diagraphic function process is like a diagraphi script line.
   Each cycle can be represented as a javascript message.
 
 Active diagraphic functions
