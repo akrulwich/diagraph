@@ -49,6 +49,7 @@ Explanations
     Clauses of an explanation have a path relative to the diagraph of the explanation, which may not correspond to the diagraph of the explainer.
 
 Diagraphic tree
+  Diagraphic tree roots can be grammatical topics or subjects.
   A diagraphic tree is a tree of diagraphic nodes, which have a string containing one or more space-delimited syntactic elements. 
   A diagraphic tree is at once a graph tree of nodes and a syntax tree of natural language strings. 
   The syntactic structure of a diagraphic tree is represented implicitly the relation between the syntactic elements.
@@ -82,18 +83,20 @@ Diagraphic nodes
 
 Syntactic elements
   A diagraphic element is a minimal syntactic element, like a word or phrase.
-
-Diagraphic tree roots
-  There are two general kinds of a diagraphic subject: spaces and things.
+ 
+Grammatical topics
   Topics are things like spaces, categories, sets, groups, topics, regions, eras, contexts.
-  Subjects are things like members of a category, things in a space, etc. 
+  Children of a topic are members.
   Topics contain subjects.
-  In a diagraph, the space that a thing is stored in is its context in that diagraph.
-    Every thing in a diagraph is stored primarily in some context, but we do not necessarily give our full private path when explaning something, but rather begin at the subject.
-      eg, if I have A/B/C, I might discuss with you .../B/C.
-  Some things, like countries, are things in one tree and spaces in another. 
-  Things are concrete and their children are predicates of that thing.
-  A tree that has a space-root may have embedded trees with subject-roots.
+    In a diagraph, the space that a thing is stored in is its context in that diagraph.
+      Every thing in a diagraph is stored primarily in some context, but we do not necessarily give our full private path when explaning something, but rather begin at the subject.
+        eg, if I have A/B/C, I might discuss with you .../B/C.
+  Some things like countries are topics in one tree and subjects in another. 
+  A tree with has a topic-root may have embedded trees with subject-roots.
+
+Grammatical subjects
+  Subjects are things like members of a category, things in a space, etc. 
+  Children of a subject are predicates.
 
 Grammatical clauses
   A clause is a subject and series of predicates ending in a comma, which may begin with a conjunction.
