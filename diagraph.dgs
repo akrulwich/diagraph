@@ -199,6 +199,7 @@ Generic diagraph
   A schema or definition is a configuration of generic diagraph, of the form A/B/C/is a D.
   We represent generic diagraph only when a particular theory exerts complete explanatory power over a domain, and so we don't need any rich particulars, otherwise we explicitly represent particular diagraph & store the generic diagraph implicitly in the predicates of the particular.
   Generic diagraph is composed of generic subjects or concepts. 
+  A diagraph might not need to define terms because they're in the generic diagraph.
 
 Generic clauses
   Generic clauses are things like "Dogs bark"
@@ -217,6 +218,8 @@ Predication
   Every particular clause is predicated upon a generic clause, the abstraction of the particular clause. 
   A predication is an implicit correspondance between a particular predicate and a predicate of the generic type. 
   Predication of a generic address to a particular gives that particular an attribute that represents a state in an underlying generic DFA.
+  A predication is a subject generic path pair.
+  A derivation is a public language generic path specification.
 
 Abstracting a clause
   I genericize a particular clause by finding the path of the generic clause that sanctions the use of the predicate. 
@@ -382,6 +385,7 @@ Representations of diagraph
       A part is a set of sections that share a topic or theme.
         Parts are seperated by three blank lines.
     Multi-line compositions can be wraped in quotes.
+    Diagraph script can be machine-interpretable, parsable, or displayable, but never readable. 
 
 JSON representation of diagraph
   Strings in any primitive represent nodes, and any kind of nesting represents hierarchy.
@@ -401,6 +405,7 @@ Diagraphic servers
 Diagraphic requests
   Requests include a path, function, and optional input diagraph.
   The path serves as prefix for lines of the input diagraph.
+  A diagraphic request gets one process and multiple threads of multiple cycles.
 Diagraphic responses
   Responses are rendered text.
 
@@ -444,6 +449,7 @@ Diagraphic function environments
     The call stack represents discrete units of cognition.
 
 Diagraphic function controllers
+  The satisfaction condition of all functions might just be empty WM.
   The controller runs the diagraphic function's configuration script.
     What the controller does with the path and input depends on the function. 
   Diagraphic function controllers are responsible for 
@@ -455,15 +461,26 @@ Diagraphic function controllers
 
 Diagraphic function processes
   A diagraphic process is a continuity of a function with a STM & LTM and root path.
-  A diagraphic process handles one or more requests.
-  A diagraphic function process is like a diagraphi script section.
+  Processes, not threads, have satisfaction conditions. Threads just have empty WM. A process will respawn threads over and over again until it reaches a satisfaction condition, like a path between two nodes.
+  A diagraphic process handles one or more requests, function-path-input combinations.
+  The functional specification of the diagraphic request is the satisfaction condition of the diagraphic process.
+  A diagraphic process spawns a diagraphic thread with an initial WM. Then that thread cycles and schedules a cycle and schedules a cycle until it empties WM. 
+  A fault-tolerant process spawns threads deterministically. 
+  A fault-tolerant diagraphic process doesn't rely on threads being able to reliably schedule subsequent threads, but instead guarentees that until the satisfaction condition is reached, every thread that is generated will eventually be regenerated and so the continuity of any particular thread is unimportant.
+  Even better are threads that save to LTM on every cycle.
+  When we are counting on a thread iterating to completion because we cannot respawn it, as with a STM-hit, we are suddenly WM-reliant and an unclean shutdown could drop the thread perminantly.
+  Lost threads can only be found by a lucky STM-hit, guessing a generic nearby.
+  A fault-tolerant diagraphic process might pipe its output to input in order to check that all threads have cleanly shutdown.
+  A diagraphic function process is like a diagraph script section.
   A diagraphic function process is like a webpage.
   Processes can be represented as a closure in the javascript runtime.
 
 Diagraphic function threads
   A diagraphic thread is represented by a closure, function, and state of WM.
   A diagraphic thread is a continuity of WM between cycles of diagraphic function.
+  A diagraphic thread that empties WM has had a clean shutdown.
   A diagraphic thread handles one request, across multiple cycles.
+  Even better are threads that save to LTM on every cycle.
   A thread of a process might be a branch of the process tree.
   A thread might persist for a while with a provisional path, and terminate once it finds a LTM address.
   A diagraphic function process is like a diagraph script block.
@@ -477,7 +494,7 @@ Diagraphic function threads
 Diagraphic function cycles
   Uses a call stack to compute the next state of WM.
   A diagraphic function thread is like a sentence.
-  A diagraphic function process is like a diagraphi script line.
+  A diagraphic function process is like a diagraph script line.
   Each cycle can be represented as a javascript message.
 
 Active diagraphic functions
@@ -496,6 +513,7 @@ Diagraph-interpret
   Autocomplete is interactive dg-interpret.
 Diagraph-explain 
   Takes a path specification in WM. 
+  The lines of input are like asking how x, "given Y".
   Diagraph-explain traverses the clauses of a tree. For each clause, if there is a element that is not in STM, it pushes it on the stack, otherwise, it states the clause and advances. 
   Dg-explain states the clauses and derives the references.
   Gives compositions of terminal nodes. 
