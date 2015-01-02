@@ -1,5 +1,5 @@
 This
-  This is 'Diagraph', a diagraph about diagraph.
+  This is 'Diagraph', a diagraph about diagraph, a proposed data structure for storing explanation.
 
 
 Diagraph
@@ -19,24 +19,23 @@ Diagraph
     It is a representation of the inputs and outputs like any abstract machine.
 
 Types of diagraphic entity
-  A diagraph has two kinds of entity, 
-    linguistic entities, like subjects, predicates, clauses, sentences, and explanations.
+  The definition of diagraph involves two sorts of entity, 
+    grammatical entities, like subjects, predicates, clauses, sentences, and explanations.
     data structures, like key-value pairs, nodes, and trees.
   The data structures are explicitly represented, and store natural-language text.
   The syntactic entities are implicitly represented, in the natural language text.
-  The data structures and their relationships supervene upon the linguistic entities and their relationships.
+  The data structures and their properties supervene upon the grammatical entities and their properties.
     There should be no relationship between data structures that doesn't represent a prior relationship between linguistic entities.
 
 The definition of diagraph
   A diagraph is a key-value store, 
-      the keys of which are diagraphic paths, which represent requests for explanation.
-      the values of which are collections of diagraphic trees, which represent explanations.
-  Each diagraphic tree is an entry in the diagraph under the particular key.
+      in which the keys are diagraphic paths, which represent requests for explanation.
+      in which the values are collections of diagraphic trees, which represent explanations.
 
 Diagraphic keys
-  The keys of a diagraph represent things that can be explained.
-  There should be a key for every query the explainer could recognize.
-  A key of a diagraph is a path prefix to the nodes of the associated tree.
+  The keys of a diagraph represent things that can be explained, such as topics or questions.
+  There should be a key for every query the explainer can understand.
+  A key of a diagraph is a diagraphic path prefix to the nodes of the associated tree.
   Every node belongs to one primary key.
   A node may be accessable via multiple keys through aliasing.
   Keys do not represent utterances of the explanation, but rather recognitions which are occasioned by the associated utterance. A diagraphic tree may reiterate its key, like a teacher repeating a question.
@@ -64,6 +63,8 @@ Diagraphic tree
   The tree is the explicit structure stored in memory, not the implicit continous structure formed with aliases. 
   Germanity as constraint on subtrees
   A speaker's sentence changes subject at the point where their tree aliases. 
+  Each diagraphic tree is an entry of the diagraph, under that particular key.
+
 
 Diagraphic nodes
   Diagraphic nodes are units of natural language text. 
@@ -226,6 +227,10 @@ Abstracting a clause
   For example, "Fifi gave birth to twins" -> "Dogs give birth to twins".
   This operation is used in diagraph-consider, and in generic diagraph formation by constantly abstracting from the particular cases we encounter.
 
+Analogies
+Analogy by shared predicate
+Analogy by juxtaposition
+
 
 Describing diagraphs
   Diagraphs can have depth, if many nodes are the roots of lower trees.
@@ -256,8 +261,11 @@ Common configurations of diagraph
   Stories
   Locations
 
-Kinds of diagraphic priority
-
+Means of diagraphic priority
+  Lexical frequency
+  Voting
+  Secondary source citations
+  Google hits
 
 Interesting diagraphs
 Discourse diagraphs
@@ -283,6 +291,7 @@ Language diagraphs
 Culture diagraphs
   A culture diagraph represents the particular and generic diagraph common to a cultural group.
   A culture diagraph is the set of references and generics that a member of a group expects another member of the group to know and understand.
+  A culture diagraph represents the states which an individual is likely to progress though. 
 
 Elsinore (criticism of Hamlet)
 Descent (a chronology of scientific theories on human development)
@@ -401,13 +410,16 @@ Diabots
 
 
 Diagraphic servers
-
+Initialization
+  On initialization a diagraphic server will set and interval that will introduce the identity process every so often. Active processes will schedule their successors after 0t, passive processes after 1t, and the identity process every 2t. 
 Diagraphic requests
   Requests include a path, function, and optional input diagraph.
   The path serves as prefix for lines of the input diagraph.
   A diagraphic request gets one process and multiple threads of multiple cycles.
+  Diagraphic requests are like sensory input, something that draws attention.
+  Diagraphic requests can be handled synchronously if they are urgent, or asynchronously.
 Diagraphic responses
-  Responses are rendered text.
+  Responses are text representing.
 
 Diagraphic interfaces
   Document mode
@@ -449,6 +461,11 @@ Diagraphic function environments
     The call stack represents discrete units of cognition.
 
 Diagraphic function controllers
+  A diagraphic function cycle is one execution of a diagraphic function controller.
+  The diagraphic function controller takes input, output, path, LTM, STM, and WM.
+  Every diagraphic message/cycle is a call to the controller bound to a particular set of arguments.
+  Passive diagraphic processes call the controller and incoming requests call the controller.
+  The diagraphic function controller executes until input and WM are empty.
   The satisfaction condition of all functions might just be empty WM.
   The controller runs the diagraphic function's configuration script.
     What the controller does with the path and input depends on the function. 
@@ -475,14 +492,17 @@ Diagraphic function processes
   A diagraphic function process is like a webpage.
   Processes can be represented as a closure in the javascript runtime.
 
-Diagraphic function threads
+Diagraphic function threads, Diagraphic threads
   A diagraphic thread is represented by a closure, function, and state of WM.
   A diagraphic thread is a continuity of WM between cycles of diagraphic function.
   A diagraphic thread that empties WM has had a clean shutdown.
+  A thread is stable if it will be generated again later by the process and state of LTM.
+  A stable thread is a deterministic result of the process, function, and state of LTM.
   A diagraphic thread handles one request, across multiple cycles.
   The most fault-tolerant threads are short threads which save to LTM on every cycle, and finish quickly.
   Threads that are regenerable by the process, like having a book-mark, are reasonably fault-tolerant. 
   A thread of a process might be a branch of the process tree.
+  A trhead is captured by anything that can be used to regenerate the state of the WM stack.
   A thread might persist for a while with a provisional path, and terminate once it finds a LTM address.
   A diagraphic function process is like a diagraph script block.
   A diagraphic function thread is like a paragraph of an essay.
@@ -533,6 +553,8 @@ Diagraph-quiz
   Diagraph-quiz is a companion function to diagraph-review.
 
 Passive diagraphic functions
+  There is one passive process, the identity process, and many passive threads.
+  Passive threads schedule their successors after a pause, so that active threads that use setInterval(0) will be able to cut in front of them.
 Diagraph-consider
   A hypothetical diagraphic function that preforms a breadth-first search on the generic inferences from a particular node, looking for collisions with existing LTM entries. 
   Consideration takes a fact and looks for particular secondary paths. 
