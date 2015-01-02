@@ -493,11 +493,13 @@ Diagraphic function processes
   Processes can be represented as a closure in the javascript runtime.
 
 Diagraphic function threads, Diagraphic threads
+  A diagraphic thread is a chained series of diagraphic function cycles.
   A diagraphic thread is represented by a closure, function, and state of WM.
   A diagraphic thread is a continuity of WM between cycles of diagraphic function.
   A diagraphic thread that empties WM has had a clean shutdown.
   A thread is stable if it will be generated again later by the process and state of LTM.
   A stable thread is a deterministic result of the process, function, and state of LTM.
+  For a thread to be fault-tolerant  means that the thread could be lost and no data would be lost.
   A diagraphic thread handles one request, across multiple cycles.
   The most fault-tolerant threads are short threads which save to LTM on every cycle, and finish quickly.
   Threads that are regenerable by the process, like having a book-mark, are reasonably fault-tolerant. 
