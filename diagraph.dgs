@@ -20,11 +20,11 @@ Diagraph
 
 Types of diagraphic entity
   The definition of diagraph involves two sorts of entity, 
-    grammatical entities, like subjects, predicates, clauses, sentences, and explanations.
+    linguistic entities, like subjects, predicates, clauses, sentences, and explanations.
     data structures, like key-value pairs, nodes, and trees.
   The data structures are explicitly represented, and store natural-language text.
-  The syntactic entities are implicitly represented, in the natural language text.
-  The data structures and their properties supervene upon the grammatical entities and their properties.
+  The linguistic entities are implicitly represented, in the natural language text.
+  The data structures and their properties supervene upon the linguistic entities and their properties.
     There should be no relationship between data structures that doesn't represent a prior relationship between linguistic entities.
 
 The definition of diagraph
@@ -407,6 +407,9 @@ Diabots
   A diabot knows N if it has the node N. 
   A diabot understands P if it has the path P. 
   A diabot's ideograph of a particular topic is its understanding of that topic. 
+
+Diabot dynamics
+  We can predict how a diagraphic agent would behave, given that it seeks to expand its ideograph in certain predictible ways.
 
 
 Diagraphic servers
