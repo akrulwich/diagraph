@@ -215,6 +215,7 @@ Generic derivations
   A generic derivation is an aside made from a particular explanation.
   A generic derivation begins a discontinous explanation.
   EG, expl(x is p) -> expl(Cs can be p) -> expl(x is p)
+  A generic derivation is a specification of some generic paths to the exclusion of others - it is a pruning of the generic tree.
 
 Predication
   Every particular clause is predicated upon a generic clause, the abstraction of the particular clause. 
@@ -430,13 +431,16 @@ Diagraphic responses
 
 Diagraphic interfaces
   Document mode
+    Document mode is like reading an expert's book. 
     Server-side generation
     Server-side assembly
   Correspondance mode
+    Correspondance mode is like sending an expert an email.
     Server-side generation
     Client-side assembly
     Pages are processes, DOM elements are threads.
   Interactive mode
+    Interactive mode is like speaking with an expert extemporaneously.
     A user can change the WM value of a running thread by editing the DOM.
     Client-side generation
     Client-side assembly
@@ -448,13 +452,13 @@ Diagraphic functions
   Diagraphic functions manipulate WM.
 
 Diagraphic function environments
-  A diagraphic function environment is a bundle of resources provided to each process.
+  A diagraphic function environment is a bundle of resources provided to each diagraphic process.
   The environment communicates with the function through the resources.
   Topic
   LTM
     Connects to a data store or API.
   STM
-    STM is a cache that associates every value added to WM with its path. 
+    STM is a cache that associates every value added to WM with its path.
     A particular trigger of STM is context. 
     A generic trigger of STM is recognition.
     STM recalls can be for generic matches or near matches by generic implicature producing analogies, another example of generic diagraph being useful for comparing different particular diagraphs.
@@ -485,6 +489,10 @@ Diagraphic function controllers
     piping the instantantaneous values of WM to output as text.
 
 Diagraphic function processes
+  A process is a listener on input with access to a ltm-topic and a stm cache.
+  A diabot only can access a LTM topic through a running process.
+    And so the diabot is one for whom data and a running program are not seperable, because the process is how the diabot recalls the data.
+
   A diagraphic process is a continuity of a function with a STM & LTM and root path.
   Processes, not threads, have satisfaction conditions. Threads just have empty WM. A process will respawn threads over and over again until it reaches a satisfaction condition, like a path between two nodes.
   A diagraphic process handles one or more requests, function-path-input combinations.
