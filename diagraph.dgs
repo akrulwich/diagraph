@@ -453,15 +453,10 @@ Diagraphic function environments
     A particular trigger of STM is context. 
     A generic trigger of STM is recognition.
     STM recalls can be for generic matches or near matches by generic implicature producing analogies, another example of generic diagraph being useful for comparing different particular diagraphs.
-  WM
-    Push method
-    Enqueue method
-    Promote method
-    By default caches to STM.
-    By default checks STM for value on top of stack and fills in context if there's a match.
-    A diagraphic function might use the base of WM to build up some value.
+  Attention
+    A single diagraphic tree.
   Call stack
-    The call stack represents discrete units of cognition.
+    Ie, working memory
 
 Diagraphic function controllers
   A diagraphic function cycle is one execution of a diagraphic function controller.
@@ -496,6 +491,8 @@ Diagraphic function processes
   Processes can be represented as a closure in the javascript runtime.
 
 Diagraphic function threads, Diagraphic threads
+  A diagraphic thread is a user of the process resources, with a WM value.
+
   A diagraphic thread is a chained series of diagraphic function cycles.
   A diagraphic thread is represented by a closure, function, and state of WM.
   A diagraphic thread is a continuity of WM between cycles of diagraphic function.
