@@ -39,6 +39,7 @@ Diagraphic keys
   Every node belongs to one primary key.
   A node may be accessable via multiple keys through aliasing.
   Keys do not represent utterances of the explanation, but rather recognitions which are occasioned by the associated utterance. A diagraphic tree may reiterate its key, like a teacher repeating a question.
+  In an ideograph, every subject has a topic, making it like a bag of marbles.
 
 Explanations
   An explanation is a thing like an essay, lecture, book, article, answer or story.
@@ -310,7 +311,9 @@ Describing with diagraph
   An adjacency in a diagraph is a thing that would bring to mind another thing in an explanation.
     So imagine the mind of the person who reads Twitter or the newspaper.
 Describing education with diagraph
-Describing journalism with diagraph
+
+Describing media with diagraph
+  How document-based media causes redundancy by having us rehash the same points over a new document, like an op-ed.
   How context in a news article might naively seem like aliased subtrees that belong primarily in other places, but really are custom made for the article's tree, children of references in a particular sentence, not a new explanation soley of the reference in its own right. 
 Describing libraries with diagraph
 Describing academia with diagraph
@@ -431,10 +434,11 @@ Diagraphic interfaces
   Correspondance mode
     Server-side generation
     Client-side assembly
+    Pages are processes, DOM elements are threads.
   Interactive mode
+    A user can change the WM value of a running thread by editing the DOM.
     Client-side generation
     Client-side assembly
-    Pages are processes, DOM elements are threads.
 
 
 Diagraphic functions
@@ -443,6 +447,7 @@ Diagraphic functions
   Diagraphic functions manipulate WM.
 
 Diagraphic function environments
+  A diagraphic function environment is a bundle of resources provided to each process.
   Input
   Output
   Path
