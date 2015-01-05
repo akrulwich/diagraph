@@ -42,7 +42,6 @@ Grammatical topics
         eg, if I have A/B/C, I might discuss with you .../B/C.
   Some things like countries are topics in one tree and subjects in another. 
   A tree with has a topic-root may have embedded trees with subject-roots.
-
 Diagraphic keys
   A diagraphic key represents a grammatical topic. 
   A diagraphic key is like a bookshelf in the library.
@@ -62,7 +61,12 @@ Diagraphic keys
 Grammatical subjects
   Subjects are things like members of a category, things in a space, etc. 
   Children of a subject are predicates.
-
+Explanations
+  An explanation is a thing like an essay, lecture, book, article, answer or story.
+  An explanation is a represented in a diagraph by a collection of diagraphic trees.
+  An explanation may span several diagraphic trees by crossing over aliases.  
+  Explanations have an implicit diagraph, the single tree formed by combining all transmissions.
+    Clauses of an explanation have a path relative to the diagraph of the explanation, which may not correspond to the diagraph of the explainer.
 Diagraphic tree
   Diagraphic tree roots are subjects. 
   A diagraphic tree is like a book in the library.
@@ -85,14 +89,10 @@ Diagraphic tree
   A speaker's sentence changes subject at the point where their tree aliases. 
   Each diagraphic tree is an entry of the diagraph, under that particular key.
 
-Explanations
-  An explanation is a thing like an essay, lecture, book, article, answer or story.
-  An explanation is a represented in a diagraph by a collection of diagraphic trees.
-  An explanation may span several diagraphic trees by crossing over aliases.  
-  Explanations have an implicit diagraph, the single tree formed by combining all transmissions.
-    Clauses of an explanation have a path relative to the diagraph of the explanation, which may not correspond to the diagraph of the explainer.
-
-
+Grammatical clauses
+  A clause is a subject and series of predicates ending in a comma, which may begin with a conjunction.
+  A clause-node tree can be automatically parsed, and can be used by some diagraphic functions.
+  Diagraphic clauses are only implicitly represented.
 Diagraphic nodes
   Diagraphic nodes are units of natural language text. 
   Diagraphic nodes contain one or more syntactic elements. 
@@ -109,18 +109,41 @@ Diagraphic nodes
     Nodes are not refactored merely by adding two nodes with the same prefix to the same path.
   Terminal nodes end with a period.
 
-Syntactic elements
-  A diagraphic element is a minimal syntactic element, like a word or phrase.
- 
-Grammatical clauses
-  A clause is a subject and series of predicates ending in a comma, which may begin with a conjunction.
-  A clause-node tree can be automatically parsed, and can be used by some diagraphic functions.
-  Diagraphic clauses are only implicitly represented.
-
 Grammatical sentences
   A sentence is a series of clauses ending in a period. 
   Sentences after a terminal clause can form subtrees in a diagraphic tree.
   Diagraphic sentences are only implicitly represented.
+Diagraphic paths
+  A diagraphic path is a comma or slash delimited string, ie sentence.
+  The path does not include the key.
+
+  A path is a series of syntactic elements divided into clauses.
+  The division of syntactic elements between nodes does not affect path formation.
+  A path can be a sole topic or subject.
+  A subject has a primary path in a given diagraph, and secondary paths through aliasing.
+  A diagraphic URL path would replace commas with forward-slashes.
+  A path from a known subject to an unknown subject is the latter's context.
+  A public path may not be the same as a private path, which may have a longer antecedent context.
+    If a public truncated path is sufficient for an understanding appropriate to some context, it is inappropriate to say that some greater context or the private path used by experts is the correct path, whereas some public path is incorrect. 
+      This is the mistake made for example by a graduate student who explains the real numbers as one axis of the range of complex numbers – says who? If the real numbers can be used and described by themselves for the purposes of a particular discussion, then they are their own sufficient context. We might say of complex numbers that they include the real numbers, but we may not say of the real numbers that they belong to the definition of complex numbers. By the time one reaches the age of a professor, one has more modularly refactored one's knowledge, so that each concept can be used and explained individually or in very intentional combinations. The undergraduate, on the other hand, avoids drawing in unneccessary information simply by maintaining a prudent ignorance. 
+  EG, T/S/P/P/C/S/P/P/P/C/...
+  A speaker might not express what they think of the topic, and the listener might not express why they want to know, both of which would be given by the private path.
+
+
+Diagraphic compositions
+  A node of one or more sentences that cannot be meaningfully subdivided.
+  A composition-node tree can only be automatically displayed.
+  Compositions don't nest.
+  Compositions come after a period, and represent a new sentence.
+    Compositions to not add to the path. 
+  Compositions can be a kind of cached derivation that doesn't require the use of a generic term in a particular clause, and then a subsequent explanation of that term, but rather can proceede by analogy, the example from which the derivation occurs being used to derive directly the property of the particular which one desires to ellicit. The primary storage location of the germ of the derivation is not the tree to which the composition belongs, but this may be the only situation in which it is useful. 
+  Compositions can correspond to any part of the tree.
+
+Diagraphic notes
+  A note is a special kind of composition which is used to store information temporarily, provisional to its incorperation into a more modular tree.
+  One would use a note not because the information contained within is meaningfully single-purpose, but rather because of the accidental organization of the information at its source. 
+  A composition that is appropriate whole in one context might need to be broken down into smaller pieces in a different context, and so a composition in one place might become a note in another, provision to refactoring. 
+  Diagraphic note piles
 
 Diagraphic element-node tree
   An element-node tree is a kind of diagraphic tree.
@@ -136,18 +159,6 @@ Diagraphic clause-node tree
   In an element-node tree, no two nodes of the same parent should share a prefix. 
   A clause-node tree is not generically parsable, but relative precedence of syntactic branches can be discerned. 
 
-Diagraphic paths
-  A path is a series of syntactic elements divided into clauses.
-  The division of syntactic elements between nodes does not affect path formation.
-  A path can be a sole topic or subject.
-  A subject has a primary path in a given diagraph, and secondary paths through aliasing.
-  A diagraphic URL path would replace commas with forward-slashes.
-  A path from a known subject to an unknown subject is the latter's context.
-  A public path may not be the same as a private path, which may have a longer antecedent context.
-    If a public truncated path is sufficient for an understanding appropriate to some context, it is inappropriate to say that some greater context or the private path used by experts is the correct path, whereas some public path is incorrect. 
-      This is the mistake made for example by a graduate student who explains the real numbers as one axis of the range of complex numbers – says who? If the real numbers can be used and described by themselves for the purposes of a particular discussion, then they are their own sufficient context. We might say of complex numbers that they include the real numbers, but we may not say of the real numbers that they belong to the definition of complex numbers. By the time one reaches the age of a professor, one has more modularly refactored one's knowledge, so that each concept can be used and explained individually or in very intentional combinations. The undergraduate, on the other hand, avoids drawing in unneccessary information simply by maintaining a prudent ignorance. 
-  EG, T/S/P/P/C/S/P/P/P/C/...
-  A speaker might not express what they think of the topic, and the listener might not express why they want to know, both of which would be given by the private path.
 
 Diagraphic addresses
   Diagraphic nodes have addresses in a particular diagraph.
@@ -164,21 +175,6 @@ Diagraphic aliases
   An alias is a correspondance between a path and a key.
   One might refactor a large tree into several smaller trees using aliases. 
   An alias is a hack where one takes what one will have in hand at a given point, the path, and makes that a new topic in the diagraph.
-
-Diagraphic composition nodes
-  A node of one or more sentences that cannot be meaningfully subdivided.
-  A composition-node tree can only be automatically displayed.
-  Compositions don't nest.
-  Compositions come after a period, and represent a new sentence.
-    Compositions to not add to the path. 
-  Compositions can be a kind of cached derivation that doesn't require the use of a generic term in a particular clause, and then a subsequent explanation of that term, but rather can proceede by analogy, the example from which the derivation occurs being used to derive directly the property of the particular which one desires to ellicit. The primary storage location of the germ of the derivation is not the tree to which the composition belongs, but this may be the only situation in which it is useful. 
-  Compositions can correspond to any part of the tree.
-
-Diagraphic notes, note-nodes
-  A note is a special kind of composition which is used to store information temporarily, provisional to its incorperation into a more modular tree.
-  One would use a note not because the information contained within is meaningfully single-purpose, but rather because of the accidental organization of the information at its source. 
-  A composition that is appropriate whole in one context might need to be broken down into smaller pieces in a different context, and so a composition in one place might become a note in another, provision to refactoring. 
-  Diagraphic note piles
 
 Diagraphic priority
   A diagraph has a mode of priority, which is a total ordering of the nodes of that diagraph.
@@ -199,6 +195,7 @@ Diagraphic priority
   "He is the" has priority over "he is a"
   Rank expresses, for example, which of two contributions that were not related would come first in an explanation.
   There cannot be an uncontroversial diagraph prioritization because even if ordering is something unobjectionable like linguistic frequency, there would still be disagreements over which things are classifications and which are interpretations attached to a description by a lower-priorty conjunction.
+
 
 Particlar diagraph
   Diagraph concerning singular subjects. 
@@ -247,6 +244,7 @@ Analogy by shared predicate
 Analogy by juxtaposition
 
 
+
 Describing diagraphs
   Diagraphs can have depth, if many nodes are the roots of lower trees.
   Diagraphs can have context, if many trees are nodes in higher trees.
@@ -282,6 +280,7 @@ Means of diagraphic priority
   Secondary source citations
   Google hits
 
+
 Interesting diagraphs
 Discourse diagraphs
   A discourse diagraph is the hypothetical diagraph implicit in a corpus of text. 
@@ -316,6 +315,7 @@ Investigations (Wittgenstein’s reduction of analytic philosophy to ordinary la
 Various Libraries
 Various Discussions 
 Various theories / religions
+
 
 
 Describing with diagraph
@@ -401,16 +401,22 @@ Representations of diagraph
         A diagraph might be more modularly refactored, and the diagraph script intended for a wider audience. 
     Top-level indentations under a key represent the roots of a diagraphic category. 
     Diagraph script is comprised of blocks, section, and parts.
+      A line of diagraph script is a diagraphic node or grammatical clause.
       A block of diagraph script is one atomic write operation.
+        A block is like a diagraphic tree, or a grammatical subject.
+
         Blocks can be seperated by one blank line for clarity.
         Blocks would often begin at the indentation of the previous block. 
         A block of diagraph script might correspond to a prose paragraph.
         A diagraph script block captures a diagraphic root, its context, its specifications, and derivations of the generics used in that tree.
       A section of diagraph script is a set of related blocks. 
+        A diagraph section is a diagraphic key or grammatical topic. 
+
         Sections can be seperated by two or three blank lines for clarity. 
         Sections would not usually begin indented. 
         A section of diagraph script might correspond to a prose article or chapter.
       A part is a set of sections that share a topic or theme.
+
         Parts are seperated by three blank lines.
     Multi-line compositions can be wraped in quotes.
     Diagraph script can be machine-interpretable, parsable, or displayable, but never readable. 
@@ -459,7 +465,6 @@ Diagraphic interfaces
     Client-side generation
     Client-side assembly
 
-
 Diagraphic functions
   Diagraphic functions have a function body, a satisfaction condition, and a configuration script. 
   Diagraphic functions take a working memory stack of diagraph-script values.
@@ -484,7 +489,6 @@ Diagraphic function environments
   Output
   Wait
     A flag that causes the current thread to stall.
-
 
 Diagraphic function controllers
   A diagraphic function cycle is one execution of a diagraphic function controller.
@@ -609,6 +613,7 @@ Background processes
   There is one passive process, the identity process, and many passive threads.
   Passive threads schedule their successors after a pause, so that active threads that use setInterval(0) will be able to cut in front of them.
 
+
 Other
 Diagraph
   A diagraph is not a document.
@@ -644,6 +649,8 @@ Intellectual virtue
   Having a reason besides ignorance for choosing where your diagraph will end
 How one can infer from the exact relevance of examples and analogies the resolution of one's ideolect.
 Moral intuitions as a finite set of innate interpretations that are naturally and generatively triggered by complete description, and so morality as a requirement to solicit the information that would give one's moral intuitions the chance to be triggered. An argument for moral intuitions of greater informational content, rather than a difference in kind. Moral intuitions as judgements, propositional to the degree that any ordinary language.
+Moral discourse doesn't required a shared vocabulary or theory.
+Moral discourse is descriptive.  
 How can you merge texts? 
   How can we reason about the individual who has read two texts?
 Ellaborative encoding, using people's quotes as compositions of particular views.
