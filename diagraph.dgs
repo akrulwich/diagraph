@@ -33,7 +33,8 @@ The definition of diagraph
   Diagraphic keys represent ordinary language topics.
   Diagraphic trees represent ordinary language explanations.
   Diagraphic nodes represent ordinary language utterances.
-  Diagraphic paths represent contextual sentences.
+  Diagraphic paths represent sentences.
+  Nothing in a diagraph corresponds to subjects or predicates alone, only words, clauses, and explanations.
 
 Diagraphic keys
   A diagraphic key represents a grammatical topic. 
@@ -92,7 +93,8 @@ Diagraphic tree
   Each diagraphic tree is an entry of the diagraph, under that particular key.
 
 Diagraphic nodes
-    Utterances/clauses
+    Utterances
+
       Grammatical clauses correspond to diagraphic nodes, although not exactly.
         Several clauses may correspond to one node, or one clause to several nodes.
 
@@ -134,7 +136,7 @@ Diagraphic clause-nodes
   In an element-node tree, no two nodes of the same parent should share a prefix. 
   A clause-node tree is not generically parsable, but relative precedence of syntactic branches can be discerned. 
 
-Diagraphic compositions
+Diagraphic composition nodes
   A node of one or more clauses that cannot be meaningfully subdivided.
   A composition-node tree can only be automatically displayed.
   Compositions don't nest.
@@ -179,9 +181,10 @@ Diagraphic priority
     In particular diagraph the order is: 
       'Subject
         Classification (is a)
-        Predicate (is)
-          Conjunctions (why/so/but/because)
-          Adverbal phrases (how)'
+        Description (is)
+          Adverbal phrases 
+          Conjunctions 
+          New sentences
     Elements of a type must be ranked by some further criterion.
       In a functional diagraph, priority is relative to function or usefulness in a particular circumstance.
       In a descriptive diagraph, priority might be relative to something like frequency.
@@ -260,7 +263,8 @@ Abstracting a clause
   This operation is used in diagraph-consider, and in generic diagraph formation by constantly abstracting from the particular cases we encounter.
 
 Analogies
-Analogy by shared predicate
+Analogy by shared classification
+Analogy by shared description
 Analogy by juxtaposition
 
 
@@ -476,6 +480,7 @@ Diagraphic interfaces
     Pages are processes, DOM elements are threads.
   Interactive mode
     Interactive mode is like speaking with an expert extemporaneously.
+    Every way in which a person can signal to an explainer what they want should have a corresponding UI interaction -- ie backchannels
     A user can change the WM value of a running thread by editing the DOM.
     Client-side generation
     Client-side assembly
@@ -488,9 +493,8 @@ Diagraphic functions
 Diagraphic function environments
   A diagraphic function environment is a bundle of resources provided to each diagraphic process.
   The environment communicates with the function through the resources.
-  Topic
-  LTM
-    Connects to a data store or API.
+  LTM-Topic
+    The LTM-topic is a small diagraph with one topic key, and the topic keys of any aliases.
   STM
     STM is a cache that associates every value added to WM with its path.
     A particular trigger of STM is context. 
