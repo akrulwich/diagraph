@@ -88,7 +88,7 @@ Diagraphic tree
   A speaker's sentence changes subject at the point where their tree aliases. 
   Each diagraphic tree is an entry of the diagraph, under that particular key.
 
-Clauses
+Words and Phrases, clauses, and sentences
   Grammatical clauses correspond to diagraphic nodes, although not exactly.
     Several clauses may correspond to one node, or one clause to several nodes.
 
@@ -97,6 +97,7 @@ Clauses
   Diagraphic clauses are only implicitly represented.
 Diagraphic nodes
   Diagraphic nodes are units of natural language text. 
+  A diagraphic node represents a single hypothetical utterance.
   Diagraphic nodes contain one or more syntactic elements. 
   Diagraphic nodes represent the meaningfully indivisible units of an explanation.
     A diagraphic node is a single-purpose text. 
@@ -111,7 +112,7 @@ Diagraphic nodes
     Nodes are not refactored merely by adding two nodes with the same prefix to the same path.
   Terminal nodes end with a period.
 
-Sentences
+Introductory sentences
   A sentence is a series of clauses ending in a period. 
   Sentences after a terminal clause can form subtrees in a diagraphic tree.
   Diagraphic sentences are only implicitly represented.
