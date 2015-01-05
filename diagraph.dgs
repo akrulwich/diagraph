@@ -15,6 +15,8 @@ Diagraph
     A diagraph can model systems that responds to requests for explanation, 
       such as teachers, books, search engines, or libraries.
   A diagraph represents a set of possible explanations. 
+    Modeling a particular explanation as a diagraph involves making assumptions about what might have been said, or what might not have been said relative to other things. 
+    A diagraph represents counterfactual explanations. 
   A diagraph is an explanation machine.
     It is a representation of the inputs and outputs like any abstract machine.
   The definition of diagraph involves two sorts of entity, 
