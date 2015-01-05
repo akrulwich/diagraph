@@ -116,6 +116,9 @@ Diagraphic paths
   A diagraphic path is a comma or slash delimited string, ie sentence.
   The path does not include the key.
 
+  A diagraphic path is the context for a node. If you just heard a node and didn't understand, what you would have failed to understand is the path.
+  The topic is not in the path, although it can be, by having a sentence include a reference back to the topic that is the key of that path, but this is a hack.
+  The key of a path is the key underwhich the path is stored.
   A path is a series of syntactic elements divided into clauses.
   The division of syntactic elements between nodes does not affect path formation.
   A path can be a sole topic or subject.
@@ -159,22 +162,6 @@ Diagraphic clause-node tree
   A clause-node tree is not generically parsable, but relative precedence of syntactic branches can be discerned. 
 
 
-Diagraphic addresses
-  Diagraphic nodes have addresses in a particular diagraph.
-  Diagraphic nodes have one primary and many secondary addresses.
-  The primary address is the path from the key where a node is actually stored in a diagraph to that node.
-  A secondary address is a path from some other key that advances through aliases.
-  Public-language nodes may have a generally agreed upon public-language address. 
-
-Diagraphic references
-  A diagraphic reference is a correspondance between a node and a key. 
-  Explanations of references or subelements of a clause during an existing explanation are asides.
-
-Diagraphic aliases
-  An alias is a correspondance between a path and a key.
-  One might refactor a large tree into several smaller trees using aliases. 
-  An alias is a hack where one takes what one will have in hand at a given point, the path, and makes that a new topic in the diagraph.
-
 Diagraphic priority
   A diagraph has a mode of priority, which is a total ordering of the nodes of that diagraph.
   Diagaphs are hierarchial, and children of a parent have a relative syntactic rank.
@@ -194,6 +181,29 @@ Diagraphic priority
   "He is the" has priority over "he is a"
   Rank expresses, for example, which of two contributions that were not related would come first in an explanation.
   There cannot be an uncontroversial diagraph prioritization because even if ordering is something unobjectionable like linguistic frequency, there would still be disagreements over which things are classifications and which are interpretations attached to a description by a lower-priorty conjunction.
+  Means of diagraphic priority
+    Lexical frequency
+    Voting
+    Secondary source citations
+    Google hits
+
+Diagraphic addresses
+  Diagraphic nodes have addresses in a particular diagraph.
+  Diagraphic nodes have one primary and many secondary addresses.
+  The primary address is the path from the key where a node is actually stored in a diagraph to that node.
+  A secondary address is a path from some other key that advances through aliases.
+  Public-language nodes may have a generally agreed upon public-language address. 
+
+Diagraphic references
+  A diagraphic reference is a correspondance between a node and a key. 
+  Explanations of references or subelements of a clause during an existing explanation are asides.
+  There are no topic-topic edges, only topic-sentence pairs in which the sentence contains an explicit reference to a different topic. 
+  References are explained by their context.
+
+Diagraphic aliases
+  An alias is a correspondance between a path and a key.
+  One might refactor a large tree into several smaller trees using aliases. 
+  An alias is a hack where one takes what one will have in hand at a given point, the path, and makes that a new topic in the diagraph.
 
 
 Particlar diagraph
@@ -272,12 +282,6 @@ Diagraph merges
 Common configurations of diagraph
   Stories
   Locations
-
-Means of diagraphic priority
-  Lexical frequency
-  Voting
-  Secondary source citations
-  Google hits
 
 
 Interesting diagraphs
