@@ -491,10 +491,12 @@ Diagraphic function environments
     STM recalls can be for generic matches or near matches by generic implicature producing analogies, another example of generic diagraph being useful for comparing different particular diagraphs.
   WM
     A string/sentence up to seven phonemes long.
+    WM.set pipes to output
   Input
     A stream of diagraph script. The process puts a listener on new input. 
     Redundant inputs should be idempotent, & increase reliability.
   Output
+    This may just be WM.set
   Wait
     A flag that causes the current thread to stall.
 
