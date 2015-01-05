@@ -408,6 +408,7 @@ Diagraph formation
   Pile sort
     Iterative periods of solicitation to topic buckets, sorting by similarity and subdividing, then more solicitation, until all buckets have fewer than some threshold of notes, then the creation of note piles, which become clause node trees, then element node trees. 
     Pile sort requires a large initial cost.
+    Pile sort might refactor several composite texts into one set of single purpose texts.
 
 
 Representations of diagraph
