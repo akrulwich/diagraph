@@ -371,6 +371,7 @@ Diagraph in Journalism
   Example of diagraph stages - articles and letters to the editor.
 Diagraph in Politics
 Diagraph in Library Science
+  As alternative to coordinated ontologies, uncoordinated ordinary language classification. Emergent, pluralistic taxonomy. Like Google coordinated tagging app.
 Diagraph in Academic Publishing
 Diagraph in personal reading
   Whatever your opinion on what people should read, biases that are failures to trigger a potential interest are inefficiencies.
@@ -533,6 +534,8 @@ Diagraphic function processes
   A process is a listener on input with access to a ltm-topic and a stm cache.
   A diabot only can access a LTM topic through a running process.
     And so the diabot is one for whom data and a running program are not seperable, because the process is how the diabot recalls the data.
+  A diagraphic server must 'run' a topic as a process in order to access the data, and thereby changes the data, so there is no distinction between retrival and execution, data and program instruciton. 
+  To represent one story is to be prepared to correct misrepresentations of it. 
 
   A diagraphic process is a continuity of a function with a STM & LTM and root path.
   Processes, not threads, have satisfaction conditions. Threads just have empty WM. A process will respawn threads over and over again until it reaches a satisfaction condition, like a path between two nodes.
