@@ -1,6 +1,6 @@
 This
   This is 'Diagraph', a diagraph about diagraph, a proposed data structure for storing explanation.
-
+  The point is to create a standardized interface to represent interactions with things like books, search engines, and human teachers, to show how they satisfy the same sorts of requests functionally specified, and allow direct comparisons.
 
 Diagraph
   A diagraph is a kind of abstract data type. 
