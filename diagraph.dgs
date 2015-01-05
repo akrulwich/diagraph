@@ -32,20 +32,22 @@ The definition of diagraph
       in which the values are collections of diagraphic trees.
   Diagraphic keys represent ordinary language topics.
   Diagraphic trees represent ordinary language explanations.
-  Diagraphic nodes represent ordinary language clauses.
-  Diagraphic paths represent ordinary language sentences.
+  Diagraphic nodes represent ordinary language utterances.
+  Diagraphic paths represent contextual sentences.
 
-Topics
-  Topics are things like spaces, categories, sets, groups, topics, regions, eras, contexts.
-  Children of a topic are members.
-  Topics contain subjects.
-    In a diagraph, the space that a thing is stored in is its context in that diagraph.
-      Every thing in a diagraph is stored primarily in some context, but we do not necessarily give our full private path when explaning something, but rather begin at the subject.
-        eg, if I have A/B/C, I might discuss with you .../B/C.
-  Some things like countries are topics in one tree and subjects in another. 
-  A tree with has a topic-root may have embedded trees with subject-roots.
 Diagraphic keys
   A diagraphic key represents a grammatical topic. 
+
+    Topics
+      Topics are things like spaces, categories, sets, groups, topics, regions, eras, contexts.
+      Children of a topic are members.
+      Topics contain subjects.
+        In a diagraph, the space that a thing is stored in is its context in that diagraph.
+          Every thing in a diagraph is stored primarily in some context, but we do not necessarily give our full private path when explaning something, but rather begin at the subject.
+            eg, if I have A/B/C, I might discuss with you .../B/C.
+      Some things like countries are topics in one tree and subjects in another. 
+      A tree with has a topic-root may have embedded trees with subject-roots.
+
   A diagraphic key is like a bookshelf in the library.
 
   The keys of a diagraph represent things that can be explained, such as topics or questions.
@@ -55,18 +57,19 @@ Diagraphic keys
   A node may be accessable via multiple keys through aliasing.
   A topic that is a precise path is a hack.
   Keys do not represent utterances of the explanation, but rather recognitions which are occasioned by the associated utterance. A diagraphic tree may reiterate its key, like a teacher repeating a question.
-  In an ideograph, every subject has a topic, making it like a bag of marbles.
+  In a diagraph, every key is a topic, and so it is like a bag of marbles.
   The keys of a diagraph are the contexts I can recognize.
   A key of a diagraph is like a space I recognize, and the subjects are what I remember being in that space.
   Being asked a questions is like recognizing a space.
 
-Explanations
-  An explanation is what is, for example, an essay, lecture, book, article, question-answer or story.
-  An explanation is a represented in a diagraph by a collection of diagraphic trees.
-  An explanation may span several diagraphic trees by crossing over aliases.  
-  Explanations have an implicit diagraph, the single tree formed by combining all transmissions.
-    Clauses of an explanation have a path relative to the diagraph of the explanation, which may not correspond to the diagraph of the explainer.
 Diagraphic tree
+    Explanations
+      An explanation is what is, for example, an essay, lecture, book, article, question-answer or story.
+      An explanation is a represented in a diagraph by a collection of diagraphic trees.
+      An explanation may span several diagraphic trees by crossing over aliases.  
+      Explanations have an implicit diagraph, the single tree formed by combining all transmissions.
+        Clauses of an explanation have a path relative to the diagraph of the explanation, which may not correspond to the diagraph of the explainer.
+
   Diagraphic tree roots are subjects. 
   A diagraphic tree is like a book in the library.
   A diagraphic subject is a diagraphic tree with that subject for a root.
@@ -88,16 +91,17 @@ Diagraphic tree
   A speaker's sentence changes subject at the point where their tree aliases. 
   Each diagraphic tree is an entry of the diagraph, under that particular key.
 
-Words and Phrases, clauses, and sentences
-  Grammatical clauses correspond to diagraphic nodes, although not exactly.
-    Several clauses may correspond to one node, or one clause to several nodes.
-
-  A clause is a subject and series of predicates ending in a comma, which may begin with a conjunction.
-  A clause-node tree can be automatically parsed, and can be used by some diagraphic functions.
-  Diagraphic clauses are only implicitly represented.
 Diagraphic nodes
+    Utterances/clauses
+      Grammatical clauses correspond to diagraphic nodes, although not exactly.
+        Several clauses may correspond to one node, or one clause to several nodes.
+
+      A clause is a subject and series of predicates ending in a comma, which may begin with a conjunction.
+      A clause-node tree can be automatically parsed, and can be used by some diagraphic functions.
+      Diagraphic clauses are only implicitly represented.
   Diagraphic nodes are units of natural language text. 
   A diagraphic node represents a single hypothetical utterance.
+  The breaks between diagraphic nodes represent facts about the possible explanations that the system can produce.
   Diagraphic nodes contain one or more syntactic elements. 
   Diagraphic nodes represent the meaningfully indivisible units of an explanation.
     A diagraphic node is a single-purpose text. 
@@ -112,11 +116,44 @@ Diagraphic nodes
     Nodes are not refactored merely by adding two nodes with the same prefix to the same path.
   Terminal nodes end with a period.
 
-Introductory sentences
-  A sentence is a series of clauses ending in a period. 
-  Sentences after a terminal clause can form subtrees in a diagraphic tree.
-  Diagraphic sentences are only implicitly represented.
+Diagraphic element-nodes
+  Correspond to words
+
+  An element-node tree is a kind of diagraphic tree.
+  An element-node tree is a diagraphic tree in which every syntactic element has its own diagraphic node.
+  In an element-node tree, no two nodes of the same parent should share a prefix. 
+  An element node tree has additional tokens like how and why before certain derivations.
+  An element node tree can be semantically interpreted, because it can be overlayed onto a generic diagraph.
+  An element node tree can be syntactically parsed, because the different syntactic brances are explicitly represented. 
+
+Diagraphic clause-nodes
+  Correspond to clauses
+
+  An element-node tree is a kind of diagraphic tree.
+  An element-node tree is a diagraphic tree in which every syntactic element has its own diagraphic node.
+  In an element-node tree, no two nodes of the same parent should share a prefix. 
+  A clause-node tree is not generically parsable, but relative precedence of syntactic branches can be discerned. 
+
+Diagraphic compositions
+  A node of one or more clauses that cannot be meaningfully subdivided.
+  A composition-node tree can only be automatically displayed.
+  Compositions don't nest.
+  Compositions come after a period, and represent a new sentence.
+    Compositions to not add to the path. 
+  Compositions can be a kind of cached derivation that doesn't require the use of a generic term in a particular clause, and then a subsequent explanation of that term, but rather can proceede by analogy, the example from which the derivation occurs being used to derive directly the property of the particular which one desires to ellicit. The primary storage location of the germ of the derivation is not the tree to which the composition belongs, but this may be the only situation in which it is useful. 
+  Compositions can correspond to any part of the tree.
+
+Diagraphic notes
+  A note is a special kind of composition which is used to store information temporarily, provisional to its incorperation into a more modular tree.
+  One would use a note not because the information contained within is meaningfully single-purpose, but rather because of the accidental organization of the information at its source. 
+  A composition that is appropriate whole in one context might need to be broken down into smaller pieces in a different context, and so a composition in one place might become a note in another, provision to refactoring. 
+  Diagraphic note piles
+
 Diagraphic paths
+    Introductory sentences
+      A sentence is a series of clauses ending in a period. 
+      Sentences after a terminal clause can form subtrees in a diagraphic tree.
+      Diagraphic sentences are only implicitly represented.
   A diagraphic path is a comma or slash delimited string, ie sentence.
   The path does not include the key.
 
@@ -134,36 +171,6 @@ Diagraphic paths
       This is the mistake made for example by a graduate student who explains the real numbers as one axis of the range of complex numbers – says who? If the real numbers can be used and described by themselves for the purposes of a particular discussion, then they are their own sufficient context. We might say of complex numbers that they include the real numbers, but we may not say of the real numbers that they belong to the definition of complex numbers. By the time one reaches the age of a professor, one has more modularly refactored one's knowledge, so that each concept can be used and explained individually or in very intentional combinations. The undergraduate, on the other hand, avoids drawing in unneccessary information simply by maintaining a prudent ignorance. 
   EG, T/S/P/P/C/S/P/P/P/C/...
   A speaker might not express what they think of the topic, and the listener might not express why they want to know, both of which would be given by the private path.
-
-
-Diagraphic compositions
-  A node of one or more sentences that cannot be meaningfully subdivided.
-  A composition-node tree can only be automatically displayed.
-  Compositions don't nest.
-  Compositions come after a period, and represent a new sentence.
-    Compositions to not add to the path. 
-  Compositions can be a kind of cached derivation that doesn't require the use of a generic term in a particular clause, and then a subsequent explanation of that term, but rather can proceede by analogy, the example from which the derivation occurs being used to derive directly the property of the particular which one desires to ellicit. The primary storage location of the germ of the derivation is not the tree to which the composition belongs, but this may be the only situation in which it is useful. 
-  Compositions can correspond to any part of the tree.
-
-Diagraphic notes
-  A note is a special kind of composition which is used to store information temporarily, provisional to its incorperation into a more modular tree.
-  One would use a note not because the information contained within is meaningfully single-purpose, but rather because of the accidental organization of the information at its source. 
-  A composition that is appropriate whole in one context might need to be broken down into smaller pieces in a different context, and so a composition in one place might become a note in another, provision to refactoring. 
-  Diagraphic note piles
-
-Diagraphic element-node tree
-  An element-node tree is a kind of diagraphic tree.
-  An element-node tree is a diagraphic tree in which every syntactic element has its own diagraphic node.
-  In an element-node tree, no two nodes of the same parent should share a prefix. 
-  An element node tree has additional tokens like how and why before certain derivations.
-  An element node tree can be semantically interpreted, because it can be overlayed onto a generic diagraph.
-  An element node tree can be syntactically parsed, because the different syntactic brances are explicitly represented. 
-
-Diagraphic clause-node tree
-  An element-node tree is a kind of diagraphic tree.
-  An element-node tree is a diagraphic tree in which every syntactic element has its own diagraphic node.
-  In an element-node tree, no two nodes of the same parent should share a prefix. 
-  A clause-node tree is not generically parsable, but relative precedence of syntactic branches can be discerned. 
 
 
 Diagraphic priority
