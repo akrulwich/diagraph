@@ -430,7 +430,8 @@ JSON representation of diagraph
 
 
 Diabots
-  A diabot is any diagraphic agent. 
+  A diabot is a diagraphic agent. 
+  A diabot is an agent who is motivated to improve its ideograph.
   A diabot is an agent that represents its knowledge as a diagraph. 
   A diabot knows N if it has the node N. 
   A diabot understands P if it has the path P. 
