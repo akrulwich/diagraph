@@ -28,14 +28,14 @@ Diagraph
 
 The definition of diagraph
   A diagraph is a key-value store, 
-      in which the keys are diagraphic paths, which represent requests for explanation.
-      in which the values are collections of diagraphic trees, which represent explanations.
-  Diagraphic keys represent topics.
-  Diagraphic trees represent explanations.
-  Diagraphic nodes represent clauses.
-  Diagraphic paths represent sentences.
+      in which the keys are diagraphic keys.
+      in which the values are collections of diagraphic trees.
+  Diagraphic keys represent ordinary language topics.
+  Diagraphic trees represent ordinary language explanations.
+  Diagraphic nodes represent ordinary language clauses.
+  Diagraphic paths represent ordinary language sentences.
 
-Grammatical topics
+Topics
   Topics are things like spaces, categories, sets, groups, topics, regions, eras, contexts.
   Children of a topic are members.
   Topics contain subjects.
@@ -61,7 +61,7 @@ Diagraphic keys
   Being asked a questions is like recognizing a space.
 
 Explanations
-  An explanation is a thing like an essay, lecture, book, article, answer or story.
+  An explanation is what is, for example, an essay, lecture, book, article, question-answer or story.
   An explanation is a represented in a diagraph by a collection of diagraphic trees.
   An explanation may span several diagraphic trees by crossing over aliases.  
   Explanations have an implicit diagraph, the single tree formed by combining all transmissions.
@@ -88,7 +88,10 @@ Diagraphic tree
   A speaker's sentence changes subject at the point where their tree aliases. 
   Each diagraphic tree is an entry of the diagraph, under that particular key.
 
-Grammatical clauses
+Clauses
+  Grammatical clauses correspond to diagraphic nodes, although not exactly.
+    Several clauses may correspond to one node, or one clause to several nodes.
+
   A clause is a subject and series of predicates ending in a comma, which may begin with a conjunction.
   A clause-node tree can be automatically parsed, and can be used by some diagraphic functions.
   Diagraphic clauses are only implicitly represented.
@@ -108,7 +111,7 @@ Diagraphic nodes
     Nodes are not refactored merely by adding two nodes with the same prefix to the same path.
   Terminal nodes end with a period.
 
-Grammatical sentences
+Sentences
   A sentence is a series of clauses ending in a period. 
   Sentences after a terminal clause can form subtrees in a diagraphic tree.
   Diagraphic sentences are only implicitly represented.
