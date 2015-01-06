@@ -231,6 +231,7 @@ Particlar diagraph
 
 Generic diagraph
   Generic diagraph is a generic subject and all possible predicates. 
+  There is in some sense a single layer of particular diagraph, and then many nested layers of generic diagraph, all the way down to innate generics like someone, something, somewhere, etc.
   Generic trees begin with "there is" or "there are".
   Generic diagraph is useful in comparing two particular diagraphs, eg determining if predicate A in one diagraph means the same thing as predicate B in another.
   Generic subordination, eg, A/B, means all Bs are A but only some As are B.
