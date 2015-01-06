@@ -272,8 +272,6 @@ Descriptive diagraph specifications
   A descriptive diagraph definition is like, the diagraph formed by a particular corpus of text.
   EG, Elsinore, Descent, Investigations
 
-
-
 Discourse diagraphs
   A discourse diagraph is the hypothetical diagraph implicit in a corpus of text. 
   Responses to particular articulations are culled to produce an abstracted diagraph. 
@@ -306,6 +304,7 @@ Modeling with diagraph
     The differences in explanation preformance between experts and non-experts.
     The ways in which we might compare directly the interfaces of different explanatory systems.
   Tag entropy
+  Capsizing
   Ephemeral documents and feeds
   An adjacency in a diagraph is a thing that would bring to mind another thing in an explanation.
     So imagine the mind of the person who reads Twitter or the newspaper.
@@ -316,7 +315,7 @@ Describing media with diagraph
   How context in a news article might naively seem like aliased subtrees that belong primarily in other places, but really are custom made for the article's tree, children of references in a particular sentence, not a new explanation soley of the reference in its own right. 
 Describing libraries with diagraph
 Describing academia with diagraph
-Capsizing
+Describing wikipedia with diagraph
 Describing individuals with diagraph
 Describing chronology with diagraph
   Real time, stateful time, evolutionary time
