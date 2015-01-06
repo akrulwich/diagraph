@@ -217,11 +217,6 @@ Diagraphic references
   There are no topic-topic edges, only topic-sentence pairs in which the sentence contains an explicit reference to a different topic. 
   References are explained by their context.
 
-Diagraphic aliases
-  An alias is a correspondance between a path and a key.
-  One might refactor a large tree into several smaller trees using aliases. 
-  An alias is a hack where one takes what one will have in hand at a given point, the path, and makes that a new topic in the diagraph.
-
 
 Particlar diagraph
   Diagraph concerning singular subjects. 
