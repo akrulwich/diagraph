@@ -191,6 +191,8 @@ Diagraphic priority
     Google hits
 
 
+
+Kinds of diagraph
 Prose diagraph
   A prose diagraph embeds a selective traversal of a particular diagraph interpreted with a generic diagraph into a hierarchial series of utterances from a voice with a particular tone, self-aware of the transission. 
   Narrative prose is the most efficient form of diagraph transission, because it can impart the generic, the particular, a perspective, and a style, all at the same time like several overlapping concentric circles.
@@ -242,7 +244,7 @@ Analogy by direct comparison
 
 
 
-Describing particular diagraphs
+Describing diagraphs
   Diagraphs can have depth, if many nodes are the roots of lower trees.
   Diagraphs can have context, if many trees are nodes in higher trees.
   A diagraph can subsume another. 
@@ -322,6 +324,17 @@ Describing individuals with diagraph
 Describing chronology with diagraph
   Real time, stateful time, evolutionary time
     Being in a DFA, as opposed to being out of one.
+
+Diabots
+  A diabot is a diagraphic agent. 
+  A diabot is an agent who is motivated to improve its ideograph.
+  A diabot is an agent that represents its knowledge as a diagraph. 
+  A diabot knows N if it has the node N. 
+  A diabot understands P if it has the path P. 
+  A diabot's ideograph of a particular topic is its understanding of that topic. 
+Diabot dynamics
+  We can predict how a diagraphic agent would behave, given that it seeks to expand its ideograph in certain predictible ways.
+  How one would behave who wanted to gain as much diagraph as possible.
 
 
 
@@ -415,18 +428,6 @@ JSON representation of diagraph
   Strings in any primitive represent nodes, and any kind of nesting represents hierarchy.
   An element-node tree can be a javascript object, because no children of the same node should share a prefix. Otherwise, trees can be represented with string-array tuples.
 
-
-Diabots
-  A diabot is a diagraphic agent. 
-  A diabot is an agent who is motivated to improve its ideograph.
-  A diabot is an agent that represents its knowledge as a diagraph. 
-  A diabot knows N if it has the node N. 
-  A diabot understands P if it has the path P. 
-  A diabot's ideograph of a particular topic is its understanding of that topic. 
-
-Diabot dynamics
-  We can predict how a diagraphic agent would behave, given that it seeks to expand its ideograph in certain predictible ways.
-  How one would behave who wanted to gain as much diagraph as possible.
 
 Diagraphic servers
 Initialization
