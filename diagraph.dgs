@@ -213,16 +213,6 @@ Generic clauses
   Generic clauses are things like "Dogs bark"
   Every particular clause is predicated on a generic clause.
 
-Particular derivations
-  EG, X is P, why? becuase X is D, so X is E, so X is P.
-  Particular derivations must provide a reputable dependent clause from which the given clause follows in generic inferences inherent in the language.
-
-Generic derivations
-  A generic derivation is an aside made from a particular explanation.
-  A generic derivation begins a discontinous explanation.
-  EG, expl(x is p) -> expl(Cs can be p) -> expl(x is p)
-  A generic derivation is a specification of some generic paths to the exclusion of others - it is a pruning of the generic tree.
-
 Predication
   Every particular clause is predicated upon a generic clause, the abstraction of the particular clause. 
   A predication is an implicit correspondance between a particular predicate and a predicate of the generic type. 
