@@ -41,8 +41,7 @@ The definition of diagraph
   Diagraphic keys represent ordinary language topics.
   Diagraphic trees represent ordinary language explanations.
   Diagraphic nodes represent ordinary language utterances.
-  Diagraphic paths represent sentences.
-  Nothing in a diagraph corresponds to subjects or predicates alone, only words, clauses, and explanations.
+  Diagraphic paths
 
 Diagraphic keys
   A diagraphic key represents a grammatical topic. 
@@ -201,6 +200,7 @@ Prose diagraph
   Producing a prose diagraph may cause someone to impart to themselves the generic and particular diagraph.
   A prose diagraph is a conscious utterance, to a particular audience, as opposed to particular or generic diagraph, which is just a platonic mesh of facts and interpretations.
   Particular and generic diagraph are almost never explicitly represented outside of the context of particular prose traversals, because this is what you would do if paper were scarce and you expected everyone to read everything anyway because there wasn't very much of it. 
+  The prose keys of a diagraph have quotes, whereas particular and generic keys are just strings.
 
 Particlar diagraph
   Diagraph concerning singular subjects. 
@@ -243,7 +243,7 @@ Analogy by direct comparison
 
 
 
-Describing diagraphs
+Describing particular diagraphs
   Diagraphs can have depth, if many nodes are the roots of lower trees.
   Diagraphs can have context, if many trees are nodes in higher trees.
   A diagraph can subsume another. 
@@ -253,6 +253,8 @@ Describing diagraphs
 
   A diagraph has a certain number of stages
     The number of conjunctive layers at a particular point.
+  Diagraph merges
+    Two diagraphs are merged into one that contains the paths of both diagraphs, refactoring nodes that share prefixes. 
 
 Diagraph specifications
 Functional diagraph specifications
@@ -265,23 +267,16 @@ Descriptive diagraph specifications
   Descriptive specifications specify the desired information by describing an attribute of that information.
   A descriptive diagraph definition is like, the diagraph formed by a particular corpus of text.
 
-Diagraph merges
-  Two diagraphs are merged into one that contains the paths of both diagraphs, refactoring nodes that share prefixes. 
-
 Common configurations of diagraph
   Stories
   Locations
 
-
-Interesting diagraphs
 Discourse diagraphs
   A discourse diagraph is the hypothetical diagraph implicit in a corpus of text. 
   Responses to particular articulations are culled to produce an abstracted diagraph. 
-  Inclusion criteria
-    Does it have a wikipedia page?
-    Number of secondary sources that make a particular point/use a particular clause.
-  Diagraph ranking
-    Number of hits on google. 
+  Any point made literally in a corpus.
+  Prioritized by number of secondary sources that make the point.
+  Learning to see prose not as a document that includes an assortment of sentences, but rather as a sequentialization of a partial traversal of a discourse diagraph.
 Pedagogic diagraphs
   Diagraphs that contain every wrong explanation of something, and corrections.
 Library diagraphs
@@ -301,16 +296,13 @@ Culture diagraphs
   A culture diagraph represents the states which an individual is likely to progress though. 
   The validity of a culture diagraph should be self-evident to any native, ie, for any given adjacency, the child really what would come to mind given the parent for any native -- that I would expect you to expect me to know about that association.
 
-Elsinore (criticism of Hamlet)
-Descent (a chronology of scientific theories on human development)
-Investigations (Wittgenstein’s reduction of analytic philosophy to ordinary language)
-Various Libraries
-Various Discussions 
-Various theories / religions
+Elsinore 
+Descent 
+Investigations
 
 
 
-Describing with diagraph
+Modeling with diagraph
   What kind of things might be more easy to talk about in terms of diagraph? 
     The differences in explanation preformance between experts and non-experts.
     The ways in which we might compare directly the interfaces of different explanatory systems.
