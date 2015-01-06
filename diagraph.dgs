@@ -164,7 +164,6 @@ Diagraphic references
   There are no topic-topic edges, only topic-sentence pairs in which the sentence contains an explicit reference to a different topic. 
   References are explained by their context.
 
-
 Diagraphic priority
   A diagraph has a mode of priority, which is a total ordering of the nodes of that diagraph.
   Diagaphs are hierarchial, and children of a parent have a relative syntactic rank.
@@ -271,6 +270,7 @@ Common configurations of diagraph
   Stories
   Locations
 
+
 Discourse diagraphs
   A discourse diagraph is the hypothetical diagraph implicit in a corpus of text. 
   Responses to particular articulations are culled to produce an abstracted diagraph. 
@@ -344,6 +344,7 @@ Diagraph as personal desktop/task manager
 
 
 
+
 Producing diagraph
 Writing a diagraph
   Discussion diagraph 
@@ -378,7 +379,7 @@ Diagraph formation
 
 
 
-Representations of diagraph
+Representing diagraph
   Diagraph script
     Diagraph script is a text format that represents a diagraph. 
     Diagaph script is the canonical representation of a diagraph. 
