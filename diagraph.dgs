@@ -127,39 +127,6 @@ Diagraphic nodes
     Nodes are not refactored merely by adding two nodes with the same prefix to the same path.
   Terminal nodes end with a period.
 
-Diagraphic element-nodes
-  Correspond to words
-
-  An element-node tree is a kind of diagraphic tree.
-  An element-node tree is a diagraphic tree in which every syntactic element has its own diagraphic node.
-  In an element-node tree, no two nodes of the same parent should share a prefix. 
-  An element node tree has additional tokens like how and why before certain derivations.
-  An element node tree can be semantically interpreted, because it can be overlayed onto a generic diagraph.
-  An element node tree can be syntactically parsed, because the different syntactic brances are explicitly represented. 
-
-Diagraphic clause-nodes
-  Correspond to clauses
-
-  An element-node tree is a kind of diagraphic tree.
-  An element-node tree is a diagraphic tree in which every syntactic element has its own diagraphic node.
-  In an element-node tree, no two nodes of the same parent should share a prefix. 
-  A clause-node tree is not generically parsable, but relative precedence of syntactic branches can be discerned. 
-
-Diagraphic composition nodes
-  A node of one or more clauses that cannot be meaningfully subdivided.
-  A composition-node tree can only be automatically displayed.
-  Compositions don't nest.
-  Compositions come after a period, and represent a new sentence.
-    Compositions to not add to the path. 
-  Compositions can be a kind of cached derivation that doesn't require the use of a generic term in a particular clause, and then a subsequent explanation of that term, but rather can proceede by analogy, the example from which the derivation occurs being used to derive directly the property of the particular which one desires to ellicit. The primary storage location of the germ of the derivation is not the tree to which the composition belongs, but this may be the only situation in which it is useful. 
-  Compositions can correspond to any part of the tree.
-
-Diagraphic notes
-  A note is a special kind of composition which is used to store information temporarily, provisional to its incorperation into a more modular tree.
-  One would use a note not because the information contained within is meaningfully single-purpose, but rather because of the accidental organization of the information at its source. 
-  A composition that is appropriate whole in one context might need to be broken down into smaller pieces in a different context, and so a composition in one place might become a note in another, provision to refactoring. 
-  Diagraphic note piles
-
 Diagraphic paths
     Introductory sentences
       A sentence is a series of clauses ending in a period. 
