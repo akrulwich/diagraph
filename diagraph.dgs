@@ -93,6 +93,7 @@ Diagraphic tree
   Germanity as constraint on subtrees
   A speaker's sentence changes subject at the point where their tree aliases. 
   Each diagraphic tree is an entry of the diagraph, under that particular key.
+  If a prose document has 50 paragraphs, you could think of them as a linear progression from 1 to 50, or as a traversal of a tree. Things can behave as trees without being presented as trees.
 
 Diagraphic nodes
     Utterances
