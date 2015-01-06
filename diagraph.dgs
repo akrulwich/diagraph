@@ -429,6 +429,13 @@ JSON representation of diagraph
 
 Diagraphic functions
 Diagraphic function environments
+  LTM-topic
+  STM
+  WM
+  Input
+  Output
+  Wait
+
 Diagraphic processes
 Diagraphic background process
 Diagraphic threads
