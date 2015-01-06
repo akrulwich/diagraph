@@ -41,7 +41,7 @@ The definition of diagraph
   Diagraphic keys represent ordinary language topics.
   Diagraphic trees represent ordinary language explanations.
   Diagraphic nodes represent ordinary language utterances.
-  Diagraphic paths
+  Diagraphic paths represent ordinary language sentences.
 
 Diagraphic keys
   A diagraphic key represents a grammatical topic. 
@@ -202,6 +202,7 @@ Prose diagraph
   A prose diagraph is a conscious utterance, to a particular audience, as opposed to particular or generic diagraph, which is just a platonic mesh of facts and interpretations.
   Particular and generic diagraph are almost never explicitly represented outside of the context of particular prose traversals, because this is what you would do if paper were scarce and you expected everyone to read everything anyway because there wasn't very much of it. 
   The prose keys of a diagraph have quotes, whereas particular and generic keys are just strings.
+  When you see prose, think instead of the particular diagraph and paths you immediately parse from it.
 
 Particlar diagraph
   Diagraph concerning singular subjects. 
@@ -430,13 +431,18 @@ JSON representation of diagraph
 
 
 Diagraphic functions
-  A diagraphic function is an iterated function of a diagraphic path value.
+  A diagraphic function is an iterated function of a diagraphic path.
 
 Diagraphic function environments
-  LTM-topic
-  STM
-  WM
+  Topic (LTM)
+    One single diagraphic key-value pair.
+  Cache (STM)
+    A partial path to full path key-value store.
+  Cursor (WM)
+    A diagraphic path represented as diagraph-script string.
+    Paths put in WM get saved to STM & LTM.
   Input
+    A stream of 
   Output
   Wait
 
