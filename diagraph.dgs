@@ -420,14 +420,17 @@ Representing diagraph
         Parts are seperated by three blank lines.
     Multi-line compositions can be wraped in quotes.
     Diagraph script can be machine-interpretable, parsable, or displayable, but never readable. 
+    Diagraph script files
+      Seperating a diagraph into seperate files?
 
 JSON representation of diagraph
-  Strings in any primitive represent nodes, and any kind of nesting represents hierarchy.
-  An element-node tree can be a javascript object, because no children of the same node should share a prefix. Otherwise, trees can be represented with string-array tuples.
+
 
 
 
 Diagraphic functions
+  A diagraphic function is an iterated function of a diagraphic path value.
+
 Diagraphic function environments
   LTM-topic
   STM
@@ -460,42 +463,3 @@ Diagraph-Consider
 Diagraph-Reflect
   Interpretation in parts?
 
-
-
-
-Other 
-Propsecting
-  Provisional compositions can become notes which can become sentences which can become either clause-trees or final compositions.
-Qualitative computing
-Moderation as merger not mean
-The explanation market
-  Market fragmentation between producers and consumers. 
-Diagraph as epistemic algorithm
-Diabots and personal reading
-Exhaustive diagraphs, which invite and address every articulation of an idea possible in the language
-Diagraphic dynamics
-  How agents behave when diagraph transmission is so reliable and ubiquitous as to be inevitable. 
-Ostensive diagraph
-  A diagraphic node may ostend to a resource referenced by address.
-Human assistants for composing diagraph script, eg customer support. 
-Diagramatic explanation
-  A visual the elements of which correspond to one or more diagraphic trees.
-Arguments over competing narratives are arguments over suggested primary ideographic storage
-A definition of wrongness that is relative to what one would think given more complete information
-How creating a diagraph involves massive redundancy, enumerating for example every concievable way of articulating an idea, so that it is perfectly clear how you suggest the reader integrate it into their understanding.
-  How there are no true synonyms in a diagraph, and so every identity between terms must be explicitly represented and justified. 
-An explanation of Darwin of infinite length might include an explanation of England of infinite length, but not every fact about England would be germane to that explanation.
-Analogies
-  Are compositions stored in subtrees analogies? Or are they like in only one respect, whereas an analogy is a direct comparison of likeness? "A is B. C is an example of B." vs. "A is like C"
-Intellectual virtue
-  Having a reason besides ignorance for choosing where your diagraph will end
-How one can infer from the exact relevance of examples and analogies the resolution of one's ideolect.
-Moral intuitions as a finite set of innate interpretations that are naturally and generatively triggered by complete description, and so morality as a requirement to solicit the information that would give one's moral intuitions the chance to be triggered. An argument for moral intuitions of greater informational content, rather than a difference in kind. Moral intuitions as judgements, propositional to the degree that any ordinary language.
-Moral discourse doesn't required a shared vocabulary or theory.
-Moral discourse is descriptive.  
-How can you merge texts? 
-  How can we reason about the individual who has read two texts?
-Ellaborative encoding, using people's quotes as compositions of particular views.
-One uses one's linguistic sense to navigate a diagraph.
-Learning to read things for which you are not the target audience. 
-The point is to create a standardized interface to represent interactions with things like books, search engines, and human teachers, to show how they satisfy the same sorts of requests functionally specified, and allow direct comparisons.
