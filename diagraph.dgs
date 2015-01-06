@@ -331,6 +331,7 @@ Describing chronology with diagraph
     Being in a DFA, as opposed to being out of one.
 
 
+
 Diagraph in use
   Preventing the redundant duplication of explanatory information in multiple documents. 
     Although, not all duplicated explanatory information is redundant, duplicating the same tree is redundant, but two tree might include the same fact but not the explanation. 
@@ -347,6 +348,7 @@ Diagraph in Academic Publishing
 Diagraph in personal reading
   Whatever your opinion on what people should read, biases that are failures to trigger a potential interest are inefficiencies.
 Diagraph as personal desktop/task manager
+
 
 
 Producing diagraph
@@ -380,6 +382,7 @@ Diagraph formation
     Iterative periods of solicitation to topic buckets, sorting by similarity and subdividing, then more solicitation, until all buckets have fewer than some threshold of notes, then the creation of note piles, which become clause node trees, then element node trees. 
     Pile sort requires a large initial cost.
     Pile sort might refactor several composite texts into one set of single purpose texts.
+
 
 
 Representations of diagraph
