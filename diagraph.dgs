@@ -610,9 +610,8 @@ Background processes
   Passive threads schedule their successors after a pause, so that active threads that use setInterval(0) will be able to cut in front of them.
 
 
-Other
-Diagraph
- 
+
+Other 
 Propsecting
   Provisional compositions can become notes which can become sentences which can become either clause-trees or final compositions.
 Qualitative computing
