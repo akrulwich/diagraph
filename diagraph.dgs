@@ -325,7 +325,7 @@ Describing chronology with diagraph
 
 
 
-Diagraph in use
+Using diagraph
   Preventing the redundant duplication of explanatory information in multiple documents. 
     Although, not all duplicated explanatory information is redundant, duplicating the same tree is redundant, but two tree might include the same fact but not the explanation. 
   Preventing information that is similar from becomming fragmented by division into seperate documents
