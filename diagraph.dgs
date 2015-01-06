@@ -430,8 +430,15 @@ JSON representation of diagraph
 Diagraphic functions
 Diagraphic function environments
 Diagraphic processes
+Diagraphic background process
 Diagraphic threads
-Diagraphic interfaces
+
+Diagraphic servers
+Diagraphic clients
+  Static
+  Correspondance
+  Interactive
+
 
 
 Diagraph-Read
