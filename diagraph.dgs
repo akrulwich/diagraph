@@ -263,10 +263,12 @@ Functional diagraph specifications
   A functional diagraph specification is like a question, ie a partial path.
   Diagraphs can be described functionally without complete knowledge of their contents. 
   Functionally specified diagraph allows us to speak precisely about hypothetical diagraphs.
+  Examples eg, human condition diagraph
 Descriptive diagraph specifications
   A descriptive diagraph specification is like a topic, and therefore is imprecise.
   Descriptive specifications specify the desired information by describing an attribute of that information.
   A descriptive diagraph definition is like, the diagraph formed by a particular corpus of text.
+  EG, Elsinore, Descent, Investigations
 
 Common configurations of diagraph
   Stories
@@ -297,10 +299,6 @@ Culture diagraphs
   A culture diagraph is the set of references and generics that a member of a group expects another member of the group to know and understand.
   A culture diagraph represents the states which an individual is likely to progress though. 
   The validity of a culture diagraph should be self-evident to any native, ie, for any given adjacency, the child really what would come to mind given the parent for any native -- that I would expect you to expect me to know about that association.
-
-Elsinore 
-Descent 
-Investigations
 
 
 
