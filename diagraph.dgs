@@ -27,6 +27,12 @@ Diagraph
     The data structures and their properties supervene upon the linguistic entities and their properties.
       There should be no relationship between data structures that doesn't represent a prior relationship between linguistic entities.
     A diagraph is never proscriptive to the ordinary linguistic practices represented.
+  A diagraph is not a document.
+    Documents are an insufficiently abstract tool for reasoning about explanatory information 
+    A diagraph is not a hypertext.
+    Diagraph does not represent embodied discussions.
+      Diagraphic responses are of ideas and to ideas, rather than of people or writings to other people or writings. 
+      Diagraphs can be formed by culling discussions.
 
 The definition of diagraph
   A diagraph is a key-value store, 
@@ -177,6 +183,19 @@ Diagraphic paths
   EG, T/S/P/P/C/S/P/P/P/C/...
   A speaker might not express what they think of the topic, and the listener might not express why they want to know, both of which would be given by the private path.
 
+Diagraphic addresses
+  Diagraphic nodes have addresses in a particular diagraph.
+  Diagraphic nodes have one primary and many secondary addresses.
+  The primary address is the path from the key where a node is actually stored in a diagraph to that node.
+  A secondary address is a path from some other key that advances through aliases.
+  Public-language nodes may have a generally agreed upon public-language address. 
+
+Diagraphic references
+  A diagraphic reference is a correspondance between a node and a key. 
+  Explanations of references or subelements of a clause during an existing explanation are asides.
+  There are no topic-topic edges, only topic-sentence pairs in which the sentence contains an explicit reference to a different topic. 
+  References are explained by their context.
+
 
 Diagraphic priority
   A diagraph has a mode of priority, which is a total ordering of the nodes of that diagraph.
@@ -204,18 +223,6 @@ Diagraphic priority
     Secondary source citations
     Google hits
 
-Diagraphic addresses
-  Diagraphic nodes have addresses in a particular diagraph.
-  Diagraphic nodes have one primary and many secondary addresses.
-  The primary address is the path from the key where a node is actually stored in a diagraph to that node.
-  A secondary address is a path from some other key that advances through aliases.
-  Public-language nodes may have a generally agreed upon public-language address. 
-
-Diagraphic references
-  A diagraphic reference is a correspondance between a node and a key. 
-  Explanations of references or subelements of a clause during an existing explanation are asides.
-  There are no topic-topic edges, only topic-sentence pairs in which the sentence contains an explicit reference to a different topic. 
-  References are explained by their context.
 
 
 Particlar diagraph
@@ -264,7 +271,7 @@ Abstracting a clause
 Analogies
 Analogy by shared classification
 Analogy by shared description
-Analogy by comparison
+Analogy by direct comparison
 
 
 
@@ -640,12 +647,7 @@ Background processes
 
 Other
 Diagraph
-  A diagraph is not a document.
-    Documents are an insufficiently abstract tool for reasoning about explanatory information 
-  A diagraph is not a hypertext.
-  Diagraph does not represent embodied discussions.
-    Diagraphic responses are of ideas and to ideas, rather than of people or writings to other people or writings. 
-    Diagraphs can be formed by culling discussions.
+ 
 Propsecting
   Provisional compositions can become notes which can become sentences which can become either clause-trees or final compositions.
 Qualitative computing
