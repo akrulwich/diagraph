@@ -251,11 +251,13 @@ Describing diagraphs
     One diagraphic tree subsumes another if it contains a node that can be parent to the other's root.
   A diagraph can reduce one diagraph to another.
   A diagraph can be coherant if all paths belong to a single refactored tree.
-
   A diagraph has a certain number of stages
     The number of conjunctive layers at a particular point.
   Diagraph merges
     Two diagraphs are merged into one that contains the paths of both diagraphs, refactoring nodes that share prefixes. 
+  Common configurations of diagraph
+    Stories
+    Locations
 
 Diagraph specifications
 Functional diagraph specifications
@@ -270,9 +272,6 @@ Descriptive diagraph specifications
   A descriptive diagraph definition is like, the diagraph formed by a particular corpus of text.
   EG, Elsinore, Descent, Investigations
 
-Common configurations of diagraph
-  Stories
-  Locations
 
 
 Discourse diagraphs
