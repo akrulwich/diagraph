@@ -100,6 +100,8 @@ Diagraphic tree
   A speaker's sentence changes subject at the point where their tree aliases. 
   Each diagraphic tree is an entry of the diagraph, under that particular key.
   If a prose document has 50 paragraphs, you could think of them as a linear progression from 1 to 50, or as a traversal of a tree. Things can behave as trees without being presented as trees.
+  The relative ordering of siblings is not an explicit relationship of hierarchy or ordinal mapping, but rather represents mere relative priority.
+  Children are prioritized, they are not ordered.
 
 Diagraphic nodes
     Utterances
@@ -196,6 +198,9 @@ Prose diagraph
   Narrative prose is the most efficient form of diagraph transission, because it can impart the generic, the particular, a perspective, and a style, all at the same time like several overlapping concentric circles.
   Prose is also the least resilient, least modular form of diagraph, because it cannot easily incorperate new information, and a fault with any one aspect renders the whole undesirable.
   A clause of a prose diagraph corresponds to a clause of particular diagraph, and a series of generic clauses of increasing abstraction. 
+  Producing a prose diagraph may cause someone to impart to themselves the generic and particular diagraph.
+  A prose diagraph is a conscious utterance, to a particular audience, as opposed to particular or generic diagraph, which is just a platonic mesh of facts and interpretations.
+  Particular and generic diagraph are almost never explicitly represented outside of the context of particular prose traversals, because this is what you would do if paper were scarce and you expected everyone to read everything anyway because there wasn't very much of it. 
 
 Particlar diagraph
   Diagraph concerning singular subjects. 
@@ -213,6 +218,7 @@ Generic diagraph
   We represent generic diagraph only when a particular theory exerts complete explanatory power over a domain, and so we don't need any rich particulars, otherwise we explicitly represent particular diagraph & store the generic diagraph implicitly in the predicates of the particular.
   Generic diagraph is composed of generic subjects or concepts. 
   A diagraph might not need to define terms because they're in the generic diagraph.
+  Long generic inheritance chains are produced through philosophy and taxonomy.
 
 Generic clauses
   Generic clauses are things like "Dogs bark"
