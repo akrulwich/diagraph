@@ -258,6 +258,7 @@ Describing diagraphs
   Common configurations of diagraph
     Stories
     Locations
+  Diagraph and intellectual histories, ie ideographs & prose embedded in history.
 
 Diagraph specifications
 Functional diagraph specifications
@@ -440,8 +441,11 @@ Diagraphic function environments
   Wait
 
 Diagraphic processes
-Diagraphic background process
+  A diagraphic process is a function-topic pair.
+  A diagraphic process maps input to output by creating diagraphic threads.
 Diagraphic threads
+  A diagraphic thread is a function-sentence pair that iterates.
+Diagraphic background process
 
 Diagraphic servers
 Diagraphic clients
@@ -456,6 +460,7 @@ Diagraph-Edit
 Diagraph-Add
 Diagraph-Interpret
 Diagraph-Explain
+  Dg-Explain takes a topic and shows one node at a time in a BFS
 Diagraph-Assess
 Diagraph-Review
 Diagraph-Quiz
