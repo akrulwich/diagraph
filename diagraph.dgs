@@ -426,7 +426,23 @@ JSON representation of diagraph
   An element-node tree can be a javascript object, because no children of the same node should share a prefix. Otherwise, trees can be represented with string-array tuples.
 
 
-Diagraphic servers
+Diagraphic functions
+Diagraphic function environments
+Diagraphic processes
+Diagraphic threads
+Diagraphic interfaces
+Diagraph-Read
+Diagraph-Edit
+Diagraph-Add
+Diagraph-Interpret
+Diagraph-Explain
+Diagraph-Assess
+Diagraph-Review
+Diagraph-Quiz
+Diagraph-Consider
+Diagraph-Reflect
+  Interpretation in parts?
+
 
 
 
