@@ -133,6 +133,11 @@ Diagraphic nodes
   Terminal nodes end with a period.
 
 Diagraphic paths
+  
+  Paths are strings of simple english sentences.
+  Paths do not communicate which nodes are which, which can be done with brackets, ie [A] [B C D] [E]
+  Paths do not need commas, because they do not contain multiple branches of a diagraphic tree, only one.
+
     Introductory sentences
       A sentence is a series of clauses ending in a period. 
       Sentences after a terminal clause can form subtrees in a diagraphic tree.
@@ -428,7 +433,7 @@ Representing diagraph
     Multi-line compositions can be wraped in quotes.
     Diagraph script can be machine-interpretable, parsable, or displayable, but never readable. 
     Diagraph script files
-      Seperating a diagraph into seperate files?
+      A diagraph can be divided into several diagraph script files named for the various parts.
 
 JSON representation of diagraph
 
@@ -436,22 +441,23 @@ JSON representation of diagraph
 
 
 Diagraphic functions
-  A diagraphic function 
-  Some diagraphic functions WM as input and output to produce an iterated function.
+  A diagraphic function is a function of the input, storage, cache, and cursor, which outputs only by side-effects to these same data structures.
+  Some functions like consider and reflect use WM to produce an iterated function, each cycle starting where the last cycle ended.
 
 Diagraphic function environments
-  Topic (LTM)
-    One single diagraphic key-value pair.
+  Storage (LTM)
+    One single diagraphic key-value pair of a topic and diagraphic tree collection.
   Cache (STM)
-    A partial path to full path key-value store.
+    A subject cache
   Cursor (WM)
     A diagraphic path represented as diagraph-script string.
     Paths put in WM get saved to STM & LTM.
   Input
-    Input goes to WM when empty.
+    When WM is empty it recieves the next value from the input stream.
   Output
     Every state of WM between function cycles is piped to output.
-  Wait
+  Pause
+    If the pause flag is true, then the thread pauses execution.
 
 Diagraphic processes
   A diagraphic process is a function-topic pair.
