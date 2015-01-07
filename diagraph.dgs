@@ -71,8 +71,11 @@ Diagraphic keys
   Being asked a questions is like recognizing a space.
 
 Diagraphic tree
-    An explanation is a traversal of a diagraphic tree.
+    An explanation is the traversal of a diagraphic tree.
     Trees are entirely contained within their topics
+    
+    An explanation session is a set of explanations of related topics. 
+    Explanations are depth-first across the nodes of a tree, but breadth-first across topics of a session.
 
     Explanations
       An explanation is what is, for example, an essay, lecture, book, article, question-answer or story.
@@ -445,8 +448,9 @@ Diagraphic functions
   Some functions like consider and reflect use WM to produce an iterated function, each cycle starting where the last cycle ended.
 
 Diagraphic function environments
+  A diagraphic function environment is a run-time environment that executes a diagraphic process and provides it a set of resources.
   Storage (LTM)
-    One single diagraphic key-value pair of a topic and diagraphic tree collection.
+    The storage diagraph
   Cache (STM)
     A subject cache
   Cursor (WM)
@@ -457,7 +461,7 @@ Diagraphic function environments
   Output
     Every state of WM between function cycles is piped to output.
   Pause
-    If the pause flag is true, then the thread pauses execution.
+    If the pause flag is true, then the thread pauses execution and the data structures can be inspected by the environment.
 
 Diagraphic processes
   A diagraphic process is a function-topic pair.
@@ -467,6 +471,8 @@ Diagraphic threads
 Diagraphic background process
 
 Diagraphic servers
+Diagraphic databases
+  
 Diagraphic clients
   Static
   Correspondance
@@ -475,14 +481,21 @@ Diagraphic clients
 
 
 Diagraph-Read
+  Takes a topic and returns the tree.
 Diagraph-Edit
+  Takes a topic and path and returns the tree at that path.
 Diagraph-Add
+  Takes a topic and path and merges the path with the storage diagraph.
 Diagraph-Interpret
+  Given an inputted path, find the appropriate topic and path in the storage diagraph.
 Diagraph-Explain
-  Dg-Explain takes a topic and shows one node at a time in a BFS
+  Takes a topic and shows one node at a time in a DFS
 Diagraph-Assess
+  Takes a topic and set of input paths path and returns a comparison of each input path with the reference path.
 Diagraph-Review
+  Takes a topic and gives a DFS of the paths.
 Diagraph-Quiz
+  Takes a topic and for each node, requests the path to that node.
 Diagraph-Consider
 Diagraph-Reflect
   Interpretation in parts?
