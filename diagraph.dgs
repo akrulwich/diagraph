@@ -71,6 +71,9 @@ Diagraphic keys
   Being asked a questions is like recognizing a space.
 
 Diagraphic tree
+    An explanation is a traversal of a diagraphic tree.
+    Trees are entirely contained within their topics
+
     Explanations
       An explanation is what is, for example, an essay, lecture, book, article, question-answer or story.
       An explanation is a represented in a diagraph by a collection of diagraphic trees.
@@ -81,6 +84,7 @@ Diagraphic tree
   Diagraphic tree roots are subjects. 
   A diagraphic tree is like a book in the library.
   A diagraphic subject is a diagraphic tree with that subject for a root.
+
 
   The hierarchy of a tree derives from the linguistic properties of the thing represented. For B to be child to A represents that B is a valid comment on A in the given context. 
   A diagraphic tree is a tree of diagraphic nodes, which have a string containing one or more space-delimited syntactic elements. 
@@ -203,6 +207,7 @@ Prose diagraph
   Particular and generic diagraph are almost never explicitly represented outside of the context of particular prose traversals, because this is what you would do if paper were scarce and you expected everyone to read everything anyway because there wasn't very much of it. 
   The prose keys of a diagraph have quotes, whereas particular and generic keys are just strings.
   When you see prose, think instead of the particular diagraph and paths you immediately parse from it.
+  The meaning of prose depends on the kind of key -- prose that is stored under a chronological or pragmatic key is persistent, prose stored under a platonic key is provisional to more modularly refactored diagraph.
 
 Particlar diagraph
   Diagraph concerning singular subjects. 
@@ -431,7 +436,8 @@ JSON representation of diagraph
 
 
 Diagraphic functions
-  A diagraphic function is an iterated function of a diagraphic path.
+  A diagraphic function 
+  Some diagraphic functions WM as input and output to produce an iterated function.
 
 Diagraphic function environments
   Topic (LTM)
@@ -442,8 +448,9 @@ Diagraphic function environments
     A diagraphic path represented as diagraph-script string.
     Paths put in WM get saved to STM & LTM.
   Input
-    A stream of 
+    Input goes to WM when empty.
   Output
+    Every state of WM between function cycles is piped to output.
   Wait
 
 Diagraphic processes
