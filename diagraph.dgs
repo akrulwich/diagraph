@@ -460,6 +460,7 @@ Diagraphic function environments
   A diagraphic function environment is a run-time environment that executes a diagraphic process and provides it a set of resources.
   Topic
     A string representing the process's current topic.
+    The last given topic of input, ie the state of the input stream, is reflected in the topic variable.
     If the topic changes, the URL should change
   Storage (LTM)
     The storage diagraph
