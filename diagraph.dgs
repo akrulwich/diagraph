@@ -458,10 +458,13 @@ Diagraphic functions
 
 Diagraphic function environments
   A diagraphic function environment is a run-time environment that executes a diagraphic process and provides it a set of resources.
+  Topic
+    A string representing the process's current topic.
+    If the topic changes, the URL should change
   Storage (LTM)
     The storage diagraph
   Cache (STM)
-    A subject cache
+    Associates every WM value with the process topic
   Cursor (WM)
     A diagraphic path represented as diagraph-script string.
     Paths put in WM get saved to STM & LTM.
@@ -473,7 +476,8 @@ Diagraphic function environments
     If the pause flag is true, then the thread pauses execution and the data structures can be inspected by the environment.
 
 Diagraphic processes
-  A diagraphic process is a function-topic pair.
+  A diagraphic process is a function and series of topics, representing a session.
+  The diagraphic topic is determined by the current input diagraph script.
   A diagraphic process maps input to output by creating diagraphic threads.
 Diagraphic threads
   A diagraphic thread is a function-sentence pair that iterates.
