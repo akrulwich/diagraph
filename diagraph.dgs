@@ -246,15 +246,22 @@ Predication
   A predication is a subject generic path pair.
   A derivation is a public language generic path specification.
 
+Schemas
+  Definitional generic clauses that link descriptions with interpretations.
+
 Abstracting a clause
   I genericize a particular clause by finding the path of the generic clause that sanctions the use of the predicate. 
   For example, "Fifi gave birth to twins" -> "Dogs give birth to twins".
   This operation is used in diagraph-consider, and in generic diagraph formation by constantly abstracting from the particular cases we encounter.
 
-Analogies
-Analogy by shared classification
-Analogy by shared description
-Analogy by direct comparison
+Interpretation
+  Interpretation is the ascription of higher-order predicates to a subject.
+  Interpretation by classification
+    "An underdog story"
+  Analogy by shared description
+    "A story about a fight against political power"
+  Analogy by direct comparison
+    "A story like Hamlet"
 
 
 
@@ -395,12 +402,14 @@ Writing a diagraph
 Diagraph formation
   Tidal sort
     Alternating periods of solicitation to topic-buckets, culling, and subdividing.
+    Tidal sort is like research, each wave involves a question, solicitation, culling the immediately proximate set of answers, and restarting.
+    Tidal sort requires initial knowledge of topics and questions of interest.
     Tidal sort provides continuous improvements.
-    Tidal sort requires prior knowledge of high-order clauses.
   Pile sort
-    Iterative periods of solicitation to topic buckets, sorting by similarity and subdividing, then more solicitation, until all buckets have fewer than some threshold of notes, then the creation of note piles, which become clause node trees, then element node trees. 
+    Iterative periods of solicitation to topic buckets, sorting by similarity and subdividing, then more solicitation, until all buckets have fewer than some threshold of notes, then the creation of note piles, which become diagraphic trees. 
     Pile sort requires a large initial cost.
-    Pile sort might refactor several composite texts into one set of single purpose texts.
+    Pile sort might be used refactor several composite texts into one set of single purpose texts.
+    Pile sort is more efficient if you want a diagraph of an entire corpus, and have no initial knowledge of interesting questions.
 
 
 
@@ -471,6 +480,7 @@ Diagraphic threads
 Diagraphic background process
 
 Diagraphic servers
+  Do diagraphic servers ever store program instructions as diagraph?
 Diagraphic databases
   
 Diagraphic clients
@@ -497,6 +507,10 @@ Diagraph-Review
 Diagraph-Quiz
   Takes a topic and for each node, requests the path to that node.
 Diagraph-Consider
+  Consideration is an iterated function that explores the space of generic inference about a particular clause, and finds possibilities which it marks as questions.
+  Consideration genericizes a particular clause and then preforms generic inferences, replacing a generic parent with a child.
 Diagraph-Reflect
-  Interpretation in parts?
+  Reflection is an iterated function that juxtaposes different descriptions in WM, inviting generic recognition.
+  Reflection is the function that produces interpretation from description.
+  Reflection might work in parts, genericizing a whole sentence by genericizing each part. 
 
