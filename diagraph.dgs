@@ -278,8 +278,9 @@ Describing diagraphs
     Two diagraphs are merged into one that contains the paths of both diagraphs, refactoring nodes that share prefixes. 
   Common configurations of diagraph
     Stories
-    Locations
-  Diagraph and intellectual histories, ie ideographs & prose embedded in history.
+      A story has a story topic with a set of abstract characters, and then a series of chronological topics with particular events.
+    Maps
+      A map diagraph has a topic space and then roots for every landmark, and adjacent subjects for every connected thing.
 
 Diagraph specifications
 Functional diagraph specifications
@@ -318,7 +319,8 @@ Culture diagraphs
   A culture diagraph is the set of references and generics that a member of a group expects another member of the group to know and understand.
   A culture diagraph represents the states which an individual is likely to progress though. 
   The validity of a culture diagraph should be self-evident to any native, ie, for any given adjacency, the child really what would come to mind given the parent for any native -- that I would expect you to expect me to know about that association.
-
+Other interesting diagraphs
+  Diagraph and intellectual histories, ie ideographs & prose embedded in history.
 
 
 Thinking with diagraph
@@ -467,7 +469,7 @@ Diagraphic function environments
   Cache (STM)
     Associates every WM value with the process topic
   Cursor (WM)
-    A diagraphic path represented as diagraph-script string.
+    A tree represented as diagraph-script string.
     Paths put in WM get saved to STM & LTM.
   Input
     When WM is empty it recieves the next value from the input stream.
@@ -503,6 +505,9 @@ Diagraph-Add
   Takes a topic and path and merges the path with the storage diagraph.
 Diagraph-Interpret
   Given an inputted path, find the appropriate topic and path in the storage diagraph.
+Diagraph-Derive
+  Takes a WM sentence with two terms that are brought to be equal through generic manipulations.
+  Derive is recursive, because after each step, what remains is a smaller derivation problem.
 Diagraph-Explain
   Takes a topic and shows one node at a time in a DFS
 Diagraph-Assess
