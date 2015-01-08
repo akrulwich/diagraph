@@ -482,11 +482,13 @@ Diagraphic functions
 
 Diagraphic function controller
   The function controller creates a process with a particular bundle of resources.
-  The diagraphic function controller also maps new requests to existing processes.
-  A more complicated controller might loop input until output converges, or make subsequent self-requests based on output.
+  The function controller persists a session accross requests by creating new processes with existing resource bundles. 
+  Processes are 1:1 with requests, but sessions persist with the resources bundle across processes.
+  A more complicated controller might loop input until output converges, or make follow-up self-requests in response to output.
 
 Diagraphic function environments
   The diagraphic function environment is where the diagraphic function gets executed.
+  The diagraphic function environment provides certain resources to the diagraphic function.
   Topic
     A string representing the process's current topic.
     The last given topic of input, ie the state of the input stream, is reflected in the topic variable.
@@ -502,13 +504,13 @@ Diagraphic function environments
     Paths put in WM get saved to STM & LTM.
     Putting multiple sentences in WM is a way to produce longer, more complicated threads.
   Update
+    Update is a callback that is called when a cycle of the diagraphic function is complete. 
+    If update finds WM empty, it creates a new thread from input. If update leaves WM empty, the process ends.
     Update pipes WM to output or gets a new WM from input otherwise. 
     Input and Output don't need to be put directly in the resource bundle so long as the update callback can access them.
     The diagraphic function controller might loop input and merge output into one diagraph, until nothing new emerges, thus giving a chance for a thread to visit every branch, but this behavior is not automatic and isn't implemented by the process or thread.
-    (Input)
-      When WM is empty it recieves the next value from the input stream.
-    (Output)
-      Every state of WM between function cycles is piped to output as diagraph-script.
+    When WM is empty it recieves the next value from the input stream.
+    Every state of WM between function cycles is piped to output as diagraph-script.
   Pause
     If the pause flag is true, then the thread pauses execution and the data structures can be inspected by the environment.
 
