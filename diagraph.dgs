@@ -123,13 +123,13 @@ Diagraphic nodes
   Terminal nodes end with a period.
 
 Diagraphic paths
-
   Paths are strings of simple english sentences.
   A path must start with the subject.
   'How' and 'why' can be put at the end of a path because they would be in a complete particular or generic diagraph.
   Paths do not communicate which nodes are which, which can be done with brackets, ie [A] [B C D] [E]
   Paths do not need commas, because they do not contain multiple branches of a diagraphic tree, only one.
   The path does not include the key.
+  A path is a subset of sentence which does not go down multiple branches. A root down traversal of multiple paths is just any sentence.
   A diagraphic path is the context for a node. If you just heard a node and didn't understand, what you would have failed to understand is the path.
   The topic is not in the path, although it can be, by having a sentence include a reference back to the topic that is the key of that path, but this is a hack.
   The key of a path is the key underwhich the path is stored.
