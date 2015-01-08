@@ -136,8 +136,10 @@ Diagraphic nodes
   Terminal nodes end with a period.
 
 Diagraphic paths
-  
+
   Paths are strings of simple english sentences.
+  A path must start with the subject.
+  'How' and 'why' can be put at the end of a path because they would be in a complete particular or generic diagraph.
   Paths do not communicate which nodes are which, which can be done with brackets, ie [A] [B C D] [E]
   Paths do not need commas, because they do not contain multiple branches of a diagraphic tree, only one.
 
@@ -206,6 +208,7 @@ Diagraphic priority
 
 Kinds of diagraph
 Prose diagraph
+  Prose diagraph has a key that names a kind of utterance, rather than a kind of thing. ('A history of NY', or 'my view on x', not 'NY' or 'x')
   A prose diagraph embeds a selective traversal of a particular diagraph interpreted with a generic diagraph into a hierarchial series of utterances from a voice with a particular tone, self-aware of the transission. 
   Narrative prose is the most efficient form of diagraph transission, because it can impart the generic, the particular, a perspective, and a style, all at the same time like several overlapping concentric circles.
   Prose is also the least resilient, least modular form of diagraph, because it cannot easily incorperate new information, and a fault with any one aspect renders the whole undesirable.
@@ -218,13 +221,15 @@ Prose diagraph
   The meaning of prose depends on the kind of key -- prose that is stored under a chronological or pragmatic key is persistent, prose stored under a platonic key is provisional to more modularly refactored diagraph.
 
 Particlar diagraph
-  Diagraph concerning singular subjects. 
+  Diagraph concerning particulars.
+  Includes 'how' and 'why'. 
   The roots of particular categories instantiate with reference to a generic. 
     All children of the particular must correspond to generically sanctioned predicates. 
   An explicit representation of a particular diagraph contains an implicit representation of a generic diagraph.
 
 Generic diagraph
   Generic diagraph is a generic subject and all possible predicates. 
+  Includes 'how' and 'why'.
   There is in some sense a single layer of particular diagraph, and then many nested layers of generic diagraph, all the way down to innate generics like someone, something, somewhere, etc.
   Generic trees begin with "there is" or "there are".
   Generic diagraph is useful in comparing two particular diagraphs, eg determining if predicate A in one diagraph means the same thing as predicate B in another.
@@ -332,8 +337,9 @@ Thinking with diagraph
   Ephemeral documents and feeds
   An adjacency in a diagraph is a thing that would bring to mind another thing in an explanation.
     So imagine the mind of the person who reads Twitter or the newspaper.
+  Don't think about transmision of linear text, think about having and giving trees -- decouple explanation hierarchy from chronology, which is over determined.
 Describing education with diagraph
-
+  Diagraphic prerequisites to next possible courses, eg.
 Describing media with diagraph
   How document-based media causes redundancy by having us rehash the same points over a new document, like an op-ed.
   How context in a news article might naively seem like aliased subtrees that belong primarily in other places, but really are custom made for the article's tree, children of references in a particular sentence, not a new explanation soley of the reference in its own right. 
@@ -468,6 +474,7 @@ Diagraphic function environments
     The storage diagraph
   Cache (STM)
     Associates every WM value with the process topic
+    Associates a generic path with a topic
   Cursor (WM)
     A tree represented as diagraph-script string.
     Paths put in WM get saved to STM & LTM.
@@ -477,10 +484,12 @@ Diagraphic function environments
     Every state of WM between function cycles is piped to output.
   Pause
     If the pause flag is true, then the thread pauses execution and the data structures can be inspected by the environment.
+  scheduleThread
+    The diagraphic function must be able to fork new threads, ie one WM value will have two successors.
 
 Diagraphic processes
-  A diagraphic process is a function and series of topics, representing a session.
-  The diagraphic topic is determined by the current input diagraph script.
+  A process is a session that handles a series of requests from a single client.
+  A diagraphic process is a collection of threads which share resources.
   A diagraphic process maps input to output by creating diagraphic threads.
 Diagraphic threads
   A diagraphic thread is a function-sentence pair that iterates.
@@ -492,7 +501,7 @@ Diagraphic databases
   
 Diagraphic clients
   Static
-  Correspondance
+  Alternating
   Interactive
 
 
@@ -504,7 +513,7 @@ Diagraph-Edit
 Diagraph-Add
   Takes a topic and path and merges the path with the storage diagraph.
 Diagraph-Interpret
-  Given an inputted path, find the appropriate topic and path in the storage diagraph.
+  Or given a topic and partial path, find the full path.
 Diagraph-Derive
   Takes a WM sentence with two terms that are brought to be equal through generic manipulations.
   Derive is recursive, because after each step, what remains is a smaller derivation problem.
