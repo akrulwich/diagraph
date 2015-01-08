@@ -73,6 +73,10 @@ Diagraphic keys
 Diagraphic tree
     An explanation is the traversal of a diagraphic tree.
     Trees are entirely contained within their topics
+    A diagraphic tree contains conjoined subtrees, through dependent clauses.
+    A tree has branches and stages, each stage being a new conjoined dependent clause.
+
+   In a flow diagram, each 1AC row is the root of a diagraphic tree, and each speech is a stage of the tree. The decision is a tree that begins with the resolution, and subsumes all of the trees of the flow.
     
     An explanation session is a set of explanations of related topics. 
     Explanations are depth-first across the nodes of a tree, but breadth-first across topics of a session.
@@ -165,6 +169,13 @@ Diagraphic paths
   EG, T/S/P/P/C/S/P/P/P/C/...
   A speaker might not express what they think of the topic, and the listener might not express why they want to know, both of which would be given by the private path.
 
+Diagraphic Clauses
+  A diagraphic clause is a path that goes from a subject until a conjunction.
+  A diagraphic clause is a diagraphic tree branch with no embedded subtrees.
+  The stages or degree of a diagraph is measured in clause-layers from the top down.
+  A diagraphic clause is a prose paragraph.
+  Every clause has a how and a why, ie the potential for those derivations.
+
 Diagraphic addresses
   Diagraphic nodes have addresses in a particular diagraph.
   Diagraphic nodes have one primary and many secondary addresses.
@@ -239,10 +250,6 @@ Generic diagraph
   A diagraph might not need to define terms because they're in the generic diagraph.
   Long generic inheritance chains are produced through philosophy and taxonomy.
 
-Clauses
-  A clause is a path that goes from a subject until a conjunction.
-  Every clause has a how and a why, ie the potential for those derivations.
-
 Generic clauses
   Generic clauses are things like "Dogs bark"
   Every particular clause is predicated on a generic clause.
@@ -314,6 +321,7 @@ Pedagogic diagraphs
   Mispellings would be the classic pedagogic diagraphs, having a particular explanation for each one.
   Pedagogic diagraphs store second-order representations of conceptual configurations under generics like "someone who things ABC", as opposed to just storing A, B and C.
     Or rather, pedagogic diagraph might wraps these in quotes. ABC vs. "ABC", the topic.
+  Pedagogical information may also be attached in counterfactual adverbial phrases.
 Library diagraphs
   A library diagraph is a diagraph that subsumes various other diagraphs. 
   Last library, a dialectic conversation about everything.
@@ -470,9 +478,15 @@ Diagraphic functions
   A diagraphic function is a function of the input, storage, cache, and cursor, which outputs by making changes to these data structures.
   A diagraphic function is a set of iterated transformations of WM.
   A diagraphic function can be thought of like a cellular automata for illustration.
+  Iterations of WM can represent a progression, like a path across a terrain, or a transformation, like the steps of an oragami figure.
+
+Diagraphic function controller
+  The function controller creates a process with a particular bundle of resources.
+  The diagraphic function controller also maps new requests to existing processes.
+  A more complicated controller might loop input until output converges, or make subsequent self-requests based on output.
 
 Diagraphic function environments
-  A diagraphic function environment is a run-time environment that executes a diagraphic process and provides it a set of resources.
+  The diagraphic function environment is where the diagraphic function gets executed.
   Topic
     A string representing the process's current topic.
     The last given topic of input, ie the state of the input stream, is reflected in the topic variable.
@@ -487,14 +501,20 @@ Diagraphic function environments
     WM can contain multiple sentences to represent a series of paths.
     Paths put in WM get saved to STM & LTM.
     Putting multiple sentences in WM is a way to produce longer, more complicated threads.
-  Input
-    When WM is empty it recieves the next value from the input stream.
-  Output
-    Every state of WM between function cycles is piped to output.
+  Update
+    Update pipes WM to output or gets a new WM from input otherwise. 
+    Input and Output don't need to be put directly in the resource bundle so long as the update callback can access them.
+    The diagraphic function controller might loop input and merge output into one diagraph, until nothing new emerges, thus giving a chance for a thread to visit every branch, but this behavior is not automatic and isn't implemented by the process or thread.
+    (Input)
+      When WM is empty it recieves the next value from the input stream.
+    (Output)
+      Every state of WM between function cycles is piped to output as diagraph-script.
   Pause
     If the pause flag is true, then the thread pauses execution and the data structures can be inspected by the environment.
-  scheduleThread
-    The diagraphic function must be able to fork new threads, ie one WM value will have two successors.
+
+Diagraphic requests
+  A request has a URL including a diagraph and function, then an input file of diagraph-script blocks.
+  A process may persist across several requests with different functions.
 
 Diagraphic processes
   A process is a session that handles a series of requests.
@@ -503,18 +523,15 @@ Diagraphic processes
   A diagraphic process is a collection of threads which share resources.
   A diagraphic process maps input to output by creating diagraphic threads.
   A process has many requests, and a request has many thread-blocks.
-
-Diagraphic requests
-  A request has a URL including a diagraph and function, then an input file of diagraph-script blocks.
-  A process may persist across several requests with different functions.
+  Diagraphic background process
 
 Diagraphic threads
   A diagraphic thread is produced in response to an input block from a diagraphic request.
 
-Diagraphic background process
+
 
 Diagraphic servers
-  Do diagraphic servers ever store program instructions as diagraph?
+
 Diagraphic databases
   
 Diagraphic clients
@@ -525,13 +542,13 @@ Diagraphic clients
 
 
 Diagraph-Read
-  Takes a topic and returns the tree.
-Diagraph-Edit
   Takes a topic and path and returns the tree at that path.
+Diagraph-Edit
+  Puts a tree in WM and changes to the tree destructively change LTM.
 Diagraph-Add
-  Takes a topic and path and merges the path with the storage diagraph.
+  Takes a topic and input tree and merges the input tree into the storage diagraph additively.
 Diagraph-Interpret
-  Or given a topic and partial path, find the full path.
+  Given a topic and a path missing intermediary nodes, find the full path. 
 Diagraph-Derive
   Takes a WM sentence with two terms that are brought to be equal through generic manipulations.
   Derive is recursive, because after each step, what remains is a smaller derivation problem.
