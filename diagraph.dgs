@@ -242,6 +242,8 @@ Derivation
 
 Schemas
   Definitional generic clauses that link descriptions with interpretations.
+  A schema is a path that redirects to an interpretive subject. 
+  Pedagogical schemas redirect conjunctions of belief to a particular redress.
 
 Abstracting a clause
   I genericize a particular clause by finding the path of the generic clause that sanctions the use of the predicate. 
@@ -301,6 +303,7 @@ Pedagogic diagraphs
   Pedagogic diagraphs store second-order representations of conceptual configurations under generics like "someone who things ABC", as opposed to just storing A, B and C.
     Or rather, pedagogic diagraph might wraps these in quotes. ABC vs. "ABC", the topic.
   Pedagogical information may also be attached in counterfactual adverbial phrases.
+  Pedagogical schemas redirect conjunctions of belief to a particular redress.
 Library diagraphs
   A library diagraph is a diagraph that subsumes various other diagraphs. 
   Last library, a dialectic conversation about everything.
@@ -505,6 +508,7 @@ Diagraphic session
 
 Diagraphic processes
   A process is a set of threads produced by continuous input.
+  Once input runs out, the process either continues without input, or the process ends.
   A process is a session that handles a series of requests.
   Processes can be for multiple functions by their requests being for multiple functions.
   The session is only represented implicitly in the browser page or runtime message. It is just a hollow collection of threads/explanations.
