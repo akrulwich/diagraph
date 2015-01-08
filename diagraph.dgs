@@ -239,6 +239,9 @@ Generic diagraph
   A diagraph might not need to define terms because they're in the generic diagraph.
   Long generic inheritance chains are produced through philosophy and taxonomy.
 
+Clauses
+  A clause is a path that goes from a subject until a conjunction.
+
 Generic clauses
   Generic clauses are things like "Dogs bark"
   Every particular clause is predicated on a generic clause.
