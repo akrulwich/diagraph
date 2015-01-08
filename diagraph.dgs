@@ -476,7 +476,8 @@ Diagraphic function environments
     Associates every WM value with the process topic
     Associates a generic path with a topic
   Cursor (WM)
-    A tree represented as diagraph-script string.
+    A tree represented as diagraph-script tree.
+    WM can contain multiple sentences to represent a series of paths.
     Paths put in WM get saved to STM & LTM.
   Input
     When WM is empty it recieves the next value from the input stream.
@@ -519,7 +520,10 @@ Diagraph-Derive
   Takes a WM sentence with two terms that are brought to be equal through generic manipulations.
   Derive is recursive, because after each step, what remains is a smaller derivation problem.
 Diagraph-Explain
-  Takes a topic and shows one node at a time in a DFS
+  Takes a set of questions on a topic, and handles each question individually.
+  Explanation visits the children of a question in a DFS.
+  (In expansive mode, when all children are visited, it visits the references of the children in a BFS)
+    WM then contains multiple sentences, first the path to the reference, a period, then the second explanation, so that when the second is complete, it will recurse back to the point of the reference in the first sentence.
 Diagraph-Assess
   Takes a topic and set of input paths path and returns a comparison of each input path with the reference path.
 Diagraph-Review
