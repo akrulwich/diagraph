@@ -241,6 +241,7 @@ Generic diagraph
 
 Clauses
   A clause is a path that goes from a subject until a conjunction.
+  Every clause has a how and a why, ie the potential for those derivations.
 
 Generic clauses
   Generic clauses are things like "Dogs bark"
