@@ -313,6 +313,7 @@ Pedagogic diagraphs
   Diagraphs that contain every wrong explanation of something, and corrections.
   Mispellings would be the classic pedagogic diagraphs, having a particular explanation for each one.
   Pedagogic diagraphs store second-order representations of conceptual configurations under generics like "someone who things ABC", as opposed to just storing A, B and C.
+    Or rather, pedagogic diagraph might wraps these in quotes. ABC vs. "ABC", the topic.
 Library diagraphs
   A library diagraph is a diagraph that subsumes various other diagraphs. 
   Last library, a dialectic conversation about everything.
@@ -497,7 +498,8 @@ Diagraphic function environments
 
 Diagraphic processes
   A process is a session that handles a series of requests.
-  The session is only represented implicitly in the browser page or node message. It is just a hollow collection of threads/explanations.
+  Processes can be for multiple functions by their requests being for multiple functions.
+  The session is only represented implicitly in the browser page or runtime message. It is just a hollow collection of threads/explanations.
   A diagraphic process is a collection of threads which share resources.
   A diagraphic process maps input to output by creating diagraphic threads.
   A process has many requests, and a request has many thread-blocks.
