@@ -44,9 +44,7 @@ The definition of diagraph
   Diagraphic paths represent ordinary language sentences.
 
 Diagraphic keys
-  A diagraphic key represents a grammatical topic. 
-
-    Topics
+  A diagraphic key represents a topic. 
       Topics are things like spaces, categories, sets, groups, topics, regions, eras, contexts.
       Children of a topic are members.
       Topics contain subjects.
@@ -55,9 +53,7 @@ Diagraphic keys
             eg, if I have A/B/C, I might discuss with you .../B/C.
       Some things like countries are topics in one tree and subjects in another. 
       A tree with has a topic-root may have embedded trees with subject-roots.
-
   A diagraphic key is like a bookshelf in the library.
-
   The keys of a diagraph represent things that can be explained, such as topics or questions.
   There should be a key for every query the explainer can understand.
   A key of a diagraph is a diagraphic path prefix to the nodes of the associated tree.
@@ -71,28 +67,22 @@ Diagraphic keys
   Being asked a questions is like recognizing a space.
 
 Diagraphic tree
-    An explanation is the traversal of a diagraphic tree.
-    Trees are entirely contained within their topics
-    A diagraphic tree contains conjoined subtrees, through dependent clauses.
-    A tree has branches and stages, each stage being a new conjoined dependent clause.
-
-   In a flow diagram, each 1AC row is the root of a diagraphic tree, and each speech is a stage of the tree. The decision is a tree that begins with the resolution, and subsumes all of the trees of the flow.
-    
-    An explanation session is a set of explanations of related topics. 
-    Explanations are depth-first across the nodes of a tree, but breadth-first across topics of a session.
-
-    Explanations
-      An explanation is what is, for example, an essay, lecture, book, article, question-answer or story.
-      An explanation is a represented in a diagraph by a collection of diagraphic trees.
-      An explanation may span several diagraphic trees by crossing over aliases.  
-      Explanations have an implicit diagraph, the single tree formed by combining all transmissions.
-        Clauses of an explanation have a path relative to the diagraph of the explanation, which may not correspond to the diagraph of the explainer.
-
+  An explanation is the traversal of a diagraphic tree.
+  Trees are entirely contained within their topics
+  A diagraphic tree contains conjoined subtrees, through dependent clauses.
+  A tree has branches and stages, each stage being a new conjoined dependent clause.
+  A diagraphic tree represents an explanation.
+    An explanation is what is, for example, an essay, lecture, book, article, question-answer or story.
+    An explanation is a represented in a diagraph by a collection of diagraphic trees.
+    An explanation may span several diagraphic trees by crossing over aliases.  
+    Explanations have an implicit diagraph, the single tree formed by combining all transmissions.
+      Clauses of an explanation have a path relative to the diagraph of the explanation, which may not correspond to the diagraph of the explainer.
+  An explanation session is a set of explanations of related topics. 
+  Explanations are depth-first across the nodes of a tree, but breadth-first across topics of a session.
   Diagraphic tree roots are subjects. 
   A diagraphic tree is like a book in the library.
   A diagraphic subject is a diagraphic tree with that subject for a root.
-
-
+  In a flow diagram, each 1AC row is the root of a diagraphic tree, and each speech is a stage of the tree. The decision is a tree that begins with the resolution, and subsumes all of the trees of the flow.
   The hierarchy of a tree derives from the linguistic properties of the thing represented. For B to be child to A represents that B is a valid comment on A in the given context. 
   A diagraphic tree is a tree of diagraphic nodes, which have a string containing one or more space-delimited syntactic elements. 
   A diagraphic tree is at once a graph tree of nodes and a syntax tree of natural language strings. 
@@ -114,16 +104,9 @@ Diagraphic tree
   Children are prioritized, they are not ordered.
 
 Diagraphic nodes
-    Utterances
-
-      Grammatical clauses correspond to diagraphic nodes, although not exactly.
-        Several clauses may correspond to one node, or one clause to several nodes.
-
-      A clause is a subject and series of predicates ending in a comma, which may begin with a conjunction.
-      A clause-node tree can be automatically parsed, and can be used by some diagraphic functions.
-      Diagraphic clauses are only implicitly represented.
   Diagraphic nodes are units of natural language text. 
   A diagraphic node represents a single hypothetical utterance.
+  Adjacent nodes represent possibly adjacent utterances.
   The breaks between diagraphic nodes represent facts about the possible explanations that the system can produce.
   Diagraphic nodes contain one or more syntactic elements. 
   Diagraphic nodes represent the meaningfully indivisible units of an explanation.
@@ -146,14 +129,7 @@ Diagraphic paths
   'How' and 'why' can be put at the end of a path because they would be in a complete particular or generic diagraph.
   Paths do not communicate which nodes are which, which can be done with brackets, ie [A] [B C D] [E]
   Paths do not need commas, because they do not contain multiple branches of a diagraphic tree, only one.
-
-    Introductory sentences
-      A sentence is a series of clauses ending in a period. 
-      Sentences after a terminal clause can form subtrees in a diagraphic tree.
-      Diagraphic sentences are only implicitly represented.
-  A diagraphic path is a comma or slash delimited string, ie sentence.
   The path does not include the key.
-
   A diagraphic path is the context for a node. If you just heard a node and didn't understand, what you would have failed to understand is the path.
   The topic is not in the path, although it can be, by having a sentence include a reference back to the topic that is the key of that path, but this is a hack.
   The key of a path is the key underwhich the path is stored.
@@ -197,8 +173,7 @@ Diagraphic priority
         Classification (is a)
         Description (is)
           Adverbal phrases 
-          Conjunctions 
-          New sentences
+          Conjunctions'
     Elements of a type must be ranked by some further criterion.
       In a functional diagraph, priority is relative to function or usefulness in a particular circumstance.
       In a descriptive diagraph, priority might be relative to something like frequency.
@@ -233,6 +208,7 @@ Prose diagraph
 
 Particlar diagraph
   Diagraph concerning particulars.
+  A particular diagraph is one continous sentence.
   Particular diagraph includes 'how' and 'why' to store cached derivations, representing generic diagraph implicitly.
   The roots of particular categories instantiate with reference to a generic. 
     All children of the particular must correspond to generically sanctioned predicates. 
