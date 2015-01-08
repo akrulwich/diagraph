@@ -489,6 +489,7 @@ Diagraphic function environments
 
 Diagraphic processes
   A process is a session that handles a series of requests from a single client.
+  The session is only represented implicitly in the browser page or node message. It is just a hollow collection of threads/explanations.
   A diagraphic process is a collection of threads which share resources.
   A diagraphic process maps input to output by creating diagraphic threads.
 Diagraphic threads
