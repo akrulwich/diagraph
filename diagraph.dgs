@@ -473,7 +473,8 @@ Diagraphic function environments
     The storage diagraph
   Cache (STM)
     Associates every WM value with the process topic
-    Associates a generic path with a topic
+    Associates a generic path with a topic.
+    A cache hit displaces the current WM value?
   Cursor (WM)
     A tree represented as diagraph-script tree.
     WM can contain multiple sentences to represent a series of paths.
