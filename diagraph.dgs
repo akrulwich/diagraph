@@ -237,6 +237,9 @@ Predication
   A predication is a subject generic path pair.
   A derivation is a public language generic path specification.
 
+Derivation
+  A derivation is a generic explanation given in the context of a particular explanation.
+
 Schemas
   Definitional generic clauses that link descriptions with interpretations.
 
@@ -530,9 +533,6 @@ Diagraph-Add
   Takes a topic and input tree and merges the input tree into the storage diagraph additively.
 Diagraph-Interpret
   Given a topic and a path missing intermediary nodes, find the full path. 
-Diagraph-Derive
-  Takes a WM sentence with two terms that are brought to be equal through generic manipulations.
-  Derive is recursive, because after each step, what remains is a smaller derivation problem.
 Diagraph-Explain
   Takes a set of questions on a topic, and handles each question individually.
   Explanation visits the children of a question in a DFS.
