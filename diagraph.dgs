@@ -460,6 +460,7 @@ Diagraphic functions
   Iterations of WM can represent a progression, like a path across a terrain, or a transformation, like the steps of an oragami figure.
 
 Diagraphic function controller
+  A diagraphic function controller instantiates a process in response to a request.
   The function controller creates a process with a particular bundle of resources.
   The function controller persists a session accross requests by creating new processes with existing resource bundles. 
   Processes are 1:1 with requests, but sessions persist with the resources bundle across processes.
@@ -499,7 +500,11 @@ Diagraphic requests
   A request has a URL including a diagraph and function, then an input file of diagraph-script blocks.
   A process may persist across several requests with different functions.
 
+Diagraphic session
+  A session is a set of processes which share a persistent set of resources.
+
 Diagraphic processes
+  A process is a set of threads produced by continuous input.
   A process is a session that handles a series of requests.
   Processes can be for multiple functions by their requests being for multiple functions.
   The session is only represented implicitly in the browser page or runtime message. It is just a hollow collection of threads/explanations.
@@ -509,9 +514,8 @@ Diagraphic processes
   Diagraphic background process
 
 Diagraphic threads
+  A thread is a continuitiy of WM across iterations.
   A diagraphic thread is produced in response to an input block from a diagraphic request.
-
-
 
 Diagraphic servers
 
