@@ -222,14 +222,13 @@ Prose diagraph
 
 Particlar diagraph
   Diagraph concerning particulars.
-  Includes 'how' and 'why'. 
+  Particular diagraph includes 'how' and 'why' to store cached derivations, representing generic diagraph implicitly.
   The roots of particular categories instantiate with reference to a generic. 
     All children of the particular must correspond to generically sanctioned predicates. 
   An explicit representation of a particular diagraph contains an implicit representation of a generic diagraph.
 
 Generic diagraph
   Generic diagraph is a generic subject and all possible predicates. 
-  Includes 'how' and 'why'.
   There is in some sense a single layer of particular diagraph, and then many nested layers of generic diagraph, all the way down to innate generics like someone, something, somewhere, etc.
   Generic trees begin with "there is" or "there are".
   Generic diagraph is useful in comparing two particular diagraphs, eg determining if predicate A in one diagraph means the same thing as predicate B in another.
@@ -308,6 +307,8 @@ Discourse diagraphs
   Learning to see prose not as a document that includes an assortment of sentences, but rather as a sequentialization of a partial traversal of a discourse diagraph.
 Pedagogic diagraphs
   Diagraphs that contain every wrong explanation of something, and corrections.
+  Mispellings would be the classic pedagogic diagraphs, having a particular explanation for each one.
+  Pedagogic diagraphs store second-order representations of conceptual configurations under generics like "someone who things ABC", as opposed to just storing A, B and C.
 Library diagraphs
   A library diagraph is a diagraph that subsumes various other diagraphs. 
   Last library, a dialectic conversation about everything.
@@ -461,8 +462,9 @@ JSON representation of diagraph
 
 
 Diagraphic functions
-  A diagraphic function is a function of the input, storage, cache, and cursor, which outputs only by side-effects to these same data structures.
-  Some functions like consider and reflect use WM to produce an iterated function, each cycle starting where the last cycle ended.
+  A diagraphic function is a function of the input, storage, cache, and cursor, which outputs by making changes to these data structures.
+  A diagraphic function is a set of iterated transformations of WM.
+  A diagraphic function can be thought of like a cellular automata for illustration.
 
 Diagraphic function environments
   A diagraphic function environment is a run-time environment that executes a diagraphic process and provides it a set of resources.
@@ -479,6 +481,7 @@ Diagraphic function environments
     A tree represented as diagraph-script tree.
     WM can contain multiple sentences to represent a series of paths.
     Paths put in WM get saved to STM & LTM.
+    Putting multiple sentences in WM is a way to produce longer, more complicated threads.
   Input
     When WM is empty it recieves the next value from the input stream.
   Output
@@ -489,12 +492,19 @@ Diagraphic function environments
     The diagraphic function must be able to fork new threads, ie one WM value will have two successors.
 
 Diagraphic processes
-  A process is a session that handles a series of requests from a single client.
+  A process is a session that handles a series of requests.
   The session is only represented implicitly in the browser page or node message. It is just a hollow collection of threads/explanations.
   A diagraphic process is a collection of threads which share resources.
   A diagraphic process maps input to output by creating diagraphic threads.
+  A process has many requests, and a request has many thread-blocks.
+
+Diagraphic requests
+  A request has a URL including a diagraph and function, then an input file of diagraph-script blocks.
+  A process may persist across several requests with different functions.
+
 Diagraphic threads
-  A diagraphic thread is a function-sentence pair that iterates.
+  A diagraphic thread is produced in response to an input block from a diagraphic request.
+
 Diagraphic background process
 
 Diagraphic servers
@@ -503,7 +513,7 @@ Diagraphic databases
   
 Diagraphic clients
   Static
-  Alternating
+  Correspondance
   Interactive
 
 
@@ -524,6 +534,7 @@ Diagraph-Explain
   Explanation visits the children of a question in a DFS.
   (In expansive mode, when all children are visited, it visits the references of the children in a BFS)
     WM then contains multiple sentences, first the path to the reference, a period, then the second explanation, so that when the second is complete, it will recurse back to the point of the reference in the first sentence.
+  An implementation of dg-explain might wrap the entire block T:ABC, "someone asking ABC about T", and then check LTM for pedagogical information about that particular configuration.
 Diagraph-Assess
   Takes a topic and set of input paths path and returns a comparison of each input path with the reference path.
 Diagraph-Review
@@ -533,8 +544,12 @@ Diagraph-Quiz
 Diagraph-Consider
   Consideration is an iterated function that explores the space of generic inference about a particular clause, and finds possibilities which it marks as questions.
   Consideration genericizes a particular clause and then preforms generic inferences, replacing a generic parent with a child.
+  I guide consideration by putting a goal in WM as a second sentence.
 Diagraph-Reflect
   Reflection is an iterated function that juxtaposes different descriptions in WM, inviting generic recognition.
   Reflection is the function that produces interpretation from description.
   Reflection might work in parts, genericizing a whole sentence by genericizing each part. 
+Diagraph-Perform
+  A diagraphic function that preforms tasks specified in imperative diagraph script.
+
 
