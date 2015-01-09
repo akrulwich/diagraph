@@ -194,6 +194,7 @@ Diagraphic priority
 
 Kinds of diagraph
 Prose diagraph
+  There could be a convention of putting prose under question-keys, and diagraphic trees under subject keys.
   Prose diagraph has a key that names a kind of utterance, rather than a kind of thing. ('A history of NY', or 'my view on x', not 'NY' or 'x')
   A prose diagraph embeds a selective traversal of a particular diagraph interpreted with a generic diagraph into a hierarchial series of utterances from a voice with a particular tone, self-aware of the transission. 
   Narrative prose is the most efficient form of diagraph transission, because it can impart the generic, the particular, a perspective, and a style, all at the same time like several overlapping concentric circles.
@@ -207,7 +208,8 @@ Prose diagraph
   The meaning of prose depends on the kind of key -- prose that is stored under a chronological or pragmatic key is persistent, prose stored under a platonic key is provisional to more modularly refactored diagraph.
 
 Particlar diagraph
-  Diagraph concerning particulars.
+  There could be a convention of putting prose under question-keys, and diagraphic trees under subject keys.
+  Diagraphic trees with particular roots.
   A particular diagraph is one continous sentence.
   Particular diagraph includes 'how' and 'why' to store cached derivations, representing generic diagraph implicitly.
   The roots of particular categories instantiate with reference to a generic. 
@@ -215,6 +217,7 @@ Particlar diagraph
   An explicit representation of a particular diagraph contains an implicit representation of a generic diagraph.
 
 Generic diagraph
+  Diagraphic trees with generic roots.
   Generic diagraph is a generic subject and all possible predicates. 
   There is in some sense a single layer of particular diagraph, and then many nested layers of generic diagraph, all the way down to innate generics like someone, something, somewhere, etc.
   Generic trees begin with "there is" or "there are".
