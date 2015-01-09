@@ -37,7 +37,7 @@ Diagraph
 The definition of diagraph
   A diagraph is a key-value store, 
       in which the keys are diagraphic keys.
-      in which the values are collections of diagraphic trees.
+      in which the values are diagraphic tree-sets.
   Diagraphic keys represent ordinary language topics.
   Diagraphic trees represent ordinary language explanations.
   Diagraphic nodes represent ordinary language utterances.
@@ -67,6 +67,9 @@ Diagraphic keys
   The keys of a diagraph are the contexts I can recognize.
   A key of a diagraph is like a space I recognize, and the subjects are what I remember being in that space.
   Being asked a questions is like recognizing a space.
+
+Diagraphic category
+  A diagraphic category is a diagraphic key and a set of diagraphic trees characterized by that key.
 
 Diagraphic tree
   An explanation is the traversal of a diagraphic tree.
@@ -110,6 +113,7 @@ Diagraphic nodes
   A diagraphic node represents a single hypothetical utterance.
   Adjacent nodes represent possibly adjacent utterances.
   The breaks between diagraphic nodes represent facts about the possible explanations that the system can produce.
+  If I were to line up a prose diagraph and a particular diagraph, a clause of particular diagraph would correspond to a node of prose.
   Diagraphic nodes contain one or more syntactic elements. 
   Diagraphic nodes represent the meaningfully indivisible units of an explanation.
     A diagraphic node is a single-purpose text. 
@@ -124,7 +128,12 @@ Diagraphic nodes
     Nodes are not refactored merely by adding two nodes with the same prefix to the same path.
   Terminal nodes end with a period.
 
+Diagraphic traversal 
+  A diagraphic traversal is a selection of connected nodes from the root down.
+  A diagraphic traversal is a continuous sentence or explanation.
+
 Diagraphic paths
+  A path is a traversal of one branch. 
   Paths are strings of simple english sentences.
   A path must start with the subject.
   'How' and 'why' can be put at the end of a path because they would be in a complete particular or generic diagraph.
@@ -147,9 +156,11 @@ Diagraphic paths
   EG, T/S/P/P/C/S/P/P/P/C/...
   A speaker might not express what they think of the topic, and the listener might not express why they want to know, both of which would be given by the private path.
 
-Diagraphic Clauses
+Diagraphic clauses
   A diagraphic clause is a path that goes from a subject until a conjunction.
   A diagraphic clause is a diagraphic tree branch with no embedded subtrees.
+  If I were to line up a prose diagraph and a particular diagraph, a clause of particular diagraph would correspond to a node of prose.
+  A node of a prose diagraph tree is the minimal explanatory unit required for the next stage of the particular tree.
   The stages or degree of a diagraph is measured in clause-layers from the top down.
   A diagraphic clause is a prose paragraph.
   Every clause has a how and a why, ie the potential for those derivations.
@@ -171,11 +182,11 @@ Diagraphic priority
   A diagraph has a mode of priority, which is a total ordering of the nodes of that diagraph.
   Diagaphs are hierarchial, and children of a parent have a relative syntactic rank.
     In particular diagraph the order is: 
-      'Subject
+      Subject
         Classification (is a)
         Description (is)
           Adverbal phrases 
-          Conjunctions'
+          Conjunctions
     Elements of a type must be ranked by some further criterion.
       In a functional diagraph, priority is relative to function or usefulness in a particular circumstance.
       In a descriptive diagraph, priority might be relative to something like frequency.
@@ -193,9 +204,21 @@ Diagraphic priority
     Google hits
 
 
+The prose layer
+  The prose layer has keys which are the names of utterances or forms of address which specify a question and a depth.
+  A specification of depth can be an audience, (advice for new graduates) a function, (ruby for rails) or a degree of diagraph (an academic analysis of x).
 
-Kinds of diagraph
-Prose diagraph
+The articulation layer
+  Articulation trees have path-question-mark topics and question tree-roots.
+  There is an articulation layer of a diagraph.
+  Prose is a traversal of an articulation tree.
+  A modular articulation tree has one articulation node per particular or generic clause.
+  Articulation trees are not prose, they are one step of abstraction above prose because they are not specific to a particular audience or context, but only to the question itself.
+  A prose diagraph has question nodes and answer nodes.
+  Nodes of the prose diagraph correspond to nodes of the particular diagraph.
+  Prose diagraph contains an implicit particular diagraph. The order of the prose may differ from the underlying particular diagraph, for example, when in the case of casting the subject of a dependent clause has to be developed before the compound can be formed.
+  A node of a prose diagraph tree is the minimal explanatory unit required for the next stage of the particular tree.
+  If I were to line up a prose diagraph and a particular diagraph, a clause of particular diagraph would correspond to a node of prose.
   Prose diagraph is stored under question keys.
   Prose diagraph has a key that names a kind of utterance, rather than a kind of thing. ('A history of NY', or 'my view on x', not 'NY' or 'x')
   A prose diagraph embeds a selective traversal of a particular diagraph interpreted with a generic diagraph into a hierarchial series of utterances from a voice with a particular tone, self-aware of the transission. 
@@ -209,8 +232,13 @@ Prose diagraph
   When you see prose, think instead of the particular diagraph and paths you immediately parse from it.
   The meaning of prose depends on the kind of key -- prose that is stored under a chronological or pragmatic key is persistent, prose stored under a platonic key is provisional to more modularly refactored diagraph.
 
-Particlar diagraph
+The particular layer
+  There is a particular layer of a diagraph.
+  The particular layer has particular noun-phrase keys.
+  A particular diagraph has element nodes.
   Particular diagraph is stored under a singular noun-phrase key.
+  A particular diagraph has references to question-keys under the appropriate paths.
+  You would also put here clippings, or notes, compositions from elsewhere that need to be refactored into particular tree.
   Diagraphic trees with particular roots.
   A particular diagraph is one continous sentence.
   Particular diagraph includes 'how' and 'why' to store cached derivations, representing generic diagraph implicitly.
@@ -218,7 +246,8 @@ Particlar diagraph
     All children of the particular must correspond to generically sanctioned predicates. 
   An explicit representation of a particular diagraph contains an implicit representation of a generic diagraph.
 
-Generic diagraph
+The generic layer
+  There is a generic layer of a diagraph.
   Generic diagraph is stored under a plural noun-phrase key.
   Diagraphic trees with generic roots.
   Generic diagraph is a generic subject and all possible predicates. 
@@ -234,9 +263,11 @@ Generic diagraph
 
 Generic clauses
   Generic clauses are things like "Dogs bark"
-  Every particular clause is predicated on a generic clause.
+  Every particular clause is predicated on a generic clause. 
+    Literally imagine that the particular clause is a point on a particular plane situated above a generic point on a lower and broader plane, and that a particular tree is to its underlying generic tree as a set of punches is to a punch card.
 
 Predication
+  A predication associates a particular subject with a generic clause, although the exact path of the generic clause is ambiguous, and requires interpretation, ie the provision of a generic path that subsumes the particular generic clause.
   Every particular clause is predicated upon a generic clause, the abstraction of the particular clause. 
   A predication is an implicit correspondance between a particular predicate and a predicate of the generic type. 
   Predication of a generic address to a particular gives that particular an attribute that represents a state in an underlying generic DFA.
@@ -245,19 +276,23 @@ Predication
 
 Derivation
   A derivation is a generic explanation given in the context of a particular explanation.
-
-Schemas
-  Definitional generic clauses that link descriptions with interpretations.
-  A schema is a path that redirects to an interpretive subject. 
-  Pedagogical schemas redirect conjunctions of belief to a particular redress.
+  A derivation of a particular clause is the generic path that corresponds to the particular path
 
 Abstracting a clause
   I genericize a particular clause by finding the path of the generic clause that sanctions the use of the predicate. 
   For example, "Fifi gave birth to twins" -> "Dogs give birth to twins".
   This operation is used in diagraph-consider, and in generic diagraph formation by constantly abstracting from the particular cases we encounter.
 
+Schemas
+  Definitional generic clauses that link descriptions with interpretations.
+  A schema is a path that redirects to an interpretive subject. 
+  Pedagogical schemas redirect conjunctions of belief to a particular redress.
+  The reflection function abstracts and conjoins the clauses of a particular in order to invite schematic recognition.
+
 Interpretation
-  Interpretation is the ascription of higher-order predicates to a subject.
+  Interpretation is the mapping of a particular subject, predicate pair to a full generic path.
+    (Allen is ill -> Allen is person, and people sometimes 
+  Interpretation is the process by which particular predicates are subsumed by more interpretive generics and their implications.
   Interpretation by classification
     "An underdog story"
   Analogy by shared description
@@ -452,7 +487,9 @@ Representing diagraph
       A part is a set of sections that share a topic or theme.
 
         Parts are seperated by three blank lines.
-    Multi-line compositions can be wraped in quotes.
+    Multi-line compositions can be preceeded by a colon.
+      Colons more generally could mean that what follows is a linear sequence, rather than a set of candidates for the same role. 
+      Colons are like javascript promises relative to the nested callbacks of ordinary diagraph script.
     Diagraph script can be machine-interpretable, parsable, or displayable, but never readable. 
     Diagraph script files
       A diagraph can be divided into several diagraph script files named for the various parts.
@@ -490,7 +527,7 @@ Diagraphic function environments
       The cache can accientally find analogies.
     The cache is used to check if something has already been in WM.
   Cursor (WM)
-    A tree represented as diagraph-script tree.
+    A string of period-seperated diagraph-script sentences representing a set of diagraphic trees.
     WM can contain multiple sentences to represent a series of paths.
     Paths put in WM get saved to STM & LTM.
     Putting multiple sentences in WM is a way to produce longer, more complicated threads.
@@ -511,6 +548,7 @@ Diagraphic requests
 
 Diagraphic session
   A session is a set of processes which share a persistent set of resources.
+  A session is a set of requests and responses between a server and a client over a continuous period of time.
 
 Diagraphic processes
   A process is a set of threads produced by continuous input.
@@ -526,6 +564,9 @@ Diagraphic processes
 Diagraphic threads
   A thread is a continuitiy of WM across iterations.
   A diagraphic thread is produced in response to an input block from a diagraphic request.
+
+Diagraphic message queue
+  Ideally a priority queue.
 
 Diagraphic servers
 
@@ -550,6 +591,8 @@ Diagraph-Interpret
 Diagraph-Explain
   Takes a set of questions on a topic, and handles each question individually.
   Explanation visits the children of a question in a DFS.
+  Predicates for which there are generic explanations that are not in STM are derived.
+  Derivations are the subexplanations of references which are stored in WM as new sentences after the period, representing that the derivation should return to the initial path before the period.
   (In expansive mode, when all children are visited, it visits the references of the children in a BFS)
     WM then contains multiple sentences, first the path to the reference, a period, then the second explanation, so that when the second is complete, it will recurse back to the point of the reference in the first sentence.
   An implementation of dg-explain might wrap the entire block T:ABC, "someone asking ABC about T", and then check LTM for pedagogical information about that particular configuration.
