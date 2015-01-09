@@ -44,6 +44,8 @@ The definition of diagraph
   Diagraphic paths represent ordinary language sentences.
 
 Diagraphic keys
+  Subject-keys have values which are diagraphic clauses that begin with that subject.
+  Question-keys have values which are prose answers.
   A diagraphic key represents a topic. 
       Topics are things like spaces, categories, sets, groups, topics, regions, eras, contexts.
       Children of a topic are members.
