@@ -20,6 +20,13 @@ A diagraph
       the presentation layer.
 
 
+A diagraph is not a kind of document.
+  This is an important distinction because using diagraph requires you to use a different set of intuitions. For example, you are not creating documents and tagging them: the index is part of the content.
+
+A diagraph is not a kind of document:
+  A diagraph is a representation of a body of information that may be instantiated in many particular documents, but the diagraph is not itself a document.
+
+
 Diagraphic keys
 Diagraphic collections
 Diagraphic elements
@@ -28,12 +35,11 @@ Diagraphic nodes
 Diagraphic paths
 
 
-The articulation layer
-  The articulation layer 
+The note layer
+  The note layer 
     has 
       keys which are 
         period or question-mark terminated paths.
-          i.e. questions or sentences.
       trees with hierarchy that represents response.
       nodes 
         which are comments.
@@ -68,12 +74,6 @@ The presentation Layer
       nodes 
         which are paragraphs.
 
-The presentation layer has keys: 
-  [presentation p1]
-  [presentation p2]
-
-The presentation layer has keys which are colon terminated paths.
-  Here is a comment on that fact.
 
 
 Diagraph specifications
