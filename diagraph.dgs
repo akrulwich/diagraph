@@ -2,44 +2,72 @@ This
   This is 'Diagraph', a diagraph about diagraph, a proposed data structure for storing explanation.
 
 
-Diagraphic key
-Diagraphic category
-Diagraphic tree
-Diagraphic node
-Diagraphic path
+
+A diagraph
+  A diagraph 
+    is a data structure.
+    is a form of media.
+    is not a document.
+    is a model of the interface of an explanatory system.
+    is a key-value store,
+      in which the keys are 
+        diagraphic keys.
+      in which the values are collections of 
+        diagraphic trees.
+    is comprised of three layers:
+      the articulation layer,
+      the model layer,
+      the presentation layer.
 
 
+Diagraphic keys
+  A diagraphic key 
+    is a grammatical topic.
+Diagraphic categories
+  A diagraphic category
+Diagraphic trees
+  A diagraphic tree
+Diagraphic nodes
+  A diagraphic node
+    is a unit of explanation,
+      which is self-contained
 
-Articulation layer
-  Articulation keys
-    Keys are colon-terminated paths, ie partial sentences.
-  Articulation trees
-  Articulation nodes
+
+Diagraphic paths
+  A diagraphic path
 
 
-The articulation layer is:
-  What is the articulation layer?
+The articulation layer
+  The articulation layer 
+    has 
+      keys which are period-terminated paths. 
+        (ie sentences.)
+      trees with hierarchy that represents response.
+      nodes 
+        which are comments.
+          A comment is any node that is subordiante to a node with a period, even if it is in a model tree.
 
-
-
-Model Layer
+The model Layer
   The model layer 
     has
       keys which are noun-phrases.
+      trees 
+        with hierarchy that represents state.
+      nodes 
+        which are syntactic elements
+        with children which are predicates.
 
-The model layer is:
-  What is the model layer?
-
-
-
-Presentation Layer
+The presentation Layer
   The presentation layer
-    has keys which are explanation-specifications,
-        like "an explanation of X for Ys", or, "an explanation of X in under two paragraphs"
-
-The presentation layer is:
-  What is the presentation layer?
-
+    has 
+      keys which are ordinary language explanation-specifications.
+        The simple key is a library tree, which presents a disambigutory selection of explanations of something.
+      trees 
+        with 
+          hierarchy that represents chronology.
+            A depth-first search of a presentation tree produces the chronological ordering. 
+      nodes 
+        which are paragraphs.
 
 
 
@@ -251,7 +279,7 @@ Diagraphic function environments
       The cache can accientally find analogies.
     The cache is used to check if something has already been in WM.
   Cursor (WM)
-    A string of period-seperated diagraph-script sentences representing a set of diagraphic trees.
+    A diagraph script string representing a set of diagraphic trees.
     WM can contain multiple sentences to represent a series of paths.
     Paths put in WM get saved to STM & LTM.
     Putting multiple sentences in WM is a way to produce longer, more complicated threads.
