@@ -21,21 +21,11 @@ A diagraph
 
 
 Diagraphic keys
-  A diagraphic key 
-    is a grammatical topic.
-Diagraphic categories
-  A diagraphic category
+Diagraphic collections
+Diagraphic elements
 Diagraphic trees
-  A diagraphic tree
-Diagraphic nodes
-  A diagraphic node
-    is a unit of explanation.
-    
-
+Diagraphic nodes  
 Diagraphic paths
-  A diagraphic path
-
-
 
 
 The articulation layer
@@ -55,7 +45,8 @@ The model Layer
     has
       keys which are noun-phrases.
       trees 
-        with hierarchy that represents state.
+        with hierarchy that represents the sequence of recollection.
+        with subject roots that match the noun-phrase key.
       nodes 
         which are syntactic elements
         with children which are predicates.
@@ -64,8 +55,12 @@ The model Layer
 The presentation Layer
   The presentation layer
     has 
-      keys which are colon-terminated ordinary language explanation-specifications.
+      keys 
+        which are colon-terminated paths.
         The initial key is a library tree, which presents a disambigutory selection of explanations of a subject.
+      elements 
+        which are sequential.
+          After a colon-terminated node, child-order represents sequence.
       trees 
         with 
           hierarchy that represents chronology.
@@ -73,7 +68,12 @@ The presentation Layer
       nodes 
         which are paragraphs.
 
+The presentation layer has keys: 
+  [presentation p1]
+  [presentation p2]
 
+The presentation layer has keys which are colon terminated paths.
+  Here is a comment on that fact.
 
 
 Diagraph specifications
@@ -137,6 +137,7 @@ Describing education with diagraph
 Describing media with diagraph
   How document-based media causes redundancy by having us rehash the same points over a new document, like an op-ed.
   How context in a news article might naively seem like aliased subtrees that belong primarily in other places, but really are custom made for the article's tree, children of references in a particular sentence, not a new explanation soley of the reference in its own right. 
+
 Describing libraries with diagraph
 Describing academia with diagraph
 Describing wikipedia with diagraph
