@@ -2,6 +2,43 @@ This
   This is 'Diagraph', a diagraph about diagraph, a proposed data structure for storing explanation.
 
 
+Diagraphic key
+Diagraphic category
+Diagraphic tree
+Diagraphic node
+Diagraphic path
+
+
+
+Articulation layer
+  Articulation keys
+    Keys are colon-terminated paths, ie partial sentences.
+  Articulation trees
+  Articulation nodes
+
+
+The articulation layer is:
+  What is the articulation layer?
+
+
+
+Model Layer
+  The model layer 
+    has
+      keys which are noun-phrases.
+
+The model layer is:
+  What is the model layer?
+
+
+
+Presentation Layer
+  The presentation layer
+    has keys which are explanation-specifications,
+        like "an explanation of X for Ys", or, "an explanation of X in under two paragraphs"
+
+The presentation layer is:
+  What is the presentation layer?
 
 
 
