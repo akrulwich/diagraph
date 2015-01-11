@@ -7,7 +7,7 @@ A diagraph
   A diagraph 
     is a data structure.
     is a form of media.
-    is not a document.
+    is not a kind of document.
     is a model of the interface of an explanatory system.
     is a key-value store,
       in which the keys are 
@@ -29,23 +29,26 @@ Diagraphic trees
   A diagraphic tree
 Diagraphic nodes
   A diagraphic node
-    is a unit of explanation,
-      which is self-contained
-
+    is a unit of explanation.
+    
 
 Diagraphic paths
   A diagraphic path
 
 
+
+
 The articulation layer
   The articulation layer 
     has 
-      keys which are period-terminated paths. 
-        (ie sentences.)
+      keys which are 
+        period or question-mark terminated paths.
+          i.e. questions or sentences.
       trees with hierarchy that represents response.
       nodes 
         which are comments.
-          A comment is any node that is subordiante to a node with a period, even if it is in a model tree.
+          A comment is any node that is subordinate to a node with a period, even if it is in a model tree.
+
 
 The model Layer
   The model layer 
@@ -57,17 +60,19 @@ The model Layer
         which are syntactic elements
         with children which are predicates.
 
+
 The presentation Layer
   The presentation layer
     has 
-      keys which are ordinary language explanation-specifications.
-        The simple key is a library tree, which presents a disambigutory selection of explanations of something.
+      keys which are colon-terminated ordinary language explanation-specifications.
+        The initial key is a library tree, which presents a disambigutory selection of explanations of a subject.
       trees 
         with 
           hierarchy that represents chronology.
             A depth-first search of a presentation tree produces the chronological ordering. 
       nodes 
         which are paragraphs.
+
 
 
 
@@ -246,7 +251,7 @@ Representing diagraph
     Diagraph script files
       A diagraph can be divided into several diagraph script files named for the various parts.
 
-JSON representation of diagraph
+  The JSON representation of diagraph
 
 
 
