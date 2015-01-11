@@ -20,11 +20,12 @@ A diagraph
       the presentation layer.
 
 
-A diagraph is not a kind of document.
-  This is an important distinction because using diagraph requires you to use a different set of intuitions. For example, you are not creating documents and tagging them: the index is part of the content.
 
 A diagraph is not a kind of document:
   A diagraph is a representation of a body of information that may be instantiated in many particular documents, but the diagraph is not itself a document.
+  
+A diagraph is not a kind of document.
+  This is an important distinction because using diagraph requires you to use a different set of intuitions. For example, you are not creating documents and tagging them: the index is part of the content.
 
 
 Diagraphic keys
