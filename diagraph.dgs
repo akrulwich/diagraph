@@ -4,22 +4,20 @@ This
 
 
 A diagraph
-  A diagraph 
-    is a data structure.
-    is a form of media.
-    is a model of the interface of an explanatory system.
-    is a key-value store,
-      in which 
-        the keys are subjects
-        the values are diagraphic trees.
+  is a data structure.
+  is a form of media.
+  is a model of the interface of an explanatory system.
+  is a key-value store,
+    in which 
+      the keys are paths,
+        which include at least a subject,
+          which can be literal or relative.
+      the values are predicate trees,
+        with nodes which are either elements or compositions.
 
 
 
 
-
-
-
-        
 
 Diagraph specifications
 Functional diagraph specifications
