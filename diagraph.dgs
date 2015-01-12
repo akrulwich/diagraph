@@ -20,14 +20,6 @@ A diagraph
       the presentation layer.
 
 
-
-A diagraph is not a kind of document:
-  A diagraph is a representation of a body of information that may be instantiated in many particular documents, but the diagraph is not itself a document.
-  
-A diagraph is not a kind of document.
-  This is an important distinction because using diagraph requires you to use a different set of intuitions. For example, you are not creating documents and tagging them: the index is part of the content.
-
-
 Diagraphic keys
 Diagraphic collections
 Diagraphic elements
@@ -37,20 +29,22 @@ Diagraphic paths
 
 
 The note layer
-  The note layer 
+  The note layer
     has 
       keys which are 
         period or question-mark terminated paths.
       trees with hierarchy that represents response.
       nodes 
-        which are comments.
-          A comment is any node that is subordinate to a node with a period, even if it is in a model tree.
+        which are notes.
+        with children which are responses.
 
 
-The model Layer
-  The model layer 
+The model layer
+  The model layer
     has
-      keys which are noun-phrases.
+      keys which are 
+        noun-phrases.
+        descriptive explanation specifications.
       trees 
         with hierarchy that represents the sequence of recollection.
         with subject roots that match the noun-phrase key.
@@ -59,11 +53,16 @@ The model Layer
         with children which are predicates.
 
 
-The presentation Layer
+The presentation layer
   The presentation layer
     has 
       keys 
-        which are colon-terminated paths.
+        which are 
+          functional explanation specifications,
+            like 'how stuff works', 'why we fight'.
+              And only for those particular query.
+              The prose explanation that is the value might start with a question based on the np-key.
+          formed like how+path or why+path.
         The initial key is a library tree, which presents a disambigutory selection of explanations of a subject.
       elements 
         which are sequential.
@@ -123,6 +122,29 @@ Other interesting diagraphs
   Diagraph and intellectual histories, ie ideographs & prose embedded in history.
 
 
+
+Using diagraph
+  Preventing the redundant duplication of explanatory information in multiple documents. 
+    Although, not all duplicated explanatory information is redundant, duplicating the same tree is redundant, but two tree might include the same fact but not the explanation. 
+  Preventing information that is similar from becomming fragmented by division into seperate documents
+  A diagraph could provide logarithmic-time lookup to a very large corpus of explanatory information.
+Diagraph in Education
+Diagraph in Journalism
+  the recap
+    not just stories, but trend coverage and debates as well.
+  Just like the NYTs can report on a debate being had between academic bloggers, diagraph will sit on top of twitter and prose media, which sift and promote information upwards.
+  Explainer journalism – having one continuous piece of content for the story and the analysis.
+  Example of diagraph stages - articles and letters to the editor.
+Diagraph in Politics
+Diagraph in Library Science
+  As alternative to coordinated ontologies, uncoordinated ordinary language classification. Emergent, pluralistic taxonomy. Like Google coordinated tagging app.
+Diagraph in Academic Publishing
+Diagraph in personal reading
+  Whatever your opinion on what people should read, biases that are failures to trigger a potential interest are inefficiencies.
+Diagraph as personal desktop/task manager
+
+
+
 Describing with diagraph
   What kind of things might be more easy to talk about in terms of diagraph? 
     The differences in explanation preformance between experts and non-experts.
@@ -157,27 +179,6 @@ Diabots
 Diabot dynamics
   We can predict how a diagraphic agent would behave, given that it seeks to expand its ideograph in certain predictible ways.
   How one would behave who wanted to gain as much diagraph as possible.
-
-
-
-Using diagraph
-  Preventing the redundant duplication of explanatory information in multiple documents. 
-    Although, not all duplicated explanatory information is redundant, duplicating the same tree is redundant, but two tree might include the same fact but not the explanation. 
-  Preventing information that is similar from becomming fragmented by division into seperate documents
-  A diagraph could provide logarithmic-time lookup to a very large corpus of explanatory information.
-Diagraph in Education
-Diagraph in Journalism
-  Just like the NYTs can report on a debate being had between academic bloggers, diagraph will sit on top of twitter and prose media, which sift and promote information upwards.
-  Explainer journalism – having one continuous piece of content for the story and the analysis.
-  Example of diagraph stages - articles and letters to the editor.
-Diagraph in Politics
-Diagraph in Library Science
-  As alternative to coordinated ontologies, uncoordinated ordinary language classification. Emergent, pluralistic taxonomy. Like Google coordinated tagging app.
-Diagraph in Academic Publishing
-Diagraph in personal reading
-  Whatever your opinion on what people should read, biases that are failures to trigger a potential interest are inefficiencies.
-Diagraph as personal desktop/task manager
-
 
 
 
