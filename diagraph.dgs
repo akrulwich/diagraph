@@ -7,74 +7,19 @@ A diagraph
   A diagraph 
     is a data structure.
     is a form of media.
-    is not a kind of document.
     is a model of the interface of an explanatory system.
     is a key-value store,
-      in which the keys are 
-        diagraphic keys.
-      in which the values are collections of 
-        diagraphic trees.
-    is comprised of three layers:
-      the articulation layer,
-      the model layer,
-      the presentation layer.
+      in which 
+        the keys are subjects
+        the values are diagraphic trees.
 
 
-Diagraphic keys
-Diagraphic collections
-Diagraphic elements
-Diagraphic trees
-Diagraphic nodes  
-Diagraphic paths
 
 
-The note layer
-  The note layer
-    has 
-      keys which are 
-        period or question-mark terminated paths.
-      trees with hierarchy that represents response.
-      nodes 
-        which are notes.
-        with children which are responses.
 
 
-The model layer
-  The model layer
-    has
-      keys which are 
-        noun-phrases.
-        descriptive explanation specifications.
-      trees 
-        with hierarchy that represents the sequence of recollection.
-        with subject roots that match the noun-phrase key.
-      nodes 
-        which are syntactic elements
-        with children which are predicates.
 
-
-The presentation layer
-  The presentation layer
-    has 
-      keys 
-        which are 
-          functional explanation specifications,
-            like 'how stuff works', 'why we fight'.
-              And only for those particular query.
-              The prose explanation that is the value might start with a question based on the np-key.
-          formed like how+path or why+path.
-        The initial key is a library tree, which presents a disambigutory selection of explanations of a subject.
-      elements 
-        which are sequential.
-          After a colon-terminated node, child-order represents sequence.
-      trees 
-        with 
-          hierarchy that represents chronology.
-            A depth-first search of a presentation tree produces the chronological ordering. 
-      nodes 
-        which are paragraphs.
-
-
+        
 
 Diagraph specifications
 Functional diagraph specifications
