@@ -2,7 +2,7 @@ This is an introduction to the diagraphic format, with application to the librar
 
 
 A diagraph is a kind of data structure. 
-  It is a trie with clause nodes, diagraphic-path keys, and composition-tree values.
+  A diagraph is a collection of named arbitrarily-nested arrays of notes and trees, which have a string values and either note or tree children.
 
 A diagraph is a form of media which can represent a set of possible explanations.
   By representing explanations as trees, many partial traversals are possible.
@@ -12,8 +12,6 @@ A diagraph is a model of the interface of an explanatory system.
 
 
 
-
-A diagraph is a collection of of topic-named nested chunk-arrays of notes and trees, which have a string of text and a children array of notes and more trees.
 
 Diagraph-script represents tree chunks. Chunks are continuous trees, newlines break chunks.
 Top-level lines without colons are orphan notes.
@@ -51,6 +49,9 @@ Tomorrow:
 
   So arrays are chunks, objects are trees, strings are notes. And strings can belong to the nodes of trees.
 
+
+Three kinds of explanation, deriving a sentence, reviewing a sentence, chunking/surveying several sentences.
+  Derivation, Explanation/Review, survey/context
 
 
 Diagraph specifications
