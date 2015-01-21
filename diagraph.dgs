@@ -1,21 +1,55 @@
-This
-  This is 'Diagraph', a diagraph about diagraph, a proposed data structure for storing explanation.
+This is an introduction to the diagraphic format, with application to the library arts and sciences.
+
+
+A diagraph is a kind of data structure. 
+  It is a trie with clause nodes, diagraphic-path keys, and composition-tree values.
+
+A diagraph is a form of media which can represent a set of possible explanations.
+  By representing explanations as trees, many partial traversals are possible.
+
+A diagraph is a model of the interface of an explanatory system.
+  A digraph represents the inputs and outputs.
 
 
 
-A diagraph
-  is a data structure.
-  is a form of media.
-  is a model of the interface of an explanatory system.
-  is a key-value store,
-    in which 
-      the keys are paths,
-        which include at least a subject,
-          which can be literal or relative.
-      the values are predicate trees,
-        with nodes which are either elements or compositions.
 
+A diagraph is a collection of of topic-named nested chunk-arrays of notes and trees, which have a string of text and a children array of notes and more trees.
 
+Diagraph-script represents tree chunks. Chunks are continuous trees, newlines break chunks.
+Top-level lines without colons are orphan notes.
+
+Tomorrow:
+  I have a call. One recieves a call on the telephone for example.
+    I have a call when?
+      I have a call at eleven. Eleven is an example of a peak business hour.
+    I have a call with whom?
+      I have a call with a company. Companies are organizations that exchange goods and services.
+        I have a call with which company?
+          I have a call with XYZ. Its a tech company.
+  I have an eye doctor's appointment. One can make an appointment with a doctor.
+    I have a eye doctor's appointment why?
+      I have a eye doctor's appointment to maybe get glasses. People around my age start to have trouble seeing.
+
+  
+  {
+    Topic: [
+      [
+        {
+          text: 'sentence',
+          children: [
+            {
+              text: 'sentence',
+              children: []
+            },
+            'note'
+          ]
+        }, 
+        'note'
+      ]
+    ]
+  }
+
+  So arrays are chunks, objects are trees, strings are notes. And strings can belong to the nodes of trees.
 
 
 
@@ -250,8 +284,9 @@ Diagraphic requests
   A process may persist across several requests with different functions.
 
 Diagraphic session
-  A session is a set of processes which share a persistent set of resources.
-  A session is a set of requests and responses between a server and a client over a continuous period of time.
+  A session is a set of processes instantiated with a persistent set of resources.
+  A session is a set of requests between the same parties, with the same URL path. 
+    Each request contains input at that path, and initial responses may furnish later input, at that same path.
 
 Diagraphic processes
   A process is a set of threads produced by continuous input.
@@ -285,6 +320,8 @@ Diagraphic clients
 
 Diagraph-Read
   Takes a topic and path and returns the tree at that path.
+Diagraph-Interpret
+  Takes a path (eg B/C) and attempts to find a subsuming path in LTM (eg, A/B/C).
 Diagraph-Edit
   Puts a tree in WM and changes to the tree destructively change LTM.
 Diagraph-Add
