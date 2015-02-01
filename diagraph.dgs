@@ -1,357 +1,99 @@
-This is an introduction to the diagraphic format, with application to the library arts and sciences.
+This is an introduction to the diagraphic format. 
 
 
-A diagraph is a kind of data structure. 
-  A diagraph is a collection of named arbitrarily-nested arrays of notes and trees, which have a string values and either note or tree children.
-
-A diagraph is a form of media which can represent a set of possible explanations.
-  By representing explanations as trees, many partial traversals are possible.
-
-A diagraph is a model of the interface of an explanatory system.
-  A digraph represents the inputs and outputs.
+What is diagraph?
+  A diagraph is a kind of representation.
+  A diagraph represents an explanatory system.
+  Diagraph represents thoughts as individual sentences, as opposed to using compound sentences to represent several thoughts.
+  A diagraph is a medium.
 
 
 
 
-Diagraph-script represents tree chunks. Chunks are continuous trees, newlines break chunks.
-Top-level lines without colons are orphan notes.
+Diagraph Schema:
 
-Tomorrow:
-  I have a call. One recieves a call on the telephone for example.
-    I have a call when?
-      I have a call at eleven. Eleven is an example of a peak business hour.
-    I have a call with whom?
-      I have a call with a company. Companies are organizations that exchange goods and services.
-        I have a call with which company?
-          I have a call with XYZ. Its a tech company.
-  I have an eye doctor's appointment. One can make an appointment with a doctor.
-    I have a eye doctor's appointment why?
-      I have a eye doctor's appointment to maybe get glasses. People around my age start to have trouble seeing.
-
-  
-  {
-    Topic: [
-      [
-        {
-          text: 'sentence',
-          children: [
-            {
-              text: 'sentence',
-              children: []
-            },
-            'note'
-          ]
-        }, 
-        'note'
-      ]
-    ]
-  }
-
-  So arrays are chunks, objects are trees, strings are notes. And strings can belong to the nodes of trees.
++----+------+-------+---------+------------+-----------+
+| id | Text | Topic | Subject | Antecedent | Prototype |
++----+------+-------+---------+------------+-----------+
+|    |      |       |         |            |           |
++----+------+-------+---------+------------+-----------+
 
 
-Three kinds of explanation, deriving a sentence, reviewing a sentence, chunking/surveying several sentences.
-  Derivation, Explanation/Review, survey/context
+What does the node / node text represent?
+  The text of a node represents the same information as do the foreign keys.
 
-
-Diagraph specifications
-Functional diagraph specifications
-  Functional diagraph specifies the desired information by functional relation to something else.
-  A functional diagraph specification is like a question, ie a partial path.
-  Diagraphs can be described functionally without complete knowledge of their contents. 
-  Functionally specified diagraph allows us to speak precisely about hypothetical diagraphs.
-  Examples eg, human condition diagraph
-Descriptive diagraph specifications
-  A descriptive diagraph specification is like a topic, and therefore is imprecise.
-  Descriptive specifications specify the desired information by describing an attribute of that information.
-  A descriptive diagraph definition is like, the diagraph formed by a particular corpus of text.
-  EG, Elsinore, Descent, Investigations
-
-Discourse diagraphs
-  A discourse diagraph is the hypothetical diagraph implicit in a corpus of text. 
-  Responses to particular articulations are culled to produce an abstracted diagraph. 
-  Any point made literally in a corpus.
-  Prioritized by number of secondary sources that make the point.
-  Learning to see prose not as a document that includes an assortment of sentences, but rather as a sequentialization of a partial traversal of a discourse diagraph.
-Pedagogic diagraphs
-  Diagraphs that contain every wrong explanation of something, and corrections.
-  Mispellings would be the classic pedagogic diagraphs, having a particular explanation for each one.
-  Pedagogic diagraphs store second-order representations of conceptual configurations under generics like "someone who things ABC", as opposed to just storing A, B and C.
-    Or rather, pedagogic diagraph might wraps these in quotes. ABC vs. "ABC", the topic.
-  Pedagogical information may also be attached in counterfactual adverbial phrases.
-  Pedagogical schemas redirect conjunctions of belief to a particular redress.
-Library diagraphs
-  A library diagraph is a diagraph that subsumes various other diagraphs. 
-  Last library, a dialectic conversation about everything. A vast particular diagraph/secondary index to the world's refactored prose.
-Ideographs
-  An ideograph represents the possible explanations of an individual. 
-  An ideograph may contain scoped versions of other ideographs for reference. 
-  The keys of my ideograph are the words that I recognize. 
-Language diagraphs
-  A langauge diagraph captures the generic information known to native speakers of a language.
-  In a language diagraph, the paths cannot be very deep because of the entropy of ambiguous uses of terms as synonymic. 
-    In an ideograph by comparison, there is no entropy across long lines of implicature, because there is no ambiguity about synonymity.
-Culture diagraphs
-  A culture diagraph represents the particular and generic diagraph common to a cultural group.
-  A culture diagraph is the set of references and generics that a member of a group expects another member of the group to know and understand.
-  A culture diagraph represents the states which an individual is likely to progress though. 
-  The validity of a culture diagraph should be self-evident to any native, ie, for any given adjacency, the child really what would come to mind given the parent for any native -- that I would expect you to expect me to know about that association.
-Other interesting diagraphs
-  Diagraph and intellectual histories, ie ideographs & prose embedded in history.
+What does topic represent? & inverse?
+What does subject represent? & inverse?
+What does antecedent represent? & inverse?
+What does prototype represent? & inverse?
 
 
 
-Using diagraph
-  Preventing the redundant duplication of explanatory information in multiple documents. 
-    Although, not all duplicated explanatory information is redundant, duplicating the same tree is redundant, but two tree might include the same fact but not the explanation. 
-  Preventing information that is similar from becomming fragmented by division into seperate documents
-  A diagraph could provide logarithmic-time lookup to a very large corpus of explanatory information.
-Diagraph in Education
-Diagraph in Journalism
-  the recap
-    not just stories, but trend coverage and debates as well.
-  Just like the NYTs can report on a debate being had between academic bloggers, diagraph will sit on top of twitter and prose media, which sift and promote information upwards.
-  Explainer journalism – having one continuous piece of content for the story and the analysis.
-  Example of diagraph stages - articles and letters to the editor.
-Diagraph in Politics
-Diagraph in Library Science
-  As alternative to coordinated ontologies, uncoordinated ordinary language classification. Emergent, pluralistic taxonomy. Like Google coordinated tagging app.
-Diagraph in Academic Publishing
-Diagraph in personal reading
-  Whatever your opinion on what people should read, biases that are failures to trigger a potential interest are inefficiencies.
-Diagraph as personal desktop/task manager
+What is an explanation?
 
 
 
-Describing with diagraph
-  What kind of things might be more easy to talk about in terms of diagraph? 
-    The differences in explanation preformance between experts and non-experts.
-    The ways in which we might compare directly the interfaces of different explanatory systems.
-  Tag entropy
-  Capsizing
-  Ephemeral documents and feeds
-  An adjacency in a diagraph is a thing that would bring to mind another thing in an explanation.
-    So imagine the mind of the person who reads Twitter or the newspaper.
-  Don't think about transmision of linear text, think about having and giving trees -- decouple explanation hierarchy from chronology, which is over determined.
-Describing education with diagraph
-  Diagraphic prerequisites to next possible courses, eg.
-Describing media with diagraph
-  How document-based media causes redundancy by having us rehash the same points over a new document, like an op-ed.
-  How context in a news article might naively seem like aliased subtrees that belong primarily in other places, but really are custom made for the article's tree, children of references in a particular sentence, not a new explanation soley of the reference in its own right. 
 
+Common configurations of diagraph
+-subject embedding
+-topic nesting
+-example of node with subject & prototype
+--The existance of a no-text node with particular foreign keys, eg subject & prototype, has a particular meaning.
+-example of adding something to the I/This topic to publish it
+  -the difference between what is true of X and what is true of me, vis what I think of X, & that in diagraph they can be different.
+-dialog, utterance nodes where the subject is other utterance nodes
+-indexing facts with text topics, like legal codes.
 Describing libraries with diagraph
 Describing academia with diagraph
 Describing wikipedia with diagraph
 Describing individuals with diagraph
 Describing chronology with diagraph
-  Real time, stateful time, evolutionary time
-    Being in a DFA, as opposed to being out of one.
+-stories
+-locations
+-what we might call the reciprocal names of the different foreign keys (eg examples/interpretations/etc)
+-notes, ie multi-sentence nodes that are not published to the I/This identity topic. 
+-how chronology is a kind of secondary index of a set of platonic facts about things.
+-napoleon and louisiana
 
-Diabots
-  A diabot is a diagraphic agent. 
-  A diabot is an agent who is motivated to improve its ideograph.
-  A diabot is an agent that represents its knowledge as a diagraph. 
-  A diabot knows N if it has the node N. 
-  A diabot understands P if it has the path P. 
-  A diabot's ideograph of a particular topic is its understanding of that topic. 
-Diabot dynamics
-  We can predict how a diagraphic agent would behave, given that it seeks to expand its ideograph in certain predictible ways.
-  How one would behave who wanted to gain as much diagraph as possible.
+
+
+
+
+Applications of diagraph
+
+
+
+
+
+
+Diagraph script
+  Diagraph script is a hierarchial text format that represents embedded topics. 
+  Every line of diagraph script is one line.
+  Subject/Antecedent/Prototype are not represented.
+
+
+
+
+Diagraph servers
+
+
+
+
+Diagraph reading interface
+  Return -- 'How', ie Nodes where topic = N
+  Down -- nodes about this subject
+  Left/Right -- Next node where topic = topic
+  Space -- nodes where subject = N
+
+
 
 
 
 Producing diagraph
-Writing a diagraph
-  Discussion diagraph 
-    Produces by consensus
-    Every write is changable by both parties. 
-    Like writing diagraph-script in a google doc.
-    One party may change the paths of the contributions of another party.
-    Vulnerable to filibustering.
-    Vulnerable to normative description.
-      Descriptive clauses should come before specifications and interpretations. By inserting a normative interpretation in the initial declaration, a party may violate that understanding.
-    Requires all parties to agree on a shared generic diagraph, 
-      in order to decide which inferences are acceptable.
-      in order to decide which declarations are descriptive and which are interpretive.
-    This method could be used by an organization with dispute resolution procedures, like a newspaper. 
-  Debate diagraph
-    Every write is submitted by only one party.
-    Like a group of people submitting diagraph-script comments to a shared page, everyone can post what they want but no party may alter another party's post.
-    No conrtibution may change the path of an existing contribution.
-    Diagraph production in which individuals produce a discussion diagraph.
-    A party that creates a terminal clause can write a composition, but another party may subdivide that terminal node causing explanation to pass over those compositions.
-    Only parties who react to opponent arguments will end up with responsive compositions at every terminal point. 
-
-Diagraph formation
-  Tidal sort
-    Alternating periods of solicitation to topic-buckets, culling, and subdividing.
-    Tidal sort is like research, each wave involves a question, solicitation, culling the immediately proximate set of answers, and restarting.
-    Tidal sort requires initial knowledge of topics and questions of interest.
-    Tidal sort provides continuous improvements.
-  Pile sort
-    Iterative periods of solicitation to topic buckets, sorting by similarity and subdividing, then more solicitation, until all buckets have fewer than some threshold of notes, then the creation of note piles, which become diagraphic trees. 
-    Pile sort requires a large initial cost.
-    Pile sort might be used refactor several composite texts into one set of single purpose texts.
-    Pile sort is more efficient if you want a diagraph of an entire corpus, and have no initial knowledge of interesting questions.
-
-
-
-Representing diagraph
-  Diagraph script
-    Diagraph script is a text format that represents a diagraph. 
-    Diagaph script is the canonical representation of a diagraph. 
-      Other data structures merely implement the constructs of diagraph script.
-    Lines of a diagraph script file represent nodes of a diagraph.
-    Indendation in a diagraph script file represents the hierarchy of a diagraph. 
-    Unindented lines of diagraph script represent the diagraphic paths which are the keys of the diagraph.
-      The paths may not correspond exactly to the path-keys of the diagraph.
-        A diagraph might be more modularly refactored, and the diagraph script intended for a wider audience. 
-    Top-level indentations under a key represent the roots of a diagraphic category. 
-    Diagraph script is comprised of blocks, section, and parts.
-      A line of diagraph script is a diagraphic node or grammatical clause.
-      A block of diagraph script is one atomic write operation.
-        A block is like a diagraphic tree, or a grammatical subject.
-
-        Blocks can be seperated by one blank line for clarity.
-        Blocks would often begin at the indentation of the previous block. 
-        A block of diagraph script might correspond to a prose paragraph.
-        A diagraph script block captures a diagraphic root, its context, its specifications, and derivations of the generics used in that tree.
-      A section of diagraph script is a set of related blocks. 
-        A diagraph section is a diagraphic key or grammatical topic. 
-
-        Sections can be seperated by two or three blank lines for clarity. 
-        Sections would not usually begin indented. 
-        A section of diagraph script might correspond to a prose article or chapter.
-      A part is a set of sections that share a topic or theme.
-
-        Parts are seperated by three blank lines.
-    Multi-line compositions can be preceeded by a colon.
-      Colons more generally could mean that what follows is a linear sequence, rather than a set of candidates for the same role. 
-      Colons are like javascript promises relative to the nested callbacks of ordinary diagraph script.
-    Diagraph script can be machine-interpretable, parsable, or displayable, but never readable. 
-    Diagraph script files
-      A diagraph can be divided into several diagraph script files named for the various parts.
-
-  The JSON representation of diagraph
+-what does a diagraph look like through every provisional stage of pile sort/tidal sort
 
 
 
 
-Diagraphic functions
-  A diagraphic function is a function of the input, storage, cache, and cursor, which outputs by making changes to these data structures.
-  A diagraphic function is a set of iterated transformations of WM.
-  A diagraphic function can be thought of like a cellular automata for illustration.
-  Iterations of WM can represent a progression, like a path across a terrain, or a transformation, like the steps of an oragami figure.
-
-Diagraphic function controller
-  A diagraphic function controller instantiates a process in response to a request.
-  The function controller creates a process with a particular bundle of resources.
-  The function controller persists a session accross requests by creating new processes with existing resource bundles. 
-  Processes are 1:1 with requests, but sessions persist with the resources bundle across processes.
-  A more complicated controller might loop input until output converges, or make follow-up self-requests in response to output.
-
-Diagraphic function environments
-  The diagraphic function environment is where the diagraphic function gets executed.
-  The diagraphic function environment provides certain resources to the diagraphic function.
-  Topic
-    A string representing the process's current topic.
-    The last given topic of input, ie the state of the input stream, is reflected in the topic variable.
-    If the topic changes, the URL should change
-  Storage (LTM)
-    The storage diagraph
-  Cache (STM)
-    Associates every WM value with the process topic
-    Associates a generic path with a topic.
-      The cache can accientally find analogies.
-    The cache is used to check if something has already been in WM.
-  Cursor (WM)
-    A diagraph script string representing a set of diagraphic trees.
-    WM can contain multiple sentences to represent a series of paths.
-    Paths put in WM get saved to STM & LTM.
-    Putting multiple sentences in WM is a way to produce longer, more complicated threads.
-  Update
-    Update is a callback that is called when a cycle of the diagraphic function is complete. 
-    If update finds WM empty, it creates a new thread from input. If update leaves WM empty, the process ends.
-    Update pipes WM to output or gets a new WM from input otherwise. 
-    Input and Output don't need to be put directly in the resource bundle so long as the update callback can access them.
-    The diagraphic function controller might loop input and merge output into one diagraph, until nothing new emerges, thus giving a chance for a thread to visit every branch, but this behavior is not automatic and isn't implemented by the process or thread.
-    When WM is empty it recieves the next value from the input stream.
-    Every state of WM between function cycles is piped to output as diagraph-script.
-  Pause
-    If the pause flag is true, then the thread pauses execution and the data structures can be inspected by the environment.
-
-Diagraphic requests
-  A request has a URL including a diagraph and function, then an input file of diagraph-script blocks.
-  A process may persist across several requests with different functions.
-
-Diagraphic session
-  A session is a set of processes instantiated with a persistent set of resources.
-  A session is a set of requests between the same parties, with the same URL path. 
-    Each request contains input at that path, and initial responses may furnish later input, at that same path.
-
-Diagraphic processes
-  A process is a set of threads produced by continuous input.
-  Once input runs out, the process either continues without input, or the process ends.
-  A process is a session that handles a series of requests.
-  Processes can be for multiple functions by their requests being for multiple functions.
-  The session is only represented implicitly in the browser page or runtime message. It is just a hollow collection of threads/explanations.
-  A diagraphic process is a collection of threads which share resources.
-  A diagraphic process maps input to output by creating diagraphic threads.
-  A process has many requests, and a request has many thread-blocks.
-  Diagraphic background process
-
-Diagraphic threads
-  A thread is a continuitiy of WM across iterations.
-  A diagraphic thread is produced in response to an input block from a diagraphic request.
-
-Diagraphic message queue
-  Ideally a priority queue.
-
-Diagraphic servers
-
-Diagraphic databases
-  A topic-tree collection key-value store in a document database.
-  
-Diagraphic clients
-  Static
-  Correspondance
-  Interactive
-
-
-
-Diagraph-Read
-  Takes a topic and path and returns the tree at that path.
-Diagraph-Interpret
-  Takes a path (eg B/C) and attempts to find a subsuming path in LTM (eg, A/B/C).
-Diagraph-Edit
-  Puts a tree in WM and changes to the tree destructively change LTM.
-Diagraph-Add
-  Takes a topic and input tree and merges the input tree into the storage diagraph additively.
-Diagraph-Interpret
-  Given a topic and a path missing intermediary nodes, find the full path. 
-Diagraph-Explain
-  Takes a set of questions on a topic, and handles each question individually.
-  Explanation visits the children of a question in a DFS.
-  Predicates for which there are generic explanations that are not in STM are derived.
-  Derivations are the subexplanations of references which are stored in WM as new sentences after the period, representing that the derivation should return to the initial path before the period.
-  (In expansive mode, when all children are visited, it visits the references of the children in a BFS)
-    WM then contains multiple sentences, first the path to the reference, a period, then the second explanation, so that when the second is complete, it will recurse back to the point of the reference in the first sentence.
-  An implementation of dg-explain might wrap the entire block T:ABC, "someone asking ABC about T", and then check LTM for pedagogical information about that particular configuration.
-Diagraph-Assess
-  Takes a topic and set of input paths path and returns a comparison of each input path with the reference path.
-Diagraph-Review
-  Takes a topic and gives a DFS of the paths.
-Diagraph-Quiz
-  Takes a topic and for each node, requests the path to that node.
-Diagraph-Consider
-  Consideration is an iterated function that explores the space of generic inference about a particular clause, and finds possibilities which it marks as questions.
-  Consideration genericizes a particular clause and then preforms generic inferences, replacing a generic parent with a child.
-  I guide consideration by putting a goal in WM as a second sentence.
-Diagraph-Reflect
-  Reflection is an iterated function that juxtaposes different descriptions in WM, inviting generic recognition.
-  Reflection is the function that produces interpretation from description.
-  Reflection might work in parts, genericizing a whole sentence by genericizing each part. 
-Diagraph-Perform
-  A diagraphic function that preforms tasks specified in imperative diagraph script.
 
 
