@@ -1,40 +1,64 @@
 This is an introduction to the diagraphic format. 
 
 
-What is diagraph?
-  A diagraph is a kind of representation.
-  A diagraph represents an explanatory system.
-  Diagraph represents thoughts as individual sentences, as opposed to using compound sentences to represent several thoughts.
-  A diagraph is a medium.
 
+
+What is diagraph?
+  A diagraph is a medium of explanation.
+  A diagraph is a representation of an explanatory system.
+
+
+
+  A diagraph is a hierarchial sentence-store.
 
 
 
 Diagraph Schema:
 
-+----+------+-------+---------+------------+-----------+
-| id | Text | Topic | Subject | Antecedent | Prototype |
-+----+------+-------+---------+------------+-----------+
-|    |      |       |         |            |           |
-+----+------+-------+---------+------------+-----------+
++----+------+-------+---------+------------+-----------+--------+
+| id | Text | Topic | Subject | Antecedent | Prototype | Object |
++----+------+-------+---------+------------+-----------+--------+
+|    |      |       |         |            |           |        |
++----+------+-------+---------+------------+-----------+--------+
 
 
 What does the node / node text represent?
   The text of a node represents the same information as do the foreign keys.
-
-What does topic represent? & inverse?
-What does subject represent? & inverse?
-What does antecedent represent? & inverse?
-What does prototype represent? & inverse?
+  Diagraph represents thoughts as individual sentences, as opposed to using compound sentences to represent several thoughts.
 
 
-
-What is an explanation?
+Why do multiple nodes reiterate the same information?
 
 
 
+What does topic represent? 
+  context, situation, surroundings, motivation
+  examples, illustrations, members, demonstrations
+What does subject represent?
+  reponses
+What does antecedent represent?
+  cause, reason, explanation, justification, evidence
+  effects, consequents, consequences, progeny
+What does prototype represent? 
+  Kind, abstract ideas, 
+  Instances, articulations
 
-Common configurations of diagraph
+
+
+
+
+
+
+What is an explanation? 
+  An explanation is a traversal of the nodes of a topic.
+
+
+
+
+
+
+
+Common configurations of diagraph 
 -subject embedding
 -topic nesting
 -example of node with subject & prototype
@@ -43,23 +67,30 @@ Common configurations of diagraph
   -the difference between what is true of X and what is true of me, vis what I think of X, & that in diagraph they can be different.
 -dialog, utterance nodes where the subject is other utterance nodes
 -indexing facts with text topics, like legal codes.
-Describing libraries with diagraph
-Describing academia with diagraph
-Describing wikipedia with diagraph
-Describing individuals with diagraph
-Describing chronology with diagraph
 -stories
 -locations
 -what we might call the reciprocal names of the different foreign keys (eg examples/interpretations/etc)
 -notes, ie multi-sentence nodes that are not published to the I/This identity topic. 
 -how chronology is a kind of secondary index of a set of platonic facts about things.
 -napoleon and louisiana
+-I know [P] because [evidence] -- a subject/antecedent pair can represent epistemic justification
+-Using two nested arguments to create an indirect object 
 
 
 
 
 
-Applications of diagraph
+
+Applications of diagraph / Describing things as diagraphs
+-tag entropy
+-capsizing, when the index needs an index
+-The problem with prose 
+  (& serialization attempts like the dewey decimal system)
+-Describing libraries as diagraph
+-Describing academia as diagraph
+-Describing wikipedia as diagraph
+-describing ephemeral media as utterances prototyping the same abstract sentences.
+
 
 
 
@@ -76,14 +107,28 @@ Diagraph script
 
 Diagraph servers
 
+host.org/diagraph/sentence
+host.org/diagraph/read/sentence.json/?N=4
+host.org/diagraph/edit/sentence/
+
 
 
 
 Diagraph reading interface
-  Return -- 'How', ie Nodes where topic = N
-  Down -- nodes about this subject
-  Left/Right -- Next node where topic = topic
-  Space -- nodes where subject = N
+  Paragraph mode and sentence mode.
+  There is a single selected sentence in the URL, the text of this sentence is displayed, then the next sentence is selected.
+
+  Read(s)
+    Give text of N
+    (and antecedents?)
+  Down - what about it
+    -Select next N where subject = S,
+  Return - how
+    -Select next N where topic = S,
+  Right - next
+    -Select next N where topic = S.topic,
+
+
 
 
 
