@@ -3,7 +3,7 @@ This is an introduction to the diagraphic format.
 
 
 
-What is diagraph?
+What is a diagraph?
   A diagraph is a medium of explanation.
   A diagraph is a representation of an explanatory system.
 
@@ -15,11 +15,11 @@ What is diagraph?
 
 Diagraph Schema:
 
-+----+------+-------+---------+------------+-----------+--------+
-| id | Text | Topic | Subject | Antecedent | Prototype | Object |
-+----+------+-------+---------+------------+-----------+--------+
-|    |      |       |         |            |           |        |
-+----+------+-------+---------+------------+-----------+--------+
++----+------+-------+---------+-----------+--------+
+| id | Text | Topic | Subject | Prototype | Object |
++----+------+-------+---------+-----------+--------+
+|    |      |       |         |           |        |
++----+------+-------+---------+-----------+--------+
 
 
 
@@ -30,11 +30,14 @@ What does the node / node text represent?
   The text of a node represents the same information as do the foreign keys.
   Diagraph represents thoughts as individual sentences, as opposed to using compound sentences to represent several thoughts.
 
+  The foreign keys supervene on the text, but the text contains additional information (modality, quantity, etc). The foreign keys are the relational information of S.
 
 
 
 Why do multiple nodes reiterate the same information?
+  The node text represents a minimal possible state of knowledge. So if you can know B without A, we call them A and B. But if B requires A, then we call them A and AB. (and if I see AB and don't know A, AB serves as a link back to A). So a sentence represents a new piece of information, and all of the previous information that is necessary to understand the new piece of information.
   -movie frames analogy
+
 
 
 What does topic represent? 
@@ -65,7 +68,7 @@ What is an explanation?
 
 
 
-Common configurations of diagraph 
+Configurations of diagraph 
 -subject embedding
 -topic nesting
 -example of node with subject & prototype
@@ -83,8 +86,8 @@ Common configurations of diagraph
 -I know [P] because [evidence] -- a subject/antecedent pair can represent epistemic justification
 -Using two nested arguments to create an indirect object 
 -Question topics which contain illustrations, question subjects with responses which are answers.
-
-
+-diagraphic merges, & discussion 
+-How putting S in T is literal, but creating S about S in T is interpretational.
 
 
 
@@ -119,6 +122,13 @@ Diagraph script
 Diagraph servers
 
   host.org/diagraph/sentence (?N=2) -- returns all adjacencies within N
+
+  host.org/diagraph/sentence/what   (s.topic)
+  host.org/diagraph/sentence/how    (nodes where topic = s)
+  host.org/diagraph/sentence/why    (T of nodes where subject = s)
+  host.org/diagraph/sentence/so     (S of nodes where T = s)
+  host.org/diagraph/sentence/which  (nodes where subject is S)
+
   Query string N argument - can request max, & receive less if refused.
   Get for read, post for edit
   Returns nested JSON.
