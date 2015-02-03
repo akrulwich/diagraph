@@ -134,19 +134,19 @@ Diagraphic interfaces
     The interactive interface displays text sentence by sentence like a slide-deck.
     The interactive interface builds a local session store that can be flexibly searched.
 
-    Read(s)
-      Give text of N
+    Visit S:
+    -state S
+    -visit sentences with subject S
+    -visit sentences antecedent to S
+    -visit sentences of topic S
+
+    Each visitation is on a stack, more pushes to the stack, next advances the current item, continue pops the stack.
     Down - more
     Left - next
     Return - continue
 
-    More:
-    -show sentences about S
-    -show sentences antecedent to S
-    -Repeat for each sentence of topic S
 
-
-    The URL fragment represents the work being done by the interface to form your query.
+    The URL fragment represents additional client-side query information.
 
   The correspondance interface
     Each click returns a JSON request which is appended to the DOM, creating a chronological sequence.
