@@ -22,25 +22,32 @@ Diagraph Schema:
 +----+------+-------+---------+------------+-----------+--------+
 
 
+
+
 What does the node / node text represent?
+  The nodes of a diagraph are the units of explanation, ways in which two explanations could differ on an informational basis, sentences which could meaningfully stand alone.
+  Nodes do not represent syntactic units.
   The text of a node represents the same information as do the foreign keys.
   Diagraph represents thoughts as individual sentences, as opposed to using compound sentences to represent several thoughts.
 
 
-Why do multiple nodes reiterate the same information?
 
+
+Why do multiple nodes reiterate the same information?
+  -movie frames analogy
 
 
 What does topic represent? 
-  context, situation, surroundings, motivation
+  situation, surroundings, motivation
   examples, illustrations, members, demonstrations
 What does subject represent?
-  reponses
+  
+  reponses, comments
 What does antecedent represent?
   cause, reason, explanation, justification, evidence
   effects, consequents, consequences, progeny
 What does prototype represent? 
-  Kind, abstract ideas, 
+  Kind, abstracts, ideas 
   Instances, articulations
 
 
@@ -75,6 +82,7 @@ Common configurations of diagraph
 -napoleon and louisiana
 -I know [P] because [evidence] -- a subject/antecedent pair can represent epistemic justification
 -Using two nested arguments to create an indirect object 
+-Question topics which contain illustrations, question subjects with responses which are answers.
 
 
 
@@ -83,10 +91,12 @@ Common configurations of diagraph
 
 Applications of diagraph / Describing things as diagraphs
 -tag entropy
+  -a reference is entropic if it does not soley belong to the prior resource, meaning it must be relevant for multiple contexts. Explanations are generally combinatorially specific.
 -capsizing, when the index needs an index
 -The problem with prose 
   (& serialization attempts like the dewey decimal system)
 -Describing libraries as diagraph
+  -A library in which the indexes were continuous with the content.
 -Describing academia as diagraph
 -Describing wikipedia as diagraph
 -describing ephemeral media as utterances prototyping the same abstract sentences.
@@ -95,38 +105,55 @@ Applications of diagraph / Describing things as diagraphs
 
 
 
-
-
 Diagraph script
-  Diagraph script is a hierarchial text format that represents embedded topics. 
-  Every line of diagraph script is one line.
-  Subject/Antecedent/Prototype are not represented.
+  Diagraph script represents sentences with explicit relations to other sentences.
 
+  S
+    Relation: 
+      S
+    Relation:
+      S
 
 
 
 Diagraph servers
 
-host.org/diagraph/sentence
-host.org/diagraph/read/sentence.json/?N=4
-host.org/diagraph/edit/sentence/
+  host.org/diagraph/sentence (?N=2) -- returns all adjacencies within N
+  Query string N argument - can request max, & receive less if refused.
+  Get for read, post for edit
+  Returns nested JSON.
 
 
 
 
-Diagraph reading interface
-  Paragraph mode and sentence mode.
-  There is a single selected sentence in the URL, the text of this sentence is displayed, then the next sentence is selected.
 
-  Read(s)
-    Give text of N
-    (and antecedents?)
-  Down - what about it
-    -Select next N where subject = S,
-  Return - how
-    -Select next N where topic = S,
-  Right - next
-    -Select next N where topic = S.topic,
+
+Diagraphic interfaces
+  The interactive interface
+    The interactive interface permits search and browse.
+    The interactive interface displays text sentence by sentence like a slide-deck.
+    The interactive interface builds a local session store that can be flexibly searched.
+
+    Read(s)
+      Give text of N
+    Down - more
+    Left - next
+    Return - continue
+
+    More:
+    -show sentences about S
+    -show sentences antecedent to S
+    -Repeat for each sentence of topic S
+
+
+    The URL fragment represents the work being done by the interface to form your query.
+
+  The correspondance interface
+    Each click returns a JSON request which is appended to the DOM, creating a chronological sequence.
+
+  The static interface
+    Simply displays all sentences of the payload with hyperlinks to their sentences pages.
+
 
 
 
