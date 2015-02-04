@@ -1,16 +1,9 @@
 This is an introduction to the diagraphic format. 
 
 
-
-
 What is a diagraph?
-  A diagraph is a medium of explanation.
-  A diagraph is a representation of an explanatory system.
-
-
-
-  A diagraph is a hierarchial sentence-store.
-
+  A diagraph is a data structure that represents a corpus of explanatory text. 
+  A diagraph is a relational sentence-store.
 
 
 Diagraph Schema:
@@ -22,29 +15,23 @@ Diagraph Schema:
 +----+------+-------+---------+-----------+--------+
 
 
-
-
-What does the node / node text represent?
-  The nodes of a diagraph are the units of explanation, ways in which two explanations could differ on an informational basis, sentences which could meaningfully stand alone.
-  Nodes do not represent syntactic units.
-  The text of a node represents the same information as do the foreign keys.
-  Diagraph represents thoughts as individual sentences, as opposed to using compound sentences to represent several thoughts.
-
-  The foreign keys supervene on the text, but the text contains additional information (modality, quantity, etc). The foreign keys are the relational information of S.
+The nodes of a finished diagraph are sentences. 
+A node's text represents a minimal unit of explanation.
+Nodes may include other nodes. A sentence may syntactically embed another, and a node references its components by foreign key.
+A node's components are its references, and their references, and their references, etc.
+A node's text cumulatively represents all of its components. 
+Each node stands alone as a syntactic and semantic unit. 
 
 
 
-Why do multiple nodes reiterate the same information?
-  The node text represents a minimal possible state of knowledge. So if you can know B without A, we call them A and B. But if B requires A, then we call them A and AB. (and if I see AB and don't know A, AB serves as a link back to A). So a sentence represents a new piece of information, and all of the previous information that is necessary to understand the new piece of information.
-  -movie frames analogy
 
-
-
+The component relations:
+The relationships between components represents the relationships between words.
 What does topic represent? 
   situation, surroundings, motivation
   examples, illustrations, members, demonstrations
 What does subject represent?
-  
+  the syntactic subject
   reponses, comments
 What does antecedent represent?
   cause, reason, explanation, justification, evidence
@@ -56,22 +43,12 @@ What does prototype represent?
 
 
 
-
-
-
-What is an explanation? 
-  An explanation is a traversal of the nodes of a topic.
-
-
-
-
-
-
-
 Configurations of diagraph 
 -subject embedding
 -topic nesting
 -example of node with subject & prototype
+-how prototypes have typical contents and descriptions
+-how there can be overlap between a node's contents & its descriptions.
 --The existance of a no-text node with particular foreign keys, eg subject & prototype, has a particular meaning.
 -example of adding something to the I/This topic to publish it
   -the difference between what is true of X and what is true of me, vis what I think of X, & that in diagraph they can be different.
@@ -88,21 +65,31 @@ Configurations of diagraph
 -Question topics which contain illustrations, question subjects with responses which are answers.
 -diagraphic merges, & discussion 
 -How putting S in T is literal, but creating S about S in T is interpretational.
+-Putting S literally in T means you can't know S without T. Putting T as an interpretation of S means they can be known seperately.
+-There can be question nodes. A question node is illustrated by its contents, and answered by its responses. 
+- A node that has a single sentence is in a kind of resting state. More than that & its a clipping, less and its a fragment/note.
+
 
 
 
 
 Applications of diagraph / Describing things as diagraphs
+-The nodes of a diagraph represent the units of an explanation, ways in which two explanations could differ on an informational basis, sentences which could meaningfully stand alone.
 -tag entropy
+-Modeling wikipedia as diagraph
   -a reference is entropic if it does not soley belong to the prior resource, meaning it must be relevant for multiple contexts. Explanations are generally combinatorially specific.
 -capsizing, when the index needs an index
 -The problem with prose 
   (& serialization attempts like the dewey decimal system)
+-Describing the discourse diagraph implicit in a corpus
 -Describing libraries as diagraph
   -A library in which the indexes were continuous with the content.
--Describing academia as diagraph
--Describing wikipedia as diagraph
+-Modeling academia with diagraph
+-modeling jouranlism as diagraph
+--eg the snowden story, which is still developing, ie long-term unfurling cause & effect relationships
 -describing ephemeral media as utterances prototyping the same abstract sentences.
+
+
 
 
 
@@ -119,20 +106,20 @@ Diagraph script
 
 
 
+
+
 Diagraph servers
 
   host.org/diagraph/sentence (?N=2) -- returns all adjacencies within N
 
-  host.org/diagraph/sentence/what   (s.topic)
   host.org/diagraph/sentence/how    (nodes where topic = s)
   host.org/diagraph/sentence/why    (T of nodes where subject = s)
   host.org/diagraph/sentence/so     (S of nodes where T = s)
-  host.org/diagraph/sentence/which  (nodes where subject is S)
+  host.org/diagraph/sentence/which  (P of nodes where subject = s)
 
   Query string N argument - can request max, & receive less if refused.
   Get for read, post for edit
   Returns nested JSON.
-
 
 
 
@@ -145,10 +132,9 @@ Diagraphic interfaces
     The interactive interface builds a local session store that can be flexibly searched.
 
     Visit S:
-    -state S
-    -visit sentences with subject S
-    -visit sentences antecedent to S
-    -visit sentences of topic S
+    -display S
+    -visit sentences about s
+    -visit sentences of topic s
 
     Each visitation is on a stack, more pushes to the stack, next advances the current item, continue pops the stack.
     Down - more
@@ -163,7 +149,6 @@ Diagraphic interfaces
 
   The static interface
     Simply displays all sentences of the payload with hyperlinks to their sentences pages.
-
 
 
 
