@@ -14,7 +14,7 @@ Diagraph Schema:
 
 
 Nodes
-  A node Nodes have a unique text and a set of foreign keys which reference other nodes.
+  A node has a unique text and a set of foreign keys which reference other nodes.
   The nodes of a finished diagraph are sentences. 
   Each node stands alone as a syntactic and semantic unit, although a node prerequires its components.
   Everything in diagraph is a sentence, nothing represents a part of a sentence.
@@ -25,6 +25,7 @@ Components
   A node is like a recipe and the components are like ingredients. 
   A node is like an image and the components are subimages.
   When a sentence is syntactically embeded in another, the node references the other by foreign key.
+  The information stored in the foreign keys should reiterate the information stored in the node text.
   A node's components are its references, and their references, and their references, etc.
   The decomposition of a node is a recursive presentation of its components.
 
