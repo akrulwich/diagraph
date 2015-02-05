@@ -1,9 +1,10 @@
-This is an introduction to the diagraphic format. 
+Specification of the diagraphic format
 
 
 What is a diagraph?
   A diagraph is a data structure that represents a corpus of explanatory text. 
   A diagraph is a relational sentence-store.
+
 
 
 Diagraph Schema:
@@ -15,31 +16,40 @@ Diagraph Schema:
 +----+------+-------+---------+-----------+--------+
 
 
-The nodes of a finished diagraph are sentences. 
-A node's text represents a minimal unit of explanation.
-Nodes may include other nodes. A sentence may syntactically embed another, and a node references its components by foreign key.
-A node's components are its references, and their references, and their references, etc.
-A node's text cumulatively represents all of its components. 
-Each node stands alone as a syntactic and semantic unit. 
+
+What is a node?
+  Nodes have a unique text and a set of foreign keys.
+  The nodes of a finished diagraph are sentences. 
+  A node's text represents a minimal unit of explanation.
+  Each node stands alone as a syntactic and semantic unit. 
+  Everything in diagraph is a sentence, nothing represents a part of a sentence.
+  A node's sentence may be implicitly represented in a multi-sentence articulation, but the real sentence is represented by the foreign keys.
 
 
+What are components?
+  A node may be composed of several components.
+  A node is like a recipe and the components are like ingredients. 
+  A node is like an image and the components are subimages.
+  A sentence may syntactically embed another, and a node references its components by foreign key.
+  A node's components are its references, and their references, and their references, etc.
+  The decomposition of a node is a list of its components.
+  Foreign keys are for decomposition and discovery.
 
 
-The component relations:
-The relationships between components represents the relationships between words.
-What does topic represent? 
-  situation, surroundings, motivation
-  examples, illustrations, members, demonstrations
-What does subject represent?
-  the syntactic subject
-  reponses, comments
-What does antecedent represent?
-  cause, reason, explanation, justification, evidence
-  effects, consequents, consequences, progeny
-What does prototype represent? 
-  Kind, abstracts, ideas 
-  Instances, articulations
-
+What kinds of component a node have?
+  The relationships between components represents the relationships between syntactic elements.
+  What does topic represent? 
+    situation, surroundings, motivation
+    examples, illustrations, members, demonstrations
+  What does subject represent?
+    the syntactic subject
+    reponses, comments
+  What does antecedent represent?
+    cause, reason, explanation, justification, evidence
+    effects, consequents, consequences, progeny
+  What does prototype represent? 
+    Kind, abstracts, ideas 
+    Instances, articulations
 
 
 
@@ -68,7 +78,7 @@ Configurations of diagraph
 -Putting S literally in T means you can't know S without T. Putting T as an interpretation of S means they can be known seperately.
 -There can be question nodes. A question node is illustrated by its contents, and answered by its responses. 
 - A node that has a single sentence is in a kind of resting state. More than that & its a clipping, less and its a fragment/note.
-
+- A and B and C did x -- using nested objects to create lists 
 
 
 
@@ -92,35 +102,18 @@ Applications of diagraph / Describing things as diagraphs
 
 
 
-
-
-
 Diagraph script
-  Diagraph script represents sentences with explicit relations to other sentences.
-
-  S
-    Relation: 
-      S
-    Relation:
-      S
-
+  Diagraph script is a text format that represents a diagraph.
+  Lines of a diagraph script file represent nodes.
+  Indentation in diagraph script represents prerequisite components. 
 
 
 
 
 Diagraph servers
 
-  host.org/diagraph/sentence (?N=2) -- returns all adjacencies within N
-
-  host.org/diagraph/sentence/how    (nodes where topic = s)
-  host.org/diagraph/sentence/why    (T of nodes where subject = s)
-  host.org/diagraph/sentence/so     (S of nodes where T = s)
-  host.org/diagraph/sentence/which  (P of nodes where subject = s)
-
-  Query string N argument - can request max, & receive less if refused.
+  host.org/diagraph/sentence 
   Get for read, post for edit
-  Returns nested JSON.
-
 
 
 
@@ -131,26 +124,17 @@ Diagraphic interfaces
     The interactive interface displays text sentence by sentence like a slide-deck.
     The interactive interface builds a local session store that can be flexibly searched.
 
-    Visit S:
-    -display S
-    -visit sentences about s
-    -visit sentences of topic s
+    Each node visited displays the sentence decomposition, omitting session-cached sentences.
 
-    Each visitation is on a stack, more pushes to the stack, next advances the current item, continue pops the stack.
     Down - more
     Left - next
     Return - continue
-
-
-    The URL fragment represents additional client-side query information.
 
   The correspondance interface
     Each click returns a JSON request which is appended to the DOM, creating a chronological sequence.
 
   The static interface
     Simply displays all sentences of the payload with hyperlinks to their sentences pages.
-
-
 
 
 
