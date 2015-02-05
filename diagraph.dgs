@@ -16,12 +16,10 @@ Diagraph Schema:
 +----+------+-------+---------+-----------+--------+
 
 
-
 Nodes
-  A node Nodes have a unique text and a set of foreign keys.
+  A node Nodes have a unique text and a set of foreign keys which reference other nodes.
   The nodes of a finished diagraph are sentences. 
-  A node's text represents a minimal unit of explanation.
-  Each node stands alone as a syntactic and semantic unit. 
+  Each node stands alone as a syntactic and semantic unit, although a node prerequires its components.
   Everything in diagraph is a sentence, nothing represents a part of a sentence.
   A node's sentence may be implicitly represented in a multi-sentence articulation, but the real sentence is represented by the foreign keys.
 
@@ -30,10 +28,10 @@ Components
   A node may be composed of several components.
   A node is like a recipe and the components are like ingredients. 
   A node is like an image and the components are subimages.
-  A sentence may syntactically embed another, and a node references its components by foreign key.
+  When a sentence is syntactically embeded in another, the node references the other by foreign key.
   A node's components are its references, and their references, and their references, etc.
-  The decomposition of a node is a list of its components.
-  Foreign keys are for decomposition and discovery.
+  The decomposition of a node is a recursive presentation of its components.
+  
 
 
 Relations
@@ -53,95 +51,15 @@ Relations
 
 
 
-Configurations of diagraph 
--subject embedding
--topic nesting
--example of node with subject & prototype
--how prototypes have typical contents and descriptions
--how there can be overlap between a node's contents & its descriptions.
---The existance of a no-text node with particular foreign keys, eg subject & prototype, has a particular meaning.
--example of adding something to the I/This topic to publish it
-  -the difference between what is true of X and what is true of me, vis what I think of X, & that in diagraph they can be different.
--dialog, utterance nodes where the subject is other utterance nodes
--indexing facts with text topics, like legal codes.
--stories
--locations
--what we might call the reciprocal names of the different foreign keys (eg examples/interpretations/etc)
--notes, ie multi-sentence nodes that are not published to the I/This identity topic. 
--how chronology is a kind of secondary index of a set of platonic facts about things.
--napoleon and louisiana
--I know [P] because [evidence] -- a subject/antecedent pair can represent epistemic justification
--Using two nested arguments to create an indirect object 
--Question topics which contain illustrations, question subjects with responses which are answers.
--diagraphic merges, & discussion 
--How putting S in T is literal, but creating S about S in T is interpretational.
--Putting S literally in T means you can't know S without T. Putting T as an interpretation of S means they can be known seperately.
--There can be question nodes. A question node is illustrated by its contents, and answered by its responses. 
-- A node that has a single sentence is in a kind of resting state. More than that & its a clipping, less and its a fragment/note.
-- A and B and C did x -- using nested objects to create lists 
-
-
-
-
-Applications of diagraph
--The nodes of a diagraph represent the units of an explanation, ways in which two explanations could differ on an informational basis, sentences which could meaningfully stand alone.
--tag entropy
--Modeling wikipedia as diagraph
-  -a reference is entropic if it does not soley belong to the prior resource, meaning it must be relevant for multiple contexts. Explanations are generally combinatorially specific.
--capsizing, when the index needs an index
--The problem with prose 
-  (& serialization attempts like the dewey decimal system)
--Describing the discourse diagraph implicit in a corpus
--Describing libraries as diagraph
-  -A library in which the indexes were continuous with the content.
--Modeling academia with diagraph
--modeling jouranlism as diagraph
---eg the snowden story, which is still developing, ie long-term unfurling cause & effect relationships
--describing ephemeral media as utterances prototyping the same abstract sentences.
-
-
-
-
-Diagraph script
-  Diagraph script is a text format that represents a diagraph.
-  Lines of a diagraph script file represent nodes.
-  Indentation in diagraph script represents prerequisite components. 
-
-
-
 
 Diagraph servers
+  Requests are made by node text.
 
   host.org/diagraph/sentence 
+  
   Get for read, post for edit
 
-
-
-
-Diagraphic interfaces
-  The interactive interface
-    The interactive interface permits search and browse.
-    The interactive interface displays text sentence by sentence like a slide-deck.
-    The interactive interface builds a local session store that can be flexibly searched.
-
-    Each node visited displays the sentence decomposition, omitting session-cached sentences.
-
-    Down - more
-    Left - next
-    Return - continue
-
-  The correspondance interface
-    Each click returns a JSON request which is appended to the DOM, creating a chronological sequence.
-
-  The static interface
-    Simply displays all sentences of the payload with hyperlinks to their sentences pages.
-
-
-
-
-
-Producing diagraph
--what does a diagraph look like through every provisional stage of pile sort/tidal sort
+  The server provides a decomposition of the sentence as nested JSON.
 
 
 
