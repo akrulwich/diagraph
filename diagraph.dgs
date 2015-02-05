@@ -17,8 +17,8 @@ Diagraph Schema:
 
 
 
-What is a node?
-  Nodes have a unique text and a set of foreign keys.
+Nodes
+  A node Nodes have a unique text and a set of foreign keys.
   The nodes of a finished diagraph are sentences. 
   A node's text represents a minimal unit of explanation.
   Each node stands alone as a syntactic and semantic unit. 
@@ -26,7 +26,7 @@ What is a node?
   A node's sentence may be implicitly represented in a multi-sentence articulation, but the real sentence is represented by the foreign keys.
 
 
-What are components?
+Components
   A node may be composed of several components.
   A node is like a recipe and the components are like ingredients. 
   A node is like an image and the components are subimages.
@@ -36,7 +36,7 @@ What are components?
   Foreign keys are for decomposition and discovery.
 
 
-What kinds of component a node have?
+Relations
   The relationships between components represents the relationships between syntactic elements.
   What does topic represent? 
     situation, surroundings, motivation
@@ -83,7 +83,7 @@ Configurations of diagraph
 
 
 
-Applications of diagraph / Describing things as diagraphs
+Applications of diagraph
 -The nodes of a diagraph represent the units of an explanation, ways in which two explanations could differ on an informational basis, sentences which could meaningfully stand alone.
 -tag entropy
 -Modeling wikipedia as diagraph
