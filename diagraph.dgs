@@ -1,11 +1,8 @@
 A Specification of the Diagraphic Format
 
-
 What is a diagraph?
   A diagraph is a data structure that represents a corpus of explanatory text. 
   A diagraph is a relational sentence-store.
-
-
 
 Diagraph Schema:
 
@@ -21,8 +18,7 @@ Nodes
   The nodes of a finished diagraph are sentences. 
   Each node stands alone as a syntactic and semantic unit, although a node prerequires its components.
   Everything in diagraph is a sentence, nothing represents a part of a sentence.
-  A node's sentence may be implicitly represented in a multi-sentence articulation, but the real sentence is represented by the foreign keys.
-
+  A node with multiple sentences might implicitly represents an abstract sentece, represented by the foreign keys.
 
 Components
   A node may be composed of several components.
@@ -31,35 +27,32 @@ Components
   When a sentence is syntactically embeded in another, the node references the other by foreign key.
   A node's components are its references, and their references, and their references, etc.
   The decomposition of a node is a recursive presentation of its components.
-  
-
 
 Relations
-  The relationships between components represents the relationships between syntactic elements.
-  What does topic represent? 
-    situation, surroundings, motivation
-    examples, illustrations, members, demonstrations
-  What does subject represent?
-    the syntactic subject
-    reponses, comments
-  What does antecedent represent?
-    cause, reason, explanation, justification, evidence
-    effects, consequents, consequences, progeny
-  What does prototype represent? 
-    Kind, abstracts, ideas 
-    Instances, articulations
-
-
-
+  A node has foreign keys which can represent its topic, subject, prototype, and object.
+  The relationships between components represents the relationships between syntactic elements of a sentence.  
+Topic
+  A node's topic represents things like situation, surroundings, or motivation. 
+  A node of a topic represents something like an example, illustration, or set member.
+Subject
+  A node's subject represents the syntactic subject of a sentence. 
+  A node of a subject represents something like a description, response, comment, or interpretation.
+Prototype
+  A node's prototype could be a generic sentence of which the particular sentence is an instance.
+  A node might be a secondary descriptor for the thing which is its prototype. 
+  An articulation might have an abstract idea for a prototype. 
+Object
+  An object is like an argument to the prototype provided in the sentence text.
+  Multiple objects are the singular objects of multiple nodes nested with subject references.
 
 Diagraph servers
-  Requests are made by node text.
+  A diagraph server responds to requests.
+  Requests are made by node text, provided as a slug in the URL.
+  The URL format looks like this: host.org/diagraph/sentence 
+  The server provides a decomposition of the sentence as nested JSON. Rows are represented as objects, and foreign keys are replaced by referenced nodes in a nested structure, or strings for terminal components.
+  Sessions can be used to avoid resending components shared across decompositions. These components are treated as terminal, and referenced by strings. 
+  Get requests are for reads, post requests are for edits.
 
-  host.org/diagraph/sentence 
-  
-  Get for read, post for edit
-
-  The server provides a decomposition of the sentence as nested JSON.
 
 
 
