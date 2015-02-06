@@ -6,11 +6,11 @@ What is a diagraph?
 
 Diagraph Schema:
 
-+----+------+-------+---------+-----------+--------+
-| id | Text | Topic | Subject | Prototype | Object |
-+----+------+-------+---------+-----------+--------+
-|    |      |       |         |           |        |
-+----+------+-------+---------+-----------+--------+
++----+------+-------+---------+--------+-----------+
+| id | Text | Topic | Subject | Object | Prototype |
++----+------+-------+---------+--------+-----------+
+|    |      |       |         |        |           |
++----+------+-------+---------+--------+-----------+
 
 
 Nodes
@@ -46,6 +46,11 @@ Object
   An object is like an argument to the prototype provided in the sentence text.
   Multiple objects are the singular objects of multiple nodes nested with subject references.
 
+Diagraph script
+  Diagraph script is a hierarchial text format that represents a diagraph. 
+  Each line of a diagraph script file is one node. 
+  Each node can have indented children. 
+
 Diagraph servers
   A diagraph server responds to requests.
   Requests are made by node text, provided as a slug in the URL.
@@ -54,7 +59,8 @@ Diagraph servers
   Sessions can be used to avoid resending components shared across decompositions. These components are treated as terminal, and referenced by strings. 
   Get requests are for reads, post requests are for edits.
 
-
+Diagraph client
+  The editing client allows a series of newline seperated node
 
 
 
