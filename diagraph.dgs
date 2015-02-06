@@ -55,12 +55,13 @@ Prototype
 Derivation
   A derivation is a recursive presentation of the dependencies of a node.
   A diagraph represents derivations explicitly, and explanations implicitly. 
+  An article represents explanations explicitly, and derivations implicitly.
+  A diagraph stores derivations and makes explanations to order.
 
 Explanation
   An explanation is a set of related derivations which may be overlapping. 
   An explanation is any topological traversal of the components of a set of nodes.
   An explanation is a continuous set of derivations.
-  Articles represent explanations explicitly, and derivations implicitly.
   Requested derivations can be added to an ongoing explanation in a queue-like fashion.
   At the end of a derivation, we might offer another derivation of which the previous was a component.
 
@@ -87,7 +88,7 @@ Diagraph servers
 Diagraph client
   The reading client would make a series of requests for derivations and offer them to the reader as a continuous growing explanation.
   The editing interface lets me create new nodes with reference to existing ones.
-  I can select a set of nodes to consult by specifying, eg, a topic or subject. The client makes a POST request for the traversals of the nodes of a diagraph script list, and returns the results as an augmented list. 
+  I can select a set of nodes to consult by specifying, eg, a topic or subject. The client makes a POST request for the traversals of the nodes of a diagraph script list, and returns the results as an augmented list -- perhaps with a query string depth parameter.
   The reading client might make several requests for individual node decompositions and merge the JSON produced into a kind of narrative topological sort before presenting them. 
   The client may store session information to avoid redundant presentation of nodes.
 
