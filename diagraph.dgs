@@ -54,9 +54,12 @@ Prototype
 
 Derivation
   A derivation is a recursive presentation of the dependencies of a node.
+  A diagraph represents derivations explicitly, and explanations implicitly. 
 
 Explanation
   An explanation is a set of related derivations which may be overlapping. 
+  An explanation is any topological traversal of the components of a set of nodes.
+  Articles represent explanations explicitly, and derivations implicitly.
 
 Diagraph script
   Diagraph script is a text format that represents a diagraph.
