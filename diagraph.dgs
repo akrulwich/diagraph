@@ -47,9 +47,14 @@ Object
   Multiple objects are the singular objects of multiple nodes nested with subject references.
 
 Diagraph script
-  Diagraph script is a hierarchial text format that represents a diagraph. 
-  Each line of a diagraph script file is one node. 
-  Each node can have indented children. 
+  Diagraph script is a text format that represents a diagraph.
+  Lines represent nodes, and hierarchy & syntax represents relations.
+
+  "Topic
+    Subject:
+      Description - object
+        (prototype)"
+
 
 Diagraph servers
   A diagraph server responds to requests.
@@ -58,10 +63,6 @@ Diagraph servers
   The server provides a decomposition of the sentence as nested JSON. Rows are represented as objects, and foreign keys are replaced by referenced nodes in a nested structure, or strings for terminal components.
   Sessions can be used to avoid resending components shared across decompositions. These components are treated as terminal, and referenced by strings. 
   Get requests are for reads, post requests are for edits.
-
-Diagraph client
-  The editing client allows a series of newline seperated node
-
 
 
 
