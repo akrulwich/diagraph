@@ -24,7 +24,7 @@ Nodes
   Nodes with periods or commas are provisional to single clause nodes. 
 
 Components
-  The nodes which a node references are its components.
+  The nodes which a node references are its components, or dependencies.
   The kinds of component are topic, subject, object, and prototype.
   A node may be said to be composed of its components.
   A node is like a recipe and the components are like ingredients. 
@@ -67,6 +67,7 @@ Diagraph servers
   Requests are made by node text, provided as a slug in the URL.
   The URL format looks like this: host.org/diagraph/sentence 
   GET requests are for a nested JSON node decomposition.
+  Requests are only ever for one decomposition at a time.
   The server provides a decomposition of the sentence as a JSON object with node-text keys, and node-object values, with foreign keys replaced by the node text of the referenced component, which can be found in the object-proper under the node-text key.
   Responses should not depend on the state of a particular user or session.
   POST requests are of a diagraph script file. If the file contains nodes that are not in the diagraph, they are added. If the file lacks nodes which are in the diagraph, the response augments the request text with those additional nodes & returns them. So the same procedure is used for adding nodes and requesting nodes. 
@@ -74,7 +75,7 @@ Diagraph servers
 Diagraph client
   The editing interface lets me create new nodes with reference to existing ones.
   I can select a set of nodes to consult by specifying, eg, a topic or subject. The client makes a POST request for the traversals of the nodes of a diagraph script list, and returns the results as an augmented list. 
-  The reading client might make several requests and merge the JSON produced into a kind of narrative topological sort. Requests are only ever for one decomposition at a time.
+  The reading client might make several requests for individual node decompositions and merge the JSON produced into a kind of narrative topological sort before presenting them. 
   The client may store session information to avoid redundant presentation of nodes.
 
 Diagraph production
