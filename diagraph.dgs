@@ -21,7 +21,9 @@ Nodes
   A node with multiple sentences might implicitly represents an abstract sentece, represented by the foreign keys.
 
 Components
-  A node may be composed of several components.
+  The nodes which a node references are its components.
+  The kinds of component are topic, subject, object, and prototype.
+  A node may be said to be composed of its components.
   A node is like a recipe and the components are like ingredients. 
   A node is like an image and the components are subimages.
   When a sentence is syntactically embeded in another, the node references the other by foreign key.
