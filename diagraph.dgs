@@ -19,7 +19,9 @@ Nodes
   Each node stands alone as a syntactic and semantic unit, although a node prerequires its components.
   Everything in diagraph is a sentence, nothing represents a part of a sentence.
   A node with multiple sentences might implicitly represents an abstract sentece, represented by the foreign keys.
-  A node with many sentences is a note, provisional to several modularly refactored nodes.
+  A node with many sentences is a note, provisional to several modularly refactored nodes. 
+  Notes can be responses to their topic notes.
+  Nodes with periods or commas are provisional to single clause nodes. 
 
 Components
   The nodes which a node references are its components.
@@ -31,6 +33,7 @@ Components
   The information stored in the foreign keys should reiterate the information stored in the node text.
   A node's components are its references, and their references, and their references, etc.
   The decomposition of a node is a recursive presentation of its components. 
+  The traversal of a node visits all nodes that have the node for a component. 
 
 Relations
   A node has foreign keys which can represent its topic, subject, prototype, and object.
@@ -53,6 +56,10 @@ Diagraph script
   Diagraph script is a text format that represents a diagraph.
   Lines represent nodes, and hierarchy & syntax represents relations.
   Diagraph script allows us to define many nodes at once by specifying a shared topic or subject only once.
+  Diagraph script lines with no periods or colons are topics.
+  Diagraph script lines with colons are subjects.
+  Diagraph script lines which contain periods are notes.
+  Notes which have other indented notes are topics to them.
 
 Diagraph servers
   A diagraph server responds to requests.
@@ -60,11 +67,12 @@ Diagraph servers
   The URL format looks like this: host.org/diagraph/sentence 
   The server provides a decomposition of the sentence as nested JSON. Rows are represented as objects, and foreign keys are replaced by referenced nodes in a nested structure, or strings for terminal components.
   Sessions can be used to avoid resending components shared across decompositions. These components are treated as terminal, and referenced by strings. 
-  Get requests are for reads, post requests are for edits.
+  GET requests are for a nested JSON node decomposition.
+  POST requests are of a diagraph script file. If the file contains nodes that are not in the diagraph, they are added. If the file lacks nodes which are in the diagraph, the response augments the request text with those additional nodes & returns them. So the same procedure is used for adding nodes and requesting nodes. 
 
 Diagraph client
   The editing interface lets me create new nodes with reference to existing ones.
-  I can select a set of nodes to consult by specifying, eg, a topic or subject.
+  I can select a set of nodes to consult by specifying, eg, a topic or subject. The client makes a POST request for the traversals of the nodes of a diagraph script list, and returns the results as an augmented list. 
 
 Diagraph production
   Diagraphs are produces in two general procedures, tidal sort and pile sort. 
