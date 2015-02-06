@@ -29,7 +29,8 @@ Components
   When a sentence is syntactically embeded in another, the node references the other by foreign key.
   The information stored in the foreign keys should reiterate the information stored in the node text.
   A node's components are its references, and their references, and their references, etc.
-  The decomposition of a node is a recursive presentation of its components.
+  The decomposition of a node is a recursive presentation of its components. 
+  The elements of a decomposition can be reordered.
 
 Relations
   A node has foreign keys which can represent its topic, subject, prototype, and object.
