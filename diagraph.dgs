@@ -38,13 +38,13 @@ Topic
 Subject
   A node's subject represents the syntactic subject of a sentence. 
   A node of a subject represents something like a description, response, comment, or interpretation.
+Object
+  An object is like an argument to the prototype provided in the sentence text.
+  Multiple objects are the singular objects of multiple nodes nested with subject references.
 Prototype
   A node's prototype could be a generic sentence of which the particular sentence is an instance.
   A node might be a secondary descriptor for the thing which is its prototype. 
   An articulation might have an abstract idea for a prototype. 
-Object
-  An object is like an argument to the prototype provided in the sentence text.
-  Multiple objects are the singular objects of multiple nodes nested with subject references.
 
 Diagraph script
   Diagraph script is a text format that represents a diagraph.
