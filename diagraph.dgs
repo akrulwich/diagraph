@@ -59,6 +59,7 @@ Derivation
   A diagraph stores derivations and makes explanations to order.
 
 Explanation
+  An explanation is a derivation-merge.
   An explanation is a set of related derivations which may be overlapping. 
   An explanation is any topological traversal of the components of a set of nodes.
   An explanation is a continuous set of derivations.
