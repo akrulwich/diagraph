@@ -60,19 +60,21 @@ Diagraph script
   Diagraph script lines with colons are subjects.
   Diagraph script lines which contain periods are notes.
   Notes which have other indented notes are topics to them.
+  Prototype and object information can be implicitly represented.
 
 Diagraph servers
   A diagraph server responds to requests.
   Requests are made by node text, provided as a slug in the URL.
   The URL format looks like this: host.org/diagraph/sentence 
-  The server provides a decomposition of the sentence as nested JSON. Rows are represented as objects, and foreign keys are replaced by referenced nodes in a nested structure, or strings for terminal components.
-  Sessions can be used to avoid resending components shared across decompositions. These components are treated as terminal, and referenced by strings. 
   GET requests are for a nested JSON node decomposition.
+  The server provides a decomposition of the sentence as nested JSON. Rows are represented as objects, and foreign keys are replaced by referenced nodes in a nested structure, or strings for terminal components or components already included elsewhere.
+  Sessions can be used to avoid resending components shared across decompositions. These components are treated as terminal, and referenced by strings. 
   POST requests are of a diagraph script file. If the file contains nodes that are not in the diagraph, they are added. If the file lacks nodes which are in the diagraph, the response augments the request text with those additional nodes & returns them. So the same procedure is used for adding nodes and requesting nodes. 
 
 Diagraph client
   The editing interface lets me create new nodes with reference to existing ones.
   I can select a set of nodes to consult by specifying, eg, a topic or subject. The client makes a POST request for the traversals of the nodes of a diagraph script list, and returns the results as an augmented list. 
+  The reading client might make several requests and merge the JSON produced into a kind of narrative topological sort.
 
 Diagraph production
   Diagraphs are produces in two general procedures, tidal sort and pile sort. 
