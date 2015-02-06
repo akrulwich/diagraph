@@ -52,12 +52,7 @@ Prototype
 Diagraph script
   Diagraph script is a text format that represents a diagraph.
   Lines represent nodes, and hierarchy & syntax represents relations.
-
-  "Topic
-    Subject:
-      Description - object
-        (prototype)"
-
+  Diagraph script allows us to define many nodes at once by specifying a shared topic or subject only once.
 
 Diagraph servers
   A diagraph server responds to requests.
