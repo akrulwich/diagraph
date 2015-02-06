@@ -59,7 +59,10 @@ Derivation
 Explanation
   An explanation is a set of related derivations which may be overlapping. 
   An explanation is any topological traversal of the components of a set of nodes.
+  An explanation is a continuous set of derivations.
   Articles represent explanations explicitly, and derivations implicitly.
+  Requested derivations can be added to an ongoing explanation in a queue-like fashion.
+  At the end of a derivation, we might offer another derivation of which the previous was a component.
 
 Diagraph script
   Diagraph script is a text format that represents a diagraph.
@@ -82,6 +85,7 @@ Diagraph servers
   POST requests have a diagraph script payload. If the file contains nodes that are not in the diagraph, they are added. If the file lacks nodes which are in the diagraph, the response augments the request payload with the additional nodes & sends it back. So the same procedure is used for adding nodes as requesting nodes. 
 
 Diagraph client
+  The reading client would make a series of requests for derivations and offer them to the reader as a continuous growing explanation.
   The editing interface lets me create new nodes with reference to existing ones.
   I can select a set of nodes to consult by specifying, eg, a topic or subject. The client makes a POST request for the traversals of the nodes of a diagraph script list, and returns the results as an augmented list. 
   The reading client might make several requests for individual node decompositions and merge the JSON produced into a kind of narrative topological sort before presenting them. 
