@@ -42,8 +42,14 @@ Relations
   A node has foreign keys which can represent its topic, subject, prototype, and object.
   The relationships between components represents the relationships between syntactic elements of a sentence.  
 Topic
-  A node's topic represents things like situation, surroundings, motivation, cause, or logical antecedent. 
+  A node's topic represents things like situation, surroundings, motivation, cause, logical antecedent, or justification. 
   A node of a topic represents something like an example, illustration, set member, consequent, effect, or abductive inference.
+  A logical antecedent is coincident a consequent in the same way being in a room brings to mind possible access of the things in that room.
+  Question-topics contain answers.
+  A node either primarily belongs to a topic, or a node has an interpretation which joins it to a particular topic.
+  'S is an answer to Q', where Q is not the topic of S, is an example of an interpretation node.
+  Making T the topic of S means one cannot concieve of S without prior knowledge of T, eg London & England. 
+  Using an interpretation node means that the sentence and the topic can be considered independently.
 Subject
   A node's subject represents the syntactic subject of a sentence, something like a thing commented on. 
   A node of a subject represents something like a description, response, comment, interpretation, or attribution.
@@ -54,6 +60,10 @@ Prototype
   A node's prototype could be a generic sentence of which the particular sentence is an instance.
   A node might be a secondary descriptor for the thing which is its prototype. 
   An articulation might have an abstract idea for a prototype. 
+  A discussion in which utterances respond to other utterances might have for prototypes a set of abstract clauses.
+  A lesson could be considered a kind of index that uses prototypes to order a set of abstract clauses.
+  A prototype would be used to name something by a secondary name. 
+  I might use a relative phrase, 'How X Ys', and have its prototype be a full sentence, to allow access to the latter without prior knowledge of the full node text. Derivations of the former would fully include the latter.
 
 Derivation
   A derivation is a recursive presentation of the dependencies of a node.
@@ -99,8 +109,23 @@ Diagraph client
   The reading client could make several requests for individual node decompositions and merge the JSON produced into a kind of narrative topological sort before presenting them. 
   The client may store session information to avoid redundant presentation of nodes.
 
+Properties of diagraph
+  Diagraph would be useful in situations where a corpus of text becomes so large that the index needs an index. 
+  In a diagraph, there is no distinction between the index and the content.
+  A diagraph would allow logarithmic-time lookup in a corpus of explanatory text without prior knowledge. 
+  Diagraph decouples the storage of explanation from the transmission of explanation, allowing more modular and redundant representation than prose.
+  A diagraph would be useful for storing a corpus of explanation that is highly interdependent, for example, using a non-standard but internally consistant vocabulary. 
+  A diagraph can be said to subsume a corpus of text or another diagraph if it fully contains and indexes it. 
+  Diagraphs can be specified functionally, by a particular question or purpose, or descriptively, with respect to a particular corpus. 
+  A diagraph can model an explanatory system by representing all possible outputs, explanations, and inputs, requests for explanation.
+  The diagraph of all possible explanations of an individual is an ideograph, following the individual vocabulary, ideolect.
+
 Diagraph production
   Diagraphs are produces in two general procedures, tidal sort and pile sort. 
   In tidal sort, we create final nodes immediately, and then in stages solicit new notes, determine the next stage of nodes, and then subdivide the nodes of the general topic into the next set of categories. This is a top-down process.
   In pile sort, we solicit a body of information all at once, then find notes which are on the topic of other notes, create 'piles', and work our way up to a subsuming set of simple nodes. 
+  Diagraphs can be merged.
+  In a discussion diagraph, a group of people might create a diagraph by collaboratively editing a set of nodes.
+  In a debate diagraph, a group of people might create a diagraph adversarially, and be unable to edit existing nodes. 
+  A library diagraph is a diagraph that subsumes other avaliable diagraphs.
 
