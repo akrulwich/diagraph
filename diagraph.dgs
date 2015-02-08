@@ -40,7 +40,7 @@ Relations
   The relationships between components represents the relationships between syntactic elements of a sentence.  
 Topic
   A node's topic represents things like situation, surroundings, motivation, cause, or logical antecedent. 
-  A node of a topic represents something like an example, illustration, set member, consequent, or effect.
+  A node of a topic represents something like an example, illustration, set member, consequent, effect, or abductive inference.
 Subject
   A node's subject represents the syntactic subject of a sentence, something like a thing commented on. 
   A node of a subject represents something like a description, response, comment, interpretation, or attribution.
