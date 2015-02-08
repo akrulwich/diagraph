@@ -68,7 +68,7 @@ Explanation
   An explanation is a merger of derivations.
   An explanation is any topological sequence of the nodes of a set of related derivations.
   Requested derivations can be added to an ongoing explanation in a queue-like fashion.
-  At the end of a derivation, we might offer another derivation of which the previous was a component, ie the derivation of a newly accessable dependant node.
+  At the end of a derivation, we might offer the derivation of a node of which the previous was a component, ie the derivation of a newly accessable dependant node.
 
 Diagraph script
   Diagraph script is a text format that represents a diagraph.
