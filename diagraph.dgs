@@ -118,7 +118,7 @@ Properties of diagraph
   A diagraph can be said to subsume a corpus of text or another diagraph if it fully contains and indexes it. 
   Diagraphs can be specified functionally, by a particular question or purpose, or descriptively, with respect to a particular corpus. 
   A diagraph can model an explanatory system by representing all possible outputs, explanations, and inputs, requests for explanation.
-  The diagraph of all possible explanations of an individual is an ideograph, following the individual vocabulary, ideolect.
+  The diagraph of all possible explanations of an individual is the ideograph, following the individual's vocabulary, the ideolect.
 
 Diagraph production
   Diagraphs are produces in two general procedures, tidal sort and pile sort. 
