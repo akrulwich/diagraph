@@ -57,6 +57,8 @@ Derivation
   A diagraph represents derivations explicitly, and explanations implicitly. 
   An article represents explanations explicitly, and derivations implicitly.
   A diagraph stores derivations and makes explanations to order.
+  A prose paragraph is the derivation of the proximate components of a node. 
+  A node's full derivation may span many paragraphs.
 
 Explanation
   An explanation is a derivation-merge.
@@ -74,7 +76,9 @@ Diagraph script
   Diagraph script lines with colons are subjects.
   Diagraph script lines which contain periods are notes.
   Notes which have other indented notes are topics to them.
-  Prototype and object information can be implicitly represented.
+  Prototype and object information are not represented.
+  Derivations are more complete, but one node at a time, whereas diagraph script provides a hierachial view that is open-ended in one dimension.
+  Notes contain whole derivations so that they can be seen from the hierarchial view. 
 
 Diagraph servers
   A diagraph server responds to requests.
@@ -90,7 +94,7 @@ Diagraph client
   The reading client would make a series of requests for derivations and offer them to the reader as a continuous growing explanation.
   The editing interface lets me create new nodes with reference to existing ones.
   I can select a set of nodes to consult by specifying, eg, a topic or subject. The client makes a POST request for the traversals of the nodes of a diagraph script list, and returns the results as an augmented list -- perhaps with a query string depth parameter.
-  The reading client might make several requests for individual node decompositions and merge the JSON produced into a kind of narrative topological sort before presenting them. 
+  The reading client could make several requests for individual node decompositions and merge the JSON produced into a kind of narrative topological sort before presenting them. 
   The client may store session information to avoid redundant presentation of nodes.
 
 Diagraph production
