@@ -14,13 +14,16 @@ Diagraph Schema:
 
 
 Nodes
-  A node has a unique text and a set of foreign keys which reference other nodes.
-  The nodes of a finished diagraph are sentences. 
-  Each node stands alone as a syntactic and semantic unit, although a node prerequires its components.
-  Everything in diagraph is a sentence, nothing represents a part of a sentence.
-  A node with multiple sentences might implicitly represents an abstract sentece, represented by the foreign keys.
-  A node with many sentences is a note, provisional to several modularly refactored nodes. 
-  Notes can be responses to their topic notes.
+  A node has a unique text and a set of foreign keys which are references to other nodes.
+  The node texts of a finished diagraph are clauses. 
+  Each node stands alone as a syntactic and semantic unit. A node is one atomic thought.
+  I can be presented a node's text if I already have its components.
+  Everything in diagraph is a sentence, nothing represents merely a portion of a sentence.
+  Larger sentences are built up by combining complete smaller sentences.
+  If a node contains a multi-sentence articulation of an abstract sentece, the foreign keys represent the abstract sentence.
+  A node that contains a derivation is a note, provisional to more modularly refactored clause nodes. 
+  Notes can be subordinate to notes which are their topics.
+  A note which has another note for a subject, however, is literally about that note, not about the same thing as the note.
   Nodes with periods or commas are provisional to single clause nodes. 
 
 Components
@@ -29,11 +32,11 @@ Components
   A node may be said to be composed of its components.
   A node is like a recipe and the components are like ingredients. 
   A node is like an image and the components are subimages.
-  When a sentence is syntactically embeded in another, the node references the other by foreign key.
+  When a sentence is syntactically embeded in another, its node references the other node by foreign key.
   The information stored in the foreign keys should reiterate the information stored in the node text.
   A node's components are its references, and their references, and their references, etc.
-  The decomposition of a node is a recursive presentation of its components. 
-  The traversal of a node visits all nodes that have the node for a component. 
+  The decomposition of a node is a recursive presentation of all its components. 
+  The dependants of a node are the nodes which have that node for a component.
 
 Relations
   A node has foreign keys which can represent its topic, subject, prototype, and object.
@@ -59,14 +62,13 @@ Derivation
   A diagraph stores derivations and makes explanations to order.
   A prose paragraph is the derivation of the proximate components of a node. 
   A node's full derivation may span many paragraphs.
+  Even if a derivation causes a subderivation, we are only ever deriving one node at a time. 
 
 Explanation
-  An explanation is a derivation-merge.
-  An explanation is a set of related derivations which may be overlapping. 
-  An explanation is any topological traversal of the components of a set of nodes.
-  An explanation is a continuous set of derivations.
+  An explanation is a merger of derivations.
+  An explanation is any topological sequence of the nodes of a set of related derivations.
   Requested derivations can be added to an ongoing explanation in a queue-like fashion.
-  At the end of a derivation, we might offer another derivation of which the previous was a component.
+  At the end of a derivation, we might offer another derivation of which the previous was a component, ie the derivation of a newly accessable dependant node.
 
 Diagraph script
   Diagraph script is a text format that represents a diagraph.
