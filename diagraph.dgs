@@ -39,11 +39,11 @@ Relations
   A node has foreign keys which can represent its topic, subject, prototype, and object.
   The relationships between components represents the relationships between syntactic elements of a sentence.  
 Topic
-  A node's topic represents things like situation, surroundings, or motivation. 
-  A node of a topic represents something like an example, illustration, or set member.
+  A node's topic represents things like situation, surroundings, motivation, cause, or logical antecedent. 
+  A node of a topic represents something like an example, illustration, set member, consequent, or effect.
 Subject
-  A node's subject represents the syntactic subject of a sentence. 
-  A node of a subject represents something like a description, response, comment, or interpretation.
+  A node's subject represents the syntactic subject of a sentence, something like a thing commented on. 
+  A node of a subject represents something like a description, response, comment, interpretation, or attribution.
 Object
   An object is like an argument to the prototype provided in the sentence text.
   Multiple objects are the singular objects of multiple nodes nested with subject references.
