@@ -32,11 +32,13 @@ Components
   A node may be said to be composed of its components.
   A node is like a recipe and the components are like ingredients. 
   A node is like an image and the components are subimages.
+  Components can be represented by foreign key references to component nodes.
   When a sentence is syntactically embeded in another, its node references the other node by foreign key.
   The information stored in the foreign keys should reiterate the information stored in the node text.
   A node's components are its references, and their references, and their references, etc.
   The decomposition of a node is a recursive presentation of all its components. 
   The dependants of a node are the nodes which have that node for a component.
+  A traversal of a node might involve visiting all the nodes that have it for a component, and the nodes with them for components, and so on.
 
 Relations
   A node has foreign keys which can represent its topic, subject, prototype, and object.
@@ -45,7 +47,6 @@ Topic
   A node's topic represents things like situation, surroundings, motivation, cause, logical antecedent, or justification. 
   A node of a topic represents something like an example, illustration, set member, consequent, effect, or abductive inference.
   A topic means what something belongs to, or is of.
-  A logical antecedent is coincident a consequent in the same way being in a room brings to mind possible access of the things in that room.
   Question-topics contain answers.
   A node either primarily belongs to a topic, or a node has an interpretation which joins it to a particular topic.
   'S is an answer to Q', where Q is not the topic of S, is an example of an interpretation node.
@@ -93,14 +94,14 @@ Diagraph servers
   A diagraph server responds to requests.
   Requests are made by node text, provided as a slug in the URL.
   The URL format looks like this: host.org/diagraph/?text=value&topic=value&subject=value
-  Queries are for one level, and can be iterated on the response data to produce nested queries.
-  GET requests recieve a flat JSON object.
-  The response object has node-text for keys.
-  The response object has node objects for values.
-  Node objects have topic, subject, object and prototype keys, with values that are the node-text of the referenced node. 
-  The references of the node object can be resolved with a lookup on the response object.
-  The response object includes the requested nodes, and all of their dependencies. 
+  Queries are for one level, and can be iterated on the response data to produce nested queries, topics of topics eg.
+  GET requests recieve a flat JSON collection of node objects.
+  Node objects have properties for each field of a node's row.
+  The response object includes the requested nodes, and all of their dependencies recursively enumerated in the flat response collection. 
   POST requests have a JSON payload and submit a diagraph segment to the server.
+  A diagraph server might delegate certain queries to other servers, creating a reference chain.
+  A diagraph server might delegate certain submissions to other servers, creating a notification chain.
+  A user might have a personal diagraphic server that served as their diagraph agent, soliciting new material from a set of trusted servers.
 
 Diagraph client
   The client has static mode, correspondance mode, and interactive mode. 
