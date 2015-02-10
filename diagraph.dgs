@@ -16,7 +16,7 @@ Diagraph Schema:
 Nodes
   A node has a unique text and a set of foreign keys which are references to other nodes.
   A set of nodes can be represented as a self-referencing relational database table.
-  The node texts of a finished diagraph are single clause sentences. 
+  The node texts of a finished diagraph are single clause sentences, or clause-nodes.
   Nodes with periods or commas are provisional to single clause nodes. 
   Each node stands alone as a syntactic and semantic unit. 
   Everything in diagraph is a sentence, nothing represents merely a portion of a sentence.
@@ -128,9 +128,9 @@ Properties of diagraph
 
 Diagraph production
   Diagraphs are produces in two general procedures, tidal sort and pile sort. 
-  In tidal sort, we create final nodes immediately, and then in stages solicit new notes, determine the next stage of nodes, and then subdivide the nodes of the general topic into the next set of categories. This is a top-down process.
-  In pile sort, we solicit a body of information all at once, then find notes which are on the topic of other notes, create 'piles', and work our way up to a subsuming set of simple nodes. 
-  Diagraphs can be merged.
+  In tidal sort, we create the initial nodes immediately from prior knowledge, and then in stages solicit new notes on those topics, determine the next stage of nodes, and then subdivide the nodes of the general topic into the next set of topic buckets, until we have a finished diagraph.
+  In pile sort, we solicit a corpus of notes all at once, then find notes which are on the topic of other notes, create 'piles' by setting one note as the topic of other nodes, and work our way up to a subsuming set of notes, which we then convert to clause-nodes. 
+  Diagraphs can be merged, by adding all the nodes of two diagraphs to the same diagraph.
   There can be consensus diagraph production, a group of people might create a diagraph by collaboratively editing a set of nodes.
   There can be adversarial diagraph production, a group of editors able to add but not edit existing nodes.
 
