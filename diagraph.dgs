@@ -16,47 +16,46 @@ Diagraph Schema:
 Nodes
   A node has a unique text and a set of foreign keys which are references to other nodes.
   A set of nodes can be represented as a self-referencing relational database table.
-  The node texts of a finished diagraph are clauses. 
-  Each node stands alone as a syntactic and semantic unit. A node is one atomic thought.
-  I can be presented a node's text if I already have its components.
+  The node texts of a finished diagraph are single clause sentences. 
+  Nodes with periods or commas are provisional to single clause nodes. 
+  Each node stands alone as a syntactic and semantic unit. 
   Everything in diagraph is a sentence, nothing represents merely a portion of a sentence.
   Larger sentences are built up by combining complete smaller sentences.
-  If a node contains a multi-sentence articulation of an abstract sentece, the foreign keys represent the abstract sentence.
+  A node might have a multi-sentence articulation of an abstract sentece, with foreign keys representing the abstract sentence components.
   A node that contains a derivation is a note, provisional to more modularly refactored clause nodes. 
-  Notes can be subordinate to notes which are their topics.
-  A note which has another note for a subject, however, is literally about that note, not about the same thing as the note.
-  Nodes with periods or commas are provisional to single clause nodes. 
 
 Components
   The nodes which a node references are its components, or dependencies.
+  A node that is a dependency of another is a dependant.
+  Components are represented by foreign key references to component nodes.
   The kinds of component are topic, subject, object, and prototype.
   A node may be said to be composed of its components.
   A node is like a recipe and the components are like ingredients. 
   A node is like an image and the components are subimages.
-  Components can be represented by foreign key references to component nodes.
   When a sentence is syntactically embeded in another, its node references the other node by foreign key.
   The information stored in the foreign keys should reiterate the information stored in the node text.
-  A node's components are its references, and their references, and their references, etc.
-  The decomposition of a node is a recursive presentation of all its components. 
-  The dependants of a node are the nodes which have that node for a component.
-  A traversal of a node might involve visiting all the nodes that have it for a component, and the nodes with them for components, and so on.
+  A node's foreign key information should supervene upon the syntactic and semantic information in the node text.
+  The decomposition or derivation of a node is a recursive presentation of all its components. 
+  The traversal of a node might involve visiting all of its dependants, and their dependants, and so on.
 
 Relations
   A node has foreign keys which can represent its topic, subject, prototype, and object.
   The relationships between components represents the relationships between syntactic elements of a sentence.  
 Topic
   A node's topic represents things like situation, surroundings, motivation, cause, logical antecedent, or justification. 
-  A node of a topic represents something like an example, illustration, set member, consequent, effect, or abductive inference.
+  A node of a topic represents something like an example, illustration, set member, part, consequent, effect, or abductive inference.
   A topic means what something belongs to, or is of.
   Question-topics contain answers.
-  A node either primarily belongs to a topic, or a node has an interpretation which joins it to a particular topic.
+  A node either primarily belongs to a topic, or a node has an interpretation, a node with it for a subject, which joins it to a particular topic.
   'S is an answer to Q', where Q is not the topic of S, is an example of an interpretation node.
   Making T the topic of S means one cannot concieve of S without prior knowledge of T, eg London & England. 
   Using an interpretation node means that the sentence and the topic can be considered independently.
+  Notes can be subordinate to notes which are their topics.
 Subject
   A node's subject represents the syntactic subject of a sentence, something like a thing commented on. 
   A node of a subject represents something like a description, response, comment, interpretation, or attribution.
   A subject is what a thing is about.
+  A note which has another note for a subject, however, is literally about that note, not about the same thing as the note.
 Object
   An object is like an argument to the prototype provided in the sentence text.
   Multiple objects are the singular objects of multiple nodes nested with subject references.
@@ -111,7 +110,7 @@ Diagraph client
   The client has static mode, correspondance mode, and interactive mode. 
   In static mode, the response object is rendered as html text.
   In correspondance mode, the user may make additional queries using a form that get appended to the expanding DOM.
-  In interactive mode, only one node is shown at a time, and the user can maneuver with the keyboard or type directly into the display with autocomplete.
+  In interactive mode, only one node is shown at a time, and the user can maneuver with the keyboard or type directly into the display with autocomplete. Return might be a request for a derivation, etc.
   The editing client allows one to submit new diagraph with a post request.
   The client may store session information to avoid redundant presentation of nodes.
 
