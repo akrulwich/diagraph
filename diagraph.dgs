@@ -15,6 +15,7 @@ Diagraph Schema:
 
 Nodes
   A node has a unique text and a set of foreign keys which are references to other nodes.
+  A set of nodes can be represented as a self-referencing relational database table.
   The node texts of a finished diagraph are clauses. 
   Each node stands alone as a syntactic and semantic unit. A node is one atomic thought.
   I can be presented a node's text if I already have its components.
