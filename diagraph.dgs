@@ -73,6 +73,8 @@ Derivation
   A derivation is a recursive presentation of the dependencies of a node.
   A diagraph represents derivations explicitly, and explanations implicitly. 
   An article represents explanations explicitly, and derivations implicitly.
+  Storing explanations as opposed to derivations overdetermines the arbitrary choices of ordering in a particular explanation.
+  Represented derivations implicitly represent all possible topological sorts of that dependency network, ie all possible explanations.
   A diagraph stores derivations and makes explanations to order.
   A prose paragraph is the derivation of the proximate components of a node. 
   A node's full derivation may span many paragraphs.
