@@ -45,6 +45,7 @@ Topic
   A node's topic represents things like situation, surroundings, motivation, cause, logical antecedent, or justification. 
   A node of a topic represents something like an example, illustration, set member, part, consequent, effect, or abductive inference.
   A topic means what something belongs to, or is of.
+  A node's contents are nodes which have that node for a topic.
   Question-topics contain answers.
   A node either primarily belongs to a topic, or a node has an interpretation, a node with it for a subject, which joins it to a particular topic.
   'S is an answer to Q', where Q is not the topic of S, is an example of an interpretation node.
@@ -66,7 +67,7 @@ Prototype
   A discussion in which utterances respond to other utterances might have for prototypes a set of abstract clauses.
   A lesson could be considered a kind of index that uses prototypes to order a set of abstract clauses.
   A prototype would be used to name something by a secondary name. 
-  I might use a relative phrase, 'How X Ys', and have its prototype be a full sentence, to allow access to the latter without prior knowledge of the full node text. Derivations of the former would fully include the latter.
+  Relative phrases, like 'How X Ys', may have prototypes which are the full sentence, to allow access to the latter without prior knowledge of the full node text. Derivations of the former would fully include the latter.
 
 Derivation
   A derivation is a recursive presentation of the dependencies of a node.
@@ -131,6 +132,10 @@ Diagraph production
   In tidal sort, we create the initial nodes immediately from prior knowledge, and then in stages solicit new notes on those topics, determine the next stage of nodes, and then subdivide the nodes of the general topic into the next set of topic buckets, until we have a finished diagraph.
   In pile sort, we solicit a corpus of notes all at once, then find notes which are on the topic of other notes, create 'piles' by setting one note as the topic of other nodes, and work our way up to a subsuming set of notes, which we then convert to clause-nodes. 
   Diagraphs can be merged, by adding all the nodes of two diagraphs to the same diagraph.
+  Diagraphs can be refactored as they grow, so that no node has more dependants than can be easily reviewed in one sitting.
+  A diagraph is refactored for example by taking several predicates of a subject and creating one sentence 'X is what X is', and then putting the three clauses as the contents of 'what X is'. 
+  One refactors by adding layers of abstraction between a component and a dependant.
+  A diagraph is refactored by 'fanning', making lists of dependants into their own trees.
   There can be consensus diagraph production, a group of people might create a diagraph by collaboratively editing a set of nodes.
   There can be adversarial diagraph production, a group of editors able to add but not edit existing nodes.
 
