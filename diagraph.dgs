@@ -71,8 +71,9 @@ Prototype
   A prototype would be used to name something by a secondary name. 
   Relative phrases, like 'How X Ys', may have prototypes which are the full sentence, to allow access to the latter without prior knowledge of the full node text. Derivations of the former would fully include the latter.
   A node can either have a direct prototype, or an interpretive prototype, ie a node with it for a subject and a particular prototype.
-  If an image node has a direct prototype, we don't say 'That image is thing' -- we just refer to the image by the name of the thing, producing a merger of intensional concepts.
+  If an image node has a direct prototype, we don't say 'That image is this thing' -- we just refer to the image by the name of the thing, producing a merger of the concepts which has a single intension.
   If an image node has an interpretive prototype, we say, 'that is an image of x', ie the two referents have different intensions.
+  What is called a concept might refer to a prototype chain of nodes.
 
 Derivation
   A derivation is a recursive presentation of the dependencies of a node.
