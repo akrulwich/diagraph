@@ -127,7 +127,7 @@ Diagraph client
 
 Properties of diagraph
   Diagraph would be useful in situations where a corpus of text becomes so large that the index needs an index. 
-  In a diagraph, there is no distinction between the index and the content.
+  In a diagraph, there is no distinction between the index to the content and the content itself.
   A diagraph would allow logarithmic-time lookup in a corpus of explanatory text without prior knowledge. 
   Diagraph decouples the storage of explanation from the transmission of explanation, allowing more modular and redundant representation than prose.
   A diagraph would be useful for storing a corpus of explanation that is highly interdependent, for example, using a non-standard but internally consistant vocabulary. 
