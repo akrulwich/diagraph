@@ -35,6 +35,7 @@ Components
   A node is like a recipe and the components are like ingredients. 
   A node is like an image and the components are subimages.
   When a sentence is syntactically embeded in another, its node references the other node by foreign key.
+  There are question nodes, like 'Why did Rome fall?', which when embedded in longer sentences become noun-phrases, like 'X fell for all the reasons Rome fell'. The question phrasing is semantically equivalent to the noun-phrase.
   The information stored in the foreign keys should reiterate the information stored in the node text.
   A node's foreign key information should supervene upon the syntactic and semantic information in the node text.
   The decomposition or derivation of a node is a recursive presentation of all its components. 
@@ -71,9 +72,12 @@ Prototype
   A prototype would be used to name something by a secondary name. 
   Relative phrases, like 'How X Ys', may have prototypes which are the full sentence, to allow access to the latter without prior knowledge of the full node text. Derivations of the former would fully include the latter.
   A node can either have a direct prototype, or an interpretive prototype, ie a node with it for a subject and a particular prototype.
+  An example of an interpretive prototype is 'The morning star is the evening star'.
+  An example of a direct prototype is 'Mr. Lincon, ie Abraham Lincoln'.
   If an image node has a direct prototype, we don't say 'That image is this thing' -- we just refer to the image by the name of the thing, producing a merger of the concepts which has a single intension.
   If an image node has an interpretive prototype, we say, 'that is an image of x', ie the two referents have different intensions.
   What is called a concept might refer to a prototype chain of nodes.
+  There are three classes of identity in diagraph, semantic identity, ie the relationship between a question and its noun-phrase form (which is not represented by different nodes), a direct prototype (Mr. L -> Abe lincoln), and an interpretive prototype (Morning star = Evening star).
 
 Derivation
   A derivation is a recursive presentation of the dependencies of a node.
