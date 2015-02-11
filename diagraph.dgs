@@ -77,7 +77,7 @@ Prototype
   There are three classes of identity between things in diagraph, semantic identity, semantic constructions which are clearly equivalent to any native speaker and which don't recieve seperate nodes (a question and its noun-phrase form), a direct prototype (Mr. Lincoln is Abraham lincoln), and an interpretive prototype (that the Morning star is the Evening star).
 Object
   An object is like an argument to the prototype provided in the sentence text.
-  Multiple objects are the singular objects of multiple nodes nested with subject references.
+  Multiple objects, like indirect objects, are the singular objects of multiple nodes nested with subject references.
 
 Derivation
   A derivation is a recursive presentation of the dependencies of a node.
