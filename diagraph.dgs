@@ -6,11 +6,11 @@ What is a diagraph?
 
 Diagraph Schema:
 
-+----+------+-------+---------+--------+-----------+
-| id | Text | Topic | Subject | Object | Prototype |
-+----+------+-------+---------+--------+-----------+
-|    |      |       |         |        |           |
-+----+------+-------+---------+--------+-----------+
++----+------+-------+---------+-----------+--------+
+| id | Text | Topic | Subject | Prototype | Object |
++----+------+-------+---------+-----------+--------+
+|    |      |       |         |           |        |
++----+------+-------+---------+-----------+--------+
 
 
 Nodes
@@ -77,7 +77,7 @@ Prototype
   If an image node has a direct prototype, we don't say 'That image is this thing' -- we just refer to the image by the name of the thing, producing a merger of the concepts which has a single intension.
   If an image node has an interpretive prototype, we say, 'that is an image of x', ie the two referents have different intensions.
   What is called a concept might refer to a prototype chain of nodes.
-  There are three classes of identity in diagraph, semantic identity, ie the relationship between a question and its noun-phrase form (which is not represented by different nodes), a direct prototype (Mr. L -> Abe lincoln), and an interpretive prototype (Morning star = Evening star).
+  There are three classes of identity between things in diagraph, semantic identity, ie the relationship between a question and its noun-phrase form (which is not represented by different nodes), a direct prototype (Mr. L -> Abe lincoln), and an interpretive prototype (Morning star = Evening star).
 
 Derivation
   A derivation is a recursive presentation of the dependencies of a node.
