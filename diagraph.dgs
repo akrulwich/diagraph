@@ -60,9 +60,6 @@ Subject
   A node of a subject represents something like a description, response, comment, interpretation, or attribution.
   A subject is what a thing is about.
   A note which has another note for a subject, however, is literally about that note, not about the same thing as the note.
-Object
-  An object is like an argument to the prototype provided in the sentence text.
-  Multiple objects are the singular objects of multiple nodes nested with subject references.
 Prototype
   A node's prototype could be a generic sentence of which the particular sentence is an instance.
   A node might be a secondary descriptor for the thing which is its prototype. 
@@ -78,6 +75,9 @@ Prototype
   If an image node has an interpretive prototype, we say, 'that is an image of x', ie the two referents have different intensions.
   What is called a concept might refer to a prototype chain of nodes.
   There are three classes of identity between things in diagraph, semantic identity, semantic constructions which are clearly equivalent to any native speaker and which don't recieve seperate nodes (a question and its noun-phrase form), a direct prototype (Mr. Lincoln is Abraham lincoln), and an interpretive prototype (that the Morning star is the Evening star).
+Object
+  An object is like an argument to the prototype provided in the sentence text.
+  Multiple objects are the singular objects of multiple nodes nested with subject references.
 
 Derivation
   A derivation is a recursive presentation of the dependencies of a node.
