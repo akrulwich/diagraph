@@ -21,8 +21,10 @@ Nodes
   Each node stands alone as a syntactic and semantic unit. 
   Everything in diagraph is a sentence, nothing represents merely a portion of a sentence.
   Larger sentences are built up by combining complete smaller sentences.
+  Articulations are when the node text includes additional syntactic structure that is not reflected in the node's references, flowery language perhaps that gets evaluated to a simpler construct which is what the node actually represents.
   A node might have a multi-sentence articulation of an abstract sentece, with foreign keys representing the abstract sentence components.
   A node that contains a derivation is a note, provisional to more modularly refactored clause nodes. 
+  Using html markup, a node's text can be, for example, an image.
 
 Components
   The nodes which a node references are its components, or dependencies.
@@ -43,11 +45,11 @@ Relations
   The relationships between components represents the relationships between syntactic elements of a sentence.  
 Topic
   A node's topic represents things like situation, surroundings, motivation, cause, logical antecedent, or justification. 
-  A node of a topic represents something like an example, illustration, set member, part, consequent, effect, or abductive inference.
+  A node of a topic represents something like an example, answer, illustration, set member, part, consequent, effect, or abductive inference.
   A topic means what something belongs to, or is of.
   A node's contents are nodes which have that node for a topic.
-  Question-topics contain answers.
-  A node either primarily belongs to a topic, or a node has an interpretation, a node with it for a subject, which joins it to a particular topic.
+  The node of a noun-phrase like 'Why Rome Fell' might have a question node text, like 'Why did Rome fall?', but these are equivalent, the question is just an articulation of the noun-phrase.
+  A node can either have a direct topic, or a node can have an interpretive topic, a node with it for a subject with a particular topic.
   'S is an answer to Q', where Q is not the topic of S, is an example of an interpretation node.
   Making T the topic of S means one cannot concieve of S without prior knowledge of T, eg London & England. 
   Using an interpretation node means that the sentence and the topic can be considered independently.
@@ -68,6 +70,9 @@ Prototype
   A lesson could be considered a kind of index that uses prototypes to order a set of abstract clauses.
   A prototype would be used to name something by a secondary name. 
   Relative phrases, like 'How X Ys', may have prototypes which are the full sentence, to allow access to the latter without prior knowledge of the full node text. Derivations of the former would fully include the latter.
+  A node can either have a direct prototype, or an interpretive prototype, ie a node with it for a subject and a particular prototype.
+  If an image node has a direct prototype, we don't say 'That image is thing' -- we just refer to the image by the name of the thing, producing a merger of intensional concepts.
+  If an image node has an interpretive prototype, we say, 'that is an image of x', ie the two referents have different intensions.
 
 Derivation
   A derivation is a recursive presentation of the dependencies of a node.
@@ -138,4 +143,3 @@ Diagraph production
   A diagraph is refactored by 'fanning', making lists of dependants into their own trees.
   There can be consensus diagraph production, a group of people might create a diagraph by collaboratively editing a set of nodes.
   There can be adversarial diagraph production, a group of editors able to add but not edit existing nodes.
-
