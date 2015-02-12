@@ -31,6 +31,7 @@ Components
   A node that is a dependency of another is a dependant.
   Components are represented by foreign key references to component nodes.
   The kinds of component are topic, subject, object, and prototype.
+  The relationships between nodes of a diagraph represent the syntactic relationships between sentences of an explanation.
   A node may be said to be composed of its components.
   A node is like a recipe and the components are like ingredients. 
   A node is like an image and the components are subimages.
@@ -97,12 +98,7 @@ Explanation
   At the end of a derivation, we might offer the derivation of a node of which the previous was a component, ie the derivation of a newly accessable dependant node.
 
 Diagraph script
-  Diagraph script is a text format that compiles to a JSON representation of diagraph.
-  Each line represents a node text.
-  Each node may have four indented children beginning with either 'topic:', 'subject:', 'object:', or 'prototype:'
-  A child that begins with, eg, 'topic:' has the parent for a topic.
-  Unlabeled lines default to having their parent for a topic.
-  The diagraph client allows the user to produce and submit diagraph in this fashion.
+  Diagraph script is a hierarchial text format that represents a diagraph.
 
 Diagraph servers
   A diagraph server responds to requests.
@@ -145,6 +141,7 @@ Diagraph production
   Diagraphs can be refactored as they grow, so that no node has more dependants than can be easily reviewed in one sitting.
   A diagraph is refactored for example by taking several predicates of a subject and creating one sentence 'X is what X is', and then putting the three clauses as the contents of 'what X is'. 
   One refactors by adding layers of abstraction between a component and a dependant.
+  A section of diagraph with more than four nodes, eg where topic = t, should be refactored into smaller sections.
   A diagraph is refactored by 'fanning', making lists of dependants into their own trees.
   There can be consensus diagraph production, a group of people might create a diagraph by collaboratively editing a set of nodes.
   There can be adversarial diagraph production, a group of editors able to add but not edit existing nodes.
